@@ -8,15 +8,15 @@ using DAL;
 
 namespace BLL
 {
-    class Color : ClaseMaestra
+    public class Motor : ClaseMaestra
     {
 
-        public int ColorId { set; get; }
+        public int MotorId { set; get; }
         public string Descripcion { set; get; }
 
-        public Color()
+        public Motor()
         {
-            this.ColorId = 0;
+            this.MotorId = 0;
             this.Descripcion = "";
         }
 
@@ -25,10 +25,10 @@ namespace BLL
             ConexionDb conexion = new ConexionDb();
             DataTable dt = new DataTable();
 
-            dt = conexion.ObtenerDatos("Select * from Colores Where ColorId=" + IdBuscado);
+            dt = conexion.ObtenerDatos("Select * from Motores Where MotorId=" + IdBuscado);
             if (dt.Rows.Count > 0)
             {
-                this.ColorId = (int)dt.Rows[0]["ColorId"];
+                this.MotorId = (int)dt.Rows[0]["MotorId"];
                 this.Descripcion = dt.Rows[0]["Descripcion"].ToString();
             }
             return dt.Rows.Count > 0;
@@ -38,7 +38,7 @@ namespace BLL
         {
             bool retorno = false;
             ConexionDb conexion = new ConexionDb();
-            conexion.Ejecutar(String.Format("Update into Colores (Descripcion) Values('{0}')", this.Descripcion));
+            conexion.Ejecutar(String.Format("Update into Motores (Descripcion) Values('{0}')", this.Descripcion));
             return retorno;
         }
 
@@ -46,7 +46,7 @@ namespace BLL
         {
             bool retorno = false;
             ConexionDb conexion = new ConexionDb();
-            retorno = conexion.Ejecutar(String.Format("Delete From Colores where ColorId={0}", this.ColorId));
+            retorno = conexion.Ejecutar(String.Format("Delete From Motores where MotorId={0}", this.MotorId));
             return retorno;
         }
 
@@ -54,7 +54,7 @@ namespace BLL
         {
             bool retorno = false;
             ConexionDb conexion = new ConexionDb();
-            conexion.Ejecutar(String.Format("Insert Into Colores (Descripcion) Values('{0}'')", this.Descripcion));
+            conexion.Ejecutar(String.Format("insert into Motores (Descripcion) Values('{0}')", this.Descripcion));
             return retorno;
         }
 
@@ -64,7 +64,7 @@ namespace BLL
             string ordenar = "";
             if (!Orden.Equals(""))
                 ordenar = " orden by  " + Orden;
-            return conexion.ObtenerDatos(("Select " + Campos + " from Colores where " + Condicion + ordenar));
+            return conexion.ObtenerDatos(("Select " + Campos + " from Motores where " + Condicion + ordenar));
         }
     }
 }
