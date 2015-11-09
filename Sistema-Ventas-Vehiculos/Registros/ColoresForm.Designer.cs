@@ -34,6 +34,7 @@
             this.DescripciontextBox = new System.Windows.Forms.TextBox();
             this.IDlabel = new System.Windows.Forms.Label();
             this.Descripcionlabel = new System.Windows.Forms.Label();
+            this.botonEliminar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // botonNuevo
@@ -47,7 +48,7 @@
             // 
             // botonGuardar
             // 
-            this.botonGuardar.Location = new System.Drawing.Point(197, 227);
+            this.botonGuardar.Location = new System.Drawing.Point(105, 227);
             this.botonGuardar.Name = "botonGuardar";
             this.botonGuardar.Size = new System.Drawing.Size(75, 23);
             this.botonGuardar.TabIndex = 4;
@@ -86,11 +87,21 @@
             this.Descripcionlabel.TabIndex = 10;
             this.Descripcionlabel.Text = "Descripcion";
             // 
+            // botonEliminar
+            // 
+            this.botonEliminar.Location = new System.Drawing.Point(197, 227);
+            this.botonEliminar.Name = "botonEliminar";
+            this.botonEliminar.Size = new System.Drawing.Size(75, 23);
+            this.botonEliminar.TabIndex = 16;
+            this.botonEliminar.Text = "Eliminar";
+            this.botonEliminar.UseVisualStyleBackColor = true;
+            // 
             // ColoresForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 262);
+            this.Controls.Add(this.botonEliminar);
             this.Controls.Add(this.Descripcionlabel);
             this.Controls.Add(this.IDlabel);
             this.Controls.Add(this.DescripciontextBox);
@@ -113,5 +124,6 @@
         private System.Windows.Forms.TextBox DescripciontextBox;
         private System.Windows.Forms.Label IDlabel;
         private System.Windows.Forms.Label Descripcionlabel;
+        private System.Windows.Forms.Button botonEliminar;
     }
 }
