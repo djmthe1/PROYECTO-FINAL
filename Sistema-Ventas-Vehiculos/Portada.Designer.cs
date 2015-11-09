@@ -29,18 +29,18 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Portada));
-            this.button1 = new System.Windows.Forms.Button();
+            this.pruebaboton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // pruebaboton
             // 
-            this.button1.Location = new System.Drawing.Point(13, 13);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.pruebaboton.Location = new System.Drawing.Point(609, 12);
+            this.pruebaboton.Name = "pruebaboton";
+            this.pruebaboton.Size = new System.Drawing.Size(75, 23);
+            this.pruebaboton.TabIndex = 0;
+            this.pruebaboton.Text = "prueba";
+            this.pruebaboton.UseVisualStyleBackColor = true;
+            this.pruebaboton.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // Portada
             // 
@@ -49,7 +49,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(696, 321);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.pruebaboton);
             this.Name = "Portada";
             this.Text = "Sistema De Ventas Vehiculos";
             this.ResumeLayout(false);
@@ -58,7 +58,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button pruebaboton;
     }
 }
 

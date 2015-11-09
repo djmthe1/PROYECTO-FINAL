@@ -15,7 +15,7 @@ namespace DAL
 
         public ConexionDb()
         {
-            con = new SqlConnection("Data Source=DJM-THE-1-PC; Initial Catalog = RegistroVehiculosDb; integrared Security=true");
+            con = new SqlConnection("Data Source=DJM-THE-1-PC; Initial Catalog = RegistroVehiculosDb;");
             Cmd = new SqlCommand();
         }
 
