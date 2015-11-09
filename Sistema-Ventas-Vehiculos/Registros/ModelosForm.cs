@@ -8,19 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Sistema_Ventas_Vehiculos
+namespace Sistema_Ventas_Vehiculos.Registros
 {
-    public partial class Portada : Form
+    public partial class ModelosForm : Form
     {
-        public Portada()
+        public ModelosForm()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            Registros.InsetarForm insert = new Registros.InsetarForm();
-            insert.Show();
         }
     }
 }

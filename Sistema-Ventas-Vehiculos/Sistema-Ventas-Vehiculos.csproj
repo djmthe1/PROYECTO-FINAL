@@ -12,6 +12,21 @@
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -54,11 +69,53 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Registros\ColoresForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registros\ColoresForm.Designer.cs">
+      <DependentUpon>ColoresForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registros\InsetarForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registros\InsetarForm.Designer.cs">
+      <DependentUpon>InsetarForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Registros\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Registros\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registros\MarcasForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registros\MarcasForm.Designer.cs">
+      <DependentUpon>MarcasForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registros\ModelosForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registros\ModelosForm.Designer.cs">
+      <DependentUpon>ModelosForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registros\MotoresForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registros\MotoresForm.Designer.cs">
+      <DependentUpon>MotoresForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registros\TipoDeVehiculosForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registros\TipoDeVehiculosForm.Designer.cs">
+      <DependentUpon>TipoDeVehiculosForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registros\VehiculosForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registros\VehiculosForm.Designer.cs">
+      <DependentUpon>VehiculosForm.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Portada.resx">
       <DependentUpon>Portada.cs</DependentUpon>
@@ -72,6 +129,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Registros\InsetarForm.resx">
+      <DependentUpon>InsetarForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Registros\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -89,8 +149,34 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="BaseDatos\" />
     <Folder Include="ImageIcon\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BaseDatos\Sistema-Ventas-Vehiculos.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="BaseDatos\Sistema-Ventas-Vehiculos_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>Sistema-Ventas-Vehiculos.mdf</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{5ab8c173-2965-405a-98f7-1ca76ea07041}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
