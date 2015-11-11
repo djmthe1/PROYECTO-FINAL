@@ -25,32 +25,38 @@ namespace BLL
 
         public override bool Insertar()
         {
+            bool retorno = false;
             try
             {
                 conexion.Ejecutar(String.Format("Insert Into Colores (Descripcion) Values('{0}'')", this.Descripcion));
-                return true;
+                retorno = true;
             }
-            catch (Exception) { return false; }
+            catch (Exception ex) {throw ex; }
+            return retorno;
         }
 
         public override bool Editar()
         {
+            bool retorno = false;
             try
             {
                 conexion.Ejecutar(String.Format("Update Colores set Descripcion='{0}' where ColorId={1}", this.Descripcion,this.ColorId));
-                return true;
+                retorno = true;
             }
-            catch (Exception) { return false; }
+            catch (Exception ex) { throw ex; }
+            return retorno;
         }
 
         public override bool Eliminar()
         {
+            bool retorno = false;
             try
             {
                 conexion.Ejecutar(String.Format("Delete From Colores where ColorId={0}", this.ColorId));
-                return true;
+                retorno = true;
             }
-            catch (Exception) { return false; }
+            catch (Exception ex) { throw ex; }
+            return retorno;
         }
 
 

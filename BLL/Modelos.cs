@@ -24,32 +24,38 @@ namespace BLL
 
         public override bool Insertar()
         {
+            bool retorno = false;
             try
             {
                 conexion.Ejecutar(String.Format("insert into Modelos (Descripcion) Values('{0}')", this.Descripcion));
-                return true;
+                retorno = true;
             }
-            catch (Exception) { return false; }
+            catch (Exception ex) { throw ex; }
+            return retorno;
         }
 
         public override bool Editar()
         {
+            bool retorno = false;
             try
             {
                 conexion.Ejecutar(String.Format("Update Modelos set Descripcion='{0}' where ModeloId={1}", this.Descripcion,this.ModeloId));
-                return true;
+                retorno = true;
             }
-            catch (Exception) { return false; }
+            catch (Exception ex) { throw ex; }
+            return retorno;
         }
 
         public override bool Eliminar()
         {
+            bool retorno = false;
             try
             {
                 conexion.Ejecutar(String.Format("Delete From Modelos where ModeloId={0}", this.ModeloId));
-                return true;
+                retorno = true;
             }
-            catch (Exception) { return false; }
+            catch (Exception ex) { throw ex; }
+            return retorno;
         }
 
         public override bool Buscar(int IdBuscado)

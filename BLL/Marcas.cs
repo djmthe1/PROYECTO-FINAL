@@ -24,31 +24,38 @@ namespace BLL
 
         public override bool Insertar()
         {
+            bool retornar = false;
             try
             {
                 conexion.Ejecutar(String.Format("insert into Marcas (Descripcion) Values('{0}')", this.Descripcion));
-                return true;
+                retornar= true;
+                
             }
-            catch (Exception) { return false; }
+            catch (Exception ex) { throw ex; }
+            return retornar;
         }
 
         public override bool Editar()
         {
+            bool retornar = false;
             try {
                 conexion.Ejecutar(String.Format("Update Marcas set Descripcion='{0}' where MarcaId={1}", this.Descripcion,this.MarcaId));
-                return true;
+                retornar =  true;
             }
-            catch (Exception) { return false; }
+            catch (Exception ex) { throw ex; }
+            return retornar;
         }
 
         public override bool Eliminar()
         {
+            bool retorno = false;
             try
             {
                 conexion.Ejecutar(String.Format("Delete From Marcas where MarcaId={0}", this.MarcaId));
-                return true;
+                retorno= true;
             }
-            catch (Exception) { return false; }
+            catch (Exception ex) { throw ex; }
+            return retorno;
         }
 
 
