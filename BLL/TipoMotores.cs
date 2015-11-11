@@ -8,19 +8,19 @@ using DAL;
 
 namespace BLL
 {
-    public class Motores : ClaseMaestra
+    public class TipoMotores : ClaseMaestra
     {
 
         public int MotorId { set; get; }
         public string Descripcion { set; get; }
         public ConexionDb conexion = new ConexionDb();
 
-        public Motores(int motorId, string descripcion)
+        public TipoMotores(int motorId, string descripcion)
         {
             this.MotorId = motorId;
             this.Descripcion = descripcion;
         }
-        public Motores() { }
+        public TipoMotores() { }
 
 
         public override bool Insertar()

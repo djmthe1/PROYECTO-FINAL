@@ -33,31 +33,6 @@ namespace Sistema_Ventas_Vehiculos.Registros
             DescripciontextBox.Clear();
         }
 
-        private void botonGuardar_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (MarcasIDtextBox.Text.Length == 0)
-                {
-                    M.Descripcion = DescripciontextBox.Text;
-                    M.Insertar();
-                    MessageBox.Show("Marca Insertada");
-                }
-                else
-                {
-                    M.MarcaId = int.Parse(MarcasIDtextBox.Text);
-                    M.Descripcion = DescripciontextBox.Text;
-                    M.Editar();
-                    MessageBox.Show("Marca Modificada");
-                }
-            }
-            catch (Exception) {
-                MessageBox.Show("Error al Insertar o Modificar");
-            }
-
-            listarDataGridView.Refresh();
-        }
-
         private void listarDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -75,6 +50,32 @@ namespace Sistema_Ventas_Vehiculos.Registros
             catch (Exception) {
                 MessageBox.Show("Error al Borrar");
             }
+        }
+
+        private void botonGuardar_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                if (MarcasIDtextBox.Text.Length == 0)
+                {
+                    M.Descripcion = DescripciontextBox.Text;
+                    M.Insertar();
+                    MessageBox.Show("Marca Insertada");
+                }
+                else
+                {
+                    M.MarcaId = int.Parse(MarcasIDtextBox.Text);
+                    M.Descripcion = DescripciontextBox.Text;
+                    M.Editar();
+                    MessageBox.Show("Marca Modificada");
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error al Insertar o Modificar");
+            }
+
+            listarDataGridView.Refresh();
         }
     }
 }

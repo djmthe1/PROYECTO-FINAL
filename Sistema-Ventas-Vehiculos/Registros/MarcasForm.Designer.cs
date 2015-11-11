@@ -37,14 +37,14 @@
             this.MarcasIDtextBox = new System.Windows.Forms.TextBox();
             this.botonEliminar = new System.Windows.Forms.Button();
             this.listarDataGridView = new System.Windows.Forms.DataGridView();
-            this._Sistema_Ventas_VehiculosDataSet = new Sistema_Ventas_Vehiculos._Sistema_Ventas_VehiculosDataSet();
-            this.marcasBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.marcasTableAdapter = new Sistema_Ventas_Vehiculos._Sistema_Ventas_VehiculosDataSetTableAdapters.MarcasTableAdapter();
             this.marcaIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.marcasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this._Sistema_Ventas_VehiculosDataSet = new Sistema_Ventas_Vehiculos._Sistema_Ventas_VehiculosDataSet();
+            this.marcasTableAdapter = new Sistema_Ventas_Vehiculos._Sistema_Ventas_VehiculosDataSetTableAdapters.MarcasTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.listarDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._Sistema_Ventas_VehiculosDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.marcasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._Sistema_Ventas_VehiculosDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // DescripciontextBox
@@ -81,6 +81,7 @@
             this.botonGuardar.TabIndex = 14;
             this.botonGuardar.Text = "Guardar";
             this.botonGuardar.UseVisualStyleBackColor = true;
+            this.botonGuardar.Click += new System.EventHandler(this.botonGuardar_Click_1);
             // 
             // IDlabel
             // 
@@ -122,20 +123,6 @@
             this.listarDataGridView.TabIndex = 16;
             this.listarDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.listarDataGridView_CellContentClick);
             // 
-            // _Sistema_Ventas_VehiculosDataSet
-            // 
-            this._Sistema_Ventas_VehiculosDataSet.DataSetName = "_Sistema_Ventas_VehiculosDataSet";
-            this._Sistema_Ventas_VehiculosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // marcasBindingSource
-            // 
-            this.marcasBindingSource.DataMember = "Marcas";
-            this.marcasBindingSource.DataSource = this._Sistema_Ventas_VehiculosDataSet;
-            // 
-            // marcasTableAdapter
-            // 
-            this.marcasTableAdapter.ClearBeforeFill = true;
-            // 
             // marcaIdDataGridViewTextBoxColumn
             // 
             this.marcaIdDataGridViewTextBoxColumn.DataPropertyName = "MarcaId";
@@ -148,6 +135,20 @@
             this.descripcionDataGridViewTextBoxColumn.DataPropertyName = "Descripcion";
             this.descripcionDataGridViewTextBoxColumn.HeaderText = "Descripcion";
             this.descripcionDataGridViewTextBoxColumn.Name = "descripcionDataGridViewTextBoxColumn";
+            // 
+            // marcasBindingSource
+            // 
+            this.marcasBindingSource.DataMember = "Marcas";
+            this.marcasBindingSource.DataSource = this._Sistema_Ventas_VehiculosDataSet;
+            // 
+            // _Sistema_Ventas_VehiculosDataSet
+            // 
+            this._Sistema_Ventas_VehiculosDataSet.DataSetName = "_Sistema_Ventas_VehiculosDataSet";
+            this._Sistema_Ventas_VehiculosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // marcasTableAdapter
+            // 
+            this.marcasTableAdapter.ClearBeforeFill = true;
             // 
             // MarcasForm
             // 
@@ -163,11 +164,11 @@
             this.Controls.Add(this.DescripciontextBox);
             this.Controls.Add(this.IDlabel);
             this.Name = "MarcasForm";
-            this.Text = "MarcasForm";
+            this.Text = "Marcas";
             this.Load += new System.EventHandler(this.MarcasForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.listarDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._Sistema_Ventas_VehiculosDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.marcasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._Sistema_Ventas_VehiculosDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
