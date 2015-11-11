@@ -52,37 +52,62 @@ namespace Sistema_Ventas_Vehiculos.Registros
         {
             try
             {
-                if (MarcasIDtextBox.Text.Length == 0)
+                marcas.MarcaId = int.Parse(MarcasIDtextBox.Text);
+                if (marcas.Eliminar())
                 {
-                    
+                    MensajeOk("Elimino correctamente");
+                    DescripciontextBox.Clear();
+                    MarcasIDtextBox.Clear();                    
                 }
-                listarDataGridView.Refresh();
-                }
-            }
-            catch (Exception) {
-                MessageBox.Show("Error al Insertar o Modificar");
-            }
-
-            listarDataGridView.Refresh();
-        }
-
-        private void listarDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void botonEliminar_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                M.MarcaId = int.Parse(MarcasIDtextBox.Text);
-                M.Eliminar();
-                MessageBox.Show("Marca Borrada");
                 listarDataGridView.Refresh();
             }
             catch (Exception) {
                 MessageBox.Show("Error al Borrar");
             }
+        }
+
+        private void botonGuardar_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                marcas.Descripcion = DescripciontextBox.Text;
+                if (MarcasIDtextBox.Text == "")
+                {
+                    
+                    if (marcas.Insertar())
+                    {
+                        DescripciontextBox.Clear();
+                        MensajeOk("Insertado Correctamente");
+                    }
+                    else {
+                        MensajeError("Error al Insertar");
+                    }
+                            
+                    
+                }
+                else
+                {
+                    int id = 0;
+                    int.TryParse(MarcasIDtextBox.Text,out id);
+                    marcas.MarcaId = id;
+                    if (marcas.Editar())
+                    {
+                        DescripciontextBox.Clear();
+                        MensajeOk("Modificado Correctamente");
+                    }
+                    else
+                    {
+                        MensajeError("Error al Modificar");
+                    }
+
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error al Insertar o Modificar");
+            }
+
+            listarDataGridView.Refresh();
         }
     }
 }
