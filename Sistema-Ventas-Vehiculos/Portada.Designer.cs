@@ -30,17 +30,44 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Portada));
             this.botonIngresar = new System.Windows.Forms.Button();
+            this.botonSalir = new System.Windows.Forms.Button();
+            this.portadaLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // botonIngresar
             // 
-            this.botonIngresar.Location = new System.Drawing.Point(609, 161);
+            this.botonIngresar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("botonIngresar.BackgroundImage")));
+            this.botonIngresar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.botonIngresar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.botonIngresar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.botonIngresar.Location = new System.Drawing.Point(508, 12);
             this.botonIngresar.Name = "botonIngresar";
-            this.botonIngresar.Size = new System.Drawing.Size(80, 47);
+            this.botonIngresar.Size = new System.Drawing.Size(80, 67);
             this.botonIngresar.TabIndex = 1;
-            this.botonIngresar.Text = "INGRESAR";
+            this.botonIngresar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.botonIngresar.UseVisualStyleBackColor = true;
             this.botonIngresar.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // botonSalir
+            // 
+            this.botonSalir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("botonSalir.BackgroundImage")));
+            this.botonSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.botonSalir.Location = new System.Drawing.Point(604, 11);
+            this.botonSalir.Name = "botonSalir";
+            this.botonSalir.Size = new System.Drawing.Size(80, 68);
+            this.botonSalir.TabIndex = 2;
+            this.botonSalir.UseVisualStyleBackColor = true;
+            this.botonSalir.Click += new System.EventHandler(this.botonSalir_Click);
+            // 
+            // portadaLabel
+            // 
+            this.portadaLabel.AutoSize = true;
+            this.portadaLabel.Font = new System.Drawing.Font("Poor Richard", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.portadaLabel.Location = new System.Drawing.Point(177, 12);
+            this.portadaLabel.Name = "portadaLabel";
+            this.portadaLabel.Size = new System.Drawing.Size(312, 24);
+            this.portadaLabel.TabIndex = 3;
+            this.portadaLabel.Text = "Sistema-De-Ventas-De-Vehiculos";
             // 
             // Portada
             // 
@@ -49,15 +76,20 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(696, 321);
+            this.Controls.Add(this.portadaLabel);
+            this.Controls.Add(this.botonSalir);
             this.Controls.Add(this.botonIngresar);
             this.Name = "Portada";
             this.Text = "Sistema De Ventas Vehiculos";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
         private System.Windows.Forms.Button botonIngresar;
+        private System.Windows.Forms.Button botonSalir;
+        private System.Windows.Forms.Label portadaLabel;
     }
 }
 

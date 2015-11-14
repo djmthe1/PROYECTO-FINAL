@@ -28,5 +28,10 @@ namespace Sistema_Ventas_Vehiculos
             Registros.LoginForm LoginF = new Registros.LoginForm();
             LoginF.Show();
         }
+
+        private void botonSalir_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
