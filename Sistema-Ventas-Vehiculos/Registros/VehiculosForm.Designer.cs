@@ -28,11 +28,56 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.botonEliminar = new System.Windows.Forms.Button();
+            this.botonGuardar = new System.Windows.Forms.Button();
+            this.botonNuevo = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // botonEliminar
+            // 
+            this.botonEliminar.Location = new System.Drawing.Point(398, 218);
+            this.botonEliminar.Name = "botonEliminar";
+            this.botonEliminar.Size = new System.Drawing.Size(75, 23);
+            this.botonEliminar.TabIndex = 22;
+            this.botonEliminar.Text = "Eliminar";
+            this.botonEliminar.UseVisualStyleBackColor = true;
+            // 
+            // botonGuardar
+            // 
+            this.botonGuardar.Location = new System.Drawing.Point(306, 218);
+            this.botonGuardar.Name = "botonGuardar";
+            this.botonGuardar.Size = new System.Drawing.Size(75, 23);
+            this.botonGuardar.TabIndex = 21;
+            this.botonGuardar.Text = "Guardar";
+            this.botonGuardar.UseVisualStyleBackColor = true;
+            // 
+            // botonNuevo
+            // 
+            this.botonNuevo.Location = new System.Drawing.Point(212, 218);
+            this.botonNuevo.Name = "botonNuevo";
+            this.botonNuevo.Size = new System.Drawing.Size(75, 23);
+            this.botonNuevo.TabIndex = 20;
+            this.botonNuevo.Text = "Nuevo";
+            this.botonNuevo.UseVisualStyleBackColor = true;
+            // 
+            // VehiculosForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(692, 262);
+            this.Controls.Add(this.botonEliminar);
+            this.Controls.Add(this.botonGuardar);
+            this.Controls.Add(this.botonNuevo);
+            this.Name = "VehiculosForm";
             this.Text = "VehiculosForm";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button botonEliminar;
+        private System.Windows.Forms.Button botonGuardar;
+        private System.Windows.Forms.Button botonNuevo;
     }
 }

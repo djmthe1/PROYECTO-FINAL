@@ -28,7 +28,7 @@ namespace BLL
             bool retorno = false;
             try
             {
-                conexion.Ejecutar(String.Format("Insert Into Colores (Descripcion) Values('{0}'')", this.Descripcion));
+                conexion.Ejecutar(String.Format("Insert Into Colores (Descripcion) Values('{0}')", this.Descripcion));
                 retorno = true;
             }
             catch (Exception ex) {throw ex; }

@@ -16,5 +16,17 @@ namespace Sistema_Ventas_Vehiculos.Registros
         {
             InitializeComponent();
         }
+
+        private void botonEntrar_Click(object sender, EventArgs e)
+        {
+            Registros.PortadaForm PortadaF = new PortadaForm();
+            PortadaF.Show();
+            this.Close();
+        }
+
+        private void botonAtras_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

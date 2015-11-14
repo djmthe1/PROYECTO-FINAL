@@ -22,5 +22,11 @@ namespace Sistema_Ventas_Vehiculos
             Registros.InsetarForm insert = new Registros.InsetarForm();
             insert.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Registros.LoginForm LoginF = new Registros.LoginForm();
+            LoginF.Show();
+        }
     }
 }

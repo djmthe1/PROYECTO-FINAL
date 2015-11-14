@@ -69,11 +69,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Registros\BuscarForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registros\BuscarForm.Designer.cs">
+      <DependentUpon>BuscarForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Registros\ColoresForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Registros\ColoresForm.Designer.cs">
       <DependentUpon>ColoresForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registros\InsertarUsuarioForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registros\InsertarUsuarioForm.Designer.cs">
+      <DependentUpon>InsertarUsuarioForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Registros\InsetarForm.cs">
       <SubType>Form</SubType>
@@ -104,6 +116,12 @@
     </Compile>
     <Compile Include="Registros\MotoresForm.Designer.cs">
       <DependentUpon>MotoresForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registros\PortadaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registros\PortadaForm.Designer.cs">
+      <DependentUpon>PortadaForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Registros\TipoDeVehiculosForm.cs">
       <SubType>Form</SubType>
@@ -137,6 +155,9 @@
     <EmbeddedResource Include="Registros\ColoresForm.resx">
       <DependentUpon>ColoresForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Registros\InsertarUsuarioForm.resx">
+      <DependentUpon>InsertarUsuarioForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Registros\InsetarForm.resx">
       <DependentUpon>InsetarForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -145,6 +166,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Registros\MarcasForm.resx">
       <DependentUpon>MarcasForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registros\ModelosForm.resx">
+      <DependentUpon>ModelosForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registros\MotoresForm.resx">
+      <DependentUpon>MotoresForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registros\PortadaForm.resx">
+      <DependentUpon>PortadaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registros\TipoDeVehiculosForm.resx">
+      <DependentUpon>TipoDeVehiculosForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registros\VehiculosForm.resx">
+      <DependentUpon>VehiculosForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
