@@ -69,7 +69,7 @@
             this.Controls.Add(this.botonGuardar);
             this.Controls.Add(this.botonNuevo);
             this.Name = "VehiculosForm";
-            this.Text = "VehiculosForm";
+            this.Text = "Vehiculos";
             this.ResumeLayout(false);
 
         }

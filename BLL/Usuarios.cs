@@ -8,7 +8,7 @@ using DAL;
 
 namespace BLL
 {
-    class Usuarios : ClaseMaestra
+    public class Usuarios : ClaseMaestra
     {
 
         public int UsuarioId { set; get; }

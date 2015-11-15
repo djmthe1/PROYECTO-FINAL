@@ -106,7 +106,7 @@
             this.Controls.Add(this.usuarioLabel);
             this.DoubleBuffered = true;
             this.Name = "LoginForm";
-            this.Text = "LoginForm";
+            this.Text = "Login";
             this.ResumeLayout(false);
             this.PerformLayout();
 

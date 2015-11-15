@@ -40,19 +40,19 @@
             this.botonIngresar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.botonIngresar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.botonIngresar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.botonIngresar.Location = new System.Drawing.Point(508, 12);
+            this.botonIngresar.Location = new System.Drawing.Point(12, 12);
             this.botonIngresar.Name = "botonIngresar";
             this.botonIngresar.Size = new System.Drawing.Size(80, 67);
             this.botonIngresar.TabIndex = 1;
             this.botonIngresar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.botonIngresar.UseVisualStyleBackColor = true;
-            this.botonIngresar.Click += new System.EventHandler(this.button1_Click);
+            this.botonIngresar.Click += new System.EventHandler(this.botonIngresar_Click);
             // 
             // botonSalir
             // 
             this.botonSalir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("botonSalir.BackgroundImage")));
             this.botonSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.botonSalir.Location = new System.Drawing.Point(604, 11);
+            this.botonSalir.Location = new System.Drawing.Point(604, 12);
             this.botonSalir.Name = "botonSalir";
             this.botonSalir.Size = new System.Drawing.Size(80, 68);
             this.botonSalir.TabIndex = 2;

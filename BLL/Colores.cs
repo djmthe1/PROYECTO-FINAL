@@ -8,7 +8,7 @@ using DAL;
 
 namespace BLL
 {
-    class Colores : ClaseMaestra
+    public class Colores : ClaseMaestra
     {
 
         public int ColorId { set; get; }
@@ -76,7 +76,6 @@ namespace BLL
 
         public override DataTable Listado(string Campos, string Condicion, string Orden)
         {
-            
             string ordenar = "";
             if (!Orden.Equals(""))
                 ordenar = " orden by  " + Orden;

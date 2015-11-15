@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BLL;
 
 namespace Sistema_Ventas_Vehiculos.Registros
 {
@@ -15,6 +16,41 @@ namespace Sistema_Ventas_Vehiculos.Registros
         public ModelosForm()
         {
             InitializeComponent();
+        }
+
+        Modelos modelos = new Modelos();
+
+        private void MensajeOk(string mensaje)
+        {
+            MessageBox.Show(mensaje, "Registro de Modelos", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+        private void MensajeError(string mensaje)
+        {
+            MessageBox.Show(mensaje, "Registro de Modelos", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void botonNuevo_Click(object sender, EventArgs e)
+        {
+            ModeloIDtextBox.Clear();
+            DescripciontextBox.Clear();
+        }
+
+        private void botonEliminar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                modelos.ModeloId = int.Parse(ModeloIDtextBox.Text);
+                if (modelos.Eliminar())
+                {
+                    MensajeOk("Eliminado correctamente");
+                    DescripciontextBox.Clear();
+                    ModeloIDtextBox.Clear();
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error al Eliminar");
+            }
         }
     }
 }

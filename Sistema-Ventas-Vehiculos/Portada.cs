@@ -17,21 +17,15 @@ namespace Sistema_Ventas_Vehiculos
             InitializeComponent();
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            Registros.InsetarForm insert = new Registros.InsetarForm();
-            insert.Show();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Registros.LoginForm LoginF = new Registros.LoginForm();
-            LoginF.Show();
-        }
-
         private void botonSalir_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void botonIngresar_Click(object sender, EventArgs e)
+        {
+            Registros.LoginForm LoginF = new Registros.LoginForm();
+            LoginF.Show();
         }
     }
 }

@@ -152,6 +152,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Registros\BuscarForm.resx">
+      <DependentUpon>BuscarForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Registros\ColoresForm.resx">
       <DependentUpon>ColoresForm.cs</DependentUpon>
     </EmbeddedResource>

@@ -41,13 +41,6 @@ namespace Sistema_Ventas_Vehiculos.Registros
             DescripciontextBox.Clear();
         }
 
-      
-
-        private void listarDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void botonEliminar_Click(object sender, EventArgs e)
         {
             try
@@ -55,14 +48,13 @@ namespace Sistema_Ventas_Vehiculos.Registros
                 marcas.MarcaId = int.Parse(MarcasIDtextBox.Text);
                 if (marcas.Eliminar())
                 {
-                    MensajeOk("Elimino correctamente");
+                    MensajeOk("Eliminado correctamente");
                     DescripciontextBox.Clear();
                     MarcasIDtextBox.Clear();                    
                 }
-                listarDataGridView.Refresh();
             }
             catch (Exception) {
-                MessageBox.Show("Error al Borrar");
+                MessageBox.Show("Error al Eliminar");
             }
         }
 
@@ -106,8 +98,6 @@ namespace Sistema_Ventas_Vehiculos.Registros
             {
                 MessageBox.Show("Error al Insertar o Modificar");
             }
-
-            listarDataGridView.Refresh();
         }
     }
 }

@@ -30,7 +30,7 @@
         {
             this.botonNuevo = new System.Windows.Forms.Button();
             this.botonGuardar = new System.Windows.Forms.Button();
-            this.ColoresIDtextBox = new System.Windows.Forms.TextBox();
+            this.ColorIDtextBox = new System.Windows.Forms.TextBox();
             this.DescripciontextBox = new System.Windows.Forms.TextBox();
             this.IDlabel = new System.Windows.Forms.Label();
             this.Descripcionlabel = new System.Windows.Forms.Label();
@@ -45,6 +45,7 @@
             this.botonNuevo.TabIndex = 3;
             this.botonNuevo.Text = "Nuevo";
             this.botonNuevo.UseVisualStyleBackColor = true;
+            this.botonNuevo.Click += new System.EventHandler(this.botonNuevo_Click);
             // 
             // botonGuardar
             // 
@@ -55,16 +56,16 @@
             this.botonGuardar.Text = "Guardar";
             this.botonGuardar.UseVisualStyleBackColor = true;
             // 
-            // ColoresIDtextBox
+            // ColorIDtextBox
             // 
-            this.ColoresIDtextBox.Location = new System.Drawing.Point(124, 47);
-            this.ColoresIDtextBox.Name = "ColoresIDtextBox";
-            this.ColoresIDtextBox.Size = new System.Drawing.Size(51, 20);
-            this.ColoresIDtextBox.TabIndex = 6;
+            this.ColorIDtextBox.Location = new System.Drawing.Point(124, 68);
+            this.ColorIDtextBox.Name = "ColorIDtextBox";
+            this.ColorIDtextBox.Size = new System.Drawing.Size(81, 20);
+            this.ColorIDtextBox.TabIndex = 6;
             // 
             // DescripciontextBox
             // 
-            this.DescripciontextBox.Location = new System.Drawing.Point(124, 97);
+            this.DescripciontextBox.Location = new System.Drawing.Point(124, 119);
             this.DescripciontextBox.Name = "DescripciontextBox";
             this.DescripciontextBox.Size = new System.Drawing.Size(81, 20);
             this.DescripciontextBox.TabIndex = 7;
@@ -72,7 +73,7 @@
             // IDlabel
             // 
             this.IDlabel.AutoSize = true;
-            this.IDlabel.Location = new System.Drawing.Point(44, 50);
+            this.IDlabel.Location = new System.Drawing.Point(44, 71);
             this.IDlabel.Name = "IDlabel";
             this.IDlabel.Size = new System.Drawing.Size(16, 13);
             this.IDlabel.TabIndex = 8;
@@ -81,7 +82,7 @@
             // Descripcionlabel
             // 
             this.Descripcionlabel.AutoSize = true;
-            this.Descripcionlabel.Location = new System.Drawing.Point(44, 100);
+            this.Descripcionlabel.Location = new System.Drawing.Point(44, 126);
             this.Descripcionlabel.Name = "Descripcionlabel";
             this.Descripcionlabel.Size = new System.Drawing.Size(63, 13);
             this.Descripcionlabel.TabIndex = 10;
@@ -95,6 +96,7 @@
             this.botonEliminar.TabIndex = 16;
             this.botonEliminar.Text = "Eliminar";
             this.botonEliminar.UseVisualStyleBackColor = true;
+            this.botonEliminar.Click += new System.EventHandler(this.botonEliminar_Click);
             // 
             // ColoresForm
             // 
@@ -105,11 +107,11 @@
             this.Controls.Add(this.Descripcionlabel);
             this.Controls.Add(this.IDlabel);
             this.Controls.Add(this.DescripciontextBox);
-            this.Controls.Add(this.ColoresIDtextBox);
+            this.Controls.Add(this.ColorIDtextBox);
             this.Controls.Add(this.botonGuardar);
             this.Controls.Add(this.botonNuevo);
             this.Name = "ColoresForm";
-            this.Text = "ColoresForm";
+            this.Text = "Colores";
             this.Load += new System.EventHandler(this.ColoresForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -120,7 +122,7 @@
 
         private System.Windows.Forms.Button botonNuevo;
         private System.Windows.Forms.Button botonGuardar;
-        private System.Windows.Forms.TextBox ColoresIDtextBox;
+        private System.Windows.Forms.TextBox ColorIDtextBox;
         private System.Windows.Forms.TextBox DescripciontextBox;
         private System.Windows.Forms.Label IDlabel;
         private System.Windows.Forms.Label Descripcionlabel;
