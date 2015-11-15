@@ -17,11 +17,19 @@ namespace Sistema_Ventas_Vehiculos.Registros
             InitializeComponent();
         }
 
+        Registros.PortadaForm PortadaF = new PortadaForm();
+
         private void botonEntrar_Click(object sender, EventArgs e)
         {
-            Registros.PortadaForm PortadaF = new PortadaForm();
-            PortadaF.Show();
-            this.Close();
+
+            if (usuarioTextBox.Text == "admin" && passTextBox.Text == "1234") {
+                PortadaF.Show();
+                this.Close();
+            }
+            else {
+                MessageBox.Show("Usuario o clave Incorrecta");
+            }
+
         }
 
         private void botonAtras_Click(object sender, EventArgs e)
