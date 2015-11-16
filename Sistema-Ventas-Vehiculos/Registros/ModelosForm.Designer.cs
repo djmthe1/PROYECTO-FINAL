@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ModelosForm));
             this.botonEliminar = new System.Windows.Forms.Button();
             this.botonGuardar = new System.Windows.Forms.Button();
             this.botonNuevo = new System.Windows.Forms.Button();
@@ -35,11 +36,13 @@
             this.Descripcionlabel = new System.Windows.Forms.Label();
             this.DescripciontextBox = new System.Windows.Forms.TextBox();
             this.ModeloIDtextBox = new System.Windows.Forms.TextBox();
+            this.botonBuscar = new System.Windows.Forms.Button();
+            this.botonAtras = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // botonEliminar
             // 
-            this.botonEliminar.Location = new System.Drawing.Point(198, 227);
+            this.botonEliminar.Location = new System.Drawing.Point(197, 171);
             this.botonEliminar.Name = "botonEliminar";
             this.botonEliminar.Size = new System.Drawing.Size(75, 23);
             this.botonEliminar.TabIndex = 22;
@@ -49,7 +52,7 @@
             // 
             // botonGuardar
             // 
-            this.botonGuardar.Location = new System.Drawing.Point(106, 227);
+            this.botonGuardar.Location = new System.Drawing.Point(105, 171);
             this.botonGuardar.Name = "botonGuardar";
             this.botonGuardar.Size = new System.Drawing.Size(75, 23);
             this.botonGuardar.TabIndex = 21;
@@ -58,7 +61,7 @@
             // 
             // botonNuevo
             // 
-            this.botonNuevo.Location = new System.Drawing.Point(13, 227);
+            this.botonNuevo.Location = new System.Drawing.Point(12, 171);
             this.botonNuevo.Name = "botonNuevo";
             this.botonNuevo.Size = new System.Drawing.Size(75, 23);
             this.botonNuevo.TabIndex = 20;
@@ -98,11 +101,35 @@
             this.ModeloIDtextBox.Size = new System.Drawing.Size(100, 20);
             this.ModeloIDtextBox.TabIndex = 26;
             // 
+            // botonBuscar
+            // 
+            this.botonBuscar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("botonBuscar.BackgroundImage")));
+            this.botonBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.botonBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.botonBuscar.Location = new System.Drawing.Point(225, 12);
+            this.botonBuscar.Name = "botonBuscar";
+            this.botonBuscar.Size = new System.Drawing.Size(47, 41);
+            this.botonBuscar.TabIndex = 27;
+            this.botonBuscar.UseVisualStyleBackColor = true;
+            // 
+            // botonAtras
+            // 
+            this.botonAtras.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("botonAtras.BackgroundImage")));
+            this.botonAtras.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.botonAtras.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.botonAtras.Location = new System.Drawing.Point(225, 209);
+            this.botonAtras.Name = "botonAtras";
+            this.botonAtras.Size = new System.Drawing.Size(47, 41);
+            this.botonAtras.TabIndex = 32;
+            this.botonAtras.UseVisualStyleBackColor = true;
+            // 
             // ModelosForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 262);
+            this.Controls.Add(this.botonAtras);
+            this.Controls.Add(this.botonBuscar);
             this.Controls.Add(this.ModeloIDtextBox);
             this.Controls.Add(this.DescripciontextBox);
             this.Controls.Add(this.Descripcionlabel);
@@ -111,6 +138,7 @@
             this.Controls.Add(this.botonGuardar);
             this.Controls.Add(this.botonNuevo);
             this.Name = "ModelosForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Modelos";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -126,5 +154,7 @@
         private System.Windows.Forms.Label Descripcionlabel;
         private System.Windows.Forms.TextBox DescripciontextBox;
         private System.Windows.Forms.TextBox ModeloIDtextBox;
+        private System.Windows.Forms.Button botonBuscar;
+        private System.Windows.Forms.Button botonAtras;
     }
 }

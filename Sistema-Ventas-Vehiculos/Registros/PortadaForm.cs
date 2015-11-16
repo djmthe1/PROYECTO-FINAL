@@ -41,6 +41,7 @@ namespace Sistema_Ventas_Vehiculos.Registros
         private void botonBuscar_Click(object sender, EventArgs e)
         {
             Registros.BuscarForm BuscarF = new BuscarForm();
+            BuscarF.botonAtrasPortada.Visible = false;
             BuscarF.Show();
             this.Close();
         }

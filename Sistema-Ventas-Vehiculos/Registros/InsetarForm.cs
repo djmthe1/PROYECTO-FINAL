@@ -61,5 +61,12 @@ namespace Sistema_Ventas_Vehiculos.Registros
 
             }
         }
+
+        private void botonAtras_Click(object sender, EventArgs e)
+        {
+            PortadaForm PortadaF = new PortadaForm();
+            PortadaF.Show();
+            this.Close();
+        }
     }
 }

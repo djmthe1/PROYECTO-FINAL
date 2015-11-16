@@ -35,12 +35,13 @@
             this.passTextBox = new System.Windows.Forms.TextBox();
             this.botonEntrar = new System.Windows.Forms.Button();
             this.botonAtras = new System.Windows.Forms.Button();
+            this.mensajeLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // usuarioLabel
             // 
             this.usuarioLabel.AutoSize = true;
-            this.usuarioLabel.Location = new System.Drawing.Point(163, 110);
+            this.usuarioLabel.Location = new System.Drawing.Point(163, 135);
             this.usuarioLabel.Name = "usuarioLabel";
             this.usuarioLabel.Size = new System.Drawing.Size(56, 13);
             this.usuarioLabel.TabIndex = 0;
@@ -49,7 +50,7 @@
             // passLabel
             // 
             this.passLabel.AutoSize = true;
-            this.passLabel.Location = new System.Drawing.Point(138, 146);
+            this.passLabel.Location = new System.Drawing.Point(138, 171);
             this.passLabel.Name = "passLabel";
             this.passLabel.Size = new System.Drawing.Size(81, 13);
             this.passLabel.TabIndex = 1;
@@ -57,22 +58,24 @@
             // 
             // usuarioTextBox
             // 
-            this.usuarioTextBox.Location = new System.Drawing.Point(233, 103);
+            this.usuarioTextBox.Location = new System.Drawing.Point(233, 128);
             this.usuarioTextBox.Name = "usuarioTextBox";
             this.usuarioTextBox.Size = new System.Drawing.Size(100, 20);
             this.usuarioTextBox.TabIndex = 2;
             // 
             // passTextBox
             // 
-            this.passTextBox.Location = new System.Drawing.Point(233, 143);
+            this.passTextBox.Location = new System.Drawing.Point(233, 168);
             this.passTextBox.Name = "passTextBox";
             this.passTextBox.Size = new System.Drawing.Size(100, 20);
             this.passTextBox.TabIndex = 3;
+            this.passTextBox.UseSystemPasswordChar = true;
             // 
             // botonEntrar
             // 
             this.botonEntrar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("botonEntrar.BackgroundImage")));
             this.botonEntrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.botonEntrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.botonEntrar.Location = new System.Drawing.Point(12, 254);
             this.botonEntrar.Name = "botonEntrar";
             this.botonEntrar.Size = new System.Drawing.Size(49, 36);
@@ -84,12 +87,24 @@
             // 
             this.botonAtras.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("botonAtras.BackgroundImage")));
             this.botonAtras.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.botonAtras.Cursor = System.Windows.Forms.Cursors.Hand;
             this.botonAtras.Location = new System.Drawing.Point(442, 254);
             this.botonAtras.Name = "botonAtras";
             this.botonAtras.Size = new System.Drawing.Size(49, 36);
             this.botonAtras.TabIndex = 5;
             this.botonAtras.UseVisualStyleBackColor = true;
             this.botonAtras.Click += new System.EventHandler(this.botonAtras_Click);
+            // 
+            // mensajeLabel
+            // 
+            this.mensajeLabel.AutoSize = true;
+            this.mensajeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mensajeLabel.Location = new System.Drawing.Point(103, 110);
+            this.mensajeLabel.Name = "mensajeLabel";
+            this.mensajeLabel.Size = new System.Drawing.Size(303, 15);
+            this.mensajeLabel.TabIndex = 6;
+            this.mensajeLabel.Text = "Introduzca su nombre de usuario y contraseña";
+            this.mensajeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // LoginForm
             // 
@@ -98,6 +113,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(503, 302);
+            this.Controls.Add(this.mensajeLabel);
             this.Controls.Add(this.botonAtras);
             this.Controls.Add(this.botonEntrar);
             this.Controls.Add(this.passTextBox);
@@ -106,6 +122,7 @@
             this.Controls.Add(this.usuarioLabel);
             this.DoubleBuffered = true;
             this.Name = "LoginForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -120,5 +137,6 @@
         private System.Windows.Forms.TextBox passTextBox;
         private System.Windows.Forms.Button botonEntrar;
         private System.Windows.Forms.Button botonAtras;
+        private System.Windows.Forms.Label mensajeLabel;
     }
 }

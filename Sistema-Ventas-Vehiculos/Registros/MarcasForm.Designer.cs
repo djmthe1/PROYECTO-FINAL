@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MarcasForm));
             this.DescripciontextBox = new System.Windows.Forms.TextBox();
             this.Descripcionlabel = new System.Windows.Forms.Label();
             this.botonNuevo = new System.Windows.Forms.Button();
@@ -39,6 +40,8 @@
             this.marcasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this._Sistema_Ventas_VehiculosDataSet = new Sistema_Ventas_Vehiculos._Sistema_Ventas_VehiculosDataSet();
             this.marcasTableAdapter = new Sistema_Ventas_Vehiculos._Sistema_Ventas_VehiculosDataSetTableAdapters.MarcasTableAdapter();
+            this.botonBuscar = new System.Windows.Forms.Button();
+            this.botonAtras = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.marcasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._Sistema_Ventas_VehiculosDataSet)).BeginInit();
             this.SuspendLayout();
@@ -61,7 +64,7 @@
             // 
             // botonNuevo
             // 
-            this.botonNuevo.Location = new System.Drawing.Point(12, 214);
+            this.botonNuevo.Location = new System.Drawing.Point(8, 157);
             this.botonNuevo.Name = "botonNuevo";
             this.botonNuevo.Size = new System.Drawing.Size(75, 23);
             this.botonNuevo.TabIndex = 13;
@@ -71,7 +74,7 @@
             // 
             // botonGuardar
             // 
-            this.botonGuardar.Location = new System.Drawing.Point(103, 214);
+            this.botonGuardar.Location = new System.Drawing.Point(99, 157);
             this.botonGuardar.Name = "botonGuardar";
             this.botonGuardar.Size = new System.Drawing.Size(75, 23);
             this.botonGuardar.TabIndex = 14;
@@ -97,7 +100,7 @@
             // 
             // botonEliminar
             // 
-            this.botonEliminar.Location = new System.Drawing.Point(195, 214);
+            this.botonEliminar.Location = new System.Drawing.Point(191, 157);
             this.botonEliminar.Name = "botonEliminar";
             this.botonEliminar.Size = new System.Drawing.Size(75, 23);
             this.botonEliminar.TabIndex = 15;
@@ -119,11 +122,36 @@
             // 
             this.marcasTableAdapter.ClearBeforeFill = true;
             // 
+            // botonBuscar
+            // 
+            this.botonBuscar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("botonBuscar.BackgroundImage")));
+            this.botonBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.botonBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.botonBuscar.Location = new System.Drawing.Point(218, 12);
+            this.botonBuscar.Name = "botonBuscar";
+            this.botonBuscar.Size = new System.Drawing.Size(48, 38);
+            this.botonBuscar.TabIndex = 16;
+            this.botonBuscar.UseVisualStyleBackColor = true;
+            // 
+            // botonAtras
+            // 
+            this.botonAtras.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("botonAtras.BackgroundImage")));
+            this.botonAtras.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.botonAtras.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.botonAtras.Location = new System.Drawing.Point(218, 199);
+            this.botonAtras.Name = "botonAtras";
+            this.botonAtras.Size = new System.Drawing.Size(48, 38);
+            this.botonAtras.TabIndex = 32;
+            this.botonAtras.UseVisualStyleBackColor = true;
+            this.botonAtras.Click += new System.EventHandler(this.botonAtras_Click);
+            // 
             // MarcasForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(278, 249);
+            this.Controls.Add(this.botonAtras);
+            this.Controls.Add(this.botonBuscar);
             this.Controls.Add(this.botonEliminar);
             this.Controls.Add(this.botonGuardar);
             this.Controls.Add(this.botonNuevo);
@@ -132,6 +160,7 @@
             this.Controls.Add(this.DescripciontextBox);
             this.Controls.Add(this.IDlabel);
             this.Name = "MarcasForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Marcas";
             this.Load += new System.EventHandler(this.MarcasForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.marcasBindingSource)).EndInit();
@@ -152,5 +181,7 @@
         private _Sistema_Ventas_VehiculosDataSet _Sistema_Ventas_VehiculosDataSet;
         private System.Windows.Forms.BindingSource marcasBindingSource;
         private _Sistema_Ventas_VehiculosDataSetTableAdapters.MarcasTableAdapter marcasTableAdapter;
+        private System.Windows.Forms.Button botonBuscar;
+        private System.Windows.Forms.Button botonAtras;
     }
 }

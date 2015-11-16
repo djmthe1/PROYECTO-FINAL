@@ -99,5 +99,10 @@ namespace Sistema_Ventas_Vehiculos.Registros
                 MessageBox.Show("Error al Insertar o Modificar");
             }
         }
+
+        private void botonAtras_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -53,7 +53,8 @@
             // 
             this.botonSalir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("botonSalir.BackgroundImage")));
             this.botonSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.botonSalir.Location = new System.Drawing.Point(604, 12);
+            this.botonSalir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.botonSalir.Location = new System.Drawing.Point(604, 241);
             this.botonSalir.Name = "botonSalir";
             this.botonSalir.Size = new System.Drawing.Size(80, 68);
             this.botonSalir.TabIndex = 2;
@@ -74,7 +75,8 @@
             // 
             this.botonVerVehiculos.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("botonVerVehiculos.BackgroundImage")));
             this.botonVerVehiculos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.botonVerVehiculos.Location = new System.Drawing.Point(604, 242);
+            this.botonVerVehiculos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.botonVerVehiculos.Location = new System.Drawing.Point(604, 12);
             this.botonVerVehiculos.Name = "botonVerVehiculos";
             this.botonVerVehiculos.Size = new System.Drawing.Size(80, 67);
             this.botonVerVehiculos.TabIndex = 4;
@@ -93,6 +95,7 @@
             this.Controls.Add(this.botonSalir);
             this.Controls.Add(this.botonIngresar);
             this.Name = "Portada";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sistema De Ventas Vehiculos";
             this.ResumeLayout(false);
             this.PerformLayout();

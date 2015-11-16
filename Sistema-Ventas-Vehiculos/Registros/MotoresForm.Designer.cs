@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MotoresForm));
             this.botonEliminar = new System.Windows.Forms.Button();
             this.botonGuardar = new System.Windows.Forms.Button();
             this.botonNuevo = new System.Windows.Forms.Button();
@@ -35,11 +36,13 @@
             this.DescripciontextBox = new System.Windows.Forms.TextBox();
             this.IDlabel = new System.Windows.Forms.Label();
             this.MotorIDtextBox = new System.Windows.Forms.TextBox();
+            this.botonBuscar = new System.Windows.Forms.Button();
+            this.botonAtras = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // botonEliminar
             // 
-            this.botonEliminar.Location = new System.Drawing.Point(197, 227);
+            this.botonEliminar.Location = new System.Drawing.Point(197, 170);
             this.botonEliminar.Name = "botonEliminar";
             this.botonEliminar.Size = new System.Drawing.Size(75, 23);
             this.botonEliminar.TabIndex = 22;
@@ -49,7 +52,7 @@
             // 
             // botonGuardar
             // 
-            this.botonGuardar.Location = new System.Drawing.Point(105, 227);
+            this.botonGuardar.Location = new System.Drawing.Point(105, 170);
             this.botonGuardar.Name = "botonGuardar";
             this.botonGuardar.Size = new System.Drawing.Size(75, 23);
             this.botonGuardar.TabIndex = 21;
@@ -58,7 +61,7 @@
             // 
             // botonNuevo
             // 
-            this.botonNuevo.Location = new System.Drawing.Point(12, 227);
+            this.botonNuevo.Location = new System.Drawing.Point(12, 170);
             this.botonNuevo.Name = "botonNuevo";
             this.botonNuevo.Size = new System.Drawing.Size(75, 23);
             this.botonNuevo.TabIndex = 20;
@@ -98,11 +101,35 @@
             this.MotorIDtextBox.Size = new System.Drawing.Size(92, 20);
             this.MotorIDtextBox.TabIndex = 27;
             // 
+            // botonBuscar
+            // 
+            this.botonBuscar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("botonBuscar.BackgroundImage")));
+            this.botonBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.botonBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.botonBuscar.Location = new System.Drawing.Point(228, 12);
+            this.botonBuscar.Name = "botonBuscar";
+            this.botonBuscar.Size = new System.Drawing.Size(44, 36);
+            this.botonBuscar.TabIndex = 28;
+            this.botonBuscar.UseVisualStyleBackColor = true;
+            // 
+            // botonAtras
+            // 
+            this.botonAtras.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("botonAtras.BackgroundImage")));
+            this.botonAtras.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.botonAtras.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.botonAtras.Location = new System.Drawing.Point(228, 214);
+            this.botonAtras.Name = "botonAtras";
+            this.botonAtras.Size = new System.Drawing.Size(44, 36);
+            this.botonAtras.TabIndex = 32;
+            this.botonAtras.UseVisualStyleBackColor = true;
+            // 
             // MotoresForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 262);
+            this.Controls.Add(this.botonAtras);
+            this.Controls.Add(this.botonBuscar);
             this.Controls.Add(this.MotorIDtextBox);
             this.Controls.Add(this.IDlabel);
             this.Controls.Add(this.Descripcionlabel);
@@ -111,6 +138,7 @@
             this.Controls.Add(this.botonGuardar);
             this.Controls.Add(this.botonNuevo);
             this.Name = "MotoresForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tipos de Motores";
             this.Load += new System.EventHandler(this.MotoresForm_Load);
             this.ResumeLayout(false);
@@ -127,5 +155,7 @@
         private System.Windows.Forms.TextBox DescripciontextBox;
         private System.Windows.Forms.Label IDlabel;
         private System.Windows.Forms.TextBox MotorIDtextBox;
+        private System.Windows.Forms.Button botonBuscar;
+        private System.Windows.Forms.Button botonAtras;
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ColoresForm));
             this.botonNuevo = new System.Windows.Forms.Button();
             this.botonGuardar = new System.Windows.Forms.Button();
             this.ColorIDtextBox = new System.Windows.Forms.TextBox();
@@ -35,11 +36,13 @@
             this.IDlabel = new System.Windows.Forms.Label();
             this.Descripcionlabel = new System.Windows.Forms.Label();
             this.botonEliminar = new System.Windows.Forms.Button();
+            this.botonBuscar = new System.Windows.Forms.Button();
+            this.botonAtras = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // botonNuevo
             // 
-            this.botonNuevo.Location = new System.Drawing.Point(12, 227);
+            this.botonNuevo.Location = new System.Drawing.Point(12, 167);
             this.botonNuevo.Name = "botonNuevo";
             this.botonNuevo.Size = new System.Drawing.Size(75, 23);
             this.botonNuevo.TabIndex = 3;
@@ -49,7 +52,7 @@
             // 
             // botonGuardar
             // 
-            this.botonGuardar.Location = new System.Drawing.Point(105, 227);
+            this.botonGuardar.Location = new System.Drawing.Point(105, 167);
             this.botonGuardar.Name = "botonGuardar";
             this.botonGuardar.Size = new System.Drawing.Size(75, 23);
             this.botonGuardar.TabIndex = 4;
@@ -90,7 +93,7 @@
             // 
             // botonEliminar
             // 
-            this.botonEliminar.Location = new System.Drawing.Point(197, 227);
+            this.botonEliminar.Location = new System.Drawing.Point(197, 167);
             this.botonEliminar.Name = "botonEliminar";
             this.botonEliminar.Size = new System.Drawing.Size(75, 23);
             this.botonEliminar.TabIndex = 16;
@@ -98,11 +101,36 @@
             this.botonEliminar.UseVisualStyleBackColor = true;
             this.botonEliminar.Click += new System.EventHandler(this.botonEliminar_Click);
             // 
+            // botonBuscar
+            // 
+            this.botonBuscar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("botonBuscar.BackgroundImage")));
+            this.botonBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.botonBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.botonBuscar.Location = new System.Drawing.Point(227, 12);
+            this.botonBuscar.Name = "botonBuscar";
+            this.botonBuscar.Size = new System.Drawing.Size(45, 39);
+            this.botonBuscar.TabIndex = 17;
+            this.botonBuscar.UseVisualStyleBackColor = true;
+            // 
+            // botonAtras
+            // 
+            this.botonAtras.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("botonAtras.BackgroundImage")));
+            this.botonAtras.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.botonAtras.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.botonAtras.Location = new System.Drawing.Point(227, 211);
+            this.botonAtras.Name = "botonAtras";
+            this.botonAtras.Size = new System.Drawing.Size(45, 39);
+            this.botonAtras.TabIndex = 32;
+            this.botonAtras.UseVisualStyleBackColor = true;
+            this.botonAtras.Click += new System.EventHandler(this.botonAtras_Click);
+            // 
             // ColoresForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 262);
+            this.Controls.Add(this.botonAtras);
+            this.Controls.Add(this.botonBuscar);
             this.Controls.Add(this.botonEliminar);
             this.Controls.Add(this.Descripcionlabel);
             this.Controls.Add(this.IDlabel);
@@ -111,6 +139,7 @@
             this.Controls.Add(this.botonGuardar);
             this.Controls.Add(this.botonNuevo);
             this.Name = "ColoresForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Colores";
             this.Load += new System.EventHandler(this.ColoresForm_Load);
             this.ResumeLayout(false);
@@ -127,5 +156,7 @@
         private System.Windows.Forms.Label IDlabel;
         private System.Windows.Forms.Label Descripcionlabel;
         private System.Windows.Forms.Button botonEliminar;
+        private System.Windows.Forms.Button botonBuscar;
+        private System.Windows.Forms.Button botonAtras;
     }
 }

@@ -21,19 +21,30 @@ namespace Sistema_Ventas_Vehiculos.Registros
 
         private void botonEntrar_Click(object sender, EventArgs e)
         {
-
-            if (usuarioTextBox.Text == "admin" && passTextBox.Text == "1234") {
-                PortadaF.Show();
-                this.Close();
+            if (usuarioTextBox.Text == "" || passTextBox.Text == "")
+            {
+                MessageBox.Show("Debe llenar todos los Campos", "Error Al Iniciar Sesion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-            else {
-                MessageBox.Show("Usuario o clave Incorrecta");
+            else
+            {
+                if (usuarioTextBox.Text == "admin" && passTextBox.Text == "1234")
+                {
+                    PortadaF.Show();
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Usuario o clave Incorrecta");
+                }
             }
-
+            usuarioTextBox.Clear();
+            passTextBox.Clear();
         }
 
         private void botonAtras_Click(object sender, EventArgs e)
         {
+            Portada Portada = new Portada();
+            Portada.Show();
             this.Close();
         }
     }

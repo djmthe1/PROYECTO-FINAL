@@ -19,19 +19,22 @@ namespace Sistema_Ventas_Vehiculos
 
         private void botonSalir_Click(object sender, EventArgs e)
         {
-            Close();
+            Application.Exit();
         }
 
         private void botonIngresar_Click(object sender, EventArgs e)
         {
             Registros.LoginForm LoginF = new Registros.LoginForm();
             LoginF.Show();
+            this.Hide();
         }
 
         private void botonVerVehiculos_Click(object sender, EventArgs e)
         {
             Registros.BuscarForm BuscarF = new Registros.BuscarForm();
+            BuscarF.botonAtras.Visible = false;
             BuscarF.Show();
+            this.Hide();
         }
     }
 }
