@@ -39,7 +39,7 @@
             "Modelo",
             "Color",
             "Tipo de Vehiculo",
-            "Motor",
+            "Tipo de Motor",
             "Vehiculo"});
             this.SeleccionarComboBox.Location = new System.Drawing.Point(13, 13);
             this.SeleccionarComboBox.Name = "SeleccionarComboBox";

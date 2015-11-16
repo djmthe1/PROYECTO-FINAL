@@ -32,6 +32,7 @@
             this.botonIngresar = new System.Windows.Forms.Button();
             this.botonSalir = new System.Windows.Forms.Button();
             this.portadaLabel = new System.Windows.Forms.Label();
+            this.botonVerVehiculos = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // botonIngresar
@@ -69,6 +70,17 @@
             this.portadaLabel.TabIndex = 3;
             this.portadaLabel.Text = "Sistema-De-Ventas-De-Vehiculos";
             // 
+            // botonVerVehiculos
+            // 
+            this.botonVerVehiculos.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("botonVerVehiculos.BackgroundImage")));
+            this.botonVerVehiculos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.botonVerVehiculos.Location = new System.Drawing.Point(604, 242);
+            this.botonVerVehiculos.Name = "botonVerVehiculos";
+            this.botonVerVehiculos.Size = new System.Drawing.Size(80, 67);
+            this.botonVerVehiculos.TabIndex = 4;
+            this.botonVerVehiculos.UseVisualStyleBackColor = true;
+            this.botonVerVehiculos.Click += new System.EventHandler(this.botonVerVehiculos_Click);
+            // 
             // Portada
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -76,6 +88,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(696, 321);
+            this.Controls.Add(this.botonVerVehiculos);
             this.Controls.Add(this.portadaLabel);
             this.Controls.Add(this.botonSalir);
             this.Controls.Add(this.botonIngresar);
@@ -90,6 +103,7 @@
         private System.Windows.Forms.Button botonIngresar;
         private System.Windows.Forms.Button botonSalir;
         private System.Windows.Forms.Label portadaLabel;
+        private System.Windows.Forms.Button botonVerVehiculos;
     }
 }
 

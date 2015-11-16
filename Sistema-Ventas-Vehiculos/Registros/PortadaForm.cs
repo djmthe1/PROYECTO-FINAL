@@ -21,12 +21,14 @@ namespace Sistema_Ventas_Vehiculos.Registros
         {
             Registros.InsetarForm InsertarF = new InsetarForm();
             InsertarF.Show();
+            this.Close();
         }
 
         private void botonAgregarUsuario_Click(object sender, EventArgs e)
         {
             Registros.InsertarUsuarioForm InsertarU = new InsertarUsuarioForm();
             InsertarU.Show();
+            this.Close();
         }
 
         private void botonSalir_Click(object sender, EventArgs e)
@@ -40,6 +42,14 @@ namespace Sistema_Ventas_Vehiculos.Registros
         {
             Registros.BuscarForm BuscarF = new BuscarForm();
             BuscarF.Show();
+            this.Close();
+        }
+
+        private void botonVenderVehiculo_Click(object sender, EventArgs e)
+        {
+            Registros.ClientesForm ClientesF = new ClientesForm();
+            ClientesF.Show();
+            this.Close();
         }
     }
 }

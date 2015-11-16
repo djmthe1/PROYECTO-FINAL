@@ -17,7 +17,8 @@ namespace BLL
         public int Prioridad { set; get; }
         public ConexionDb conexion = new ConexionDb();
 
-        public Usuarios(int usuarioId, string nombre, string pass, int prioridad){
+        public Usuarios(int usuarioId, string nombre, string pass, int prioridad)
+        {
             this.UsuarioId = usuarioId;
             this.Nombre = nombre;
             this.Pass = pass;
@@ -46,7 +47,7 @@ namespace BLL
             bool retorno = false;
             try
             {
-                conexion.Ejecutar(String.Format("Update Usuarios set (Nombre,Pass,Prioridad) Values('{0}'{1}'{2}') where UsuarioId={4}", this.Nombre, this.Pass, this.Prioridad, this.UsuarioId));
+                conexion.Ejecutar(String.Format("Update Usuarios set Nombre='{0}',Pass='{1}',Prioridad='{2}' where UsuarioId='{3}'", this.Nombre, this.Pass, this.Prioridad, this.UsuarioId));
                 retorno = true;
             }
             catch (Exception ex) { throw ex; }

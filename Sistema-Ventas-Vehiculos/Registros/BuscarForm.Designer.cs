@@ -28,19 +28,112 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BuscarForm));
+            this.buscarComboBox = new System.Windows.Forms.ComboBox();
+            this.BuscarLabel = new System.Windows.Forms.Label();
+            this.buscarTextBox = new System.Windows.Forms.TextBox();
+            this.botonBuscar = new System.Windows.Forms.Button();
+            this.buscarDataGridView = new System.Windows.Forms.DataGridView();
+            this.sistemaVentasVehiculosDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this._Sistema_Ventas_VehiculosDataSet2 = new Sistema_Ventas_Vehiculos._Sistema_Ventas_VehiculosDataSet2();
+            this.sistemaVentasVehiculosDataSet2BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.buscarDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sistemaVentasVehiculosDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._Sistema_Ventas_VehiculosDataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sistemaVentasVehiculosDataSet2BindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // buscarComboBox
+            // 
+            this.buscarComboBox.FormattingEnabled = true;
+            this.buscarComboBox.Location = new System.Drawing.Point(12, 30);
+            this.buscarComboBox.Name = "buscarComboBox";
+            this.buscarComboBox.Size = new System.Drawing.Size(121, 21);
+            this.buscarComboBox.TabIndex = 0;
+            // 
+            // BuscarLabel
+            // 
+            this.BuscarLabel.AutoSize = true;
+            this.BuscarLabel.Location = new System.Drawing.Point(13, 11);
+            this.BuscarLabel.Name = "BuscarLabel";
+            this.BuscarLabel.Size = new System.Drawing.Size(62, 13);
+            this.BuscarLabel.TabIndex = 1;
+            this.BuscarLabel.Text = "Buscar Por:";
+            // 
+            // buscarTextBox
+            // 
+            this.buscarTextBox.Location = new System.Drawing.Point(162, 30);
+            this.buscarTextBox.Name = "buscarTextBox";
+            this.buscarTextBox.Size = new System.Drawing.Size(130, 20);
+            this.buscarTextBox.TabIndex = 2;
+            // 
+            // botonBuscar
+            // 
+            this.botonBuscar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("botonBuscar.BackgroundImage")));
+            this.botonBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.botonBuscar.Location = new System.Drawing.Point(427, 12);
+            this.botonBuscar.Name = "botonBuscar";
+            this.botonBuscar.Size = new System.Drawing.Size(77, 54);
+            this.botonBuscar.TabIndex = 3;
+            this.botonBuscar.UseVisualStyleBackColor = true;
+            // 
+            // buscarDataGridView
+            // 
+            this.buscarDataGridView.AllowUserToAddRows = false;
+            this.buscarDataGridView.AllowUserToDeleteRows = false;
+            this.buscarDataGridView.AutoGenerateColumns = false;
+            this.buscarDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.buscarDataGridView.DataSource = this.sistemaVentasVehiculosDataSet2BindingSource;
+            this.buscarDataGridView.Location = new System.Drawing.Point(12, 81);
+            this.buscarDataGridView.Name = "buscarDataGridView";
+            this.buscarDataGridView.ReadOnly = true;
+            this.buscarDataGridView.Size = new System.Drawing.Size(368, 169);
+            this.buscarDataGridView.TabIndex = 4;
+            // 
+            // _Sistema_Ventas_VehiculosDataSet2
+            // 
+            this._Sistema_Ventas_VehiculosDataSet2.DataSetName = "_Sistema_Ventas_VehiculosDataSet2";
+            this._Sistema_Ventas_VehiculosDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // sistemaVentasVehiculosDataSet2BindingSource
+            // 
+            this.sistemaVentasVehiculosDataSet2BindingSource.DataSource = this._Sistema_Ventas_VehiculosDataSet2;
+            this.sistemaVentasVehiculosDataSet2BindingSource.Position = 0;
             // 
             // BuscarForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 262);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(516, 309);
+            this.Controls.Add(this.buscarDataGridView);
+            this.Controls.Add(this.botonBuscar);
+            this.Controls.Add(this.buscarTextBox);
+            this.Controls.Add(this.BuscarLabel);
+            this.Controls.Add(this.buscarComboBox);
+            this.DoubleBuffered = true;
             this.Name = "BuscarForm";
             this.Text = "Buscar";
+            ((System.ComponentModel.ISupportInitialize)(this.buscarDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sistemaVentasVehiculosDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._Sistema_Ventas_VehiculosDataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sistemaVentasVehiculosDataSet2BindingSource)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.ComboBox buscarComboBox;
+        private System.Windows.Forms.Label BuscarLabel;
+        private System.Windows.Forms.TextBox buscarTextBox;
+        private System.Windows.Forms.Button botonBuscar;
+        private System.Windows.Forms.DataGridView buscarDataGridView;
+        private System.Windows.Forms.BindingSource sistemaVentasVehiculosDataSet2BindingSource;
+        private _Sistema_Ventas_VehiculosDataSet2 _Sistema_Ventas_VehiculosDataSet2;
+        private System.Windows.Forms.BindingSource sistemaVentasVehiculosDataSetBindingSource;
     }
 }
