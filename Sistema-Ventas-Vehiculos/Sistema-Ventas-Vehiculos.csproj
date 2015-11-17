@@ -162,6 +162,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>_Sistema_Ventas_VehiculosDataSet2.xsd</DependentUpon>
     </Compile>
+    <Compile Include="_Sistema_Ventas_VehiculosDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_Sistema_Ventas_VehiculosDataSet3.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Portada.resx">
       <DependentUpon>Portada.cs</DependentUpon>
     </EmbeddedResource>
@@ -254,6 +259,17 @@
     </None>
     <None Include="_Sistema_Ventas_VehiculosDataSet2.xss">
       <DependentUpon>_Sistema_Ventas_VehiculosDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="_Sistema_Ventas_VehiculosDataSet3.xsc">
+      <DependentUpon>_Sistema_Ventas_VehiculosDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="_Sistema_Ventas_VehiculosDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_Sistema_Ventas_VehiculosDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_Sistema_Ventas_VehiculosDataSet3.xss">
+      <DependentUpon>_Sistema_Ventas_VehiculosDataSet3.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

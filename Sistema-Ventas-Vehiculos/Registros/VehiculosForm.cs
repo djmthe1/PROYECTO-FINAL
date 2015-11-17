@@ -16,5 +16,12 @@ namespace Sistema_Ventas_Vehiculos.Registros
         {
             InitializeComponent();
         }
+
+        private void VehiculosForm_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the '_Sistema_Ventas_VehiculosDataSet3.Colores' table. You can move, or remove it, as needed.
+            this.coloresTableAdapter.Fill(this._Sistema_Ventas_VehiculosDataSet3.Colores);
+
+        }
     }
 }

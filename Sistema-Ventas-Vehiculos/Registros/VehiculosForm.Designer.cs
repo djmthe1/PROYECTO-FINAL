@@ -28,12 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VehiculosForm));
             this.botonEliminar = new System.Windows.Forms.Button();
             this.botonGuardar = new System.Windows.Forms.Button();
             this.botonNuevo = new System.Windows.Forms.Button();
             this.botonBuscar = new System.Windows.Forms.Button();
             this.botonAtras = new System.Windows.Forms.Button();
+            this._Sistema_Ventas_VehiculosDataSet = new Sistema_Ventas_Vehiculos._Sistema_Ventas_VehiculosDataSet();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this._Sistema_Ventas_VehiculosDataSet3 = new Sistema_Ventas_Vehiculos._Sistema_Ventas_VehiculosDataSet3();
+            this.coloresBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.coloresTableAdapter = new Sistema_Ventas_Vehiculos._Sistema_Ventas_VehiculosDataSet3TableAdapters.ColoresTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this._Sistema_Ventas_VehiculosDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._Sistema_Ventas_VehiculosDataSet3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coloresBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // botonEliminar
@@ -84,11 +93,43 @@
             this.botonAtras.TabIndex = 32;
             this.botonAtras.UseVisualStyleBackColor = true;
             // 
+            // _Sistema_Ventas_VehiculosDataSet
+            // 
+            this._Sistema_Ventas_VehiculosDataSet.DataSetName = "_Sistema_Ventas_VehiculosDataSet";
+            this._Sistema_Ventas_VehiculosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.coloresBindingSource, "Descripcion", true));
+            this.comboBox1.DataSource = this.coloresBindingSource;
+            this.comboBox1.DisplayMember = "Descripcion";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(13, 12);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 33;
+            this.comboBox1.ValueMember = "Descripcion";
+            // 
+            // _Sistema_Ventas_VehiculosDataSet3
+            // 
+            this._Sistema_Ventas_VehiculosDataSet3.DataSetName = "_Sistema_Ventas_VehiculosDataSet3";
+            this._Sistema_Ventas_VehiculosDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // coloresBindingSource
+            // 
+            this.coloresBindingSource.DataMember = "Colores";
+            this.coloresBindingSource.DataSource = this._Sistema_Ventas_VehiculosDataSet3;
+            // 
+            // coloresTableAdapter
+            // 
+            this.coloresTableAdapter.ClearBeforeFill = true;
+            // 
             // VehiculosForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(692, 405);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.botonAtras);
             this.Controls.Add(this.botonBuscar);
             this.Controls.Add(this.botonEliminar);
@@ -97,6 +138,10 @@
             this.Name = "VehiculosForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Vehiculos";
+            this.Load += new System.EventHandler(this.VehiculosForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this._Sistema_Ventas_VehiculosDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._Sistema_Ventas_VehiculosDataSet3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coloresBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -108,5 +153,10 @@
         private System.Windows.Forms.Button botonNuevo;
         private System.Windows.Forms.Button botonBuscar;
         private System.Windows.Forms.Button botonAtras;
+        private _Sistema_Ventas_VehiculosDataSet _Sistema_Ventas_VehiculosDataSet;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private _Sistema_Ventas_VehiculosDataSet3 _Sistema_Ventas_VehiculosDataSet3;
+        private System.Windows.Forms.BindingSource coloresBindingSource;
+        private _Sistema_Ventas_VehiculosDataSet3TableAdapters.ColoresTableAdapter coloresTableAdapter;
     }
 }
