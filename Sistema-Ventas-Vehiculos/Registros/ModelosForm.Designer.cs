@@ -122,6 +122,7 @@
             this.botonAtras.Size = new System.Drawing.Size(47, 41);
             this.botonAtras.TabIndex = 32;
             this.botonAtras.UseVisualStyleBackColor = true;
+            this.botonAtras.Click += new System.EventHandler(this.botonAtras_Click);
             // 
             // ModelosForm
             // 

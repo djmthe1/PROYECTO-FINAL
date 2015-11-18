@@ -89,10 +89,10 @@
             this.buscarDataGridView.AutoGenerateColumns = false;
             this.buscarDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.buscarDataGridView.DataSource = this.sistemaVentasVehiculosDataSet2BindingSource;
-            this.buscarDataGridView.Location = new System.Drawing.Point(12, 81);
+            this.buscarDataGridView.Location = new System.Drawing.Point(16, 114);
             this.buscarDataGridView.Name = "buscarDataGridView";
             this.buscarDataGridView.ReadOnly = true;
-            this.buscarDataGridView.Size = new System.Drawing.Size(368, 169);
+            this.buscarDataGridView.Size = new System.Drawing.Size(368, 183);
             this.buscarDataGridView.TabIndex = 4;
             // 
             // sistemaVentasVehiculosDataSet2BindingSource

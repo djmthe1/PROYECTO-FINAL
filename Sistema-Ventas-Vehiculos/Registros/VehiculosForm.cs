@@ -23,5 +23,12 @@ namespace Sistema_Ventas_Vehiculos.Registros
             this.coloresTableAdapter.Fill(this._Sistema_Ventas_VehiculosDataSet3.Colores);
 
         }
+
+        private void botonAtras_Click(object sender, EventArgs e)
+        {
+            InsetarForm InsetarF = new InsetarForm();
+            InsetarF.Show();
+            this.Close();
+        }
     }
 }

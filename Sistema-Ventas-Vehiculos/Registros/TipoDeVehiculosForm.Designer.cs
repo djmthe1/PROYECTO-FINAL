@@ -123,6 +123,7 @@
             this.botonAtras.Size = new System.Drawing.Size(45, 39);
             this.botonAtras.TabIndex = 31;
             this.botonAtras.UseVisualStyleBackColor = true;
+            this.botonAtras.Click += new System.EventHandler(this.botonAtras_Click);
             // 
             // TipoDeVehiculosForm
             // 

@@ -28,36 +28,42 @@ namespace Sistema_Ventas_Vehiculos.Registros
             {
                 MarcasForm MarcasF = new MarcasForm();
                 MarcasF.Show();
+                this.Hide();
 
             }
             if (SeleccionarComboBox.Text == "Modelo")
             {
                 ModelosForm ModelosF = new ModelosForm();
                 ModelosF.Show();
+                this.Hide();
 
             }
             if (SeleccionarComboBox.Text == "Color")
             {
                 ColoresForm ColoresF = new ColoresForm();
                 ColoresF.Show();
+                this.Hide();
 
             }
             if (SeleccionarComboBox.Text == "Tipo de Vehiculo")
             {
                 TipoDeVehiculosForm TipoVehiculoF = new TipoDeVehiculosForm();
                 TipoVehiculoF.Show();
+                this.Hide();
 
             }
             if (SeleccionarComboBox.Text == "Tipo de Motor")
             {
                 MotoresForm TipoMotorF = new MotoresForm();
                 TipoMotorF.Show();
+                this.Hide();
 
             }
             if (SeleccionarComboBox.Text == "Vehiculo")
             {
                 VehiculosForm VehiculosF = new VehiculosForm();
                 VehiculosF.Show();
+                this.Hide();
 
             }
         }

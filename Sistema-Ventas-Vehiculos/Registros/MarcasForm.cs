@@ -60,27 +60,13 @@ namespace Sistema_Ventas_Vehiculos.Registros
 
         private void botonGuardar_Click_1(object sender, EventArgs e)
         {
-            try
-            {
+           
                 marcas.Descripcion = DescripciontextBox.Text;
-                if (MarcasIDtextBox.Text == "")
+                if (MarcasIDtextBox.Text.Length > 0)
                 {
-                    
-                    if (marcas.Insertar())
-                    {
-                        DescripciontextBox.Clear();
-                        MensajeOk("Insertado Correctamente");
-                    }
-                    else {
-                        MensajeError("Error al Insertar");
-                    }
-                            
-                    
-                }
-                else
-                {
+
                     int id = 0;
-                    int.TryParse(MarcasIDtextBox.Text,out id);
+                    int.TryParse(MarcasIDtextBox.Text, out id);
                     marcas.MarcaId = id;
                     if (marcas.Editar())
                     {
@@ -92,17 +78,29 @@ namespace Sistema_Ventas_Vehiculos.Registros
                         MensajeError("Error al Modificar");
                     }
 
-                }
             }
-            catch (Exception)
-            {
-                MessageBox.Show("Error al Insertar o Modificar");
+                else
+                {
+
+                    if (marcas.Insertar())
+                        {
+                            DescripciontextBox.Clear();
+                            MensajeOk("Insertado Correctamente");
+                        }
+                        else
+                        {
+                            MensajeError("Error al Insertar");
+                        }
+
             }
+            
         }
 
         private void botonAtras_Click(object sender, EventArgs e)
         {
-
+            InsetarForm InsetarF = new InsetarForm();
+            InsetarF.Show();
+            this.Close();
         }
     }
 }
