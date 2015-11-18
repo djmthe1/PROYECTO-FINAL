@@ -52,5 +52,13 @@ namespace Sistema_Ventas_Vehiculos.Registros
             ClientesF.Show();
             this.Close();
         }
+
+        private void botonListar_Click(object sender, EventArgs e)
+        {
+            Registros.ListarForm ListarF = new ListarForm();
+            ListarF.botonAtrasPortada.Visible = false;
+            ListarF.Show();
+            this.Close();
+        }
     }
 }

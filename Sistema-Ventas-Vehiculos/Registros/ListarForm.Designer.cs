@@ -51,6 +51,7 @@
             this.botonAtrasPortada.Size = new System.Drawing.Size(77, 54);
             this.botonAtrasPortada.TabIndex = 34;
             this.botonAtrasPortada.UseVisualStyleBackColor = true;
+            this.botonAtrasPortada.Click += new System.EventHandler(this.botonAtrasPortada_Click);
             // 
             // botonAtras
             // 
@@ -62,6 +63,7 @@
             this.botonAtras.Size = new System.Drawing.Size(77, 54);
             this.botonAtras.TabIndex = 35;
             this.botonAtras.UseVisualStyleBackColor = true;
+            this.botonAtras.Click += new System.EventHandler(this.botonAtras_Click);
             // 
             // listarDataGridView
             // 

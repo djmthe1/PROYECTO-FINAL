@@ -41,7 +41,7 @@
             // usuarioLabel
             // 
             this.usuarioLabel.AutoSize = true;
-            this.usuarioLabel.Location = new System.Drawing.Point(163, 135);
+            this.usuarioLabel.Location = new System.Drawing.Point(192, 156);
             this.usuarioLabel.Name = "usuarioLabel";
             this.usuarioLabel.Size = new System.Drawing.Size(56, 13);
             this.usuarioLabel.TabIndex = 0;
@@ -50,7 +50,7 @@
             // passLabel
             // 
             this.passLabel.AutoSize = true;
-            this.passLabel.Location = new System.Drawing.Point(138, 171);
+            this.passLabel.Location = new System.Drawing.Point(167, 192);
             this.passLabel.Name = "passLabel";
             this.passLabel.Size = new System.Drawing.Size(81, 13);
             this.passLabel.TabIndex = 1;
@@ -58,14 +58,14 @@
             // 
             // usuarioTextBox
             // 
-            this.usuarioTextBox.Location = new System.Drawing.Point(233, 128);
+            this.usuarioTextBox.Location = new System.Drawing.Point(262, 149);
             this.usuarioTextBox.Name = "usuarioTextBox";
             this.usuarioTextBox.Size = new System.Drawing.Size(100, 20);
             this.usuarioTextBox.TabIndex = 2;
             // 
             // passTextBox
             // 
-            this.passTextBox.Location = new System.Drawing.Point(233, 168);
+            this.passTextBox.Location = new System.Drawing.Point(262, 189);
             this.passTextBox.Name = "passTextBox";
             this.passTextBox.Size = new System.Drawing.Size(100, 20);
             this.passTextBox.TabIndex = 3;
@@ -76,9 +76,9 @@
             this.botonEntrar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("botonEntrar.BackgroundImage")));
             this.botonEntrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.botonEntrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.botonEntrar.Location = new System.Drawing.Point(12, 254);
+            this.botonEntrar.Location = new System.Drawing.Point(12, 280);
             this.botonEntrar.Name = "botonEntrar";
-            this.botonEntrar.Size = new System.Drawing.Size(49, 36);
+            this.botonEntrar.Size = new System.Drawing.Size(60, 47);
             this.botonEntrar.TabIndex = 4;
             this.botonEntrar.UseVisualStyleBackColor = true;
             this.botonEntrar.Click += new System.EventHandler(this.botonEntrar_Click);
@@ -88,9 +88,9 @@
             this.botonAtras.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("botonAtras.BackgroundImage")));
             this.botonAtras.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.botonAtras.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.botonAtras.Location = new System.Drawing.Point(442, 254);
+            this.botonAtras.Location = new System.Drawing.Point(487, 280);
             this.botonAtras.Name = "botonAtras";
-            this.botonAtras.Size = new System.Drawing.Size(49, 36);
+            this.botonAtras.Size = new System.Drawing.Size(60, 47);
             this.botonAtras.TabIndex = 5;
             this.botonAtras.UseVisualStyleBackColor = true;
             this.botonAtras.Click += new System.EventHandler(this.botonAtras_Click);
@@ -99,7 +99,7 @@
             // 
             this.mensajeLabel.AutoSize = true;
             this.mensajeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mensajeLabel.Location = new System.Drawing.Point(103, 110);
+            this.mensajeLabel.Location = new System.Drawing.Point(132, 126);
             this.mensajeLabel.Name = "mensajeLabel";
             this.mensajeLabel.Size = new System.Drawing.Size(303, 15);
             this.mensajeLabel.TabIndex = 6;
@@ -112,7 +112,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(503, 302);
+            this.ClientSize = new System.Drawing.Size(559, 339);
             this.Controls.Add(this.mensajeLabel);
             this.Controls.Add(this.botonAtras);
             this.Controls.Add(this.botonEntrar);
@@ -124,6 +124,7 @@
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.LoginForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

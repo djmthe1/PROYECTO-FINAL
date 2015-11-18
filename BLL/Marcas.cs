@@ -28,10 +28,9 @@ namespace BLL
             try
             {
                 conexion.Ejecutar(String.Format("insert into Marcas (Descripcion) Values('{0}')", this.Descripcion));
-                retornar= true;
-                
+                retornar = true;
             }
-            catch (Exception ex) {  }
+            catch (Exception ex) { throw ex; }
             return retornar;
         }
 
@@ -40,7 +39,7 @@ namespace BLL
             bool retornar = false;
             try {
                 conexion.Ejecutar(String.Format("Update Marcas set Descripcion='{0}' where MarcaId={1}", this.Descripcion,this.MarcaId));
-                retornar =  true;
+                retornar = true;
             }
             catch (Exception ex) { throw ex; }
             return retornar;

@@ -57,5 +57,12 @@ namespace Sistema_Ventas_Vehiculos.Registros
                 MessageBox.Show("Error al Eliminar");
             }
         }
+
+        private void botonAtras_Click(object sender, EventArgs e)
+        {
+            InsetarForm InsetarF = new InsetarForm();
+            InsetarF.Show();
+            this.Close();
+        }
     }
 }

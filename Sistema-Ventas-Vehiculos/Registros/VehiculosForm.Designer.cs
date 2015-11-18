@@ -37,12 +37,12 @@
             this.botonAtras = new System.Windows.Forms.Button();
             this._Sistema_Ventas_VehiculosDataSet = new Sistema_Ventas_Vehiculos._Sistema_Ventas_VehiculosDataSet();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this._Sistema_Ventas_VehiculosDataSet3 = new Sistema_Ventas_Vehiculos._Sistema_Ventas_VehiculosDataSet3();
             this.coloresBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this._Sistema_Ventas_VehiculosDataSet3 = new Sistema_Ventas_Vehiculos._Sistema_Ventas_VehiculosDataSet3();
             this.coloresTableAdapter = new Sistema_Ventas_Vehiculos._Sistema_Ventas_VehiculosDataSet3TableAdapters.ColoresTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this._Sistema_Ventas_VehiculosDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._Sistema_Ventas_VehiculosDataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.coloresBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._Sistema_Ventas_VehiculosDataSet3)).BeginInit();
             this.SuspendLayout();
             // 
             // botonEliminar
@@ -92,6 +92,7 @@
             this.botonAtras.Size = new System.Drawing.Size(52, 43);
             this.botonAtras.TabIndex = 32;
             this.botonAtras.UseVisualStyleBackColor = true;
+            this.botonAtras.Click += new System.EventHandler(this.botonAtras_Click);
             // 
             // _Sistema_Ventas_VehiculosDataSet
             // 
@@ -110,15 +111,15 @@
             this.comboBox1.TabIndex = 33;
             this.comboBox1.ValueMember = "Descripcion";
             // 
-            // _Sistema_Ventas_VehiculosDataSet3
-            // 
-            this._Sistema_Ventas_VehiculosDataSet3.DataSetName = "_Sistema_Ventas_VehiculosDataSet3";
-            this._Sistema_Ventas_VehiculosDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // coloresBindingSource
             // 
             this.coloresBindingSource.DataMember = "Colores";
             this.coloresBindingSource.DataSource = this._Sistema_Ventas_VehiculosDataSet3;
+            // 
+            // _Sistema_Ventas_VehiculosDataSet3
+            // 
+            this._Sistema_Ventas_VehiculosDataSet3.DataSetName = "_Sistema_Ventas_VehiculosDataSet3";
+            this._Sistema_Ventas_VehiculosDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // coloresTableAdapter
             // 
@@ -140,8 +141,8 @@
             this.Text = "Vehiculos";
             this.Load += new System.EventHandler(this.VehiculosForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this._Sistema_Ventas_VehiculosDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._Sistema_Ventas_VehiculosDataSet3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.coloresBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._Sistema_Ventas_VehiculosDataSet3)).EndInit();
             this.ResumeLayout(false);
 
         }

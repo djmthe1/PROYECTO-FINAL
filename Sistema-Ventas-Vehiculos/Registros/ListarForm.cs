@@ -23,5 +23,19 @@ namespace Sistema_Ventas_Vehiculos.Registros
             this.vehiculosTableAdapter.Fill(this._Sistema_Ventas_VehiculosDataSet2.Vehiculos);
 
         }
+
+        private void botonAtras_Click(object sender, EventArgs e)
+        {
+            PortadaForm PortadaF = new PortadaForm();
+            PortadaF.Show();
+            this.Close();
+        }
+
+        private void botonAtrasPortada_Click(object sender, EventArgs e)
+        {
+            Portada Portada = new Portada();
+            Portada.Show();
+            this.Close();
+        }
     }
 }
