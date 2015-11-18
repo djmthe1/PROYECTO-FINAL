@@ -33,6 +33,7 @@
             this.botonSalir = new System.Windows.Forms.Button();
             this.portadaLabel = new System.Windows.Forms.Label();
             this.botonVerVehiculos = new System.Windows.Forms.Button();
+            this.botonListar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // botonIngresar
@@ -41,7 +42,7 @@
             this.botonIngresar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.botonIngresar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.botonIngresar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.botonIngresar.Location = new System.Drawing.Point(12, 12);
+            this.botonIngresar.Location = new System.Drawing.Point(12, 242);
             this.botonIngresar.Name = "botonIngresar";
             this.botonIngresar.Size = new System.Drawing.Size(80, 67);
             this.botonIngresar.TabIndex = 1;
@@ -83,6 +84,17 @@
             this.botonVerVehiculos.UseVisualStyleBackColor = true;
             this.botonVerVehiculos.Click += new System.EventHandler(this.botonVerVehiculos_Click);
             // 
+            // botonListar
+            // 
+            this.botonListar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("botonListar.BackgroundImage")));
+            this.botonListar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.botonListar.Location = new System.Drawing.Point(12, 12);
+            this.botonListar.Name = "botonListar";
+            this.botonListar.Size = new System.Drawing.Size(80, 67);
+            this.botonListar.TabIndex = 5;
+            this.botonListar.UseVisualStyleBackColor = true;
+            this.botonListar.Click += new System.EventHandler(this.botonListar_Click);
+            // 
             // Portada
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -90,6 +102,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(696, 321);
+            this.Controls.Add(this.botonListar);
             this.Controls.Add(this.botonVerVehiculos);
             this.Controls.Add(this.portadaLabel);
             this.Controls.Add(this.botonSalir);
@@ -107,6 +120,7 @@
         private System.Windows.Forms.Button botonSalir;
         private System.Windows.Forms.Label portadaLabel;
         private System.Windows.Forms.Button botonVerVehiculos;
+        private System.Windows.Forms.Button botonListar;
     }
 }
 

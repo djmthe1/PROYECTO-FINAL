@@ -60,8 +60,7 @@ namespace Sistema_Ventas_Vehiculos.Registros
 
         private void botonGuardar_Click_1(object sender, EventArgs e)
         {
-            try
-            {
+           
                 marcas.Descripcion = DescripciontextBox.Text;
                 if (MarcasIDtextBox.Text == "")
                 {
@@ -93,11 +92,8 @@ namespace Sistema_Ventas_Vehiculos.Registros
                     }
 
                 }
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Error al Insertar o Modificar");
-            }
+            
+            
         }
 
         private void botonAtras_Click(object sender, EventArgs e)

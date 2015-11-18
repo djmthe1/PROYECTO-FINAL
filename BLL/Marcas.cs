@@ -31,7 +31,7 @@ namespace BLL
                 retornar= true;
                 
             }
-            catch (Exception ex) { throw ex; }
+            catch (Exception ex) {  }
             return retornar;
         }
 

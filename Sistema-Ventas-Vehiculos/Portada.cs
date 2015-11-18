@@ -36,6 +36,14 @@ namespace Sistema_Ventas_Vehiculos
             BuscarF.Show();
             this.Hide();
         }
+
+        private void botonListar_Click(object sender, EventArgs e)
+        {
+            Registros.ListarForm ListarF = new Registros.ListarForm();
+            ListarF.botonAtras.Visible = false;
+            ListarF.Show();
+            this.Hide();
+        }
     }
 }
 
