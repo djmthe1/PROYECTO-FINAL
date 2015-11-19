@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FacturaDeVentasForm));
             this.botonAnterior = new System.Windows.Forms.Button();
             this.botonSiguente = new System.Windows.Forms.Button();
+            this.vehiculoIdComboBox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // botonAnterior
@@ -56,11 +57,20 @@
             this.botonSiguente.TabIndex = 3;
             this.botonSiguente.UseVisualStyleBackColor = true;
             // 
+            // vehiculoIdComboBox
+            // 
+            this.vehiculoIdComboBox.FormattingEnabled = true;
+            this.vehiculoIdComboBox.Location = new System.Drawing.Point(13, 13);
+            this.vehiculoIdComboBox.Name = "vehiculoIdComboBox";
+            this.vehiculoIdComboBox.Size = new System.Drawing.Size(121, 21);
+            this.vehiculoIdComboBox.TabIndex = 4;
+            // 
             // FacturaDeVentasForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(711, 489);
+            this.Controls.Add(this.vehiculoIdComboBox);
             this.Controls.Add(this.botonSiguente);
             this.Controls.Add(this.botonAnterior);
             this.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -76,5 +86,6 @@
 
         private System.Windows.Forms.Button botonAnterior;
         private System.Windows.Forms.Button botonSiguente;
+        private System.Windows.Forms.ComboBox vehiculoIdComboBox;
     }
 }
