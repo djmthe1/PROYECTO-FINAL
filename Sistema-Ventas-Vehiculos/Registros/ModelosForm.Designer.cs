@@ -141,6 +141,7 @@
             this.Name = "ModelosForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Modelos";
+            this.Load += new System.EventHandler(this.ModelosForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

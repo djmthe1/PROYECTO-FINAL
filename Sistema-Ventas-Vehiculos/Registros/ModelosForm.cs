@@ -59,5 +59,10 @@ namespace Sistema_Ventas_Vehiculos.Registros
             InsetarF.Show();
             this.Close();
         }
+
+        private void ModelosForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
