@@ -147,6 +147,7 @@
             this.Name = "BuscarForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Buscar";
+            this.Load += new System.EventHandler(this.BuscarForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.buscarDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sistemaVentasVehiculosDataSet2BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._Sistema_Ventas_VehiculosDataSet2)).EndInit();

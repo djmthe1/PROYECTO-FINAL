@@ -26,7 +26,6 @@ namespace Sistema_Ventas_Vehiculos
         {
             Registros.LoginForm LoginF = new Registros.LoginForm();
             LoginF.Show();
-            this.Hide();
         }
 
         private void botonVerVehiculos_Click(object sender, EventArgs e)
@@ -34,7 +33,6 @@ namespace Sistema_Ventas_Vehiculos
             Registros.BuscarForm BuscarF = new Registros.BuscarForm();
             BuscarF.botonAtras.Visible = false;
             BuscarF.Show();
-            this.Hide();
         }
 
         private void botonListar_Click(object sender, EventArgs e)
@@ -42,7 +40,11 @@ namespace Sistema_Ventas_Vehiculos
             Registros.ListarForm ListarF = new Registros.ListarForm();
             ListarF.botonAtras.Visible = false;
             ListarF.Show();
-            this.Hide();
+        }
+
+        private void Portada_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

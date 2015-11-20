@@ -33,8 +33,6 @@ namespace Sistema_Ventas_Vehiculos.Registros
 
         private void botonAtrasPortada_Click(object sender, EventArgs e)
         {
-            Portada Portada = new Portada();
-            Portada.Show();
             this.Close();
         }
     }

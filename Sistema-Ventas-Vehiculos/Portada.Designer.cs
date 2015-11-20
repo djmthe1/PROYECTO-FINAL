@@ -110,6 +110,7 @@
             this.Name = "Portada";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sistema De Ventas Vehiculos";
+            this.Load += new System.EventHandler(this.Portada_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

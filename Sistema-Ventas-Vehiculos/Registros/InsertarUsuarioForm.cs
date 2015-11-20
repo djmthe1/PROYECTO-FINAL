@@ -103,5 +103,10 @@ namespace Sistema_Ventas_Vehiculos.Registros
                 }
             }
         }
+
+        private void InsertarUsuarioForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -99,6 +99,7 @@
             this.Controls.Add(this.botonAtrasPortada);
             this.DoubleBuffered = true;
             this.Name = "ListarForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Listar";
             this.Load += new System.EventHandler(this.ListarForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.listarDataGridView)).EndInit();

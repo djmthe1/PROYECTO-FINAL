@@ -41,10 +41,16 @@ namespace Sistema_Ventas_Vehiculos.Registros
             passTextBox.Clear();
         }
 
+        private void passTextBox_KeyPress(object sender, System.Windows.Forms.KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                botonEntrar.PerformClick();
+            }
+        }
+
         private void botonAtras_Click(object sender, EventArgs e)
         {
-            Portada Portada = new Portada();
-            Portada.Show();
             this.Close();
         }
 
