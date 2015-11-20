@@ -64,5 +64,47 @@ namespace Sistema_Ventas_Vehiculos.Registros
             InsetarF.Show();
             this.Close();
         }
+
+        private void botonGuardar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                motores.Descripcion = DescripciontextBox.Text;
+                if (MotorIDtextBox.Text == "")
+                {
+
+                    if (motores.Insertar())
+                    {
+                        DescripciontextBox.Clear();
+                        MensajeOk("Insertado Correctamente");
+                    }
+                    else
+                    {
+                        MensajeError("Error al Insertar");
+                    }
+
+                }
+                else
+                {
+                    int id = 0;
+                    int.TryParse(MotorIDtextBox.Text, out id);
+                    motores.MotorId= id;
+                    if (motores.Editar())
+                    {
+                        DescripciontextBox.Clear();
+                        MensajeOk("Modificado Correctamente");
+                    }
+                    else
+                    {
+                        MensajeError("Error al Modificar");
+                    }
+
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error al Insertar o Modificar");
+            }
+        }
     }
 }

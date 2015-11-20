@@ -60,40 +60,37 @@ namespace Sistema_Ventas_Vehiculos.Registros
 
         private void botonGuardar_Click_1(object sender, EventArgs e)
         {
-           
-                marcas.Descripcion = DescripciontextBox.Text;
-                if (MarcasIDtextBox.Text.Length > 0)
+
+            marcas.Descripcion = DescripciontextBox.Text;
+            if (MarcasIDtextBox.Text == "")
+            {
+                if (marcas.Insertar())
                 {
-
-                    int id = 0;
-                    int.TryParse(MarcasIDtextBox.Text, out id);
-                    marcas.MarcaId = id;
-                    if (marcas.Editar())
-                    {
-                        DescripciontextBox.Clear();
-                        MensajeOk("Modificado Correctamente");
-                    }
-                    else
-                    {
-                        MensajeError("Error al Modificar");
-                    }
-
+                    DescripciontextBox.Clear();
+                    MensajeOk("Insertado Correctamente");
+                }
+                else
+                {
+                    MensajeError("Error al Insertar");
+                }
             }
                 else
                 {
 
-                    if (marcas.Insertar())
-                        {
-                            DescripciontextBox.Clear();
-                            MensajeOk("Insertado Correctamente");
-                        }
-                        else
-                        {
-                            MensajeError("Error al Insertar");
-                        }
-
+                int id = 0;
+                int.TryParse(MarcasIDtextBox.Text, out id);
+                marcas.MarcaId = id;
+                if (marcas.Editar())
+                {
+                    DescripciontextBox.Clear();
+                    MensajeOk("Modificado Correctamente");
+                }
+                else
+                {
+                    MensajeError("Error al Modificar");
+                }
             }
-            
+
         }
 
         private void botonAtras_Click(object sender, EventArgs e)

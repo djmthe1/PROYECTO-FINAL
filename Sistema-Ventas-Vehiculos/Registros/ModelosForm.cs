@@ -64,5 +64,47 @@ namespace Sistema_Ventas_Vehiculos.Registros
         {
 
         }
+
+        private void botonGuardar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                modelos.Descripcion = DescripciontextBox.Text;
+                if (ModeloIDtextBox.Text == "")
+                {
+
+                    if (modelos.Insertar())
+                    {
+                        DescripciontextBox.Clear();
+                        MensajeOk("Insertado Correctamente");
+                    }
+                    else
+                    {
+                        MensajeError("Error al Insertar");
+                    }
+
+                }
+                else
+                {
+                    int id = 0;
+                    int.TryParse(ModeloIDtextBox.Text, out id);
+                    modelos.ModeloId = id;
+                    if (modelos.Editar())
+                    {
+                        DescripciontextBox.Clear();
+                        MensajeOk("Modificado Correctamente");
+                    }
+                    else
+                    {
+                        MensajeError("Error al Modificar");
+                    }
+
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error al Insertar o Modificar");
+            }
+        }
     }
 }

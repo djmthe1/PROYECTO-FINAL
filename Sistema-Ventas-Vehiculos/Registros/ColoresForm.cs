@@ -64,5 +64,47 @@ namespace Sistema_Ventas_Vehiculos.Registros
             InsetarF.Show();
             this.Close();
         }
+
+        private void botonGuardar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                colores.Descripcion = DescripciontextBox.Text;
+                if (ColorIDtextBox.Text == "")
+                {
+
+                    if (colores.Insertar())
+                    {
+                        DescripciontextBox.Clear();
+                        MensajeOk("Insertado Correctamente");
+                    }
+                    else
+                    {
+                        MensajeError("Error al Insertar");
+                    }
+
+                }
+                else
+                {
+                    int id = 0;
+                    int.TryParse(ColorIDtextBox.Text, out id);
+                    colores.ColorId = id;
+                    if (colores.Editar())
+                    {
+                        DescripciontextBox.Clear();
+                        MensajeOk("Modificado Correctamente");
+                    }
+                    else
+                    {
+                        MensajeError("Error al Modificar");
+                    }
+
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error al Insertar o Modificar");
+            }
+        }
     }
 }
