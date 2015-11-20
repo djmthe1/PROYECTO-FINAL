@@ -28,5 +28,10 @@ namespace Sistema_Ventas_Vehiculos.Registros
             InsetarF.Show();
             this.Close();
         }
+
+        private void botonBuscar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
