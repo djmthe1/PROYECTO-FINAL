@@ -81,6 +81,7 @@
             this.botonBuscar.Size = new System.Drawing.Size(77, 54);
             this.botonBuscar.TabIndex = 3;
             this.botonBuscar.UseVisualStyleBackColor = true;
+            this.botonBuscar.Click += new System.EventHandler(this.botonBuscar_Click);
             // 
             // buscarDataGridView
             // 

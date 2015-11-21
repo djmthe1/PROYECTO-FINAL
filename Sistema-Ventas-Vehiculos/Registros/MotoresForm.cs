@@ -106,5 +106,15 @@ namespace Sistema_Ventas_Vehiculos.Registros
                 MessageBox.Show("Error al Insertar o Modificar");
             }
         }
+
+        private void botonBuscar_Click(object sender, EventArgs e)
+        {
+            int id = 0;
+            int.TryParse(MotorIDtextBox.Text, out id);
+            motores.MotorId = id;
+
+            motores.Buscar(motores.MotorId);
+            DescripciontextBox.Text = motores.Descripcion;
+        }
     }
 }

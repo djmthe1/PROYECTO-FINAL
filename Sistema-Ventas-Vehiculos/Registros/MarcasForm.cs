@@ -99,5 +99,15 @@ namespace Sistema_Ventas_Vehiculos.Registros
             InsetarF.Show();
             this.Close();
         }
+
+        private void botonBuscar_Click(object sender, EventArgs e)
+        {
+            int id = 0;
+            int.TryParse(MarcasIDtextBox.Text, out id);
+            marcas.MarcaId = id;
+
+            marcas.Buscar(marcas.MarcaId);
+            DescripciontextBox.Text = marcas.Descripcion;
+        }
     }
 }

@@ -108,5 +108,16 @@ namespace Sistema_Ventas_Vehiculos.Registros
         {
 
         }
+
+        private void botonBuscar_Click(object sender, EventArgs e)
+        {
+            int id = 0;
+            int.TryParse(usuarioIDTextBox.Text, out id);
+            usuarios.UsuarioId = id;
+
+            usuarios.Buscar(usuarios.UsuarioId);
+            nombreTextBox.Text = usuarios.Nombre;
+            prioridadTextBox.Text = usuarios.Prioridad.ToString();
+        }
     }
 }

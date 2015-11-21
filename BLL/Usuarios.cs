@@ -27,20 +27,19 @@ namespace BLL
 
         public Usuarios() {}
 
-        public override bool Buscar(int IdBuscado)
+        
+        public override bool Insertar()
         {
-            DataTable dt = new DataTable();
-
-            dt = conexion.ObtenerDatos("Select * from Usuarios Where UsuarioId=" + IdBuscado);
-            if (dt.Rows.Count > 0)
+            bool retorno = false;
+            try
             {
-                this.UsuarioId = (int)dt.Rows[0]["UsuarioId"];
-                this.Nombre = dt.Rows[0]["Nombre"].ToString();
-                this.Pass = dt.Rows[0]["Pass"].ToString();
-                this.Prioridad = (int)dt.Rows[0]["Prioridad"];
+                conexion.Ejecutar(String.Format("Insert Into Usuarios (Nombre,Pass,Prioridad) Values('{0}'{1}'{2}')", this.Nombre, this.Pass, this.Prioridad));
+                retorno = true;
             }
-            return dt.Rows.Count > 0;
+            catch (Exception ex) { throw ex; }
+            return retorno;
         }
+
 
         public override bool Editar()
         {
@@ -66,17 +65,21 @@ namespace BLL
             return retorno;
         }
 
-        public override bool Insertar()
+        public override bool Buscar(int IdBuscado)
         {
-            bool retorno = false;
-            try
+            DataTable dt = new DataTable();
+
+            dt = conexion.ObtenerDatos("Select * from Usuarios Where UsuarioId=" + IdBuscado);
+            if (dt.Rows.Count > 0)
             {
-                conexion.Ejecutar(String.Format("Insert Into Usuarios (Nombre,Pass,Prioridad) Values('{0}'{1}'{2}')", this.Nombre,this.Pass,this.Prioridad));
-                retorno = true;
+                this.UsuarioId = (int)dt.Rows[0]["UsuarioId"];
+                this.Nombre = dt.Rows[0]["Nombre"].ToString();
+                this.Pass = dt.Rows[0]["Pass"].ToString();
+                this.Prioridad = (int)dt.Rows[0]["Prioridad"];
             }
-            catch (Exception ex) { throw ex; }
-            return retorno;
+            return dt.Rows.Count > 0;
         }
+
 
         public override DataTable Listado(string Campos, string Condicion, string Orden)
         {

@@ -112,6 +112,7 @@
             this.botonBuscar.Size = new System.Drawing.Size(44, 36);
             this.botonBuscar.TabIndex = 28;
             this.botonBuscar.UseVisualStyleBackColor = true;
+            this.botonBuscar.Click += new System.EventHandler(this.botonBuscar_Click);
             // 
             // botonAtras
             // 

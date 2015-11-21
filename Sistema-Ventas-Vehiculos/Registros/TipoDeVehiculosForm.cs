@@ -18,7 +18,7 @@ namespace Sistema_Ventas_Vehiculos.Registros
             InitializeComponent();
         }
 
-        TipoDeVehiculos tipovehiculos = new TipoDeVehiculos();
+        TipoDeVehiculos tipoVehiculos = new TipoDeVehiculos();
 
         private void MensajeOk(string mensaje)
         {
@@ -44,8 +44,8 @@ namespace Sistema_Ventas_Vehiculos.Registros
         {
             try
             {
-                tipovehiculos.TipoDeVehiculoId = int.Parse(TipoIDtextBox.Text);
-                if (tipovehiculos.Eliminar())
+                tipoVehiculos.TipoDeVehiculoId = int.Parse(TipoIDtextBox.Text);
+                if (tipoVehiculos.Eliminar())
                 {
                     MensajeOk("Eliminado correctamente");
                     DescripciontextBox.Clear();
@@ -62,11 +62,11 @@ namespace Sistema_Ventas_Vehiculos.Registros
         {
             try
             {
-                tipovehiculos.Descripcion = DescripciontextBox.Text;
+                tipoVehiculos.Descripcion = DescripciontextBox.Text;
                 if (TipoIDtextBox.Text == "")
                 {
 
-                    if (tipovehiculos.Insertar())
+                    if (tipoVehiculos.Insertar())
                     {
                         DescripciontextBox.Clear();
                         MensajeOk("Insertado Correctamente");
@@ -81,8 +81,8 @@ namespace Sistema_Ventas_Vehiculos.Registros
                 {
                     int id = 0;
                     int.TryParse(TipoIDtextBox.Text, out id);
-                    tipovehiculos.TipoDeVehiculoId = id;
-                    if (tipovehiculos.Editar())
+                    tipoVehiculos.TipoDeVehiculoId = id;
+                    if (tipoVehiculos.Editar())
                     {
                         DescripciontextBox.Clear();
                         MensajeOk("Modificado Correctamente");
@@ -105,6 +105,16 @@ namespace Sistema_Ventas_Vehiculos.Registros
             InsetarForm InsetarF = new InsetarForm();
             InsetarF.Show();
             this.Close();
+        }
+
+        private void botonBuscar_Click(object sender, EventArgs e)
+        {
+            int id = 0;
+            int.TryParse(TipoIDtextBox.Text, out id);
+            tipoVehiculos.TipoDeVehiculoId = id;
+
+            tipoVehiculos.Buscar(tipoVehiculos.TipoDeVehiculoId);
+            DescripciontextBox.Text = tipoVehiculos.Descripcion;
         }
     }
 }
