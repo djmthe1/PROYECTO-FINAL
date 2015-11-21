@@ -41,7 +41,7 @@ namespace Sistema_Ventas_Vehiculos.Registros
             nombreTextBox.Clear();
             passTextBox.Clear();
             confirmarPassTextBox.Clear();
-            prioridadComboBox.ResetText();
+            prioridadTextBox.Clear();
         }
 
         private void botonNuevo_Click(object sender, EventArgs e)
@@ -67,54 +67,40 @@ namespace Sistema_Ventas_Vehiculos.Registros
 
         private void botonGuardar_Click(object sender, EventArgs e)
         {
-            try {
-                usuarios.Nombre = nombreTextBox.Text;
-                int prioridad = 0;
-                int.TryParse(prioridadComboBox.Text, out prioridad);
-                if (prioridad > 2)
+            usuarios.Nombre = nombreTextBox.Text;
+            int prioridad = 0;
+            int.TryParse(prioridadTextBox.Text, out prioridad);
+            usuarios.Prioridad = prioridad;
+
+            if (usuarioIDTextBox.Text == "" && passTextBox.Text == confirmarPassTextBox.Text)
+            {
+
+                usuarios.Pass = passTextBox.Text;
+                if (usuarios.Insertar())
                 {
-                    MessageBox.Show("Error Prioridad No exite");
-                    prioridadComboBox.ResetText();
+                    Limpiar();
+                    MensajeOk("Insertado Correctamente");
                 }
                 else
                 {
-                    usuarios.Prioridad = prioridad;
-                }
-
-                if (usuarioIDTextBox.Text == "" && passTextBox.Text == confirmarPassTextBox.Text && prioridad != 0)
-                {
-
-                    usuarios.Pass = passTextBox.Text;
-                    if (usuarios.Insertar())
-                    {
-                        Limpiar();
-                        MensajeOk("Insertado Correctamente");
-                    }
-                    else
-                    {
-                        MensajeError("Error al Insertar");
-                    }
-                }
-                else
-                {
-
-                    int id = 0;
-                    int.TryParse(usuarioIDTextBox.Text, out id);
-                    usuarios.UsuarioId = id;
-                    if (usuarios.Editar())
-                    {
-                        Limpiar();
-                        MensajeOk("Modificado Correctamente");
-                    }
-                    else
-                    {
-                        MensajeError("Error al Modificar");
-                    }
+                    MensajeError("Error al Insertar");
                 }
             }
-                catch (Exception)
+            else
             {
-                MessageBox.Show("Error al Insertar o Modificar");
+
+                int id = 0;
+                int.TryParse(usuarioIDTextBox.Text, out id);
+                usuarios.UsuarioId = id;
+                if (usuarios.Editar())
+                {
+                    Limpiar();
+                    MensajeOk("Modificado Correctamente");
+                }
+                else
+                {
+                    MensajeError("Error al Modificar");
+                }
             }
         }
 
@@ -123,7 +109,7 @@ namespace Sistema_Ventas_Vehiculos.Registros
 
         }
 
-        private void botonBuscar_Click_1(object sender, EventArgs e)
+        private void botonBuscar_Click(object sender, EventArgs e)
         {
             int id = 0;
             int.TryParse(usuarioIDTextBox.Text, out id);
@@ -131,7 +117,7 @@ namespace Sistema_Ventas_Vehiculos.Registros
 
             usuarios.Buscar(usuarios.UsuarioId);
             nombreTextBox.Text = usuarios.Nombre;
-            prioridadComboBox.Text = usuarios.Prioridad.ToString();
+            prioridadTextBox.Text = usuarios.Prioridad.ToString();
         }
     }
 }
