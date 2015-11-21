@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BLL;
 
 namespace Sistema_Ventas_Vehiculos.Registros
 {
@@ -18,6 +19,7 @@ namespace Sistema_Ventas_Vehiculos.Registros
         }
 
         Registros.PortadaForm PortadaF = new PortadaForm();
+        Usuarios usuarios = new Usuarios();
 
         private void botonEntrar_Click(object sender, EventArgs e)
         {
@@ -27,7 +29,7 @@ namespace Sistema_Ventas_Vehiculos.Registros
             }
             else
             {
-                if (usuarioTextBox.Text == "admin" && passTextBox.Text == "1234")
+                if (usuarios.Verificar(usuarioTextBox.Text, passTextBox.Text))
                 {
                     PortadaF.Show();
                     this.Close();
@@ -41,12 +43,9 @@ namespace Sistema_Ventas_Vehiculos.Registros
             passTextBox.Clear();
         }
 
-        private void passTextBox_KeyPress(object sender, System.Windows.Forms.KeyPressEventArgs e)
+        private void passTextBox_KeyDown(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar == Convert.ToChar(Keys.Enter))
-            {
-                botonEntrar.PerformClick();
-            }
+      
         }
 
         private void botonAtras_Click(object sender, EventArgs e)

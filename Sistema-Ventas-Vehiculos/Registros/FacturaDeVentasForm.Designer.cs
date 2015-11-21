@@ -32,6 +32,7 @@
             this.botonAnterior = new System.Windows.Forms.Button();
             this.botonSiguente = new System.Windows.Forms.Button();
             this.vehiculoIdComboBox = new System.Windows.Forms.ComboBox();
+            this.facturaDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // botonAnterior
@@ -65,11 +66,19 @@
             this.vehiculoIdComboBox.Size = new System.Drawing.Size(121, 21);
             this.vehiculoIdComboBox.TabIndex = 4;
             // 
+            // facturaDateTimePicker
+            // 
+            this.facturaDateTimePicker.Location = new System.Drawing.Point(13, 55);
+            this.facturaDateTimePicker.Name = "facturaDateTimePicker";
+            this.facturaDateTimePicker.Size = new System.Drawing.Size(200, 20);
+            this.facturaDateTimePicker.TabIndex = 5;
+            // 
             // FacturaDeVentasForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(711, 489);
+            this.Controls.Add(this.facturaDateTimePicker);
             this.Controls.Add(this.vehiculoIdComboBox);
             this.Controls.Add(this.botonSiguente);
             this.Controls.Add(this.botonAnterior);
@@ -87,5 +96,6 @@
         private System.Windows.Forms.Button botonAnterior;
         private System.Windows.Forms.Button botonSiguente;
         private System.Windows.Forms.ComboBox vehiculoIdComboBox;
+        private System.Windows.Forms.DateTimePicker facturaDateTimePicker;
     }
 }

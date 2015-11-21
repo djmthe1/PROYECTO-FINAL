@@ -77,7 +77,7 @@ namespace BLL
             bool retornar = false;
             try
             {
-                conexion.Ejecutar(String.Format("Update FacturaDeVentas set Fecha='{0}', Año='{1}', MarcaId='{2}', ModeloId='{3}', MotorId='{4}', ColorId='{5}', TipoDeVehiculoId='{6}', EstadoDelVehiculoId='{7}', PrecioVehiculo='{8}', PagoInicialEnEfectivo='{9}', PagoInicialEnCheque='{10}', PrecioAPagar='{11}', AutorizadoPor='{12}' where FacturaId='{13}'", this.Fecha, this.FacturaId));
+                conexion.Ejecutar(String.Format("Update FacturaDeVentas set Fecha='{0}', Año={1}, MarcaId={2}, ModeloId={3}, MotorId={4}, ColorId={5}, TipoDeVehiculoId={6}, EstadoDelVehiculoId={7}, PrecioVehiculo={8}, PagoInicialEnEfectivo={9}, PagoInicialEnCheque={10}, PrecioAPagar={11}, AutorizadoPor='{12}' where FacturaId={13}", this.Fecha, this.Año, this.MarcaId, this.ModeloId, this.MotorId, this.ColorId, this.TipoDeVehiculoId, this.EstadoDelVehiculoId, this.PrecioVehiculo, this.PagoInicialEnEfectivo, this.PagoInicialEnCheque, this.PrecioAPagar, this.AutorizadoPor, this.FacturaId));
                 retornar = true;
             }
             catch (Exception ex) { throw ex; }
@@ -101,7 +101,7 @@ namespace BLL
             bool retorno = false;
             try
             {
-                conexion.Ejecutar(String.Format("Insert Into FacturaDeVentas (Fecha,Año,MarcaId,ModeloId,MotorId,ColorId,TipoDeVehiculoId,EstadoDelVehiculoId,PrecioVehiculo,PagoInicialEnEfectivo,PagoInicialEnCheque,PrecioAPagar,AutorizadoPor) Values('{0}'{1}'{2}'{3}'{4}'{5}'{6}'{7}'{8}'{9}'{10}'{11}'{12}'{13}')", this.Fecha, this.Año, this.MarcaId, this.ModeloId, this.MotorId, this.ColorId, this.TipoDeVehiculoId, this.EstadoDelVehiculoId, this.PrecioVehiculo, this.PagoInicialEnEfectivo, this.PagoInicialEnCheque, this.PrecioAPagar, this.AutorizadoPor));
+                conexion.Ejecutar(String.Format("Insert Into FacturaDeVentas (Fecha,Año,MarcaId,ModeloId,MotorId,ColorId,TipoDeVehiculoId,EstadoDelVehiculoId,PrecioVehiculo,PagoInicialEnEfectivo,PagoInicialEnCheque,PrecioAPagar,AutorizadoPor) Values('{0}',{1},{2},{3},{4},{5},{6},{7},{8},{9},{10},{11},'{12}')", this.Fecha, this.Año, this.MarcaId, this.ModeloId, this.MotorId, this.ColorId, this.TipoDeVehiculoId, this.EstadoDelVehiculoId, this.PrecioVehiculo, this.PagoInicialEnEfectivo, this.PagoInicialEnCheque, this.PrecioAPagar, this.AutorizadoPor));
                 retorno = true;
             }
             catch (Exception ex) { throw ex; }

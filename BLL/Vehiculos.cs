@@ -77,7 +77,7 @@ namespace BLL
             bool retorno = false;
             try
             {
-                conexion.Ejecutar(String.Format("Update Vehiculos set EstadoDelVehiculoId='{0}', AtributosId='{1}', ModelosId='{2}', MarcasId='{3}', MotorId='{4}', ColorId='{5}', Año='{6}', NoChasis='{7}', TipoDeVehiculoId='{8}', Kilometraje='{9}', Precio='{10}', Placa='{11}', Matricula='{12}' where VehiculoId='{13}'", this.EstadoDelVehiculoId, this.AtributosId, this.ModelosId, this.MarcasId, this.MotorId, this.ColorId, this.Año, this.NoChasis, this.TipoDeVehiculoId, this.Kilometraje, this.Precio, this.Placa, this.Matricula, this.VehiculoId));
+                conexion.Ejecutar(String.Format("Update Vehiculos set EstadoDelVehiculoId={0}, AtributosId={1}, ModelosId={2}, MarcasId={3}, MotorId={4}, ColorId={5}, Año={6}, NoChasis='{7}', TipoDeVehiculoId={8}, Kilometraje={9}, Precio={10}, Placa='{11}', Matricula='{12}' where VehiculoId={13}", this.EstadoDelVehiculoId, this.AtributosId, this.ModelosId, this.MarcasId, this.MotorId, this.ColorId, this.Año, this.NoChasis, this.TipoDeVehiculoId, this.Kilometraje, this.Precio, this.Placa, this.Matricula, this.VehiculoId));
                 retorno = true;
             }
             catch (Exception ex) { throw ex; }
@@ -101,7 +101,7 @@ namespace BLL
             bool retorno = false;
             try
             {
-                conexion.Ejecutar(String.Format("Insert Into Vehiculos (EstadoDelVehiculoId, AtributosId, ModelosId, MarcasId, MotorId, ColorId, Año, NoChasis, TipoDeVehiculoId, Kilometraje, Precio, Placa, Matricula) Values('{0}'{1}'{2}'{3}'{4}'{5}'{6}'{7}'{8}'{9}'{10}'{11}'{12}')", this.EstadoDelVehiculoId, this.AtributosId, this.ModelosId, this.MarcasId, this.MotorId, this.ColorId, this.Año, this.NoChasis, this.TipoDeVehiculoId, this.Kilometraje, this.Precio, this.Placa, this.Matricula));
+                conexion.Ejecutar(String.Format("Insert Into Vehiculos (EstadoDelVehiculoId, AtributosId, ModelosId, MarcasId, MotorId, ColorId, Año, NoChasis, TipoDeVehiculoId, Kilometraje, Precio, Placa, Matricula) Values({0},{1},{2},{3},{4},{5},{6},'{7}',{8},{9},{10},'{11}','{12}')", this.EstadoDelVehiculoId, this.AtributosId, this.ModelosId, this.MarcasId, this.MotorId, this.ColorId, this.Año, this.NoChasis, this.TipoDeVehiculoId, this.Kilometraje, this.Precio, this.Placa, this.Matricula));
                 retorno = true;
             }
             catch (Exception ex) { throw ex; }
