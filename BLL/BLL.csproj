@@ -53,6 +53,7 @@
     <Compile Include="FacturasDeVentas.cs" />
     <Compile Include="Marcas.cs" />
     <Compile Include="Modelos.cs" />
+    <Compile Include="NumerosTelefono.cs" />
     <Compile Include="TipoMotores.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -27,7 +27,7 @@ namespace BLL
         public string Matricula { set; get; }
         public ConexionDb conexion = new ConexionDb();
 
-        List<Atributos> Atributos { get; set; }
+        List <Atributos> Atributos { get; set; }
         List <Marcas> Marcas { get; set; }
         List <Modelos> Modelos { get; set; }
         List <TipoMotores> TipoMotores { get; set; }
@@ -50,9 +50,17 @@ namespace BLL
             this.Precio = precio;
             this.Placa = placa;
             this.Matricula = matricula;
+            this.Atributos = new List<Atributos>();
+            this.Modelos = new List<Modelos>();
+            this.Marcas = new List<Marcas>();
+            this.TipoMotores = new List<TipoMotores>();
+            this.Colores = new List<Colores>();
+            this.TipoDeVehiculos = new List<TipoDeVehiculos>();
         }
 
-        public Vehiculos() { }
+        public Vehiculos()
+        {
+        }
 
         public override bool Insertar()
         {
@@ -90,11 +98,10 @@ namespace BLL
             return retorno;
         }
 
-      
-
         public override bool Buscar(int IdBuscado)
         {
             DataTable datos = new DataTable();
+            DataTable datas = new DataTable();
 
             datos = conexion.ObtenerDatos("Select * from Vehiculos Where VehiculoId=" + IdBuscado);
             if (datos.Rows.Count > 0)

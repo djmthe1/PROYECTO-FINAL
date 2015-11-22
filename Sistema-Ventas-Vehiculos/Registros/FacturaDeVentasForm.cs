@@ -17,15 +17,17 @@ namespace Sistema_Ventas_Vehiculos.Registros
             InitializeComponent();
         }
 
-        private void FacturaDeVentasForm_Load(object sender, EventArgs e)
+        private void botonSiguente_Click(object sender, EventArgs e)
         {
-
+            FacturaDeVentasForm Factura = new FacturaDeVentasForm();
+            Factura.Show();
+            this.Close();
         }
 
         private void botonAnterior_Click(object sender, EventArgs e)
         {
-            ClientesForm ClientesF = new ClientesForm();
-            ClientesF.Show();
+            PortadaForm Portada = new PortadaForm();
+            Portada.Show();
             this.Close();
         }
     }
