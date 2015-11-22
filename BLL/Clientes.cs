@@ -67,7 +67,7 @@ namespace BLL
             bool retorno = false;
             try
             {
-                conexion.Ejecutar(String.Format("Update Clientes set (NombreCompleto,Apodo,TelefonoId,Direccion,Cedula,Nacionalidad,Ocupacion,LugarDeNacimiento,Sexo,FacturaId) Values('{0}'{1}'{2}'{3}'{4}'{5}'{6}'{7}'{8}'{9}') where ClienteId={10}", this.NombreCompleto, this.Apodo, this.TelefonoId, this.Direccion, this.Cedula, this.Nacionalidad, this.Ocupacion, this.LugarDeNacimiento, this.Sexo, this.FacturaId, this.ClienteId));
+                conexion.Ejecutar(String.Format("Update Clientes set NombreCompleto='{0}', Apodo='{1}', TelefonoId={2}, Direccion='{3}', Cedula='{4}', Nacionalidad='{5}', Ocupacion='{6}', LugarDeNacimiento='{7}', Sexo='{8}', FacturaId={9} where ClienteId={10}", this.NombreCompleto, this.Apodo, this.TelefonoId, this.Direccion, this.Cedula, this.Nacionalidad, this.Ocupacion, this.LugarDeNacimiento, this.Sexo, this.FacturaId, this.ClienteId));
                 retorno = true;
             }
             catch (Exception ex) { throw ex; }
@@ -91,7 +91,7 @@ namespace BLL
             bool retorno = false;
             try
             {
-                conexion.Ejecutar(String.Format("insert into Clientes (NombreCompleto,Apodo,TelefonoId,Direccion,Cedula,Nacionalidad,Ocupacion,LugarDeNacimiento,Sexo,FacturaId) Values('{0}'{1}'{2}'{3}'{4}'{5}'{6}'{7}'{8}'{9}')", this.NombreCompleto, this.Apodo, this.TelefonoId, this.Direccion, this.Cedula, this.Nacionalidad, this.Ocupacion, this.LugarDeNacimiento, this.Sexo, this.FacturaId));
+                conexion.Ejecutar(String.Format("insert into Clientes (NombreCompleto, Apodo, TelefonoId, Direccion, Cedula, Nacionalidad, Ocupacion, LugarDeNacimiento, Sexo, FacturaId) Values('{0}'{1}'{2}'{3}'{4}'{5}'{6}'{7}'{8}'{9}')", this.NombreCompleto, this.Apodo, this.TelefonoId, this.Direccion, this.Cedula, this.Nacionalidad, this.Ocupacion, this.LugarDeNacimiento, this.Sexo, this.FacturaId));
                 retorno = true;
             }
             catch (Exception ex) { throw ex; }

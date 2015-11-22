@@ -30,9 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.usuarioLabel = new System.Windows.Forms.Label();
-            this.passLabel = new System.Windows.Forms.Label();
+            this.passwordLabel = new System.Windows.Forms.Label();
             this.usuarioTextBox = new System.Windows.Forms.TextBox();
-            this.passTextBox = new System.Windows.Forms.TextBox();
+            this.passwordTextBox = new System.Windows.Forms.TextBox();
             this.botonEntrar = new System.Windows.Forms.Button();
             this.botonAtras = new System.Windows.Forms.Button();
             this.mensajeLabel = new System.Windows.Forms.Label();
@@ -47,14 +47,14 @@
             this.usuarioLabel.TabIndex = 0;
             this.usuarioLabel.Text = "USUARIO";
             // 
-            // passLabel
+            // passwordLabel
             // 
-            this.passLabel.AutoSize = true;
-            this.passLabel.Location = new System.Drawing.Point(167, 192);
-            this.passLabel.Name = "passLabel";
-            this.passLabel.Size = new System.Drawing.Size(81, 13);
-            this.passLabel.TabIndex = 1;
-            this.passLabel.Text = "CONTRASEÑA";
+            this.passwordLabel.AutoSize = true;
+            this.passwordLabel.Location = new System.Drawing.Point(167, 192);
+            this.passwordLabel.Name = "passwordLabel";
+            this.passwordLabel.Size = new System.Drawing.Size(81, 13);
+            this.passwordLabel.TabIndex = 1;
+            this.passwordLabel.Text = "CONTRASEÑA";
             // 
             // usuarioTextBox
             // 
@@ -63,13 +63,13 @@
             this.usuarioTextBox.Size = new System.Drawing.Size(100, 20);
             this.usuarioTextBox.TabIndex = 2;
             // 
-            // passTextBox
+            // passwordTextBox
             // 
-            this.passTextBox.Location = new System.Drawing.Point(262, 189);
-            this.passTextBox.Name = "passTextBox";
-            this.passTextBox.Size = new System.Drawing.Size(100, 20);
-            this.passTextBox.TabIndex = 3;
-            this.passTextBox.UseSystemPasswordChar = true;
+            this.passwordTextBox.Location = new System.Drawing.Point(262, 189);
+            this.passwordTextBox.Name = "passwordTextBox";
+            this.passwordTextBox.Size = new System.Drawing.Size(100, 20);
+            this.passwordTextBox.TabIndex = 3;
+            this.passwordTextBox.UseSystemPasswordChar = true;
             // 
             // botonEntrar
             // 
@@ -116,9 +116,9 @@
             this.Controls.Add(this.mensajeLabel);
             this.Controls.Add(this.botonAtras);
             this.Controls.Add(this.botonEntrar);
-            this.Controls.Add(this.passTextBox);
+            this.Controls.Add(this.passwordTextBox);
             this.Controls.Add(this.usuarioTextBox);
-            this.Controls.Add(this.passLabel);
+            this.Controls.Add(this.passwordLabel);
             this.Controls.Add(this.usuarioLabel);
             this.DoubleBuffered = true;
             this.Name = "LoginForm";
@@ -133,9 +133,9 @@
         #endregion
 
         private System.Windows.Forms.Label usuarioLabel;
-        private System.Windows.Forms.Label passLabel;
+        private System.Windows.Forms.Label passwordLabel;
         private System.Windows.Forms.TextBox usuarioTextBox;
-        private System.Windows.Forms.TextBox passTextBox;
+        private System.Windows.Forms.TextBox passwordTextBox;
         private System.Windows.Forms.Button botonEntrar;
         private System.Windows.Forms.Button botonAtras;
         private System.Windows.Forms.Label mensajeLabel;

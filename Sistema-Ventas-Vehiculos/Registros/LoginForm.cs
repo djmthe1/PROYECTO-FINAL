@@ -23,13 +23,13 @@ namespace Sistema_Ventas_Vehiculos.Registros
 
         private void botonEntrar_Click(object sender, EventArgs e)
         {
-            if (usuarioTextBox.Text == "" || passTextBox.Text == "")
+            if (usuarioTextBox.Text == "" || passwordTextBox.Text == "")
             {
                 MessageBox.Show("Debe llenar todos los Campos", "Error Al Iniciar Sesion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else
             {
-                if (usuarios.Verificar(usuarioTextBox.Text, passTextBox.Text))
+                if (usuarios.Verificar(usuarioTextBox.Text, passwordTextBox.Text))
                 {
                     PortadaF.Show();
                     this.Close();
@@ -40,7 +40,7 @@ namespace Sistema_Ventas_Vehiculos.Registros
                 }
             }
             usuarioTextBox.Clear();
-            passTextBox.Clear();
+            passwordTextBox.Clear();
         }
 
         private void passTextBox_KeyDown(object sender, KeyPressEventArgs e)
