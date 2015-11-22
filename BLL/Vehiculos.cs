@@ -120,6 +120,9 @@ namespace BLL
                 this.Precio = (int)datos.Rows[0]["Precio"];
                 this.Placa = datos.Rows[0]["Placa"].ToString();
                 this.Matricula = datos.Rows[0]["Matricula"].ToString();
+
+
+
             }
             return datos.Rows.Count > 0;
         }
