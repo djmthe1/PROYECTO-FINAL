@@ -28,7 +28,7 @@ namespace BLL.Tests
         {
             Vehiculos v = new Vehiculos();
             v.VehiculoId = 1;
-            v.EstadoDelVehiculoId = 1;
+            v.EstadoDelVehiculoId = "jh";
             v.AtributosId = 1;
             v.ModelosId = 1;
             v.MarcasId = 1;
