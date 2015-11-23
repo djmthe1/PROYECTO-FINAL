@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BLL;
 
 namespace Sistema_Ventas_Vehiculos.Registros
 {
@@ -16,7 +17,9 @@ namespace Sistema_Ventas_Vehiculos.Registros
         {
             InitializeComponent();
         }
-
+        public Clientes cliente = new Clientes();
+        public Vehiculos vehiculo = new Vehiculos();
+         
         private void botonSiguente_Click(object sender, EventArgs e)
         {
             FacturaDeVentasForm Factura = new FacturaDeVentasForm();
@@ -34,6 +37,39 @@ namespace Sistema_Ventas_Vehiculos.Registros
         private void añoVehiculoTextBox_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void botonBuscarCliente_Click(object sender, EventArgs e)
+        {
+
+            int id = 0;
+            int.TryParse(IdClinteTextBox.Text, out id);
+            cliente.ClienteId = id;
+
+            cliente.Buscar(cliente.ClienteId);
+
+            NombreTextBox.Text = cliente.NombreCompleto;
+            ApodoTextBox.Text = cliente.Apodo;
+            DireccionTextBox.Text = cliente.Direccion;
+            TelefonoTextBox.Text = cliente.Telefono;
+            CelularTextBox.Text = cliente.Celular;
+            CedulaTextBox.Text = cliente.Cedula;
+            NacimientoTextBox.Text = cliente.Nacionalidad;
+            OcupacionTextBox.Text = cliente.Ocupacion;
+            LugardeNacimientoTextBox.Text = cliente.LugarDeNacimiento;
+            SexoTextBox.Text = cliente.Sexo;
+        }
+
+        private void botonBuscarVehiculo_Click(object sender, EventArgs e)
+        {
+            int id = 0;
+            int.TryParse(vehiculoIdTextBox.Text, out id);
+            vehiculo.VehiculoId = id;
+
+            vehiculo.Buscar(vehiculo.VehiculoId);
+
+            estadoVehiculoTextBox.Text = vehiculo.EstadoDelVehiculo;
+            
         }
     }
 }

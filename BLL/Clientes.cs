@@ -14,43 +14,40 @@ namespace BLL
         public int ClienteId { set; get; }
         public string NombreCompleto { set; get; }
         public string Apodo { set; get; }
-        public int TelefonoId { set; get; }
+        public string Telefono { set; get; }
+        public string Celular { set; get; }
         public string Direccion { set; get; }
         public string Cedula { set; get; }
         public string Nacionalidad { set; get; }
         public string Ocupacion { set; get; }
         public string LugarDeNacimiento { set; get; }
         public string Sexo { set; get; }
-        public int FacturaId { set; get; }
+      
         public ConexionDb conexion = new ConexionDb();
         public StringBuilder comando = new StringBuilder();
-        List <NumerosTelefono> NumerosTelefono { set; get; }
-        public NumerosTelefono NumeroC = new NumerosTelefono();
+        
 
-        public Clientes(int clienteId, string nombreCompleto, string Apodo, int telefonoId, string direccion, string cedula, string nacionalidad, string ocupacion, string lugarDeNacimiento, string sexo, int facturaId) {
+        public Clientes(int clienteId, string nombreCompleto, string Apodo, string telefono,string celular, string direccion, string cedula, string nacionalidad, string ocupacion, string lugarDeNacimiento, string sexo, int facturaId) {
             this.ClienteId = clienteId;
             this.NombreCompleto = nombreCompleto;
             this.Apodo = Apodo;
-            this.TelefonoId = telefonoId;
+            this.Telefono = telefono;
+            this.Cedula = cedula;
             this.Direccion = direccion;
             this.Cedula = cedula;
             this.Nacionalidad = nacionalidad;
             this.Ocupacion = ocupacion;
             this.LugarDeNacimiento = lugarDeNacimiento;
             this.Sexo = sexo;
-            this.FacturaId = facturaId;
+            
         }
 
         public Clientes()
         {
-            NumerosTelefono = new List <NumerosTelefono>();
+           
         }
 
-        public void InsertarNumerosTelefono (int id, int clienteId, string telefono)
-        {
-            this.NumerosTelefono.Add(new NumerosTelefono(id, ClienteId, telefono));
-
-        }
+        
 
         public override bool Buscar(int IdBuscado)
         {
@@ -62,6 +59,8 @@ namespace BLL
             {
                 this.ClienteId = (int)dt.Rows[0]["ClienteId"];
                 this.NombreCompleto = dt.Rows[0]["NombreCompleto"].ToString();
+                this.Telefono = dt.Rows[0]["Telefono"].ToString();
+                this.Celular = dt.Rows[0]["Celular"].ToString();
                 this.Apodo = dt.Rows[0]["Apodo"].ToString();
                 this.Direccion = dt.Rows[0]["Direccion"].ToString();
                 this.Cedula = dt.Rows[0]["Cedula"].ToString();
@@ -69,12 +68,8 @@ namespace BLL
                 this.Ocupacion = dt.Rows[0]["Ocupacion"].ToString();
                 this.LugarDeNacimiento = dt.Rows[0]["LugarDeNacimiento"].ToString();
                 this.Sexo = dt.Rows[0]["Sexo"].ToString();
-                this.FacturaId = (int)dt.Rows[0]["FacturaId"];
-                datosNumerosTelefonos = conexion.ObtenerDatos("Select ct.ClienteId, c.NombreCompleto, c.Apodo, c.Direccion, c.Cedula, c.Nacionalidad, c.Ocupacion, c.LugarDeNacimiento, c.FacturaId Sexo from NumerosTelefono ct Inner Join Cliente c On ct.ClienteId=c.ClienteId where c.ClienteId =" + this.ClienteId);
-                foreach (DataRow row in datosNumerosTelefonos.Rows)
-                {
-                    this.InsertarNumerosTelefono((int)row["Id"], (int)row["ClienteId"], row["Telefono"].ToString());
-                }
+                
+                
             }
             return dt.Rows.Count > 0;
         }
@@ -84,18 +79,9 @@ namespace BLL
             bool retorno = false;
             try
             {
-                conexion.Ejecutar(String.Format("Update Clientes set NombreCompleto='{0}', Apodo='{1}', TelefonoId={2}, Direccion='{3}', Cedula='{4}', Nacionalidad='{5}', Ocupacion='{6}', LugarDeNacimiento='{7}', Sexo='{8}', FacturaId={9} where ClienteId={10}", this.NombreCompleto, this.Apodo, this.TelefonoId, this.Direccion, this.Cedula, this.Nacionalidad, this.Ocupacion, this.LugarDeNacimiento, this.Sexo, this.FacturaId, this.ClienteId));
+                conexion.Ejecutar(String.Format("Update Clientes set NombreCompleto='{0}', Apodo='{1}', Telefono='{2}',Celular='{3}', Direccion='{4}', Cedula='{5}', Nacionalidad='{6}', Ocupacion='{7}', LugarDeNacimiento='{8}', Sexo='{9}' where ClienteId={10}", this.NombreCompleto, this.Apodo, this.Telefono,this.Celular, this.Direccion, this.Cedula, this.Nacionalidad, this.Ocupacion, this.LugarDeNacimiento, this.Sexo, this.ClienteId));
                 retorno = true;
-                if (retorno)
-                {
-                    conexion.Ejecutar(String.Format("Delete from NumerosTelefono where PersonaId={0}", this.ClienteId));
-
-                    foreach (var Cliente in this.NumerosTelefono)
-                    {
-                        comando.AppendLine(String.Format("insert into NumerosTelefono (ClienteId,Telefono) Values({0},'{1}')", this.ClienteId, Cliente.Telefono));
-                    }
-                    retorno = conexion.Ejecutar(comando.ToString());
-                }
+                
             }
             catch (Exception ex) { throw ex; }
             return retorno;
@@ -118,21 +104,10 @@ namespace BLL
             bool retorno = false;
             try
             {
-                conexion.Ejecutar(String.Format("Insert into Clientes (NombreCompleto, Apodo, TelefonoId, Direccion, Cedula, Nacionalidad, Ocupacion, LugarDeNacimiento, Sexo, FacturaId) Values('{0}','{1}',{2},'{3}','{4}','{5}','{6}','{7}','{8}',{9})", this.NombreCompleto, this.Apodo, this.TelefonoId, this.Direccion, this.Cedula, this.Nacionalidad, this.Ocupacion, this.LugarDeNacimiento, this.Sexo, this.FacturaId));
+                conexion.Ejecutar(String.Format("Insert into Clientes (NombreCompleto, Apodo, Telefono, Celular, Direccion, Cedula, Nacionalidad, Ocupacion, LugarDeNacimiento, Sexo, FacturaId) Values('{0}','{1}',{2},'{3}','{4}','{5}','{6}','{7}','{8}','{9}',{10})", this.NombreCompleto, this.Apodo, this.Telefono,this.Celular, this.Direccion, this.Cedula, this.Nacionalidad, this.Ocupacion, this.LugarDeNacimiento, this.Sexo));
                 retorno = true;
 
-                if (retorno)
-                {
-                    this.ClienteId = (int) conexion.ObtenerValor ("Select Max (ClienteId) From Clientes");
-
-                    this.InsertarNumerosTelefono (NumeroC.Id, this.ClienteId, NumeroC.Telefono);
-
-                    foreach (var Cliente in this.NumerosTelefono)
-                    {
-                        comando.AppendLine(String.Format("Insert into NumerosTelefono (ClienteId,Telefono) Values({0},'{1}')", this.ClienteId, Cliente.Telefono));
-                    }
-                    retorno = conexion.Ejecutar(comando.ToString());
-                }
+               
             }
             catch (Exception ex) { throw ex; }
             return retorno;
