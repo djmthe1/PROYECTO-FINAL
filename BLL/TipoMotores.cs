@@ -81,7 +81,7 @@ namespace BLL
             string ordenar = "";
             if (!Orden.Equals(""))
                 ordenar = " orden by  " + Orden;
-            return conexion.ObtenerDatos(("Select " + Campos + " from Motores where " + Condicion + ordenar));
+            return conexion.ObtenerDatos(("Select " + Campos + " from Motores where " + Condicion + Orden));
         }
     }
 }

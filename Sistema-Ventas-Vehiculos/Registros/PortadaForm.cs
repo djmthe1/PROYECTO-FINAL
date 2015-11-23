@@ -57,8 +57,14 @@ namespace Sistema_Ventas_Vehiculos.Registros
         {
             Registros.ListarForm ListarF = new ListarForm();
             ListarF.botonAtrasPortada.Visible = false;
+            ListarF.listarFueraComboBox.Visible = false;
             ListarF.Show();
             this.Close();
+        }
+
+        private void PortadaForm_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

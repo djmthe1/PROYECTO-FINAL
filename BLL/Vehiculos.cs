@@ -26,13 +26,19 @@ namespace BLL
         public string Placa { set; get; }
         public string Matricula { set; get; }
         public ConexionDb conexion = new ConexionDb();
-
+        public StringBuilder comando = new StringBuilder();
         List <Atributos> Atributos { get; set; }
         List <Marcas> Marcas { get; set; }
         List <Modelos> Modelos { get; set; }
         List <TipoMotores> TipoMotores { get; set; }
         List <Colores> Colores { get; set; }
         List <TipoDeVehiculos> TipoDeVehiculos { get; set; }
+        public Atributos AtributosV = new Atributos();
+        public Marcas MarcasV = new Marcas();
+        public Modelos ModelosV = new Modelos();
+        public TipoMotores TipoMotoresV = new TipoMotores();
+        public Colores ColoresV = new Colores();
+        public TipoDeVehiculos TipoDeVehiculosV = new TipoDeVehiculos();
 
         public Vehiculos(int vehiculoId, string estadoDelVehiculo, int atributosId, int modeloId, int marcaId, int motorId, int colorId, int año, string noChasis, int tipoDeVehiculoId, int kilometraje, int precio, string placa, string matricula)
         {
@@ -60,6 +66,42 @@ namespace BLL
 
         public Vehiculos()
         {
+            Atributos = new List<Atributos>();
+            Modelos = new List<Modelos>();
+            Marcas = new List<Marcas>();
+            TipoMotores = new List<TipoMotores>();
+            Colores = new List<Colores>();
+            TipoDeVehiculos = new List<TipoDeVehiculos>();
+        }
+
+        public void InsertarAtributos(int AtributosId, bool EspejoRetrovisorInterno, bool EspejoRetrovisorDerecho, bool EspejoRetrovisorIzquierdo, bool Radio, bool Gato, bool Gomas, bool GomaDeRepuesto, bool Alfombras, bool Botiquin, bool TaponDeGasolina, bool TaponDeRadiador, bool Encendedor, bool ManualDeUsuario, bool DuplicadoDeLlaveDeEncendido, bool LlaveDeRueda)
+        {
+            this.Atributos.Add(new Atributos(AtributosId, EspejoRetrovisorInterno, EspejoRetrovisorDerecho, EspejoRetrovisorIzquierdo, Radio, Gato, Gomas, GomaDeRepuesto, Alfombras, Botiquin, TaponDeGasolina, TaponDeRadiador, Encendedor, ManualDeUsuario, DuplicadoDeLlaveDeEncendido, LlaveDeRueda));
+        }
+
+        public void InsertarModelos(int ModeloId, string Descripcion)
+        {
+            this.Modelos.Add(new Modelos(ModeloId, Descripcion));
+        }
+
+        public void InsertarMarcas(int MarcaId, string Descripcion)
+        {
+            this.Marcas.Add(new Marcas(MarcaId, Descripcion));
+        }
+
+        public void InsertarTipoMotores(int MotorId, string Descripcion)
+        {
+            this.TipoMotores.Add(new TipoMotores( MotorId, Descripcion));
+        }
+
+        public void InsertarColores(int ColorId, string Descripcion)
+        {
+            this.Colores.Add(new Colores(ColorId, Descripcion));
+        }
+
+        public void InsertarTipoDeVehiculos(int TipoDeVehiculosId, string Descripcion)
+        {
+            this.TipoDeVehiculos.Add(new TipoDeVehiculos(TipoDeVehiculosId, Descripcion));
         }
 
         public override bool Insertar()
@@ -132,7 +174,7 @@ namespace BLL
             string ordenar = "";
             if (!Orden.Equals(""))
                 ordenar = " orden by  " + Orden;
-            return conexion.ObtenerDatos(("Select " + Campos + " from Vehiculos where " + Condicion + ordenar));
+            return conexion.ObtenerDatos(("Select " + Campos + " from Vehiculos where " + Condicion + Orden));
         }
     }
 }

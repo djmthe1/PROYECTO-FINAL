@@ -36,6 +36,8 @@
             this.botonEntrar = new System.Windows.Forms.Button();
             this.botonAtras = new System.Windows.Forms.Button();
             this.mensajeLabel = new System.Windows.Forms.Label();
+            this.loginComboBox = new System.Windows.Forms.ComboBox();
+            this.prioridadLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // usuarioLabel
@@ -50,7 +52,7 @@
             // passwordLabel
             // 
             this.passwordLabel.AutoSize = true;
-            this.passwordLabel.Location = new System.Drawing.Point(167, 192);
+            this.passwordLabel.Location = new System.Drawing.Point(186, 182);
             this.passwordLabel.Name = "passwordLabel";
             this.passwordLabel.Size = new System.Drawing.Size(81, 13);
             this.passwordLabel.TabIndex = 1;
@@ -58,14 +60,14 @@
             // 
             // usuarioTextBox
             // 
-            this.usuarioTextBox.Location = new System.Drawing.Point(262, 149);
+            this.usuarioTextBox.Location = new System.Drawing.Point(273, 149);
             this.usuarioTextBox.Name = "usuarioTextBox";
             this.usuarioTextBox.Size = new System.Drawing.Size(100, 20);
             this.usuarioTextBox.TabIndex = 2;
             // 
             // passwordTextBox
             // 
-            this.passwordTextBox.Location = new System.Drawing.Point(262, 189);
+            this.passwordTextBox.Location = new System.Drawing.Point(273, 175);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.Size = new System.Drawing.Size(100, 20);
             this.passwordTextBox.TabIndex = 3;
@@ -106,6 +108,27 @@
             this.mensajeLabel.Text = "Introduzca su nombre de usuario y contraseña";
             this.mensajeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // loginComboBox
+            // 
+            this.loginComboBox.FormattingEnabled = true;
+            this.loginComboBox.Items.AddRange(new object[] {
+            "Administrador",
+            "Usuario"});
+            this.loginComboBox.Location = new System.Drawing.Point(273, 202);
+            this.loginComboBox.Name = "loginComboBox";
+            this.loginComboBox.Size = new System.Drawing.Size(100, 21);
+            this.loginComboBox.TabIndex = 7;
+            this.loginComboBox.SelectedIndexChanged += new System.EventHandler(this.loginComboBox_SelectedIndexChanged);
+            // 
+            // prioridadLabel
+            // 
+            this.prioridadLabel.AutoSize = true;
+            this.prioridadLabel.Location = new System.Drawing.Point(165, 205);
+            this.prioridadLabel.Name = "prioridadLabel";
+            this.prioridadLabel.Size = new System.Drawing.Size(102, 13);
+            this.prioridadLabel.TabIndex = 8;
+            this.prioridadLabel.Text = "TIPO DE USUARIO";
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -113,6 +136,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(559, 339);
+            this.Controls.Add(this.prioridadLabel);
+            this.Controls.Add(this.loginComboBox);
             this.Controls.Add(this.mensajeLabel);
             this.Controls.Add(this.botonAtras);
             this.Controls.Add(this.botonEntrar);
@@ -139,5 +164,7 @@
         private System.Windows.Forms.Button botonEntrar;
         private System.Windows.Forms.Button botonAtras;
         private System.Windows.Forms.Label mensajeLabel;
+        private System.Windows.Forms.ComboBox loginComboBox;
+        private System.Windows.Forms.Label prioridadLabel;
     }
 }

@@ -33,5 +33,10 @@ namespace Sistema_Ventas_Vehiculos.Registros
         {
 
         }
+
+        private void alfombrasCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

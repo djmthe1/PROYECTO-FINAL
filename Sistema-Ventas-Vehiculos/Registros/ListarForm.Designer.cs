@@ -28,17 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListarForm));
             this.botonAtrasPortada = new System.Windows.Forms.Button();
             this.botonAtras = new System.Windows.Forms.Button();
             this.listarDataGridView = new System.Windows.Forms.DataGridView();
-            this._Sistema_Ventas_VehiculosDataSet2 = new Sistema_Ventas_Vehiculos._Sistema_Ventas_VehiculosDataSet2();
-            this.vehiculosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.vehiculosTableAdapter = new Sistema_Ventas_Vehiculos._Sistema_Ventas_VehiculosDataSet2TableAdapters.VehiculosTableAdapter();
+            this.listarComboBox = new System.Windows.Forms.ComboBox();
+            this.listarFueraComboBox = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.listarDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._Sistema_Ventas_VehiculosDataSet2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vehiculosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // botonAtrasPortada
@@ -73,19 +69,32 @@
             this.listarDataGridView.Size = new System.Drawing.Size(381, 188);
             this.listarDataGridView.TabIndex = 36;
             // 
-            // _Sistema_Ventas_VehiculosDataSet2
+            // listarComboBox
             // 
-            this._Sistema_Ventas_VehiculosDataSet2.DataSetName = "_Sistema_Ventas_VehiculosDataSet2";
-            this._Sistema_Ventas_VehiculosDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.listarComboBox.FormattingEnabled = true;
+            this.listarComboBox.Items.AddRange(new object[] {
+            "Marcas",
+            "Modelos",
+            "Colores",
+            "Tipos de Vehiculos",
+            "Tipos de Motores",
+            "Vehiculos"});
+            this.listarComboBox.Location = new System.Drawing.Point(12, 12);
+            this.listarComboBox.Name = "listarComboBox";
+            this.listarComboBox.Size = new System.Drawing.Size(121, 21);
+            this.listarComboBox.TabIndex = 37;
+            this.listarComboBox.SelectedIndexChanged += new System.EventHandler(this.listarComboBox_SelectedIndexChanged);
             // 
-            // vehiculosBindingSource
+            // listarFueraComboBox
             // 
-            this.vehiculosBindingSource.DataMember = "Vehiculos";
-            this.vehiculosBindingSource.DataSource = this._Sistema_Ventas_VehiculosDataSet2;
-            // 
-            // vehiculosTableAdapter
-            // 
-            this.vehiculosTableAdapter.ClearBeforeFill = true;
+            this.listarFueraComboBox.FormattingEnabled = true;
+            this.listarFueraComboBox.Items.AddRange(new object[] {
+            "Vehiculos"});
+            this.listarFueraComboBox.Location = new System.Drawing.Point(13, 12);
+            this.listarFueraComboBox.Name = "listarFueraComboBox";
+            this.listarFueraComboBox.Size = new System.Drawing.Size(121, 21);
+            this.listarFueraComboBox.TabIndex = 38;
+            this.listarFueraComboBox.SelectedIndexChanged += new System.EventHandler(this.listarFueraComboBox_SelectedIndexChanged);
             // 
             // ListarForm
             // 
@@ -94,6 +103,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(536, 318);
+            this.Controls.Add(this.listarFueraComboBox);
+            this.Controls.Add(this.listarComboBox);
             this.Controls.Add(this.listarDataGridView);
             this.Controls.Add(this.botonAtras);
             this.Controls.Add(this.botonAtrasPortada);
@@ -103,8 +114,6 @@
             this.Text = "Listar";
             this.Load += new System.EventHandler(this.ListarForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.listarDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._Sistema_Ventas_VehiculosDataSet2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vehiculosBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -114,8 +123,7 @@
         internal System.Windows.Forms.Button botonAtrasPortada;
         internal System.Windows.Forms.Button botonAtras;
         private System.Windows.Forms.DataGridView listarDataGridView;
-        private _Sistema_Ventas_VehiculosDataSet2 _Sistema_Ventas_VehiculosDataSet2;
-        private System.Windows.Forms.BindingSource vehiculosBindingSource;
-        private _Sistema_Ventas_VehiculosDataSet2TableAdapters.VehiculosTableAdapter vehiculosTableAdapter;
+        public System.Windows.Forms.ComboBox listarComboBox;
+        public System.Windows.Forms.ComboBox listarFueraComboBox;
     }
 }

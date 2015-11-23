@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BLL;
 
 namespace Sistema_Ventas_Vehiculos.Registros
 {
@@ -17,11 +18,16 @@ namespace Sistema_Ventas_Vehiculos.Registros
             InitializeComponent();
         }
 
+        Colores colores = new Colores();
+        Marcas marcas = new Marcas();
+        Modelos modelos = new Modelos();
+        TipoDeVehiculos tipoDeVehiculos = new TipoDeVehiculos();
+        TipoMotores tipoMotores = new TipoMotores();
+        Vehiculos vehiculos = new Vehiculos();
+
         private void ListarForm_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the '_Sistema_Ventas_VehiculosDataSet2.Vehiculos' table. You can move, or remove it, as needed.
-            this.vehiculosTableAdapter.Fill(this._Sistema_Ventas_VehiculosDataSet2.Vehiculos);
-
+        
         }
 
         private void botonAtras_Click(object sender, EventArgs e)
@@ -34,6 +40,64 @@ namespace Sistema_Ventas_Vehiculos.Registros
         private void botonAtrasPortada_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        public void mensaje()
+        {
+            if (listarDataGridView.Rows.Count == 0)
+            {
+                MessageBox.Show("No hay Nada registrado");
+            }
+        }
+
+    private void listarComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listarComboBox.Text == "Marcas")
+            {
+                listarDataGridView.DataSource = marcas.Listado("*", "1=1", "ORDER BY Descripcion");
+                mensaje();
+
+            }
+            if (listarComboBox.Text == "Modelos")
+            {
+                listarDataGridView.DataSource = modelos.Listado("*", "1=1", "ORDER BY Descripcion");
+                mensaje();
+
+            }
+            if (listarComboBox.Text == "Colores")
+            {
+                listarDataGridView.DataSource = colores.Listado("*", "1=1", "ORDER BY Descripcion");
+                mensaje();
+
+            }
+            if (listarComboBox.Text == "Tipos de Vehiculos")
+            {
+                listarDataGridView.DataSource = tipoDeVehiculos.Listado("*", "1=1", "ORDER BY Descripcion");
+                mensaje();
+
+            }
+            if (listarComboBox.Text == "Tipos de Motores")
+            {
+                listarDataGridView.DataSource = tipoMotores.Listado("*", "1=1", "ORDER BY Descripcion");
+                mensaje();
+
+            }
+            if (listarComboBox.Text == "Vehiculos")
+            {
+                listarDataGridView.DataSource = vehiculos.Listado("*", "1=1", "ORDER BY VehiculoId");
+                mensaje();
+
+            }
+        }
+
+        private void listarFueraComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(listarFueraComboBox.Text == "Vehiculos")
+            {
+                listarDataGridView.DataSource = vehiculos.Listado("*", "1=1", "ORDER BY VehiculoId");
+                mensaje();
+
+            }
         }
     }
 }

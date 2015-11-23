@@ -26,10 +26,29 @@ namespace BLL
         public bool ManualDeUsuario { set; get; }
         public bool DuplicadoDeLlaveDeEncendido { set; get; }
         public bool LlaveDeRueda { set; get; }
+        public ConexionDb conexion = new ConexionDb();
+
+        public Atributos(int atributosId, bool espejoRetrovisorInterno, bool espejoRetrovisorDerecho, bool espejoRetrovisorIzquierdo, bool radio, bool gato, bool gomas, bool gomaDeRepuesto, bool alfombras, bool botiquin, bool taponDeGasolina, bool taponDeRadiador, bool encendedor, bool manualDeUsuario, bool duplicadoDeLlaveDeEncendido, bool llaveDeRueda)
+        {
+            AtributosId = atributosId;
+            EspejoRetrovisorInterno = espejoRetrovisorInterno;
+            EspejoRetrovisorDerecho = espejoRetrovisorDerecho;
+            EspejoRetrovisorIzquierdo = espejoRetrovisorIzquierdo;
+            Radio = radio;
+            Gato = gato;
+            Gomas = gomas;
+            GomaDeRepuesto = gomaDeRepuesto;
+            Alfombras = alfombras;
+            Botiquin = botiquin;
+            TaponDeGasolina = taponDeGasolina;
+            TaponDeRadiador = taponDeRadiador;
+            Encendedor = encendedor;
+            ManualDeUsuario = manualDeUsuario;
+            DuplicadoDeLlaveDeEncendido = duplicadoDeLlaveDeEncendido;
+            LlaveDeRueda = llaveDeRueda;
+        }
 
         public Atributos() { }
-
-        public ConexionDb conexion = new ConexionDb();
 
         public override bool Insertar()
         {

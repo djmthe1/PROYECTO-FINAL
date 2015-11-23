@@ -70,37 +70,48 @@ namespace Sistema_Ventas_Vehiculos.Registros
             usuarios.Nombre = nombreTextBox.Text;
             int prioridad = 0;
             int.TryParse(prioridadComboBox.Text, out prioridad);
-            usuarios.Prioridad = prioridad;
-
-            if (usuarioIDTextBox.Text == "" && passTextBox.Text == confirmarPassTextBox.Text)
+            if (prioridad < 3)
             {
+                usuarios.Prioridad = prioridad;
 
-                usuarios.Password = passTextBox.Text;
-                if (usuarios.Insertar())
+                if (usuarioIDTextBox.Text == "" && passTextBox.Text == confirmarPassTextBox.Text && nombreTextBox.Text.Length > 0 && passTextBox.Text.Length > 0 && confirmarPassTextBox.Text.Length > 0)
                 {
-                    Limpiar();
-                    MensajeOk("Insertado Correctamente");
+
+                    usuarios.Password = passTextBox.Text;
+                    if (usuarios.Insertar())
+                    {
+                        Limpiar();
+                        MensajeOk("Insertado Correctamente");
+                    }
+                    else
+                    {
+                        MensajeError("Error al Insertar");
+                    }
                 }
                 else
                 {
-                    MensajeError("Error al Insertar");
+                    if (passTextBox.Text == confirmarPassTextBox.Text && nombreTextBox.Text.Length > 0 && passTextBox.Text.Length > 0 && confirmarPassTextBox.Text.Length > 0) {
+                        int id = 0;
+                        int.TryParse(usuarioIDTextBox.Text, out id);
+                        usuarios.UsuarioId = id;
+                        if (usuarios.Editar())
+                        {
+                            Limpiar();
+                            MensajeOk("Modificado Correctamente");
+                        }
+                        else
+                        {
+                            MensajeError("Error al Modificar");
+                        }
+                    }
+                    else {
+                        MessageBox.Show("Debe Llenar Los Campos Correspondientes");
+                    }
                 }
             }
             else
             {
-
-                int id = 0;
-                int.TryParse(usuarioIDTextBox.Text, out id);
-                usuarios.UsuarioId = id;
-                if (usuarios.Editar())
-                {
-                    Limpiar();
-                    MensajeOk("Modificado Correctamente");
-                }
-                else
-                {
-                    MensajeError("Error al Modificar");
-                }
+                MessageBox.Show("Seleccione Una Prioridad Correcta");
             }
         }
 

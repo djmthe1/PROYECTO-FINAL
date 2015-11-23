@@ -39,6 +39,7 @@ namespace Sistema_Ventas_Vehiculos
         {
             Registros.ListarForm ListarF = new Registros.ListarForm();
             ListarF.botonAtras.Visible = false;
+            ListarF.listarComboBox.Visible = false;
             ListarF.Show();
         }
 

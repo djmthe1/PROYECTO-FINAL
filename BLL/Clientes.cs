@@ -24,7 +24,7 @@ namespace BLL
         public int FacturaId { set; get; }
         public ConexionDb conexion = new ConexionDb();
         public StringBuilder comando = new StringBuilder();
-        public List <NumerosTelefono> NumerosTelefono { set; get; }
+        List <NumerosTelefono> NumerosTelefono { set; get; }
         public NumerosTelefono NumeroC = new NumerosTelefono();
 
         public Clientes(int clienteId, string nombreCompleto, string Apodo, int telefonoId, string direccion, string cedula, string nacionalidad, string ocupacion, string lugarDeNacimiento, string sexo, int facturaId) {
@@ -63,7 +63,6 @@ namespace BLL
                 this.ClienteId = (int)dt.Rows[0]["ClienteId"];
                 this.NombreCompleto = dt.Rows[0]["NombreCompleto"].ToString();
                 this.Apodo = dt.Rows[0]["Apodo"].ToString();
-                this.TelefonoId = (int)dt.Rows[0]["TelefonoId"];
                 this.Direccion = dt.Rows[0]["Direccion"].ToString();
                 this.Cedula = dt.Rows[0]["Cedula"].ToString();
                 this.Nacionalidad = dt.Rows[0]["Nacionalidad"].ToString();
@@ -71,6 +70,11 @@ namespace BLL
                 this.LugarDeNacimiento = dt.Rows[0]["LugarDeNacimiento"].ToString();
                 this.Sexo = dt.Rows[0]["Sexo"].ToString();
                 this.FacturaId = (int)dt.Rows[0]["FacturaId"];
+                datosNumerosTelefonos = conexion.ObtenerDatos("Select ct.ClienteId, c.NombreCompleto, c.Apodo, c.Direccion, c.Cedula, c.Nacionalidad, c.Ocupacion, c.LugarDeNacimiento, c.FacturaId Sexo from NumerosTelefono ct Inner Join Cliente c On ct.ClienteId=c.ClienteId where c.ClienteId =" + this.ClienteId);
+                foreach (DataRow row in datosNumerosTelefonos.Rows)
+                {
+                    this.InsertarNumerosTelefono((int)row["Id"], (int)row["ClienteId"], row["Telefono"].ToString());
+                }
             }
             return dt.Rows.Count > 0;
         }
@@ -139,7 +143,7 @@ namespace BLL
             string ordenar = "";
             if (!Orden.Equals(""))
                 ordenar = " orden by  " + Orden;
-            return conexion.ObtenerDatos(("Select " + Campos + " from Clientes where " + Condicion + ordenar));
+            return conexion.ObtenerDatos(("Select " + Campos + " from Clientes where " + Condicion + Orden));
         }
     }
 }
