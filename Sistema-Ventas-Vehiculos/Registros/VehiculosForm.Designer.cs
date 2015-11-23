@@ -55,6 +55,32 @@
             this.InternoCheckBox = new System.Windows.Forms.CheckBox();
             this.manualCheckBox = new System.Windows.Forms.CheckBox();
             this.duplicadoLlaveCheckBox = new System.Windows.Forms.CheckBox();
+            this.matriculaVehiculoLabel = new System.Windows.Forms.Label();
+            this.placaVehiculoLabel = new System.Windows.Forms.Label();
+            this.precioVehiculoLabel = new System.Windows.Forms.Label();
+            this.kilometrajeVehiculoLabel = new System.Windows.Forms.Label();
+            this.tipoVehiculoLabel = new System.Windows.Forms.Label();
+            this.chasisVehiculoLabel = new System.Windows.Forms.Label();
+            this.añoVehiculoLabel = new System.Windows.Forms.Label();
+            this.colorVehiculoLabel = new System.Windows.Forms.Label();
+            this.motorVehiculoLabel = new System.Windows.Forms.Label();
+            this.marcaVehiculoLabel = new System.Windows.Forms.Label();
+            this.modeloVehiculoLabel = new System.Windows.Forms.Label();
+            this.estadoVehiculoLabel = new System.Windows.Forms.Label();
+            this.matriculaVehiculoTextBox = new System.Windows.Forms.TextBox();
+            this.placaVehiculoTextBox = new System.Windows.Forms.TextBox();
+            this.precioVehiculoTextBox = new System.Windows.Forms.TextBox();
+            this.kilometrajeVehiculoTextBox = new System.Windows.Forms.TextBox();
+            this.tipoVehiculoTextBox = new System.Windows.Forms.TextBox();
+            this.chasisVehiculoTextBox = new System.Windows.Forms.TextBox();
+            this.añoVehiculoTextBox = new System.Windows.Forms.TextBox();
+            this.colorVehiculoTextBox = new System.Windows.Forms.TextBox();
+            this.motorVehiculoTextBox = new System.Windows.Forms.TextBox();
+            this.marcaVehiculoTextBox = new System.Windows.Forms.TextBox();
+            this.modeloVehiculoTextBox = new System.Windows.Forms.TextBox();
+            this.estadoVehiculoTextBox = new System.Windows.Forms.TextBox();
+            this.vehiculoIdTextBox = new System.Windows.Forms.TextBox();
+            this.vehiculoIdLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this._Sistema_Ventas_VehiculosDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.coloresBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._Sistema_Ventas_VehiculosDataSet3)).BeginInit();
@@ -121,7 +147,7 @@
             this.comboBox1.DataSource = this.coloresBindingSource;
             this.comboBox1.DisplayMember = "Descripcion";
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(12, 58);
+            this.comboBox1.Location = new System.Drawing.Point(107, 8);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 33;
@@ -199,7 +225,7 @@
             // gomaRepuestoCheckBox
             // 
             this.gomaRepuestoCheckBox.AutoSize = true;
-            this.gomaRepuestoCheckBox.Location = new System.Drawing.Point(560, 173);
+            this.gomaRepuestoCheckBox.Location = new System.Drawing.Point(560, 104);
             this.gomaRepuestoCheckBox.Name = "gomaRepuestoCheckBox";
             this.gomaRepuestoCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.gomaRepuestoCheckBox.Size = new System.Drawing.Size(120, 17);
@@ -244,7 +270,7 @@
             // taponGasolinaCheckBox
             // 
             this.taponGasolinaCheckBox.AutoSize = true;
-            this.taponGasolinaCheckBox.Location = new System.Drawing.Point(562, 127);
+            this.taponGasolinaCheckBox.Location = new System.Drawing.Point(562, 150);
             this.taponGasolinaCheckBox.Name = "taponGasolinaCheckBox";
             this.taponGasolinaCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.taponGasolinaCheckBox.Size = new System.Drawing.Size(118, 17);
@@ -255,7 +281,7 @@
             // taponRadiadorCheckBox
             // 
             this.taponRadiadorCheckBox.AutoSize = true;
-            this.taponRadiadorCheckBox.Location = new System.Drawing.Point(560, 104);
+            this.taponRadiadorCheckBox.Location = new System.Drawing.Point(560, 127);
             this.taponRadiadorCheckBox.Name = "taponRadiadorCheckBox";
             this.taponRadiadorCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.taponRadiadorCheckBox.Size = new System.Drawing.Size(120, 17);
@@ -288,7 +314,7 @@
             // manualCheckBox
             // 
             this.manualCheckBox.AutoSize = true;
-            this.manualCheckBox.Location = new System.Drawing.Point(563, 150);
+            this.manualCheckBox.Location = new System.Drawing.Point(563, 173);
             this.manualCheckBox.Name = "manualCheckBox";
             this.manualCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.manualCheckBox.Size = new System.Drawing.Size(117, 17);
@@ -307,11 +333,247 @@
             this.duplicadoLlaveCheckBox.Text = "Duplicado De Llave De Encendido";
             this.duplicadoLlaveCheckBox.UseVisualStyleBackColor = true;
             // 
+            // matriculaVehiculoLabel
+            // 
+            this.matriculaVehiculoLabel.AutoSize = true;
+            this.matriculaVehiculoLabel.Location = new System.Drawing.Point(51, 371);
+            this.matriculaVehiculoLabel.Name = "matriculaVehiculoLabel";
+            this.matriculaVehiculoLabel.Size = new System.Drawing.Size(50, 13);
+            this.matriculaVehiculoLabel.TabIndex = 88;
+            this.matriculaVehiculoLabel.Text = "Matricula";
+            // 
+            // placaVehiculoLabel
+            // 
+            this.placaVehiculoLabel.AutoSize = true;
+            this.placaVehiculoLabel.Location = new System.Drawing.Point(48, 345);
+            this.placaVehiculoLabel.Name = "placaVehiculoLabel";
+            this.placaVehiculoLabel.Size = new System.Drawing.Size(54, 13);
+            this.placaVehiculoLabel.TabIndex = 87;
+            this.placaVehiculoLabel.Text = "Placa No.";
+            // 
+            // precioVehiculoLabel
+            // 
+            this.precioVehiculoLabel.AutoSize = true;
+            this.precioVehiculoLabel.Location = new System.Drawing.Point(65, 319);
+            this.precioVehiculoLabel.Name = "precioVehiculoLabel";
+            this.precioVehiculoLabel.Size = new System.Drawing.Size(37, 13);
+            this.precioVehiculoLabel.TabIndex = 86;
+            this.precioVehiculoLabel.Text = "Precio";
+            // 
+            // kilometrajeVehiculoLabel
+            // 
+            this.kilometrajeVehiculoLabel.AutoSize = true;
+            this.kilometrajeVehiculoLabel.Location = new System.Drawing.Point(43, 293);
+            this.kilometrajeVehiculoLabel.Name = "kilometrajeVehiculoLabel";
+            this.kilometrajeVehiculoLabel.Size = new System.Drawing.Size(58, 13);
+            this.kilometrajeVehiculoLabel.TabIndex = 85;
+            this.kilometrajeVehiculoLabel.Text = "Kilometraje";
+            // 
+            // tipoVehiculoLabel
+            // 
+            this.tipoVehiculoLabel.AutoSize = true;
+            this.tipoVehiculoLabel.Location = new System.Drawing.Point(13, 267);
+            this.tipoVehiculoLabel.Name = "tipoVehiculoLabel";
+            this.tipoVehiculoLabel.Size = new System.Drawing.Size(89, 13);
+            this.tipoVehiculoLabel.TabIndex = 84;
+            this.tipoVehiculoLabel.Text = "Tipo De Vehiculo";
+            // 
+            // chasisVehiculoLabel
+            // 
+            this.chasisVehiculoLabel.AutoSize = true;
+            this.chasisVehiculoLabel.Location = new System.Drawing.Point(44, 241);
+            this.chasisVehiculoLabel.Name = "chasisVehiculoLabel";
+            this.chasisVehiculoLabel.Size = new System.Drawing.Size(58, 13);
+            this.chasisVehiculoLabel.TabIndex = 83;
+            this.chasisVehiculoLabel.Text = "Chasis No.";
+            // 
+            // añoVehiculoLabel
+            // 
+            this.añoVehiculoLabel.AutoSize = true;
+            this.añoVehiculoLabel.Location = new System.Drawing.Point(75, 215);
+            this.añoVehiculoLabel.Name = "añoVehiculoLabel";
+            this.añoVehiculoLabel.Size = new System.Drawing.Size(26, 13);
+            this.añoVehiculoLabel.TabIndex = 82;
+            this.añoVehiculoLabel.Text = "Año";
+            // 
+            // colorVehiculoLabel
+            // 
+            this.colorVehiculoLabel.AutoSize = true;
+            this.colorVehiculoLabel.Location = new System.Drawing.Point(70, 189);
+            this.colorVehiculoLabel.Name = "colorVehiculoLabel";
+            this.colorVehiculoLabel.Size = new System.Drawing.Size(31, 13);
+            this.colorVehiculoLabel.TabIndex = 81;
+            this.colorVehiculoLabel.Text = "Color";
+            // 
+            // motorVehiculoLabel
+            // 
+            this.motorVehiculoLabel.AutoSize = true;
+            this.motorVehiculoLabel.Location = new System.Drawing.Point(67, 163);
+            this.motorVehiculoLabel.Name = "motorVehiculoLabel";
+            this.motorVehiculoLabel.Size = new System.Drawing.Size(34, 13);
+            this.motorVehiculoLabel.TabIndex = 80;
+            this.motorVehiculoLabel.Text = "Motor";
+            // 
+            // marcaVehiculoLabel
+            // 
+            this.marcaVehiculoLabel.AutoSize = true;
+            this.marcaVehiculoLabel.Location = new System.Drawing.Point(64, 137);
+            this.marcaVehiculoLabel.Name = "marcaVehiculoLabel";
+            this.marcaVehiculoLabel.Size = new System.Drawing.Size(37, 13);
+            this.marcaVehiculoLabel.TabIndex = 79;
+            this.marcaVehiculoLabel.Text = "Marca";
+            // 
+            // modeloVehiculoLabel
+            // 
+            this.modeloVehiculoLabel.AutoSize = true;
+            this.modeloVehiculoLabel.Location = new System.Drawing.Point(59, 111);
+            this.modeloVehiculoLabel.Name = "modeloVehiculoLabel";
+            this.modeloVehiculoLabel.Size = new System.Drawing.Size(42, 13);
+            this.modeloVehiculoLabel.TabIndex = 78;
+            this.modeloVehiculoLabel.Text = "Modelo";
+            // 
+            // estadoVehiculoLabel
+            // 
+            this.estadoVehiculoLabel.AutoSize = true;
+            this.estadoVehiculoLabel.Location = new System.Drawing.Point(-2, 85);
+            this.estadoVehiculoLabel.Name = "estadoVehiculoLabel";
+            this.estadoVehiculoLabel.Size = new System.Drawing.Size(103, 13);
+            this.estadoVehiculoLabel.TabIndex = 77;
+            this.estadoVehiculoLabel.Text = "Estado Del Vehiculo";
+            // 
+            // matriculaVehiculoTextBox
+            // 
+            this.matriculaVehiculoTextBox.Location = new System.Drawing.Point(107, 371);
+            this.matriculaVehiculoTextBox.Name = "matriculaVehiculoTextBox";
+            this.matriculaVehiculoTextBox.Size = new System.Drawing.Size(100, 20);
+            this.matriculaVehiculoTextBox.TabIndex = 76;
+            // 
+            // placaVehiculoTextBox
+            // 
+            this.placaVehiculoTextBox.Location = new System.Drawing.Point(107, 345);
+            this.placaVehiculoTextBox.Name = "placaVehiculoTextBox";
+            this.placaVehiculoTextBox.Size = new System.Drawing.Size(100, 20);
+            this.placaVehiculoTextBox.TabIndex = 75;
+            // 
+            // precioVehiculoTextBox
+            // 
+            this.precioVehiculoTextBox.Location = new System.Drawing.Point(107, 319);
+            this.precioVehiculoTextBox.Name = "precioVehiculoTextBox";
+            this.precioVehiculoTextBox.Size = new System.Drawing.Size(100, 20);
+            this.precioVehiculoTextBox.TabIndex = 74;
+            // 
+            // kilometrajeVehiculoTextBox
+            // 
+            this.kilometrajeVehiculoTextBox.Location = new System.Drawing.Point(107, 293);
+            this.kilometrajeVehiculoTextBox.Name = "kilometrajeVehiculoTextBox";
+            this.kilometrajeVehiculoTextBox.Size = new System.Drawing.Size(100, 20);
+            this.kilometrajeVehiculoTextBox.TabIndex = 73;
+            // 
+            // tipoVehiculoTextBox
+            // 
+            this.tipoVehiculoTextBox.Location = new System.Drawing.Point(107, 267);
+            this.tipoVehiculoTextBox.Name = "tipoVehiculoTextBox";
+            this.tipoVehiculoTextBox.Size = new System.Drawing.Size(100, 20);
+            this.tipoVehiculoTextBox.TabIndex = 72;
+            // 
+            // chasisVehiculoTextBox
+            // 
+            this.chasisVehiculoTextBox.Location = new System.Drawing.Point(107, 241);
+            this.chasisVehiculoTextBox.Name = "chasisVehiculoTextBox";
+            this.chasisVehiculoTextBox.Size = new System.Drawing.Size(100, 20);
+            this.chasisVehiculoTextBox.TabIndex = 71;
+            // 
+            // añoVehiculoTextBox
+            // 
+            this.añoVehiculoTextBox.Location = new System.Drawing.Point(107, 215);
+            this.añoVehiculoTextBox.Name = "añoVehiculoTextBox";
+            this.añoVehiculoTextBox.Size = new System.Drawing.Size(100, 20);
+            this.añoVehiculoTextBox.TabIndex = 70;
+            // 
+            // colorVehiculoTextBox
+            // 
+            this.colorVehiculoTextBox.Location = new System.Drawing.Point(107, 189);
+            this.colorVehiculoTextBox.Name = "colorVehiculoTextBox";
+            this.colorVehiculoTextBox.Size = new System.Drawing.Size(100, 20);
+            this.colorVehiculoTextBox.TabIndex = 69;
+            // 
+            // motorVehiculoTextBox
+            // 
+            this.motorVehiculoTextBox.Location = new System.Drawing.Point(107, 163);
+            this.motorVehiculoTextBox.Name = "motorVehiculoTextBox";
+            this.motorVehiculoTextBox.Size = new System.Drawing.Size(100, 20);
+            this.motorVehiculoTextBox.TabIndex = 68;
+            // 
+            // marcaVehiculoTextBox
+            // 
+            this.marcaVehiculoTextBox.Location = new System.Drawing.Point(107, 137);
+            this.marcaVehiculoTextBox.Name = "marcaVehiculoTextBox";
+            this.marcaVehiculoTextBox.Size = new System.Drawing.Size(100, 20);
+            this.marcaVehiculoTextBox.TabIndex = 67;
+            // 
+            // modeloVehiculoTextBox
+            // 
+            this.modeloVehiculoTextBox.Location = new System.Drawing.Point(107, 111);
+            this.modeloVehiculoTextBox.Name = "modeloVehiculoTextBox";
+            this.modeloVehiculoTextBox.Size = new System.Drawing.Size(100, 20);
+            this.modeloVehiculoTextBox.TabIndex = 66;
+            // 
+            // estadoVehiculoTextBox
+            // 
+            this.estadoVehiculoTextBox.Location = new System.Drawing.Point(107, 85);
+            this.estadoVehiculoTextBox.Name = "estadoVehiculoTextBox";
+            this.estadoVehiculoTextBox.Size = new System.Drawing.Size(100, 20);
+            this.estadoVehiculoTextBox.TabIndex = 65;
+            // 
+            // vehiculoIdTextBox
+            // 
+            this.vehiculoIdTextBox.Location = new System.Drawing.Point(107, 59);
+            this.vehiculoIdTextBox.Name = "vehiculoIdTextBox";
+            this.vehiculoIdTextBox.Size = new System.Drawing.Size(100, 20);
+            this.vehiculoIdTextBox.TabIndex = 64;
+            // 
+            // vehiculoIdLabel
+            // 
+            this.vehiculoIdLabel.AutoSize = true;
+            this.vehiculoIdLabel.Location = new System.Drawing.Point(44, 59);
+            this.vehiculoIdLabel.Name = "vehiculoIdLabel";
+            this.vehiculoIdLabel.Size = new System.Drawing.Size(57, 13);
+            this.vehiculoIdLabel.TabIndex = 63;
+            this.vehiculoIdLabel.Text = "VehiculoId";
+            // 
             // VehiculosForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(692, 405);
+            this.Controls.Add(this.matriculaVehiculoLabel);
+            this.Controls.Add(this.placaVehiculoLabel);
+            this.Controls.Add(this.precioVehiculoLabel);
+            this.Controls.Add(this.kilometrajeVehiculoLabel);
+            this.Controls.Add(this.tipoVehiculoLabel);
+            this.Controls.Add(this.chasisVehiculoLabel);
+            this.Controls.Add(this.añoVehiculoLabel);
+            this.Controls.Add(this.colorVehiculoLabel);
+            this.Controls.Add(this.motorVehiculoLabel);
+            this.Controls.Add(this.marcaVehiculoLabel);
+            this.Controls.Add(this.modeloVehiculoLabel);
+            this.Controls.Add(this.estadoVehiculoLabel);
+            this.Controls.Add(this.matriculaVehiculoTextBox);
+            this.Controls.Add(this.placaVehiculoTextBox);
+            this.Controls.Add(this.precioVehiculoTextBox);
+            this.Controls.Add(this.kilometrajeVehiculoTextBox);
+            this.Controls.Add(this.tipoVehiculoTextBox);
+            this.Controls.Add(this.chasisVehiculoTextBox);
+            this.Controls.Add(this.añoVehiculoTextBox);
+            this.Controls.Add(this.colorVehiculoTextBox);
+            this.Controls.Add(this.motorVehiculoTextBox);
+            this.Controls.Add(this.marcaVehiculoTextBox);
+            this.Controls.Add(this.modeloVehiculoTextBox);
+            this.Controls.Add(this.estadoVehiculoTextBox);
+            this.Controls.Add(this.vehiculoIdTextBox);
+            this.Controls.Add(this.vehiculoIdLabel);
             this.Controls.Add(this.duplicadoLlaveCheckBox);
             this.Controls.Add(this.manualCheckBox);
             this.Controls.Add(this.encendedorCheckBox);
@@ -372,5 +634,31 @@
         private System.Windows.Forms.CheckBox InternoCheckBox;
         private System.Windows.Forms.CheckBox manualCheckBox;
         private System.Windows.Forms.CheckBox duplicadoLlaveCheckBox;
+        private System.Windows.Forms.Label matriculaVehiculoLabel;
+        private System.Windows.Forms.Label placaVehiculoLabel;
+        private System.Windows.Forms.Label precioVehiculoLabel;
+        private System.Windows.Forms.Label kilometrajeVehiculoLabel;
+        private System.Windows.Forms.Label tipoVehiculoLabel;
+        private System.Windows.Forms.Label chasisVehiculoLabel;
+        private System.Windows.Forms.Label añoVehiculoLabel;
+        private System.Windows.Forms.Label colorVehiculoLabel;
+        private System.Windows.Forms.Label motorVehiculoLabel;
+        private System.Windows.Forms.Label marcaVehiculoLabel;
+        private System.Windows.Forms.Label modeloVehiculoLabel;
+        private System.Windows.Forms.Label estadoVehiculoLabel;
+        private System.Windows.Forms.TextBox matriculaVehiculoTextBox;
+        private System.Windows.Forms.TextBox placaVehiculoTextBox;
+        private System.Windows.Forms.TextBox precioVehiculoTextBox;
+        private System.Windows.Forms.TextBox kilometrajeVehiculoTextBox;
+        private System.Windows.Forms.TextBox tipoVehiculoTextBox;
+        private System.Windows.Forms.TextBox chasisVehiculoTextBox;
+        private System.Windows.Forms.TextBox añoVehiculoTextBox;
+        private System.Windows.Forms.TextBox colorVehiculoTextBox;
+        private System.Windows.Forms.TextBox motorVehiculoTextBox;
+        private System.Windows.Forms.TextBox marcaVehiculoTextBox;
+        private System.Windows.Forms.TextBox modeloVehiculoTextBox;
+        private System.Windows.Forms.TextBox estadoVehiculoTextBox;
+        private System.Windows.Forms.TextBox vehiculoIdTextBox;
+        private System.Windows.Forms.Label vehiculoIdLabel;
     }
 }

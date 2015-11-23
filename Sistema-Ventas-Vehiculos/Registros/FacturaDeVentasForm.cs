@@ -30,5 +30,10 @@ namespace Sistema_Ventas_Vehiculos.Registros
             Portada.Show();
             this.Close();
         }
+
+        private void añoVehiculoTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

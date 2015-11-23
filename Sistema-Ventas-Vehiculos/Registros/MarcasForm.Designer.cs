@@ -150,6 +150,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(278, 249);
             this.Controls.Add(this.botonAtras);
             this.Controls.Add(this.botonBuscar);
@@ -160,6 +162,7 @@
             this.Controls.Add(this.Descripcionlabel);
             this.Controls.Add(this.DescripciontextBox);
             this.Controls.Add(this.IDlabel);
+            this.DoubleBuffered = true;
             this.Name = "MarcasForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Marcas";

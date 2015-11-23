@@ -130,6 +130,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(284, 262);
             this.Controls.Add(this.botonAtras);
             this.Controls.Add(this.botonBuscar);
@@ -140,6 +142,7 @@
             this.Controls.Add(this.botonEliminar);
             this.Controls.Add(this.botonGuardar);
             this.Controls.Add(this.botonNuevo);
+            this.DoubleBuffered = true;
             this.Name = "ModelosForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Modelos";
