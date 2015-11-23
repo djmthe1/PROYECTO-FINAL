@@ -298,7 +298,7 @@
             // 
             this.datosClientelabel.AutoSize = true;
             this.datosClientelabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.datosClientelabel.Location = new System.Drawing.Point(53, 14);
+            this.datosClientelabel.Location = new System.Drawing.Point(53, 19);
             this.datosClientelabel.Name = "datosClientelabel";
             this.datosClientelabel.Size = new System.Drawing.Size(144, 15);
             this.datosClientelabel.TabIndex = 24;
@@ -308,7 +308,7 @@
             // 
             this.datosVehiculoLabel.AutoSize = true;
             this.datosVehiculoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.datosVehiculoLabel.Location = new System.Drawing.Point(498, 9);
+            this.datosVehiculoLabel.Location = new System.Drawing.Point(498, 15);
             this.datosVehiculoLabel.Name = "datosVehiculoLabel";
             this.datosVehiculoLabel.Size = new System.Drawing.Size(155, 15);
             this.datosVehiculoLabel.TabIndex = 25;

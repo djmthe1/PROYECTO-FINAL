@@ -27,12 +27,12 @@ namespace BLL
         public string Matricula { set; get; }
         public ConexionDb conexion = new ConexionDb();
         public StringBuilder comando = new StringBuilder();
-        List <Atributos> Atributos { get; set; }
-        List <Marcas> Marcas { get; set; }
-        List <Modelos> Modelos { get; set; }
-        List <TipoMotores> TipoMotores { get; set; }
-        List <Colores> Colores { get; set; }
-        List <TipoDeVehiculos> TipoDeVehiculos { get; set; }
+        List<Atributos> Atributos { get; set; }
+        List<Marcas> Marcas { get; set; }
+        List<Modelos> Modelos { get; set; }
+        List<TipoMotores> TipoMotores { get; set; }
+        List<Colores> Colores { get; set; }
+        List<TipoDeVehiculos> TipoDeVehiculos { get; set; }
         public Atributos AtributosV = new Atributos();
         public Marcas MarcasV = new Marcas();
         public Modelos ModelosV = new Modelos();
@@ -109,8 +109,9 @@ namespace BLL
             bool retorno = false;
             try
             {
-                conexion.Ejecutar(String.Format("Insert Into Vehiculos (EstadoDelVehiculo, AtributosId, ModelosId, MarcasId, MotorId, ColorId, Año, NoChasis, TipoDeVehiculoId, Kilometraje, Precio, Placa, Matricula) Values('{0}',{1},{2},{3},{4},{5},{6},'{7}',{8},{9},{10},'{11}','{12}')", this.EstadoDelVehiculo, this.AtributosId, this.ModelosId, this.MarcasId, this.MotorId, this.ColorId, this.Año, this.NoChasis, this.TipoDeVehiculoId, this.Kilometraje, this.Precio, this.Placa, this.Matricula));
+                conexion.Ejecutar(String.Format("Insert Into Vehiculos (EstadoDelVehiculo, Año, NoChasis, Kilometraje, Precio, Placa, Matricula) Values('{0}',{1},'{2}',{3},{4},'{5}','{6}')", this.EstadoDelVehiculo, this.Año, this.NoChasis, this.Kilometraje, this.Precio, this.Placa, this.Matricula));
                 retorno = true;
+                comando.AppendLine(String.Format("Update Vehiculos set AtributosId={0}, ModeloId={1}, MarcaId={2}, MotorId={3}, ColorId={4}, TipoDeVehiculoId={5}, VehiculoId={6}; ", this.AtributosId, this.ModelosId, this.MarcasId, this.MotorId, this.ColorId, this.TipoDeVehiculoId, this.VehiculoId));
             }
             catch (Exception ex) { throw ex; }
             return retorno;

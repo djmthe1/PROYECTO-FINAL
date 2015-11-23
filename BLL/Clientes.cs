@@ -70,7 +70,7 @@ namespace BLL
                 this.LugarDeNacimiento = dt.Rows[0]["LugarDeNacimiento"].ToString();
                 this.Sexo = dt.Rows[0]["Sexo"].ToString();
                 this.FacturaId = (int)dt.Rows[0]["FacturaId"];
-                datosNumerosTelefonos = conexion.ObtenerDatos("Select ct.ClienteId, c.NombreCompleto, c.Apodo, c.Direccion, c.Cedula, c.Nacionalidad, c.Ocupacion, c.LugarDeNacimiento, c.FacturaId Sexo from NumerosTelefono ct Inner Join Cliente c On ct.ClienteId=c.ClienteId where c.ClienteId =" + this.ClienteId);
+                datosNumerosTelefonos = conexion.ObtenerDatos("Select ct.ClienteId, c.NombreCompleto, c.Apodo, c.Direccion, c.Cedula, c.Nacionalidad, c.Ocupacion, c.LugarDeNacimiento, c.FacturaId, c.Sexo from NumerosTelefono ct Inner Join Cliente c On ct.ClienteId=c.ClienteId where c.ClienteId =" + this.ClienteId);
                 foreach (DataRow row in datosNumerosTelefonos.Rows)
                 {
                     this.InsertarNumerosTelefono((int)row["Id"], (int)row["ClienteId"], row["Telefono"].ToString());
