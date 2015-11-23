@@ -43,15 +43,15 @@
             this.clienteIdLabel = new System.Windows.Forms.Label();
             this.vehiculoIdLabel = new System.Windows.Forms.Label();
             this.IdClinteTextBox = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.NombreTextBox = new System.Windows.Forms.TextBox();
+            this.ApodoTextBox = new System.Windows.Forms.TextBox();
+            this.TelefonoTextBox = new System.Windows.Forms.TextBox();
+            this.DireccionTextBox = new System.Windows.Forms.TextBox();
+            this.CedulaTextBox = new System.Windows.Forms.TextBox();
+            this.NacimientoTextBox = new System.Windows.Forms.TextBox();
+            this.OcupacionTextBox = new System.Windows.Forms.TextBox();
+            this.LugardeNacimientoTextBox = new System.Windows.Forms.TextBox();
+            this.SexoTextBox = new System.Windows.Forms.TextBox();
             this.vehiculoIdTextBox = new System.Windows.Forms.TextBox();
             this.datosClientelabel = new System.Windows.Forms.Label();
             this.datosVehiculoLabel = new System.Windows.Forms.Label();
@@ -92,6 +92,8 @@
             this.precioVehiculoLabel = new System.Windows.Forms.Label();
             this.placaVehiculoLabel = new System.Windows.Forms.Label();
             this.matriculaVehiculoLabel = new System.Windows.Forms.Label();
+            this.CelularTextBox = new System.Windows.Forms.TextBox();
+            this.Celular = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // botonSiguente
@@ -148,7 +150,7 @@
             // direccionLabel
             // 
             this.direccionLabel.AutoSize = true;
-            this.direccionLabel.Location = new System.Drawing.Point(118, 160);
+            this.direccionLabel.Location = new System.Drawing.Point(118, 188);
             this.direccionLabel.Name = "direccionLabel";
             this.direccionLabel.Size = new System.Drawing.Size(52, 13);
             this.direccionLabel.TabIndex = 5;
@@ -157,7 +159,7 @@
             // cedulaLabel
             // 
             this.cedulaLabel.AutoSize = true;
-            this.cedulaLabel.Location = new System.Drawing.Point(118, 186);
+            this.cedulaLabel.Location = new System.Drawing.Point(118, 214);
             this.cedulaLabel.Name = "cedulaLabel";
             this.cedulaLabel.Size = new System.Drawing.Size(40, 13);
             this.cedulaLabel.TabIndex = 6;
@@ -166,7 +168,7 @@
             // nacionalidadLabel
             // 
             this.nacionalidadLabel.AutoSize = true;
-            this.nacionalidadLabel.Location = new System.Drawing.Point(118, 212);
+            this.nacionalidadLabel.Location = new System.Drawing.Point(118, 240);
             this.nacionalidadLabel.Name = "nacionalidadLabel";
             this.nacionalidadLabel.Size = new System.Drawing.Size(69, 13);
             this.nacionalidadLabel.TabIndex = 7;
@@ -175,7 +177,7 @@
             // ocupacionLabel
             // 
             this.ocupacionLabel.AutoSize = true;
-            this.ocupacionLabel.Location = new System.Drawing.Point(118, 238);
+            this.ocupacionLabel.Location = new System.Drawing.Point(118, 266);
             this.ocupacionLabel.Name = "ocupacionLabel";
             this.ocupacionLabel.Size = new System.Drawing.Size(59, 13);
             this.ocupacionLabel.TabIndex = 8;
@@ -184,7 +186,7 @@
             // lugarDeNacimientoLabel
             // 
             this.lugarDeNacimientoLabel.AutoSize = true;
-            this.lugarDeNacimientoLabel.Location = new System.Drawing.Point(118, 264);
+            this.lugarDeNacimientoLabel.Location = new System.Drawing.Point(118, 292);
             this.lugarDeNacimientoLabel.Name = "lugarDeNacimientoLabel";
             this.lugarDeNacimientoLabel.Size = new System.Drawing.Size(107, 13);
             this.lugarDeNacimientoLabel.TabIndex = 9;
@@ -193,7 +195,7 @@
             // sexoLabel
             // 
             this.sexoLabel.AutoSize = true;
-            this.sexoLabel.Location = new System.Drawing.Point(118, 290);
+            this.sexoLabel.Location = new System.Drawing.Point(118, 318);
             this.sexoLabel.Name = "sexoLabel";
             this.sexoLabel.Size = new System.Drawing.Size(31, 13);
             this.sexoLabel.TabIndex = 10;
@@ -224,68 +226,68 @@
             this.IdClinteTextBox.Size = new System.Drawing.Size(100, 20);
             this.IdClinteTextBox.TabIndex = 13;
             // 
-            // textBox2
+            // NombreTextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(12, 75);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 14;
+            this.NombreTextBox.Location = new System.Drawing.Point(12, 75);
+            this.NombreTextBox.Name = "NombreTextBox";
+            this.NombreTextBox.Size = new System.Drawing.Size(100, 20);
+            this.NombreTextBox.TabIndex = 14;
             // 
-            // textBox3
+            // ApodoTextBox
             // 
-            this.textBox3.Location = new System.Drawing.Point(12, 101);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 15;
+            this.ApodoTextBox.Location = new System.Drawing.Point(12, 101);
+            this.ApodoTextBox.Name = "ApodoTextBox";
+            this.ApodoTextBox.Size = new System.Drawing.Size(100, 20);
+            this.ApodoTextBox.TabIndex = 15;
             // 
-            // textBox
+            // TelefonoTextBox
             // 
-            this.textBox.Location = new System.Drawing.Point(12, 127);
-            this.textBox.Name = "textBox";
-            this.textBox.Size = new System.Drawing.Size(100, 20);
-            this.textBox.TabIndex = 16;
+            this.TelefonoTextBox.Location = new System.Drawing.Point(12, 127);
+            this.TelefonoTextBox.Name = "TelefonoTextBox";
+            this.TelefonoTextBox.Size = new System.Drawing.Size(100, 20);
+            this.TelefonoTextBox.TabIndex = 16;
             // 
-            // textBox5
+            // DireccionTextBox
             // 
-            this.textBox5.Location = new System.Drawing.Point(12, 153);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 17;
+            this.DireccionTextBox.Location = new System.Drawing.Point(12, 181);
+            this.DireccionTextBox.Name = "DireccionTextBox";
+            this.DireccionTextBox.Size = new System.Drawing.Size(100, 20);
+            this.DireccionTextBox.TabIndex = 17;
             // 
-            // textBox6
+            // CedulaTextBox
             // 
-            this.textBox6.Location = new System.Drawing.Point(12, 179);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 18;
+            this.CedulaTextBox.Location = new System.Drawing.Point(12, 207);
+            this.CedulaTextBox.Name = "CedulaTextBox";
+            this.CedulaTextBox.Size = new System.Drawing.Size(100, 20);
+            this.CedulaTextBox.TabIndex = 18;
             // 
-            // textBox7
+            // NacimientoTextBox
             // 
-            this.textBox7.Location = new System.Drawing.Point(12, 205);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 20);
-            this.textBox7.TabIndex = 19;
+            this.NacimientoTextBox.Location = new System.Drawing.Point(12, 233);
+            this.NacimientoTextBox.Name = "NacimientoTextBox";
+            this.NacimientoTextBox.Size = new System.Drawing.Size(100, 20);
+            this.NacimientoTextBox.TabIndex = 19;
             // 
-            // textBox8
+            // OcupacionTextBox
             // 
-            this.textBox8.Location = new System.Drawing.Point(12, 231);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(100, 20);
-            this.textBox8.TabIndex = 20;
+            this.OcupacionTextBox.Location = new System.Drawing.Point(12, 259);
+            this.OcupacionTextBox.Name = "OcupacionTextBox";
+            this.OcupacionTextBox.Size = new System.Drawing.Size(100, 20);
+            this.OcupacionTextBox.TabIndex = 20;
             // 
-            // textBox9
+            // LugardeNacimientoTextBox
             // 
-            this.textBox9.Location = new System.Drawing.Point(12, 257);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(100, 20);
-            this.textBox9.TabIndex = 21;
+            this.LugardeNacimientoTextBox.Location = new System.Drawing.Point(12, 285);
+            this.LugardeNacimientoTextBox.Name = "LugardeNacimientoTextBox";
+            this.LugardeNacimientoTextBox.Size = new System.Drawing.Size(100, 20);
+            this.LugardeNacimientoTextBox.TabIndex = 21;
             // 
-            // textBox10
+            // SexoTextBox
             // 
-            this.textBox10.Location = new System.Drawing.Point(12, 283);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(100, 20);
-            this.textBox10.TabIndex = 22;
+            this.SexoTextBox.Location = new System.Drawing.Point(12, 311);
+            this.SexoTextBox.Name = "SexoTextBox";
+            this.SexoTextBox.Size = new System.Drawing.Size(100, 20);
+            this.SexoTextBox.TabIndex = 22;
             // 
             // vehiculoIdTextBox
             // 
@@ -324,6 +326,7 @@
             this.botonBuscarVehiculo.Size = new System.Drawing.Size(39, 31);
             this.botonBuscarVehiculo.TabIndex = 26;
             this.botonBuscarVehiculo.UseVisualStyleBackColor = true;
+            this.botonBuscarVehiculo.Click += new System.EventHandler(this.botonBuscarVehiculo_Click);
             // 
             // botonBuscarCliente
             // 
@@ -335,6 +338,7 @@
             this.botonBuscarCliente.Size = new System.Drawing.Size(39, 31);
             this.botonBuscarCliente.TabIndex = 27;
             this.botonBuscarCliente.UseVisualStyleBackColor = true;
+            this.botonBuscarCliente.Click += new System.EventHandler(this.botonBuscarCliente_Click);
             // 
             // detallesFacturaLabel
             // 
@@ -508,10 +512,10 @@
             // facturaDeVentasLlabel
             // 
             this.facturaDeVentasLlabel.AutoSize = true;
-            this.facturaDeVentasLlabel.Font = new System.Drawing.Font("Perpetua Titling MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.facturaDeVentasLlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.facturaDeVentasLlabel.Location = new System.Drawing.Point(233, 9);
             this.facturaDeVentasLlabel.Name = "facturaDeVentasLlabel";
-            this.facturaDeVentasLlabel.Size = new System.Drawing.Size(227, 23);
+            this.facturaDeVentasLlabel.Size = new System.Drawing.Size(229, 24);
             this.facturaDeVentasLlabel.TabIndex = 50;
             this.facturaDeVentasLlabel.Text = "FACTURA DE VENTAS";
             // 
@@ -623,6 +627,22 @@
             this.matriculaVehiculoLabel.TabIndex = 62;
             this.matriculaVehiculoLabel.Text = "Matricula";
             // 
+            // CelularTextBox
+            // 
+            this.CelularTextBox.Location = new System.Drawing.Point(12, 155);
+            this.CelularTextBox.Name = "CelularTextBox";
+            this.CelularTextBox.Size = new System.Drawing.Size(100, 20);
+            this.CelularTextBox.TabIndex = 64;
+            // 
+            // Celular
+            // 
+            this.Celular.AutoSize = true;
+            this.Celular.Location = new System.Drawing.Point(118, 162);
+            this.Celular.Name = "Celular";
+            this.Celular.Size = new System.Drawing.Size(39, 13);
+            this.Celular.TabIndex = 63;
+            this.Celular.Text = "Celular";
+            // 
             // FacturaDeVentasForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -630,6 +650,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(710, 485);
+            this.Controls.Add(this.CelularTextBox);
+            this.Controls.Add(this.Celular);
             this.Controls.Add(this.matriculaVehiculoLabel);
             this.Controls.Add(this.placaVehiculoLabel);
             this.Controls.Add(this.precioVehiculoLabel);
@@ -670,15 +692,15 @@
             this.Controls.Add(this.datosVehiculoLabel);
             this.Controls.Add(this.datosClientelabel);
             this.Controls.Add(this.vehiculoIdTextBox);
-            this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.SexoTextBox);
+            this.Controls.Add(this.LugardeNacimientoTextBox);
+            this.Controls.Add(this.OcupacionTextBox);
+            this.Controls.Add(this.NacimientoTextBox);
+            this.Controls.Add(this.CedulaTextBox);
+            this.Controls.Add(this.DireccionTextBox);
+            this.Controls.Add(this.TelefonoTextBox);
+            this.Controls.Add(this.ApodoTextBox);
+            this.Controls.Add(this.NombreTextBox);
             this.Controls.Add(this.IdClinteTextBox);
             this.Controls.Add(this.vehiculoIdLabel);
             this.Controls.Add(this.clienteIdLabel);
@@ -718,15 +740,15 @@
         private System.Windows.Forms.Label clienteIdLabel;
         private System.Windows.Forms.Label vehiculoIdLabel;
         private System.Windows.Forms.TextBox IdClinteTextBox;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox NombreTextBox;
+        private System.Windows.Forms.TextBox ApodoTextBox;
+        private System.Windows.Forms.TextBox TelefonoTextBox;
+        private System.Windows.Forms.TextBox DireccionTextBox;
+        private System.Windows.Forms.TextBox CedulaTextBox;
+        private System.Windows.Forms.TextBox NacimientoTextBox;
+        private System.Windows.Forms.TextBox OcupacionTextBox;
+        private System.Windows.Forms.TextBox LugardeNacimientoTextBox;
+        private System.Windows.Forms.TextBox SexoTextBox;
         private System.Windows.Forms.TextBox vehiculoIdTextBox;
         private System.Windows.Forms.Label datosClientelabel;
         private System.Windows.Forms.Label datosVehiculoLabel;
@@ -767,5 +789,7 @@
         private System.Windows.Forms.Label precioVehiculoLabel;
         private System.Windows.Forms.Label placaVehiculoLabel;
         private System.Windows.Forms.Label matriculaVehiculoLabel;
+        private System.Windows.Forms.TextBox CelularTextBox;
+        private System.Windows.Forms.Label Celular;
     }
 }
