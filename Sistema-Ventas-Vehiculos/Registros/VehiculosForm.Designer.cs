@@ -74,13 +74,13 @@
             this.tipoVehiculoTextBox = new System.Windows.Forms.TextBox();
             this.chasisVehiculoTextBox = new System.Windows.Forms.TextBox();
             this.añoVehiculoTextBox = new System.Windows.Forms.TextBox();
-            this.colorVehiculoTextBox = new System.Windows.Forms.TextBox();
-            this.motorVehiculoTextBox = new System.Windows.Forms.TextBox();
-            this.marcaVehiculoTextBox = new System.Windows.Forms.TextBox();
-            this.modeloVehiculoTextBox = new System.Windows.Forms.TextBox();
             this.estadoVehiculoTextBox = new System.Windows.Forms.TextBox();
             this.vehiculoIdTextBox = new System.Windows.Forms.TextBox();
             this.vehiculoIdLabel = new System.Windows.Forms.Label();
+            this.ModeloComboBox = new System.Windows.Forms.ComboBox();
+            this.MotorComboBox = new System.Windows.Forms.ComboBox();
+            this.MarcasComboBox = new System.Windows.Forms.ComboBox();
+            this.ColorComboBox = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this._Sistema_Ventas_VehiculosDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.coloresBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._Sistema_Ventas_VehiculosDataSet3)).BeginInit();
@@ -490,44 +490,16 @@
             this.añoVehiculoTextBox.Size = new System.Drawing.Size(100, 20);
             this.añoVehiculoTextBox.TabIndex = 70;
             // 
-            // colorVehiculoTextBox
-            // 
-            this.colorVehiculoTextBox.Location = new System.Drawing.Point(107, 189);
-            this.colorVehiculoTextBox.Name = "colorVehiculoTextBox";
-            this.colorVehiculoTextBox.Size = new System.Drawing.Size(100, 20);
-            this.colorVehiculoTextBox.TabIndex = 69;
-            // 
-            // motorVehiculoTextBox
-            // 
-            this.motorVehiculoTextBox.Location = new System.Drawing.Point(107, 163);
-            this.motorVehiculoTextBox.Name = "motorVehiculoTextBox";
-            this.motorVehiculoTextBox.Size = new System.Drawing.Size(100, 20);
-            this.motorVehiculoTextBox.TabIndex = 68;
-            // 
-            // marcaVehiculoTextBox
-            // 
-            this.marcaVehiculoTextBox.Location = new System.Drawing.Point(107, 137);
-            this.marcaVehiculoTextBox.Name = "marcaVehiculoTextBox";
-            this.marcaVehiculoTextBox.Size = new System.Drawing.Size(100, 20);
-            this.marcaVehiculoTextBox.TabIndex = 67;
-            // 
-            // modeloVehiculoTextBox
-            // 
-            this.modeloVehiculoTextBox.Location = new System.Drawing.Point(107, 111);
-            this.modeloVehiculoTextBox.Name = "modeloVehiculoTextBox";
-            this.modeloVehiculoTextBox.Size = new System.Drawing.Size(100, 20);
-            this.modeloVehiculoTextBox.TabIndex = 66;
-            // 
             // estadoVehiculoTextBox
             // 
-            this.estadoVehiculoTextBox.Location = new System.Drawing.Point(107, 85);
+            this.estadoVehiculoTextBox.Location = new System.Drawing.Point(107, 82);
             this.estadoVehiculoTextBox.Name = "estadoVehiculoTextBox";
             this.estadoVehiculoTextBox.Size = new System.Drawing.Size(100, 20);
             this.estadoVehiculoTextBox.TabIndex = 65;
             // 
             // vehiculoIdTextBox
             // 
-            this.vehiculoIdTextBox.Location = new System.Drawing.Point(107, 59);
+            this.vehiculoIdTextBox.Location = new System.Drawing.Point(107, 54);
             this.vehiculoIdTextBox.Name = "vehiculoIdTextBox";
             this.vehiculoIdTextBox.Size = new System.Drawing.Size(100, 20);
             this.vehiculoIdTextBox.TabIndex = 64;
@@ -541,6 +513,38 @@
             this.vehiculoIdLabel.TabIndex = 63;
             this.vehiculoIdLabel.Text = "VehiculoId";
             // 
+            // ModeloComboBox
+            // 
+            this.ModeloComboBox.FormattingEnabled = true;
+            this.ModeloComboBox.Location = new System.Drawing.Point(107, 109);
+            this.ModeloComboBox.Name = "ModeloComboBox";
+            this.ModeloComboBox.Size = new System.Drawing.Size(100, 21);
+            this.ModeloComboBox.TabIndex = 89;
+            // 
+            // MotorComboBox
+            // 
+            this.MotorComboBox.FormattingEnabled = true;
+            this.MotorComboBox.Location = new System.Drawing.Point(107, 161);
+            this.MotorComboBox.Name = "MotorComboBox";
+            this.MotorComboBox.Size = new System.Drawing.Size(100, 21);
+            this.MotorComboBox.TabIndex = 91;
+            // 
+            // MarcasComboBox
+            // 
+            this.MarcasComboBox.FormattingEnabled = true;
+            this.MarcasComboBox.Location = new System.Drawing.Point(107, 134);
+            this.MarcasComboBox.Name = "MarcasComboBox";
+            this.MarcasComboBox.Size = new System.Drawing.Size(100, 21);
+            this.MarcasComboBox.TabIndex = 92;
+            // 
+            // ColorComboBox
+            // 
+            this.ColorComboBox.FormattingEnabled = true;
+            this.ColorComboBox.Location = new System.Drawing.Point(107, 188);
+            this.ColorComboBox.Name = "ColorComboBox";
+            this.ColorComboBox.Size = new System.Drawing.Size(100, 21);
+            this.ColorComboBox.TabIndex = 93;
+            // 
             // VehiculosForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -548,6 +552,10 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(692, 405);
+            this.Controls.Add(this.ColorComboBox);
+            this.Controls.Add(this.MarcasComboBox);
+            this.Controls.Add(this.MotorComboBox);
+            this.Controls.Add(this.ModeloComboBox);
             this.Controls.Add(this.matriculaVehiculoLabel);
             this.Controls.Add(this.placaVehiculoLabel);
             this.Controls.Add(this.precioVehiculoLabel);
@@ -567,10 +575,6 @@
             this.Controls.Add(this.tipoVehiculoTextBox);
             this.Controls.Add(this.chasisVehiculoTextBox);
             this.Controls.Add(this.añoVehiculoTextBox);
-            this.Controls.Add(this.colorVehiculoTextBox);
-            this.Controls.Add(this.motorVehiculoTextBox);
-            this.Controls.Add(this.marcaVehiculoTextBox);
-            this.Controls.Add(this.modeloVehiculoTextBox);
             this.Controls.Add(this.estadoVehiculoTextBox);
             this.Controls.Add(this.vehiculoIdTextBox);
             this.Controls.Add(this.vehiculoIdLabel);
@@ -595,6 +599,7 @@
             this.Controls.Add(this.botonEliminar);
             this.Controls.Add(this.botonGuardar);
             this.Controls.Add(this.botonNuevo);
+            this.DoubleBuffered = true;
             this.Name = "VehiculosForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Vehiculos";
@@ -653,12 +658,12 @@
         private System.Windows.Forms.TextBox tipoVehiculoTextBox;
         private System.Windows.Forms.TextBox chasisVehiculoTextBox;
         private System.Windows.Forms.TextBox añoVehiculoTextBox;
-        private System.Windows.Forms.TextBox colorVehiculoTextBox;
-        private System.Windows.Forms.TextBox motorVehiculoTextBox;
-        private System.Windows.Forms.TextBox marcaVehiculoTextBox;
-        private System.Windows.Forms.TextBox modeloVehiculoTextBox;
         private System.Windows.Forms.TextBox estadoVehiculoTextBox;
         private System.Windows.Forms.TextBox vehiculoIdTextBox;
         private System.Windows.Forms.Label vehiculoIdLabel;
+        private System.Windows.Forms.ComboBox ModeloComboBox;
+        private System.Windows.Forms.ComboBox MotorComboBox;
+        private System.Windows.Forms.ComboBox MarcasComboBox;
+        private System.Windows.Forms.ComboBox ColorComboBox;
     }
 }
