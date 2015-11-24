@@ -91,8 +91,7 @@
             // 
             this.listarFueraComboBox.FormattingEnabled = true;
             this.listarFueraComboBox.Items.AddRange(new object[] {
-            "Vehiculos",
-            "Marcas"});
+            "Vehiculos"});
             this.listarFueraComboBox.Location = new System.Drawing.Point(13, 18);
             this.listarFueraComboBox.Name = "listarFueraComboBox";
             this.listarFueraComboBox.Size = new System.Drawing.Size(121, 21);
