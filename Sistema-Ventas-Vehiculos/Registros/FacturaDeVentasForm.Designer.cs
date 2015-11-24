@@ -213,7 +213,7 @@
             // vehiculoIdLabel
             // 
             this.vehiculoIdLabel.AutoSize = true;
-            this.vehiculoIdLabel.Location = new System.Drawing.Point(535, 42);
+            this.vehiculoIdLabel.Location = new System.Drawing.Point(535, 49);
             this.vehiculoIdLabel.Name = "vehiculoIdLabel";
             this.vehiculoIdLabel.Size = new System.Drawing.Size(57, 13);
             this.vehiculoIdLabel.TabIndex = 12;
@@ -291,7 +291,7 @@
             // 
             // vehiculoIdTextBox
             // 
-            this.vehiculoIdTextBox.Location = new System.Drawing.Point(598, 42);
+            this.vehiculoIdTextBox.Location = new System.Drawing.Point(598, 49);
             this.vehiculoIdTextBox.Name = "vehiculoIdTextBox";
             this.vehiculoIdTextBox.Size = new System.Drawing.Size(100, 20);
             this.vehiculoIdTextBox.TabIndex = 23;
@@ -300,7 +300,7 @@
             // 
             this.datosClientelabel.AutoSize = true;
             this.datosClientelabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.datosClientelabel.Location = new System.Drawing.Point(53, 19);
+            this.datosClientelabel.Location = new System.Drawing.Point(53, 18);
             this.datosClientelabel.Name = "datosClientelabel";
             this.datosClientelabel.Size = new System.Drawing.Size(144, 15);
             this.datosClientelabel.TabIndex = 24;
@@ -310,7 +310,7 @@
             // 
             this.datosVehiculoLabel.AutoSize = true;
             this.datosVehiculoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.datosVehiculoLabel.Location = new System.Drawing.Point(498, 15);
+            this.datosVehiculoLabel.Location = new System.Drawing.Point(498, 18);
             this.datosVehiculoLabel.Name = "datosVehiculoLabel";
             this.datosVehiculoLabel.Size = new System.Drawing.Size(155, 15);
             this.datosVehiculoLabel.TabIndex = 25;
@@ -333,7 +333,7 @@
             this.botonBuscarCliente.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("botonBuscarCliente.BackgroundImage")));
             this.botonBuscarCliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.botonBuscarCliente.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.botonBuscarCliente.Location = new System.Drawing.Point(12, 12);
+            this.botonBuscarCliente.Location = new System.Drawing.Point(8, 7);
             this.botonBuscarCliente.Name = "botonBuscarCliente";
             this.botonBuscarCliente.Size = new System.Drawing.Size(39, 31);
             this.botonBuscarCliente.TabIndex = 27;
@@ -416,42 +416,42 @@
             // 
             // estadoVehiculoTextBox
             // 
-            this.estadoVehiculoTextBox.Location = new System.Drawing.Point(598, 68);
+            this.estadoVehiculoTextBox.Location = new System.Drawing.Point(598, 75);
             this.estadoVehiculoTextBox.Name = "estadoVehiculoTextBox";
             this.estadoVehiculoTextBox.Size = new System.Drawing.Size(100, 20);
             this.estadoVehiculoTextBox.TabIndex = 37;
             // 
             // modeloVehiculoTextBox
             // 
-            this.modeloVehiculoTextBox.Location = new System.Drawing.Point(598, 94);
+            this.modeloVehiculoTextBox.Location = new System.Drawing.Point(598, 101);
             this.modeloVehiculoTextBox.Name = "modeloVehiculoTextBox";
             this.modeloVehiculoTextBox.Size = new System.Drawing.Size(100, 20);
             this.modeloVehiculoTextBox.TabIndex = 38;
             // 
             // marcaVehiculoTextBox
             // 
-            this.marcaVehiculoTextBox.Location = new System.Drawing.Point(598, 120);
+            this.marcaVehiculoTextBox.Location = new System.Drawing.Point(598, 127);
             this.marcaVehiculoTextBox.Name = "marcaVehiculoTextBox";
             this.marcaVehiculoTextBox.Size = new System.Drawing.Size(100, 20);
             this.marcaVehiculoTextBox.TabIndex = 39;
             // 
             // motorVehiculoTextBox
             // 
-            this.motorVehiculoTextBox.Location = new System.Drawing.Point(598, 146);
+            this.motorVehiculoTextBox.Location = new System.Drawing.Point(598, 153);
             this.motorVehiculoTextBox.Name = "motorVehiculoTextBox";
             this.motorVehiculoTextBox.Size = new System.Drawing.Size(100, 20);
             this.motorVehiculoTextBox.TabIndex = 40;
             // 
             // colorVehiculoTextBox
             // 
-            this.colorVehiculoTextBox.Location = new System.Drawing.Point(598, 172);
+            this.colorVehiculoTextBox.Location = new System.Drawing.Point(598, 179);
             this.colorVehiculoTextBox.Name = "colorVehiculoTextBox";
             this.colorVehiculoTextBox.Size = new System.Drawing.Size(100, 20);
             this.colorVehiculoTextBox.TabIndex = 41;
             // 
             // añoVehiculoTextBox
             // 
-            this.añoVehiculoTextBox.Location = new System.Drawing.Point(598, 198);
+            this.añoVehiculoTextBox.Location = new System.Drawing.Point(598, 205);
             this.añoVehiculoTextBox.Name = "añoVehiculoTextBox";
             this.añoVehiculoTextBox.Size = new System.Drawing.Size(100, 20);
             this.añoVehiculoTextBox.TabIndex = 42;
@@ -459,42 +459,42 @@
             // 
             // chasisVehiculoTextBox
             // 
-            this.chasisVehiculoTextBox.Location = new System.Drawing.Point(598, 224);
+            this.chasisVehiculoTextBox.Location = new System.Drawing.Point(598, 231);
             this.chasisVehiculoTextBox.Name = "chasisVehiculoTextBox";
             this.chasisVehiculoTextBox.Size = new System.Drawing.Size(100, 20);
             this.chasisVehiculoTextBox.TabIndex = 43;
             // 
             // tipoVehiculoTextBox
             // 
-            this.tipoVehiculoTextBox.Location = new System.Drawing.Point(598, 250);
+            this.tipoVehiculoTextBox.Location = new System.Drawing.Point(598, 257);
             this.tipoVehiculoTextBox.Name = "tipoVehiculoTextBox";
             this.tipoVehiculoTextBox.Size = new System.Drawing.Size(100, 20);
             this.tipoVehiculoTextBox.TabIndex = 44;
             // 
             // kilometrajeVehiculoTextBox
             // 
-            this.kilometrajeVehiculoTextBox.Location = new System.Drawing.Point(598, 276);
+            this.kilometrajeVehiculoTextBox.Location = new System.Drawing.Point(598, 283);
             this.kilometrajeVehiculoTextBox.Name = "kilometrajeVehiculoTextBox";
             this.kilometrajeVehiculoTextBox.Size = new System.Drawing.Size(100, 20);
             this.kilometrajeVehiculoTextBox.TabIndex = 45;
             // 
             // precioVehiculoTextBox
             // 
-            this.precioVehiculoTextBox.Location = new System.Drawing.Point(598, 302);
+            this.precioVehiculoTextBox.Location = new System.Drawing.Point(598, 309);
             this.precioVehiculoTextBox.Name = "precioVehiculoTextBox";
             this.precioVehiculoTextBox.Size = new System.Drawing.Size(100, 20);
             this.precioVehiculoTextBox.TabIndex = 46;
             // 
             // placaVehiculoTextBox
             // 
-            this.placaVehiculoTextBox.Location = new System.Drawing.Point(598, 328);
+            this.placaVehiculoTextBox.Location = new System.Drawing.Point(598, 335);
             this.placaVehiculoTextBox.Name = "placaVehiculoTextBox";
             this.placaVehiculoTextBox.Size = new System.Drawing.Size(100, 20);
             this.placaVehiculoTextBox.TabIndex = 47;
             // 
             // matriculaVehiculoTextBox
             // 
-            this.matriculaVehiculoTextBox.Location = new System.Drawing.Point(598, 354);
+            this.matriculaVehiculoTextBox.Location = new System.Drawing.Point(598, 361);
             this.matriculaVehiculoTextBox.Name = "matriculaVehiculoTextBox";
             this.matriculaVehiculoTextBox.Size = new System.Drawing.Size(100, 20);
             this.matriculaVehiculoTextBox.TabIndex = 48;
@@ -522,7 +522,7 @@
             // estadoVehiculoLabel
             // 
             this.estadoVehiculoLabel.AutoSize = true;
-            this.estadoVehiculoLabel.Location = new System.Drawing.Point(489, 68);
+            this.estadoVehiculoLabel.Location = new System.Drawing.Point(489, 75);
             this.estadoVehiculoLabel.Name = "estadoVehiculoLabel";
             this.estadoVehiculoLabel.Size = new System.Drawing.Size(103, 13);
             this.estadoVehiculoLabel.TabIndex = 51;
@@ -531,7 +531,7 @@
             // modeloVehiculoLabel
             // 
             this.modeloVehiculoLabel.AutoSize = true;
-            this.modeloVehiculoLabel.Location = new System.Drawing.Point(550, 94);
+            this.modeloVehiculoLabel.Location = new System.Drawing.Point(550, 101);
             this.modeloVehiculoLabel.Name = "modeloVehiculoLabel";
             this.modeloVehiculoLabel.Size = new System.Drawing.Size(42, 13);
             this.modeloVehiculoLabel.TabIndex = 52;
@@ -540,7 +540,7 @@
             // marcaVehiculoLabel
             // 
             this.marcaVehiculoLabel.AutoSize = true;
-            this.marcaVehiculoLabel.Location = new System.Drawing.Point(555, 120);
+            this.marcaVehiculoLabel.Location = new System.Drawing.Point(555, 127);
             this.marcaVehiculoLabel.Name = "marcaVehiculoLabel";
             this.marcaVehiculoLabel.Size = new System.Drawing.Size(37, 13);
             this.marcaVehiculoLabel.TabIndex = 53;
@@ -549,7 +549,7 @@
             // motorVehiculoLabel
             // 
             this.motorVehiculoLabel.AutoSize = true;
-            this.motorVehiculoLabel.Location = new System.Drawing.Point(558, 146);
+            this.motorVehiculoLabel.Location = new System.Drawing.Point(558, 153);
             this.motorVehiculoLabel.Name = "motorVehiculoLabel";
             this.motorVehiculoLabel.Size = new System.Drawing.Size(34, 13);
             this.motorVehiculoLabel.TabIndex = 54;
@@ -558,7 +558,7 @@
             // colorVehiculoLabel
             // 
             this.colorVehiculoLabel.AutoSize = true;
-            this.colorVehiculoLabel.Location = new System.Drawing.Point(561, 172);
+            this.colorVehiculoLabel.Location = new System.Drawing.Point(561, 179);
             this.colorVehiculoLabel.Name = "colorVehiculoLabel";
             this.colorVehiculoLabel.Size = new System.Drawing.Size(31, 13);
             this.colorVehiculoLabel.TabIndex = 55;
@@ -567,7 +567,7 @@
             // añoVehiculoLabel
             // 
             this.añoVehiculoLabel.AutoSize = true;
-            this.añoVehiculoLabel.Location = new System.Drawing.Point(566, 198);
+            this.añoVehiculoLabel.Location = new System.Drawing.Point(566, 205);
             this.añoVehiculoLabel.Name = "añoVehiculoLabel";
             this.añoVehiculoLabel.Size = new System.Drawing.Size(26, 13);
             this.añoVehiculoLabel.TabIndex = 56;
@@ -576,7 +576,7 @@
             // chasisVehiculoLabel
             // 
             this.chasisVehiculoLabel.AutoSize = true;
-            this.chasisVehiculoLabel.Location = new System.Drawing.Point(535, 224);
+            this.chasisVehiculoLabel.Location = new System.Drawing.Point(535, 231);
             this.chasisVehiculoLabel.Name = "chasisVehiculoLabel";
             this.chasisVehiculoLabel.Size = new System.Drawing.Size(58, 13);
             this.chasisVehiculoLabel.TabIndex = 57;
@@ -585,7 +585,7 @@
             // tipoVehiculoLabel
             // 
             this.tipoVehiculoLabel.AutoSize = true;
-            this.tipoVehiculoLabel.Location = new System.Drawing.Point(504, 250);
+            this.tipoVehiculoLabel.Location = new System.Drawing.Point(504, 257);
             this.tipoVehiculoLabel.Name = "tipoVehiculoLabel";
             this.tipoVehiculoLabel.Size = new System.Drawing.Size(89, 13);
             this.tipoVehiculoLabel.TabIndex = 58;
@@ -594,7 +594,7 @@
             // kilometrajeVehiculoLabel
             // 
             this.kilometrajeVehiculoLabel.AutoSize = true;
-            this.kilometrajeVehiculoLabel.Location = new System.Drawing.Point(534, 276);
+            this.kilometrajeVehiculoLabel.Location = new System.Drawing.Point(534, 283);
             this.kilometrajeVehiculoLabel.Name = "kilometrajeVehiculoLabel";
             this.kilometrajeVehiculoLabel.Size = new System.Drawing.Size(58, 13);
             this.kilometrajeVehiculoLabel.TabIndex = 59;
@@ -603,7 +603,7 @@
             // precioVehiculoLabel
             // 
             this.precioVehiculoLabel.AutoSize = true;
-            this.precioVehiculoLabel.Location = new System.Drawing.Point(556, 302);
+            this.precioVehiculoLabel.Location = new System.Drawing.Point(556, 309);
             this.precioVehiculoLabel.Name = "precioVehiculoLabel";
             this.precioVehiculoLabel.Size = new System.Drawing.Size(37, 13);
             this.precioVehiculoLabel.TabIndex = 60;
@@ -612,7 +612,7 @@
             // placaVehiculoLabel
             // 
             this.placaVehiculoLabel.AutoSize = true;
-            this.placaVehiculoLabel.Location = new System.Drawing.Point(539, 328);
+            this.placaVehiculoLabel.Location = new System.Drawing.Point(539, 335);
             this.placaVehiculoLabel.Name = "placaVehiculoLabel";
             this.placaVehiculoLabel.Size = new System.Drawing.Size(54, 13);
             this.placaVehiculoLabel.TabIndex = 61;
@@ -621,7 +621,7 @@
             // matriculaVehiculoLabel
             // 
             this.matriculaVehiculoLabel.AutoSize = true;
-            this.matriculaVehiculoLabel.Location = new System.Drawing.Point(542, 354);
+            this.matriculaVehiculoLabel.Location = new System.Drawing.Point(542, 361);
             this.matriculaVehiculoLabel.Name = "matriculaVehiculoLabel";
             this.matriculaVehiculoLabel.Size = new System.Drawing.Size(50, 13);
             this.matriculaVehiculoLabel.TabIndex = 62;
