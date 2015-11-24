@@ -41,7 +41,7 @@
             this.botonInsertar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("botonInsertar.BackgroundImage")));
             this.botonInsertar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.botonInsertar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.botonInsertar.Location = new System.Drawing.Point(225, 12);
+            this.botonInsertar.Location = new System.Drawing.Point(12, 12);
             this.botonInsertar.Name = "botonInsertar";
             this.botonInsertar.Size = new System.Drawing.Size(72, 54);
             this.botonInsertar.TabIndex = 0;
@@ -90,7 +90,7 @@
             // 
             this.botonListar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("botonListar.BackgroundImage")));
             this.botonListar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.botonListar.Location = new System.Drawing.Point(12, 12);
+            this.botonListar.Location = new System.Drawing.Point(12, 246);
             this.botonListar.Name = "botonListar";
             this.botonListar.Size = new System.Drawing.Size(72, 54);
             this.botonListar.TabIndex = 6;
