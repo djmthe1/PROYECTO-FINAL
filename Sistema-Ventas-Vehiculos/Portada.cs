@@ -28,6 +28,8 @@ namespace Sistema_Ventas_Vehiculos
             LoginF.Show();
         }
 
+        
+
         private void botonListar_Click(object sender, EventArgs e)
         {
             Registros.ListarForm ListarF = new Registros.ListarForm();

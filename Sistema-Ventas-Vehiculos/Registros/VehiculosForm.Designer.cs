@@ -28,13 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VehiculosForm));
             this.botonEliminar = new System.Windows.Forms.Button();
             this.botonGuardar = new System.Windows.Forms.Button();
             this.botonNuevo = new System.Windows.Forms.Button();
             this.botonBuscar = new System.Windows.Forms.Button();
             this.botonAtras = new System.Windows.Forms.Button();
+            this._Sistema_Ventas_VehiculosDataSet = new Sistema_Ventas_Vehiculos._Sistema_Ventas_VehiculosDataSet();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.coloresBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this._Sistema_Ventas_VehiculosDataSet3 = new Sistema_Ventas_Vehiculos._Sistema_Ventas_VehiculosDataSet3();
+            this.coloresTableAdapter = new Sistema_Ventas_Vehiculos._Sistema_Ventas_VehiculosDataSet3TableAdapters.ColoresTableAdapter();
             this.derechoCheckBox = new System.Windows.Forms.CheckBox();
             this.izquierdoCheckBox = new System.Windows.Forms.CheckBox();
             this.radioCheckBox = new System.Windows.Forms.CheckBox();
@@ -76,6 +81,9 @@
             this.MotorComboBox = new System.Windows.Forms.ComboBox();
             this.MarcasComboBox = new System.Windows.Forms.ComboBox();
             this.ColorComboBox = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this._Sistema_Ventas_VehiculosDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coloresBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._Sistema_Ventas_VehiculosDataSet3)).BeginInit();
             this.SuspendLayout();
             // 
             // botonEliminar
@@ -95,7 +103,6 @@
             this.botonGuardar.TabIndex = 21;
             this.botonGuardar.Text = "Guardar";
             this.botonGuardar.UseVisualStyleBackColor = true;
-            this.botonGuardar.Click += new System.EventHandler(this.botonGuardar_Click);
             // 
             // botonNuevo
             // 
@@ -130,14 +137,36 @@
             this.botonAtras.UseVisualStyleBackColor = true;
             this.botonAtras.Click += new System.EventHandler(this.botonAtras_Click);
             // 
+            // _Sistema_Ventas_VehiculosDataSet
+            // 
+            this._Sistema_Ventas_VehiculosDataSet.DataSetName = "_Sistema_Ventas_VehiculosDataSet";
+            this._Sistema_Ventas_VehiculosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // comboBox1
             // 
+            this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.coloresBindingSource, "Descripcion", true));
+            this.comboBox1.DataSource = this.coloresBindingSource;
+            this.comboBox1.DisplayMember = "Descripcion";
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(107, 8);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 33;
             this.comboBox1.ValueMember = "Descripcion";
+            // 
+            // coloresBindingSource
+            // 
+            this.coloresBindingSource.DataMember = "Colores";
+            this.coloresBindingSource.DataSource = this._Sistema_Ventas_VehiculosDataSet3;
+            // 
+            // _Sistema_Ventas_VehiculosDataSet3
+            // 
+            this._Sistema_Ventas_VehiculosDataSet3.DataSetName = "_Sistema_Ventas_VehiculosDataSet3";
+            this._Sistema_Ventas_VehiculosDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // coloresTableAdapter
+            // 
+            this.coloresTableAdapter.ClearBeforeFill = true;
             // 
             // derechoCheckBox
             // 
@@ -576,6 +605,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Vehiculos";
             this.Load += new System.EventHandler(this.VehiculosForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this._Sistema_Ventas_VehiculosDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coloresBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._Sistema_Ventas_VehiculosDataSet3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -588,7 +620,11 @@
         private System.Windows.Forms.Button botonNuevo;
         private System.Windows.Forms.Button botonBuscar;
         private System.Windows.Forms.Button botonAtras;
+        private _Sistema_Ventas_VehiculosDataSet _Sistema_Ventas_VehiculosDataSet;
         private System.Windows.Forms.ComboBox comboBox1;
+        private _Sistema_Ventas_VehiculosDataSet3 _Sistema_Ventas_VehiculosDataSet3;
+        private System.Windows.Forms.BindingSource coloresBindingSource;
+        private _Sistema_Ventas_VehiculosDataSet3TableAdapters.ColoresTableAdapter coloresTableAdapter;
         private System.Windows.Forms.CheckBox derechoCheckBox;
         private System.Windows.Forms.CheckBox izquierdoCheckBox;
         private System.Windows.Forms.CheckBox radioCheckBox;
