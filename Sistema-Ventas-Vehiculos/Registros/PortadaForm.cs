@@ -38,8 +38,7 @@ namespace Sistema_Ventas_Vehiculos.Registros
             this.Close();
         }
 
-        
-
+       
         private void botonVenderVehiculo_Click(object sender, EventArgs e)
         {
             Registros.FacturaDeVentasForm ClientesF = new FacturaDeVentasForm();

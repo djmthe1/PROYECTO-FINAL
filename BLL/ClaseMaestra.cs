@@ -20,3 +20,4 @@ namespace BLL
         public abstract DataTable Listado(string Campos, string Condicion, string Orden);
     }
 }
+

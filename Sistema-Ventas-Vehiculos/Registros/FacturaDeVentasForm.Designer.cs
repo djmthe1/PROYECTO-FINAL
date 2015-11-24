@@ -719,6 +719,7 @@
             this.Name = "FacturaDeVentasForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Factura De Ventas";
+            this.Load += new System.EventHandler(this.FacturaDeVentasForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
