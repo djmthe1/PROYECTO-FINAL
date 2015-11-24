@@ -19,6 +19,7 @@ namespace Sistema_Ventas_Vehiculos.Registros
         }
         public Clientes cliente = new Clientes();
         public Vehiculos vehiculo = new Vehiculos();
+        public Marcas marca = new Marcas();
          
         private void botonSiguente_Click(object sender, EventArgs e)
         {
@@ -73,7 +74,7 @@ namespace Sistema_Ventas_Vehiculos.Registros
             placaVehiculoTextBox.Text = vehiculo.Placa;
             matriculaVehiculoTextBox.Text = vehiculo.Matricula;
             kilometrajeVehiculoTextBox.Text = vehiculo.Kilometraje.ToString();
-            
+            marcaVehiculoTextBox.Text = marca.Descripcion;
             
             
         }

@@ -109,8 +109,20 @@ namespace BLL
             bool retorno = false;
             try
             {
-                conexion.Ejecutar(String.Format("Insert Into Vehiculos (EstadoDelVehiculo, AtributosId, ModelosId, MarcasId, MotorId, ColorId, Año, NoChasis, TipoDeVehiculoId, Kilometraje, Precio, Placa, Matricula) Values('{0}',{1},{2},{3},{4},{5},{6},'{7}',{8},{9},{10},'{11}','{12}')", this.EstadoDelVehiculo, this.AtributosId, this.ModelosId, this.MarcasId, this.MotorId, this.ColorId, this.Año, this.NoChasis, this.TipoDeVehiculoId, this.Kilometraje, this.Precio, this.Placa, this.Matricula));
+                conexion.Ejecutar(String.Format("Insert Into Vehiculos (EstadoDelVehiculo, Año, NoChasis, Kilometraje, Precio, Placa, Matricula) Values('{0}',{1},'{2}',{3},{4},'{5}','{6}')", this.EstadoDelVehiculo, this.Año, this.NoChasis, this.Kilometraje, this.Precio, this.Placa, this.Matricula));
                 retorno = true;
+
+
+
+
+                foreach (var marcas in this.Marcas)
+                {
+                    comando.AppendLine(String.Format("Update Vehiculos set MarcaId={0}, VehiculoId={1}; ", marcas.MarcaId,this.VehiculoId));
+                }
+                retorno = conexion.Ejecutar(comando.ToString());
+
+
+                
             }
             catch (Exception ex) { throw ex; }
             return retorno;
@@ -143,7 +155,7 @@ namespace BLL
         public override bool Buscar(int IdBuscado)
         {
             DataTable datos = new DataTable();
-            DataTable datas = new DataTable();
+            DataTable vehiculodatos = new DataTable();
 
             datos = conexion.ObtenerDatos("Select * from Vehiculos Where VehiculoId=" + IdBuscado);
             if (datos.Rows.Count > 0)
@@ -163,7 +175,11 @@ namespace BLL
                 this.Placa = datos.Rows[0]["Placa"].ToString();
                 this.Matricula = datos.Rows[0]["Matricula"].ToString();
 
+                vehiculodatos = conexion.ObtenerDatos("Select v.MarcaId, m.Descripcion From Vehiculos v Inner Join Marcas m On v.MarcaId = m.MarcaId where v.VehiculoId =" + this.VehiculoId);
 
+                
+                this.InsertarMarcas((int)vehiculodatos.Rows[0]["MarcaId"], vehiculodatos.Rows[0]["Descripcion"].ToString());
+                
 
             }
             return datos.Rows.Count > 0;

@@ -13,6 +13,7 @@ namespace Sistema_Ventas_Vehiculos.Registros
 {
     public partial class VehiculosForm : Form
     {
+        public Vehiculos vehiculo = new Vehiculos();
         public Modelos modelo = new Modelos();
         public Marcas marcas = new Marcas();
         public TipoMotores motores = new TipoMotores();
@@ -99,6 +100,17 @@ namespace Sistema_Ventas_Vehiculos.Registros
         private void botonNuevo_Click(object sender, EventArgs e)
         {
             Borrar();
+        }
+
+        private void botonGuardar_Click(object sender, EventArgs e)
+        {
+            vehiculo.EstadoDelVehiculo = estadoVehiculoTextBox.Text;
+            int MarcaId = 0;
+            
+            
+                MarcaId = (int)marcas.ObtenerMarcaId(MarcasComboBox);
+                vehiculo.InsertarMarcas(MarcaId, MarcasComboBox.ToString());
+            
         }
     }
 }
