@@ -58,6 +58,11 @@ namespace BLL
             return retorno;
         }
 
+        public DataTable ObtenerModeloId(string Descripcion)
+        {
+            return conexion.ObtenerDatos(String.Format("select ModeloId from Modelos where Descripcion ='{0}'", Descripcion));
+        }
+
         public override bool Buscar(int IdBuscado)
         {
             DataTable dt = new DataTable();

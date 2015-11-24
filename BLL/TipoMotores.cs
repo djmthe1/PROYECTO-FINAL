@@ -59,7 +59,11 @@ namespace BLL
             return retorno;
         }
 
-       
+
+        public DataTable ObtenerMotorId(string Descripcion)
+        {
+            return conexion.ObtenerDatos(String.Format("select MotorId from Motores where Descripcion ='{0}'", Descripcion));
+        }
 
         public override bool Buscar(int IdBuscado)
         {

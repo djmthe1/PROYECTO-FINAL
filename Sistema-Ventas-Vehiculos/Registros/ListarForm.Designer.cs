@@ -92,7 +92,7 @@
             this.listarFueraComboBox.FormattingEnabled = true;
             this.listarFueraComboBox.Items.AddRange(new object[] {
             "Vehiculos"});
-            this.listarFueraComboBox.Location = new System.Drawing.Point(12, 18);
+            this.listarFueraComboBox.Location = new System.Drawing.Point(12, 45);
             this.listarFueraComboBox.Name = "listarFueraComboBox";
             this.listarFueraComboBox.Size = new System.Drawing.Size(121, 21);
             this.listarFueraComboBox.TabIndex = 38;

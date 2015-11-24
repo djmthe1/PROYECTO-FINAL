@@ -59,6 +59,10 @@ namespace BLL
             return retorno;
         }
 
+        public DataTable ObtenerColorId(string Descripcion)
+        {
+            return conexion.ObtenerDatos(String.Format("select ColorId from Colores where Descripcion ='{0}'", Descripcion));
+        }
 
         public override bool Buscar(int IdBuscado)
         {

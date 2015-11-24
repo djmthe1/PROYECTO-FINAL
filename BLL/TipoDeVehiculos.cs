@@ -58,7 +58,12 @@ namespace BLL
             catch (Exception ex) { throw ex; }
             return retorno;
         }
-       
+
+        public DataTable ObtenerTipoDeVehiculoId(string Descripcion)
+        {
+            return conexion.ObtenerDatos(String.Format("select TipoDeVehiculoId from TipoDeVehiculos where Descripcion ='{0}'", Descripcion));
+        }
+
         public override bool Buscar(int IdBuscado)
         {
            
