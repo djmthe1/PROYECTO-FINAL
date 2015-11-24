@@ -101,9 +101,10 @@ namespace Sistema_Ventas_Vehiculos.Registros
 
         }
 
-        private void listarDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void BuscarTextBox_TextChanged(object sender, EventArgs e)
         {
-
+            listarDataGridView.DataSource = marcas.Listado("*", "1=1", "ORDER BY Descripcion");
+            
         }
     }
 }

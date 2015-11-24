@@ -69,7 +69,18 @@ namespace Sistema_Ventas_Vehiculos.Registros
             vehiculo.Buscar(vehiculo.VehiculoId);
 
             estadoVehiculoTextBox.Text = vehiculo.EstadoDelVehiculo;
+            precioVehiculoTextBox.Text = vehiculo.Precio.ToString();
+            placaVehiculoTextBox.Text = vehiculo.Placa;
+            matriculaVehiculoTextBox.Text = vehiculo.Matricula;
+            kilometrajeVehiculoTextBox.Text = vehiculo.Kilometraje.ToString();
+            chasisVehiculoTextBox.Text = vehiculo.NoChasis;
             
+            
+        }
+
+        private void FacturaDeVentasForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

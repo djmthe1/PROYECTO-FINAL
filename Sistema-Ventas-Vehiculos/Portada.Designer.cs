@@ -75,7 +75,7 @@
             // 
             this.botonListar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("botonListar.BackgroundImage")));
             this.botonListar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.botonListar.Location = new System.Drawing.Point(316, 242);
+            this.botonListar.Location = new System.Drawing.Point(12, 12);
             this.botonListar.Name = "botonListar";
             this.botonListar.Size = new System.Drawing.Size(80, 67);
             this.botonListar.TabIndex = 5;
