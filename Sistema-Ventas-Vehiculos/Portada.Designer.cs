@@ -32,7 +32,6 @@
             this.botonIngresar = new System.Windows.Forms.Button();
             this.botonSalir = new System.Windows.Forms.Button();
             this.portadaLabel = new System.Windows.Forms.Label();
-            this.botonVerVehiculos = new System.Windows.Forms.Button();
             this.botonListar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -65,30 +64,18 @@
             // portadaLabel
             // 
             this.portadaLabel.AutoSize = true;
-            this.portadaLabel.Font = new System.Drawing.Font("Poor Richard", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.portadaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.portadaLabel.Location = new System.Drawing.Point(177, 12);
             this.portadaLabel.Name = "portadaLabel";
-            this.portadaLabel.Size = new System.Drawing.Size(312, 24);
+            this.portadaLabel.Size = new System.Drawing.Size(362, 25);
             this.portadaLabel.TabIndex = 3;
             this.portadaLabel.Text = "Sistema-De-Ventas-De-Vehiculos";
-            // 
-            // botonVerVehiculos
-            // 
-            this.botonVerVehiculos.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("botonVerVehiculos.BackgroundImage")));
-            this.botonVerVehiculos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.botonVerVehiculos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.botonVerVehiculos.Location = new System.Drawing.Point(604, 12);
-            this.botonVerVehiculos.Name = "botonVerVehiculos";
-            this.botonVerVehiculos.Size = new System.Drawing.Size(80, 67);
-            this.botonVerVehiculos.TabIndex = 4;
-            this.botonVerVehiculos.UseVisualStyleBackColor = true;
-            this.botonVerVehiculos.Click += new System.EventHandler(this.botonVerVehiculos_Click);
             // 
             // botonListar
             // 
             this.botonListar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("botonListar.BackgroundImage")));
             this.botonListar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.botonListar.Location = new System.Drawing.Point(12, 12);
+            this.botonListar.Location = new System.Drawing.Point(316, 242);
             this.botonListar.Name = "botonListar";
             this.botonListar.Size = new System.Drawing.Size(80, 67);
             this.botonListar.TabIndex = 5;
@@ -103,7 +90,6 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(696, 321);
             this.Controls.Add(this.botonListar);
-            this.Controls.Add(this.botonVerVehiculos);
             this.Controls.Add(this.portadaLabel);
             this.Controls.Add(this.botonSalir);
             this.Controls.Add(this.botonIngresar);
@@ -120,7 +106,6 @@
         private System.Windows.Forms.Button botonIngresar;
         private System.Windows.Forms.Button botonSalir;
         private System.Windows.Forms.Label portadaLabel;
-        private System.Windows.Forms.Button botonVerVehiculos;
         private System.Windows.Forms.Button botonListar;
     }
 }

@@ -28,12 +28,7 @@ namespace Sistema_Ventas_Vehiculos
             LoginF.Show();
         }
 
-        private void botonVerVehiculos_Click(object sender, EventArgs e)
-        {
-            Registros.BuscarForm BuscarF = new Registros.BuscarForm();
-            BuscarF.botonAtras.Visible = false;
-            BuscarF.Show();
-        }
+        
 
         private void botonListar_Click(object sender, EventArgs e)
         {

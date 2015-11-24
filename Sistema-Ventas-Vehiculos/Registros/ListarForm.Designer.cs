@@ -34,6 +34,7 @@
             this.listarDataGridView = new System.Windows.Forms.DataGridView();
             this.listarComboBox = new System.Windows.Forms.ComboBox();
             this.listarFueraComboBox = new System.Windows.Forms.ComboBox();
+            this.BuscarTextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.listarDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,6 +69,7 @@
             this.listarDataGridView.Name = "listarDataGridView";
             this.listarDataGridView.Size = new System.Drawing.Size(381, 188);
             this.listarDataGridView.TabIndex = 36;
+            this.listarDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.listarDataGridView_CellContentClick);
             // 
             // listarComboBox
             // 
@@ -79,7 +81,7 @@
             "Tipos de Vehiculos",
             "Tipos de Motores",
             "Vehiculos"});
-            this.listarComboBox.Location = new System.Drawing.Point(12, 12);
+            this.listarComboBox.Location = new System.Drawing.Point(12, 18);
             this.listarComboBox.Name = "listarComboBox";
             this.listarComboBox.Size = new System.Drawing.Size(121, 21);
             this.listarComboBox.TabIndex = 37;
@@ -89,12 +91,20 @@
             // 
             this.listarFueraComboBox.FormattingEnabled = true;
             this.listarFueraComboBox.Items.AddRange(new object[] {
-            "Vehiculos"});
-            this.listarFueraComboBox.Location = new System.Drawing.Point(13, 12);
+            "Vehiculos",
+            "Marcas"});
+            this.listarFueraComboBox.Location = new System.Drawing.Point(13, 18);
             this.listarFueraComboBox.Name = "listarFueraComboBox";
             this.listarFueraComboBox.Size = new System.Drawing.Size(121, 21);
             this.listarFueraComboBox.TabIndex = 38;
             this.listarFueraComboBox.SelectedIndexChanged += new System.EventHandler(this.listarFueraComboBox_SelectedIndexChanged);
+            // 
+            // BuscarTextBox
+            // 
+            this.BuscarTextBox.Location = new System.Drawing.Point(174, 18);
+            this.BuscarTextBox.Name = "BuscarTextBox";
+            this.BuscarTextBox.Size = new System.Drawing.Size(100, 20);
+            this.BuscarTextBox.TabIndex = 39;
             // 
             // ListarForm
             // 
@@ -103,6 +113,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(536, 318);
+            this.Controls.Add(this.BuscarTextBox);
             this.Controls.Add(this.listarFueraComboBox);
             this.Controls.Add(this.listarComboBox);
             this.Controls.Add(this.listarDataGridView);
@@ -115,6 +126,7 @@
             this.Load += new System.EventHandler(this.ListarForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.listarDataGridView)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -125,5 +137,6 @@
         private System.Windows.Forms.DataGridView listarDataGridView;
         public System.Windows.Forms.ComboBox listarComboBox;
         public System.Windows.Forms.ComboBox listarFueraComboBox;
+        private System.Windows.Forms.TextBox BuscarTextBox;
     }
 }
