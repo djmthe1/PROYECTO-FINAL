@@ -41,7 +41,7 @@ namespace Sistema_Ventas_Vehiculos.Registros
             nombreTextBox.Clear();
             passTextBox.Clear();
             confirmarPassTextBox.Clear();
-            prioridadComboBox.Refresh();
+           
         }
 
         private void botonNuevo_Click(object sender, EventArgs e)
@@ -69,7 +69,7 @@ namespace Sistema_Ventas_Vehiculos.Registros
         {
             usuarios.Nombre = nombreTextBox.Text;
             int prioridad = 0;
-            int.TryParse(prioridadComboBox.Text, out prioridad);
+           
             if (prioridad < 3)
             {
                 usuarios.Prioridad = prioridad;
@@ -127,7 +127,7 @@ namespace Sistema_Ventas_Vehiculos.Registros
             usuarios.UsuarioId = id;
             usuarios.Buscar(usuarios.UsuarioId);
             nombreTextBox.Text = usuarios.Nombre;
-            prioridadComboBox.Text = usuarios.Prioridad.ToString();
+            
         }
     }
 }

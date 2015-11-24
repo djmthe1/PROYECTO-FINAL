@@ -98,6 +98,18 @@ namespace Sistema_Ventas_Vehiculos.Registros
                 mensaje();
 
             }
+
+            if (listarComboBox.Text == "Marcas")
+            {
+                listarDataGridView.DataSource = marcas.Listado("*", "1=1", "ORDER BY Descripcion");
+                mensaje();
+
+            }
+        }
+
+        private void listarDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
