@@ -112,6 +112,7 @@
             this.botonNuevo.TabIndex = 20;
             this.botonNuevo.Text = "Nuevo";
             this.botonNuevo.UseVisualStyleBackColor = true;
+            this.botonNuevo.Click += new System.EventHandler(this.botonNuevo_Click);
             // 
             // botonBuscar
             // 

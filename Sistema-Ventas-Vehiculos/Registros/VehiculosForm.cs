@@ -23,6 +23,38 @@ namespace Sistema_Ventas_Vehiculos.Registros
             InitializeComponent();
         }
 
+        public void Borrar()
+        {
+            vehiculoIdTextBox.Clear();
+            estadoVehiculoTextBox.Clear();
+            ModeloComboBox.Refresh();
+            MarcasComboBox.Refresh();
+            MotorComboBox.Refresh();
+            ColorComboBox.Refresh();
+            tipoVehiculoTextBox.Clear();
+            añoVehiculoTextBox.Clear();
+            chasisVehiculoTextBox.Clear();
+            kilometrajeVehiculoTextBox.Clear();
+            precioVehiculoTextBox.Clear();
+            placaVehiculoTextBox.Clear();
+            matriculaVehiculoTextBox.Clear();
+            duplicadoLlaveCheckBox.Checked = false;
+            izquierdoCheckBox.Checked = false;
+            derechoCheckBox.Checked = false;
+            InternoCheckBox.Checked = false;
+            gomaRepuestoCheckBox.Checked = false;
+            taponRadiadorCheckBox.Checked = false;
+            taponGasolinaCheckBox.Checked = false;
+            manualCheckBox.Checked = false;
+            llaveDeRuedaCheckBox.Checked = false;
+            encendedorCheckBox.Checked = false;
+            alfombrasCheckBox.Checked = false;
+            botiquinCheckBox.Checked = false;
+            gomasCheckBox.Checked = false;
+            radioCheckBox.Checked = false;
+            gatoCheckBox.Checked = false;
+        }
+
         private void VehiculosForm_Load(object sender, EventArgs e)
         {
             dato = modelo.Listado("*", "0=0", "ORDER BY Descripcion");
@@ -62,6 +94,11 @@ namespace Sistema_Ventas_Vehiculos.Registros
         private void alfombrasCheckBox_CheckedChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void botonNuevo_Click(object sender, EventArgs e)
+        {
+            Borrar();
         }
     }
 }
