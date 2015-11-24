@@ -73,7 +73,7 @@ namespace Sistema_Ventas_Vehiculos.Registros
             placaVehiculoTextBox.Text = vehiculo.Placa;
             matriculaVehiculoTextBox.Text = vehiculo.Matricula;
             kilometrajeVehiculoTextBox.Text = vehiculo.Kilometraje.ToString();
-            
+            chasisVehiculoTextBox.Text = vehiculo.NoChasis;
             
             
         }
