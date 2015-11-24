@@ -104,6 +104,7 @@ namespace Sistema_Ventas_Vehiculos.Registros
         private void botonGuardar_Click(object sender, EventArgs e)
         {
             Borrar();
+
         }
     }
 }
