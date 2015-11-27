@@ -129,5 +129,10 @@ namespace Sistema_Ventas_Vehiculos.Registros
             nombreTextBox.Text = usuarios.Nombre;
             
         }
+
+        private void nombreLabel_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

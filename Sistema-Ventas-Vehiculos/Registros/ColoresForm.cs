@@ -26,8 +26,13 @@ namespace Sistema_Ventas_Vehiculos.Registros
         }
         private void MensajeError(string mensaje)
         {
-            MessageBox.Show(mensaje, "Registro de Colores", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show(mensaje, "Registro de Colores", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
+        private void MensajeAdvertencia(string mensaje)
+        {
+            MessageBox.Show(mensaje, "Registro de Colores", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+        }
+
 
         private void ColoresForm_Load(object sender, EventArgs e)
         {
@@ -44,17 +49,31 @@ namespace Sistema_Ventas_Vehiculos.Registros
         {
             try
             {
-                colores.ColorId = int.Parse(ColorIDtextBox.Text);
-                if (colores.Eliminar())
+                int id = 0;
+                int.TryParse(ColorIDtextBox.Text, out id);
+                colores.ColorId = id;
+
+                if (colores.Buscar(colores.ColorId))
                 {
-                    MensajeOk("Eliminado correctamente");
-                    DescripciontextBox.Clear();
+
+                    if (colores.Eliminar())
+                    {
+                        MensajeOk("Eliminado correctamente");
+                        DescripciontextBox.Clear();
+                        ColorIDtextBox.Clear();
+                    }
+                    else {
+                        MensajeError("Error al eliminar");
+                    }
+                }
+                else {
+                    MensajeAdvertencia("Este Id no existe");
                     ColorIDtextBox.Clear();
                 }
             }
             catch (Exception)
             {
-                MessageBox.Show("Error al Eliminar");
+                MensajeError("Error al Eliminar");
             }
         }
 
@@ -72,15 +91,20 @@ namespace Sistema_Ventas_Vehiculos.Registros
                 colores.Descripcion = DescripciontextBox.Text;
                 if (ColorIDtextBox.Text == "")
                 {
-
-                    if (colores.Insertar())
+                    if (DescripciontextBox.Text != "")
                     {
-                        DescripciontextBox.Clear();
-                        MensajeOk("Insertado Correctamente");
+                        if (colores.Insertar())
+                        {
+                            DescripciontextBox.Clear();
+                            MensajeOk("Insertado Correctamente");
+                        }
+                        else
+                        {
+                            MensajeError("Error al Insertar");
+                        }
                     }
-                    else
-                    {
-                        MensajeError("Error al Insertar");
+                    else {
+                        MensajeAdvertencia("Inserte la descripcion");
                     }
 
                 }
@@ -89,21 +113,29 @@ namespace Sistema_Ventas_Vehiculos.Registros
                     int id = 0;
                     int.TryParse(ColorIDtextBox.Text, out id);
                     colores.ColorId = id;
-                    if (colores.Editar())
+                    if (DescripciontextBox.Text != "")
                     {
-                        DescripciontextBox.Clear();
-                        MensajeOk("Modificado Correctamente");
+                        if (colores.Editar())
+                        {
+                            DescripciontextBox.Clear();
+                            ColorIDtextBox.Clear();
+                            MensajeOk("Modificado Correctamente");
+                        }
+                        else
+                        {
+                            MensajeError("Error al Modificar");
+                        }
                     }
                     else
                     {
-                        MensajeError("Error al Modificar");
+                        MensajeAdvertencia("Inserte la descripcion");
                     }
 
                 }
             }
             catch (Exception)
             {
-                MessageBox.Show("Error al Insertar o Modificar");
+                MensajeError("Error al Insertar o Modificar");
             }
         }
 
@@ -113,8 +145,14 @@ namespace Sistema_Ventas_Vehiculos.Registros
             int.TryParse(ColorIDtextBox.Text, out id);
             colores.ColorId = id;
 
-            colores.Buscar(colores.ColorId);
-            DescripciontextBox.Text = colores.Descripcion;
+            if (colores.Buscar(colores.ColorId))
+            {
+                DescripciontextBox.Text = colores.Descripcion;
+            }
+            else {
+                MensajeAdvertencia("Id no encontrado");
+                ColorIDtextBox.Clear();
+            }
         }
     }
 }

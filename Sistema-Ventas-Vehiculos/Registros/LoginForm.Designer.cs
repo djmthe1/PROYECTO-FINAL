@@ -43,18 +43,22 @@
             // usuarioLabel
             // 
             this.usuarioLabel.AutoSize = true;
-            this.usuarioLabel.Location = new System.Drawing.Point(192, 156);
+            this.usuarioLabel.BackColor = System.Drawing.Color.Transparent;
+            this.usuarioLabel.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usuarioLabel.Location = new System.Drawing.Point(172, 155);
             this.usuarioLabel.Name = "usuarioLabel";
-            this.usuarioLabel.Size = new System.Drawing.Size(56, 13);
+            this.usuarioLabel.Size = new System.Drawing.Size(54, 14);
             this.usuarioLabel.TabIndex = 0;
             this.usuarioLabel.Text = "USUARIO";
             // 
             // passwordLabel
             // 
             this.passwordLabel.AutoSize = true;
-            this.passwordLabel.Location = new System.Drawing.Point(186, 182);
+            this.passwordLabel.BackColor = System.Drawing.Color.Transparent;
+            this.passwordLabel.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passwordLabel.Location = new System.Drawing.Point(172, 181);
             this.passwordLabel.Name = "passwordLabel";
-            this.passwordLabel.Size = new System.Drawing.Size(81, 13);
+            this.passwordLabel.Size = new System.Drawing.Size(81, 14);
             this.passwordLabel.TabIndex = 1;
             this.passwordLabel.Text = "CONTRASEÑA";
             // 
@@ -100,10 +104,11 @@
             // mensajeLabel
             // 
             this.mensajeLabel.AutoSize = true;
-            this.mensajeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mensajeLabel.BackColor = System.Drawing.Color.Transparent;
+            this.mensajeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mensajeLabel.Location = new System.Drawing.Point(132, 126);
             this.mensajeLabel.Name = "mensajeLabel";
-            this.mensajeLabel.Size = new System.Drawing.Size(303, 15);
+            this.mensajeLabel.Size = new System.Drawing.Size(325, 16);
             this.mensajeLabel.TabIndex = 6;
             this.mensajeLabel.Text = "Introduzca su nombre de usuario y contraseña";
             this.mensajeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -123,9 +128,11 @@
             // prioridadLabel
             // 
             this.prioridadLabel.AutoSize = true;
-            this.prioridadLabel.Location = new System.Drawing.Point(165, 205);
+            this.prioridadLabel.BackColor = System.Drawing.Color.Transparent;
+            this.prioridadLabel.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.prioridadLabel.Location = new System.Drawing.Point(172, 205);
             this.prioridadLabel.Name = "prioridadLabel";
-            this.prioridadLabel.Size = new System.Drawing.Size(102, 13);
+            this.prioridadLabel.Size = new System.Drawing.Size(98, 14);
             this.prioridadLabel.TabIndex = 8;
             this.prioridadLabel.Text = "TIPO DE USUARIO";
             // 
@@ -146,6 +153,7 @@
             this.Controls.Add(this.passwordLabel);
             this.Controls.Add(this.usuarioLabel);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";

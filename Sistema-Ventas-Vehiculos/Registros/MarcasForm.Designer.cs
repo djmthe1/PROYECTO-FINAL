@@ -56,9 +56,10 @@
             // Descripcionlabel
             // 
             this.Descripcionlabel.AutoSize = true;
-            this.Descripcionlabel.Location = new System.Drawing.Point(47, 117);
+            this.Descripcionlabel.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Descripcionlabel.Location = new System.Drawing.Point(40, 117);
             this.Descripcionlabel.Name = "Descripcionlabel";
-            this.Descripcionlabel.Size = new System.Drawing.Size(63, 13);
+            this.Descripcionlabel.Size = new System.Drawing.Size(72, 14);
             this.Descripcionlabel.TabIndex = 11;
             this.Descripcionlabel.Text = "Descripcion";
             // 
@@ -85,9 +86,10 @@
             // IDlabel
             // 
             this.IDlabel.AutoSize = true;
-            this.IDlabel.Location = new System.Drawing.Point(47, 64);
+            this.IDlabel.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IDlabel.Location = new System.Drawing.Point(40, 64);
             this.IDlabel.Name = "IDlabel";
-            this.IDlabel.Size = new System.Drawing.Size(16, 13);
+            this.IDlabel.Size = new System.Drawing.Size(17, 14);
             this.IDlabel.TabIndex = 9;
             this.IDlabel.Text = "Id";
             // 
@@ -127,9 +129,9 @@
             this.botonBuscar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("botonBuscar.BackgroundImage")));
             this.botonBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.botonBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.botonBuscar.Location = new System.Drawing.Point(218, 12);
+            this.botonBuscar.Location = new System.Drawing.Point(209, 55);
             this.botonBuscar.Name = "botonBuscar";
-            this.botonBuscar.Size = new System.Drawing.Size(48, 38);
+            this.botonBuscar.Size = new System.Drawing.Size(35, 30);
             this.botonBuscar.TabIndex = 16;
             this.botonBuscar.UseVisualStyleBackColor = true;
             this.botonBuscar.Click += new System.EventHandler(this.botonBuscar_Click);
@@ -150,7 +152,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(278, 249);
             this.Controls.Add(this.botonAtras);
@@ -163,6 +164,7 @@
             this.Controls.Add(this.DescripciontextBox);
             this.Controls.Add(this.IDlabel);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "MarcasForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Marcas";

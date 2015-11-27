@@ -30,10 +30,10 @@ namespace BLL.Tests
             v.VehiculoId = 1;
             v.EstadoDelVehiculo = "jh";
             v.AtributosId = 1;
-            v.ModelosId = 1;
-            v.MarcasId = 1;
-            v.MotorId = 1;
-            v.ColorId = 1;
+            v.Modelo = 1;
+            v.Marca = 1;
+            v.Motor = 1;
+            v.Color = 1;
             v.Año = 123;
             v.NoChasis = "43";
             v.TipoDeVehiculoId = 1;

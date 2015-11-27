@@ -25,7 +25,12 @@ namespace Sistema_Ventas_Vehiculos.Registros
         }
         private void MensajeError(string mensaje)
         {
-            MessageBox.Show(mensaje, "Registro de Marcas", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show(mensaje, "Registro de Marcas", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void MensajeAdvertencia(string mensaje)
+        {
+            MessageBox.Show(mensaje, "Registro de Marcas", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
 
         private void MarcasForm_Load(object sender, EventArgs e)
@@ -45,53 +50,88 @@ namespace Sistema_Ventas_Vehiculos.Registros
         {
             try
             {
-                marcas.MarcaId = int.Parse(MarcasIDtextBox.Text);
-                if (marcas.Eliminar())
+                int id = 0;
+                int.TryParse(MarcasIDtextBox.Text, out id);
+                marcas.MarcaId = id;
+
+                if (marcas.Buscar(marcas.MarcaId))
                 {
-                    MensajeOk("Eliminado correctamente");
-                    DescripciontextBox.Clear();
-                    MarcasIDtextBox.Clear();                    
+ 
+                    if (marcas.Eliminar())
+                    {
+                        MensajeOk("Eliminado correctamente");
+                        DescripciontextBox.Clear();
+                        MarcasIDtextBox.Clear();
+                    }
+                    else
+                    {
+                        MensajeError("Error al Eliminar");
+                    }
+
                 }
+                else
+                {
+                    MensajeAdvertencia("Este Id no existe");
+                    MarcasIDtextBox.Clear();
+                }
+
             }
             catch (Exception) {
-                MessageBox.Show("Error al Eliminar");
+                MensajeError("Error al Eliminar");
             }
         }
 
         private void botonGuardar_Click_1(object sender, EventArgs e)
         {
-
-            marcas.Descripcion = DescripciontextBox.Text;
-            if (MarcasIDtextBox.Text == "")
+            try
             {
-                if (marcas.Insertar())
+                marcas.Descripcion = DescripciontextBox.Text;
+                if (MarcasIDtextBox.Text == "")
                 {
-                    DescripciontextBox.Clear();
-                    MensajeOk("Insertado Correctamente");
+                    if (DescripciontextBox.Text != "")
+                    {
+                        if (marcas.Insertar())
+                        {
+                            DescripciontextBox.Clear();
+                            MensajeOk("Insertado Correctamente");
+                        }
+                        else
+                        {
+                            MensajeError("Error al Insertar");
+                        }
+                    }
+                    else
+                    {
+                        MensajeAdvertencia("Inserte la descripcion");
+                    }
                 }
-                else
-                {
-                    MensajeError("Error al Insertar");
-                }
-            }
                 else
                 {
 
-                int id = 0;
-                int.TryParse(MarcasIDtextBox.Text, out id);
-                marcas.MarcaId = id;
-                if (marcas.Editar())
-                {
-                    DescripciontextBox.Clear();
-                    MensajeOk("Modificado Correctamente");
-                }
-                else
-                {
-                    MensajeError("Error al Modificar");
+                    int id = 0;
+                    int.TryParse(MarcasIDtextBox.Text, out id);
+                    marcas.MarcaId = id;
+                    if (DescripciontextBox.Text != "")
+                    {
+                        if (marcas.Editar())
+                        {
+                            DescripciontextBox.Clear();
+                            MarcasIDtextBox.Clear();
+                            MensajeOk("Modificado Correctamente");
+                        }
+                        else
+                        {
+                            MensajeError("Error al Modificar");
+                        }
+                    }
+                    else
+                    {
+                        MensajeAdvertencia("Inserte la descripcion");
+                    }
                 }
             }
-
-        }
+            catch (Exception) { MensajeError("Error al Insertar o Modificar"); }
+            }
 
         private void botonAtras_Click(object sender, EventArgs e)
         {
@@ -106,8 +146,15 @@ namespace Sistema_Ventas_Vehiculos.Registros
             int.TryParse(MarcasIDtextBox.Text, out id);
             marcas.MarcaId = id;
 
-            marcas.Buscar(marcas.MarcaId);
-            DescripciontextBox.Text = marcas.Descripcion;
+            if (marcas.Buscar(marcas.MarcaId))
+            {
+                DescripciontextBox.Text = marcas.Descripcion;
+            }
+            else
+            {
+                MensajeAdvertencia("Id no encontrado");
+                MarcasIDtextBox.Clear();
+            }
         }
     }
 }

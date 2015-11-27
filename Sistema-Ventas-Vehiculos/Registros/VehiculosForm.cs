@@ -105,12 +105,35 @@ namespace Sistema_Ventas_Vehiculos.Registros
         private void botonGuardar_Click(object sender, EventArgs e)
         {
             vehiculo.EstadoDelVehiculo = estadoVehiculoTextBox.Text;
-            int MarcaId = 0;
-            
-            
-                MarcaId = (int)marcas.ObtenerMarcaId(MarcasComboBox);
-                vehiculo.InsertarMarcas(MarcaId, MarcasComboBox.ToString());
-            
+            vehiculo.Motor = MotorComboBox.Text;
+            vehiculo.Marca = MarcasComboBox.Text;
+            vehiculo.Modelo = MotorComboBox.Text;
+            vehiculo.Color = ColorComboBox.Text;
+            int idAño = 0;
+            int.TryParse(añoVehiculoTextBox.Text, out idAño);
+            vehiculo.Año = idAño;
+
+            vehiculo.NoChasis = chasisVehiculoTextBox.Text;
+            vehiculo.TipoDeVehiculo = tipoVehiculoTextBox.Text;
+
+            int idKilometraje = 0;
+            int.TryParse(kilometrajeVehiculoTextBox.Text, out idKilometraje);
+            vehiculo.Año = idKilometraje;
+
+            int idPrecio = 0;
+            int.TryParse(precioVehiculoTextBox.Text, out idPrecio);
+            vehiculo.Año = idPrecio;
+
+            vehiculo.Placa = placaVehiculoTextBox.Text;
+            vehiculo.Matricula = matriculaVehiculoTextBox.Text;
+
+            vehiculo.Insertar();
+
+        }
+
+        private void manualCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
