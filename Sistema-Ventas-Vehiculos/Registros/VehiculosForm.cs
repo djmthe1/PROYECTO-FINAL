@@ -13,17 +13,17 @@ namespace Sistema_Ventas_Vehiculos.Registros
 {
     public partial class VehiculosForm : Form
     {
+        public VehiculosForm()
+        {
+            InitializeComponent();
+        }
+
         public Vehiculos vehiculo = new Vehiculos();
         public Modelos modelo = new Modelos();
         public Marcas marcas = new Marcas();
         public TipoMotores motores = new TipoMotores();
         public Colores colores = new Colores();
         public DataTable dato = new DataTable();
-
-        public VehiculosForm()
-        {
-            InitializeComponent();
-        }
 
         public void Limpiar()
         {
@@ -77,7 +77,7 @@ namespace Sistema_Ventas_Vehiculos.Registros
             dato = modelo.Listado("*", "0=0", "ORDER BY Descripcion");
 
             for (int i = 0; i <= dato.Rows.Count - 1; i++)
-                ModeloComboBox.Items.Add(modelo.Listado("*", "0=0","ORDER BY Descripcion").Rows[i]["Descripcion"]);
+                ModeloComboBox.Items.Add(modelo.Listado("*", "0=0", "ORDER BY Descripcion").Rows[i]["Descripcion"]);
 
             dato = marcas.Listado("*", "0=0", "ORDER BY Descripcion");
 
@@ -93,51 +93,51 @@ namespace Sistema_Ventas_Vehiculos.Registros
 
             for (int i = 0; i <= dato.Rows.Count - 1; i++)
                 ColorComboBox.Items.Add(colores.Listado("*", "0=0", "ORDER BY Descripcion").Rows[i]["Descripcion"]);
-  
-        }
 
-
-        private void botonAtras_Click(object sender, EventArgs e)
-        {
-            InsetarForm InsetarF = new InsetarForm();
-            InsetarF.Show();
-            this.Close();
         }
 
         private void botonBuscar_Click(object sender, EventArgs e)
         {
-            
+            try
+            {
                 int id = 0;
                 int.TryParse(vehiculoIdTextBox.Text, out id);
                 vehiculo.VehiculoId = id;
 
-                if (vehiculo.Buscar(vehiculo.VehiculoId)) {
+                if (vehiculo.Buscar(vehiculo.VehiculoId))
+                {
 
-                estadoVehiculoTextBox.Text= vehiculo.EstadoDelVehiculo;
-                MotorComboBox.Text = vehiculo.Motor;
-                MarcasComboBox.Text = vehiculo.Marca;
-                MotorComboBox.Text = vehiculo.Modelo;
-                ColorComboBox.Text = vehiculo.Color;
-                añoVehiculoTextBox.Text = vehiculo.Año.ToString();
-                chasisVehiculoTextBox.Text = vehiculo.NoChasis;
-                tipoVehiculoTextBox.Text = vehiculo.TipoDeVehiculo;
-                kilometrajeVehiculoTextBox.Text = vehiculo.Kilometraje.ToString();
-                precioVehiculoTextBox.Text = vehiculo.Precio.ToString();
-                placaVehiculoTextBox.Text = vehiculo.Placa;
-                matriculaVehiculoTextBox.Text = vehiculo.Matricula;
+                    estadoVehiculoTextBox.Text = vehiculo.EstadoDelVehiculo;
+                    MotorComboBox.Text = vehiculo.Motor;
+                    MarcasComboBox.Text = vehiculo.Marca;
+                    MotorComboBox.Text = vehiculo.Modelo;
+                    ColorComboBox.Text = vehiculo.Color;
+                    añoVehiculoTextBox.Text = vehiculo.Año.ToString();
+                    chasisVehiculoTextBox.Text = vehiculo.NoChasis;
+                    tipoVehiculoTextBox.Text = vehiculo.TipoDeVehiculo;
+                    kilometrajeVehiculoTextBox.Text = vehiculo.Kilometraje.ToString();
+                    precioVehiculoTextBox.Text = vehiculo.Precio.ToString();
+                    placaVehiculoTextBox.Text = vehiculo.Placa;
+                    matriculaVehiculoTextBox.Text = vehiculo.Matricula;
+
                 }
                 else
                 {
                     MensajeAdvertencia("Id no encontrado");
                     Limpiar();
                 }
-           
-
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error Al buscar");
+            }
         }
 
-        private void alfombrasCheckBox_CheckedChanged(object sender, EventArgs e)
+        private void botonAtras_Click(object sender, EventArgs e)
         {
-
+            InsetarForm InsetarF = new InsetarForm();
+            InsetarF.Show();
+            this.Close();
         }
 
         private void botonNuevo_Click(object sender, EventArgs e)
@@ -154,20 +154,156 @@ namespace Sistema_Ventas_Vehiculos.Registros
                 vehiculo.Marca = MarcasComboBox.Text;
                 vehiculo.Modelo = MotorComboBox.Text;
                 vehiculo.Color = ColorComboBox.Text;
-                int idAño = 0;
-                int.TryParse(añoVehiculoTextBox.Text, out idAño);
-                vehiculo.Año = idAño;
+
+                if (!duplicadoLlaveCheckBox.ThreeState)
+                {
+                    duplicadoLlaveCheckBox.ThreeState = true;
+                }
+                else
+                {
+                    duplicadoLlaveCheckBox.ThreeState = false;
+                }
+
+                if (!derechoCheckBox.ThreeState)
+                {
+                    derechoCheckBox.ThreeState = true;
+                }
+                else
+                {
+                    derechoCheckBox.ThreeState = false;
+                }
+
+                if (!izquierdoCheckBox.ThreeState)
+                {
+                    izquierdoCheckBox.ThreeState = true;
+                }
+                else
+                {
+                    izquierdoCheckBox.ThreeState = false;
+                }
+
+                if (!InternoCheckBox.ThreeState)
+                {
+                    InternoCheckBox.ThreeState = true;
+                }
+                else
+                {
+                    InternoCheckBox.ThreeState = false;
+                }
+
+                if (!manualCheckBox.ThreeState)
+                {
+                    manualCheckBox.ThreeState = true;
+                }
+                else
+                {
+                    manualCheckBox.ThreeState = false;
+                }
+
+                if (!taponGasolinaCheckBox.ThreeState)
+                {
+                    taponGasolinaCheckBox.ThreeState = true;
+                }
+                else
+                {
+                    taponGasolinaCheckBox.ThreeState = false;
+                }
+
+                if (!taponRadiadorCheckBox.ThreeState)
+                {
+                    taponRadiadorCheckBox.ThreeState = true;
+                }
+                else
+                {
+                    taponRadiadorCheckBox.ThreeState = false;
+                }
+
+                if (!gomaRepuestoCheckBox.ThreeState)
+                {
+                    gomaRepuestoCheckBox.ThreeState = true;
+                }
+                else
+                {
+                    gomaRepuestoCheckBox.ThreeState = false;
+                }
+
+                if (!botiquinCheckBox.ThreeState)
+                {
+                    botiquinCheckBox.ThreeState = true;
+                }
+                else
+                {
+                    botiquinCheckBox.ThreeState = false;
+                }
+
+                if (!gomasCheckBox.ThreeState)
+                {
+                    gomasCheckBox.ThreeState = true;
+                }
+                else
+                {
+                    gomasCheckBox.ThreeState = false;
+                }
+
+                if (!radioCheckBox.ThreeState)
+                {
+                    radioCheckBox.ThreeState = true;
+                }
+                else
+                {
+                    radioCheckBox.ThreeState = false;
+                }
+
+                if (!gatoCheckBox.ThreeState)
+                {
+                    gatoCheckBox.ThreeState = true;
+                }
+                else
+                {
+                    gatoCheckBox.ThreeState = false;
+                }
+
+                if (!alfombrasCheckBox.ThreeState)
+                {
+                    alfombrasCheckBox.ThreeState = true;
+                }
+                else
+                {
+                    alfombrasCheckBox.ThreeState = false;
+                }
+
+                if (!encendedorCheckBox.ThreeState)
+                {
+                    encendedorCheckBox.ThreeState = true;
+                }
+                else
+                {
+                    encendedorCheckBox.ThreeState = false;
+                }
+
+                if (!llaveDeRuedaCheckBox.ThreeState)
+                {
+                    llaveDeRuedaCheckBox.ThreeState = true;
+                }
+                else
+                {
+                    llaveDeRuedaCheckBox.ThreeState = false;
+                }
+
+                int Año = 0;
+                int.TryParse(añoVehiculoTextBox.Text, out Año);
+                vehiculo.Año = Año;
 
                 vehiculo.NoChasis = chasisVehiculoTextBox.Text;
                 vehiculo.TipoDeVehiculo = tipoVehiculoTextBox.Text;
 
-                int idKilometraje = 0;
-                int.TryParse(kilometrajeVehiculoTextBox.Text, out idKilometraje);
-                vehiculo.Kilometraje = idKilometraje;
+                int Kilometraje = 0;
+                int.TryParse(kilometrajeVehiculoTextBox.Text, out Kilometraje);
+                vehiculo.Kilometraje = Kilometraje;
 
-                int idPrecio = 0;
-                int.TryParse(precioVehiculoTextBox.Text, out idPrecio);
-                vehiculo.Precio = idPrecio;
+                int Precio = 0;
+                int.TryParse(precioVehiculoTextBox.Text, out Precio);
+                vehiculo.Precio = Precio;
 
                 vehiculo.Placa = placaVehiculoTextBox.Text;
                 vehiculo.Matricula = matriculaVehiculoTextBox.Text;
@@ -192,7 +328,8 @@ namespace Sistema_Ventas_Vehiculos.Registros
                         MensajeAdvertencia("Debe llenar las cajas de texto vacias");
                     }
                 }
-                else {
+                else
+                {
                     int id = 0;
                     int.TryParse(vehiculoIdTextBox.Text, out id);
                     vehiculo.VehiculoId = id;
@@ -213,17 +350,47 @@ namespace Sistema_Ventas_Vehiculos.Registros
                     {
                         MensajeAdvertencia("Debe llenar las cajas de texto vacias");
                     }
-               }
+                }
 
             }
-            catch (Exception) {
+            catch (Exception)
+            {
                 MensajeError("Error al intentar guardar o editar");
             }
         }
 
-        private void manualCheckBox_CheckedChanged(object sender, EventArgs e)
+        private void botonEliminar_Click(object sender, EventArgs e)
         {
-            
+            try {
+                int id = 0;
+                int.TryParse(vehiculoIdTextBox.Text, out id);
+                vehiculo.VehiculoId = id;
+
+                if (vehiculo.Buscar(vehiculo.VehiculoId))
+                {
+
+                    if (vehiculo.Eliminar())
+                    {
+                        MensajeOk("Eliminado correctamente");
+                        Limpiar();
+                    }
+                    else
+                    {
+                        MensajeError("Error al Eliminar");
+                    }
+
+                }
+                else
+                {
+                    MensajeAdvertencia("Este Id no existe");
+                    Limpiar();
+                }
+
+            }
+            catch (Exception)
+            {
+                MensajeError("Error al Eliminar");
+            }
         }
     }
 }
