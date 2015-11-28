@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClientesForm));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.sexoComboBox = new System.Windows.Forms.ComboBox();
             this.NombreTextBox = new System.Windows.Forms.TextBox();
             this.nombreClienteLabel = new System.Windows.Forms.Label();
             this.apodoLabel = new System.Windows.Forms.Label();
@@ -56,7 +57,6 @@
             this.botonEliminar = new System.Windows.Forms.Button();
             this.botonGuardar = new System.Windows.Forms.Button();
             this.botonNuevo = new System.Windows.Forms.Button();
-            this.sexoComboBox = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -85,10 +85,22 @@
             this.panel1.Controls.Add(this.OcupacionTextBox);
             this.panel1.Controls.Add(this.LugardeNacimientoTextBox);
             this.panel1.Controls.Add(this.botonBuscarCliente);
-            this.panel1.Location = new System.Drawing.Point(183, 40);
+            this.panel1.Location = new System.Drawing.Point(11, 34);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(260, 311);
             this.panel1.TabIndex = 67;
+            // 
+            // sexoComboBox
+            // 
+            this.sexoComboBox.FormattingEnabled = true;
+            this.sexoComboBox.Items.AddRange(new object[] {
+            "Femenino",
+            "Masculino",
+            "Otro"});
+            this.sexoComboBox.Location = new System.Drawing.Point(120, 271);
+            this.sexoComboBox.Name = "sexoComboBox";
+            this.sexoComboBox.Size = new System.Drawing.Size(100, 21);
+            this.sexoComboBox.TabIndex = 28;
             // 
             // NombreTextBox
             // 
@@ -291,7 +303,7 @@
             this.datosClientelabel.BackColor = System.Drawing.Color.Transparent;
             this.datosClientelabel.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.datosClientelabel.ForeColor = System.Drawing.Color.Black;
-            this.datosClientelabel.Location = new System.Drawing.Point(180, 20);
+            this.datosClientelabel.Location = new System.Drawing.Point(8, 14);
             this.datosClientelabel.Name = "datosClientelabel";
             this.datosClientelabel.Size = new System.Drawing.Size(138, 17);
             this.datosClientelabel.TabIndex = 66;
@@ -302,7 +314,7 @@
             this.botonSiguente.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("botonSiguente.BackgroundImage")));
             this.botonSiguente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.botonSiguente.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.botonSiguente.Location = new System.Drawing.Point(549, 388);
+            this.botonSiguente.Location = new System.Drawing.Point(206, 392);
             this.botonSiguente.Name = "botonSiguente";
             this.botonSiguente.Size = new System.Drawing.Size(65, 55);
             this.botonSiguente.TabIndex = 68;
@@ -314,7 +326,7 @@
             this.botonAnterior.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("botonAnterior.BackgroundImage")));
             this.botonAnterior.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.botonAnterior.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.botonAnterior.Location = new System.Drawing.Point(12, 388);
+            this.botonAnterior.Location = new System.Drawing.Point(8, 392);
             this.botonAnterior.Name = "botonAnterior";
             this.botonAnterior.Size = new System.Drawing.Size(65, 55);
             this.botonAnterior.TabIndex = 69;
@@ -323,7 +335,7 @@
             // 
             // botonEliminar
             // 
-            this.botonEliminar.Location = new System.Drawing.Point(365, 357);
+            this.botonEliminar.Location = new System.Drawing.Point(193, 351);
             this.botonEliminar.Name = "botonEliminar";
             this.botonEliminar.Size = new System.Drawing.Size(75, 23);
             this.botonEliminar.TabIndex = 72;
@@ -333,7 +345,7 @@
             // 
             // botonGuardar
             // 
-            this.botonGuardar.Location = new System.Drawing.Point(273, 357);
+            this.botonGuardar.Location = new System.Drawing.Point(101, 351);
             this.botonGuardar.Name = "botonGuardar";
             this.botonGuardar.Size = new System.Drawing.Size(75, 23);
             this.botonGuardar.TabIndex = 71;
@@ -343,7 +355,7 @@
             // 
             // botonNuevo
             // 
-            this.botonNuevo.Location = new System.Drawing.Point(182, 357);
+            this.botonNuevo.Location = new System.Drawing.Point(10, 351);
             this.botonNuevo.Name = "botonNuevo";
             this.botonNuevo.Size = new System.Drawing.Size(75, 23);
             this.botonNuevo.TabIndex = 70;
@@ -351,23 +363,11 @@
             this.botonNuevo.UseVisualStyleBackColor = true;
             this.botonNuevo.Click += new System.EventHandler(this.botonNuevo_Click);
             // 
-            // sexoComboBox
-            // 
-            this.sexoComboBox.FormattingEnabled = true;
-            this.sexoComboBox.Items.AddRange(new object[] {
-            "Femenino",
-            "Masculino",
-            "Otro"});
-            this.sexoComboBox.Location = new System.Drawing.Point(120, 271);
-            this.sexoComboBox.Name = "sexoComboBox";
-            this.sexoComboBox.Size = new System.Drawing.Size(100, 21);
-            this.sexoComboBox.TabIndex = 28;
-            // 
             // ClientesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(626, 455);
+            this.ClientSize = new System.Drawing.Size(281, 457);
             this.Controls.Add(this.botonEliminar);
             this.Controls.Add(this.botonGuardar);
             this.Controls.Add(this.botonNuevo);

@@ -71,6 +71,9 @@ namespace Sistema_Ventas_Vehiculos.Registros
                     modeloVehiculoTextBox.Text = vehiculo.Modelo;
                     colorVehiculoTextBox.Text = vehiculo.Color;
                     tipoVehiculoTextBox.Text = vehiculo.TipoDeVehiculo;
+                    motorVehiculoTextBox.Text = vehiculo.Motor;
+                    chasisVehiculoTextBox.Text = vehiculo.NoChasis;
+                    añoVehiculoTextBox.Text = vehiculo.Año.ToString();
                 }
                 else
                 {
