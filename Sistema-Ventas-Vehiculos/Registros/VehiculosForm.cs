@@ -106,8 +106,6 @@ namespace Sistema_Ventas_Vehiculos.Registros
         {
             vehiculo.EstadoDelVehiculo = estadoVehiculoTextBox.Text;
             int MarcaId = 0;
-            
-            
                 MarcaId = (int)marcas.ObtenerMarcaId(MarcasComboBox);
                 vehiculo.InsertarMarcas(MarcaId, MarcasComboBox.ToString());
             
