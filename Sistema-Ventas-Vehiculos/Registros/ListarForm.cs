@@ -92,12 +92,7 @@ namespace Sistema_Ventas_Vehiculos.Registros
 
         private void listarFueraComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(listarFueraComboBox.Text == "Vehiculos")
-            {
-                listarDataGridView.DataSource = vehiculos.Listado("*", "1=1", "ORDER BY VehiculoId");
-                mensaje();
-
-            }
+            
 
         }
 

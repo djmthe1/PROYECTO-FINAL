@@ -25,7 +25,7 @@ namespace Sistema_Ventas_Vehiculos.Registros
             InitializeComponent();
         }
 
-        public void Borrar()
+        public void Limpiar()
         {
             vehiculoIdTextBox.Clear();
             estadoVehiculoTextBox.Clear();
@@ -57,6 +57,21 @@ namespace Sistema_Ventas_Vehiculos.Registros
             gatoCheckBox.Checked = false;
         }
 
+        private void MensajeOk(string mensaje)
+        {
+            MessageBox.Show(mensaje, "Registro de Marcas", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+        private void MensajeError(string mensaje)
+        {
+            MessageBox.Show(mensaje, "Registro de Marcas", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void MensajeAdvertencia(string mensaje)
+        {
+            MessageBox.Show(mensaje, "Registro de Marcas", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+        }
+
+
         private void VehiculosForm_Load(object sender, EventArgs e)
         {
             dato = modelo.Listado("*", "0=0", "ORDER BY Descripcion");
@@ -81,6 +96,7 @@ namespace Sistema_Ventas_Vehiculos.Registros
   
         }
 
+
         private void botonAtras_Click(object sender, EventArgs e)
         {
             InsetarForm InsetarF = new InsetarForm();
@@ -90,6 +106,32 @@ namespace Sistema_Ventas_Vehiculos.Registros
 
         private void botonBuscar_Click(object sender, EventArgs e)
         {
+            
+                int id = 0;
+                int.TryParse(vehiculoIdTextBox.Text, out id);
+                vehiculo.VehiculoId = id;
+
+                if (vehiculo.Buscar(vehiculo.VehiculoId)) {
+
+                estadoVehiculoTextBox.Text= vehiculo.EstadoDelVehiculo;
+                MotorComboBox.Text = vehiculo.Motor;
+                MarcasComboBox.Text = vehiculo.Marca;
+                MotorComboBox.Text = vehiculo.Modelo;
+                ColorComboBox.Text = vehiculo.Color;
+                añoVehiculoTextBox.Text = vehiculo.Año.ToString();
+                chasisVehiculoTextBox.Text = vehiculo.NoChasis;
+                tipoVehiculoTextBox.Text = vehiculo.TipoDeVehiculo;
+                kilometrajeVehiculoTextBox.Text = vehiculo.Kilometraje.ToString();
+                precioVehiculoTextBox.Text = vehiculo.Precio.ToString();
+                placaVehiculoTextBox.Text = vehiculo.Placa;
+                matriculaVehiculoTextBox.Text = vehiculo.Matricula;
+                }
+                else
+                {
+                    MensajeAdvertencia("Id no encontrado");
+                    Limpiar();
+                }
+           
 
         }
 
@@ -100,36 +142,83 @@ namespace Sistema_Ventas_Vehiculos.Registros
 
         private void botonNuevo_Click(object sender, EventArgs e)
         {
-            Borrar();
+            Limpiar();
         }
 
         private void botonGuardar_Click(object sender, EventArgs e)
         {
-            vehiculo.EstadoDelVehiculo = estadoVehiculoTextBox.Text;
-            vehiculo.Motor = MotorComboBox.Text;
-            vehiculo.Marca = MarcasComboBox.Text;
-            vehiculo.Modelo = MotorComboBox.Text;
-            vehiculo.Color = ColorComboBox.Text;
-            int idAño = 0;
-            int.TryParse(añoVehiculoTextBox.Text, out idAño);
-            vehiculo.Año = idAño;
+            try
+            {
+                vehiculo.EstadoDelVehiculo = estadoVehiculoTextBox.Text;
+                vehiculo.Motor = MotorComboBox.Text;
+                vehiculo.Marca = MarcasComboBox.Text;
+                vehiculo.Modelo = MotorComboBox.Text;
+                vehiculo.Color = ColorComboBox.Text;
+                int idAño = 0;
+                int.TryParse(añoVehiculoTextBox.Text, out idAño);
+                vehiculo.Año = idAño;
 
-            vehiculo.NoChasis = chasisVehiculoTextBox.Text;
-            vehiculo.TipoDeVehiculo = tipoVehiculoTextBox.Text;
+                vehiculo.NoChasis = chasisVehiculoTextBox.Text;
+                vehiculo.TipoDeVehiculo = tipoVehiculoTextBox.Text;
 
-            int idKilometraje = 0;
-            int.TryParse(kilometrajeVehiculoTextBox.Text, out idKilometraje);
-            vehiculo.Año = idKilometraje;
+                int idKilometraje = 0;
+                int.TryParse(kilometrajeVehiculoTextBox.Text, out idKilometraje);
+                vehiculo.Kilometraje = idKilometraje;
 
-            int idPrecio = 0;
-            int.TryParse(precioVehiculoTextBox.Text, out idPrecio);
-            vehiculo.Año = idPrecio;
+                int idPrecio = 0;
+                int.TryParse(precioVehiculoTextBox.Text, out idPrecio);
+                vehiculo.Precio = idPrecio;
 
-            vehiculo.Placa = placaVehiculoTextBox.Text;
-            vehiculo.Matricula = matriculaVehiculoTextBox.Text;
+                vehiculo.Placa = placaVehiculoTextBox.Text;
+                vehiculo.Matricula = matriculaVehiculoTextBox.Text;
 
-            vehiculo.Insertar();
+                if (vehiculoIdTextBox.Text == "")
+                {
+                    if (estadoVehiculoTextBox.Text != "" && MotorComboBox.Text != "" && MarcasComboBox.Text != "" && MotorComboBox.Text != "" && ColorComboBox.Text != "" && añoVehiculoTextBox.Text != "" && chasisVehiculoTextBox.Text != "" && tipoVehiculoTextBox.Text != "" && kilometrajeVehiculoTextBox.Text != "" && precioVehiculoTextBox.Text != "" && placaVehiculoTextBox.Text != "" && matriculaVehiculoTextBox.Text != "")
+                    {
 
+                        if (vehiculo.Insertar())
+                        {
+                            MensajeOk("Insertado correctamente");
+                            Limpiar();
+                        }
+                        else
+                        {
+                            MensajeError("Error al insertar");
+                        }
+                    }
+                    else
+                    {
+                        MensajeAdvertencia("Debe llenar las cajas de texto vacias");
+                    }
+                }
+                else {
+                    int id = 0;
+                    int.TryParse(vehiculoIdTextBox.Text, out id);
+                    vehiculo.VehiculoId = id;
+
+                    if (estadoVehiculoTextBox.Text != "" && MotorComboBox.Text != "" && MarcasComboBox.Text != "" && MotorComboBox.Text != "" && ColorComboBox.Text != "" && añoVehiculoTextBox.Text != "" && chasisVehiculoTextBox.Text != "" && tipoVehiculoTextBox.Text != "" && kilometrajeVehiculoTextBox.Text != "" && precioVehiculoTextBox.Text != "" && placaVehiculoTextBox.Text != "" && matriculaVehiculoTextBox.Text != "")
+                    {
+                        if (vehiculo.Editar())
+                        {
+                            MensajeOk("Editado correctamente");
+                            Limpiar();
+                        }
+                        else
+                        {
+                            MensajeError("Error al editar");
+                        }
+                    }
+                    else
+                    {
+                        MensajeAdvertencia("Debe llenar las cajas de texto vacias");
+                    }
+               }
+
+            }
+            catch (Exception) {
+                MensajeError("Error al intentar guardar o editar");
+            }
         }
 
         private void manualCheckBox_CheckedChanged(object sender, EventArgs e)
