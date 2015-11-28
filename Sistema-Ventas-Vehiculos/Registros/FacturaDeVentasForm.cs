@@ -17,21 +17,33 @@ namespace Sistema_Ventas_Vehiculos.Registros
         {
             InitializeComponent();
         }
-        public Clientes cliente = new Clientes();
+        public Clientes clientes = new Clientes();
         public Vehiculos vehiculo = new Vehiculos();
         public Marcas marca = new Marcas();
-         
+
+        private void MensajeOk(string mensaje)
+        {
+            MessageBox.Show(mensaje, "Factura de Ventas", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+        private void MensajeError(string mensaje)
+        {
+            MessageBox.Show(mensaje, "Factura de Ventas", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void MensajeAdvertencia(string mensaje)
+        {
+            MessageBox.Show(mensaje, "Factura de Ventas", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+        }
+
         private void botonSiguente_Click(object sender, EventArgs e)
         {
-            FacturaDeVentasForm Factura = new FacturaDeVentasForm();
-            Factura.Show();
-            this.Close();
+            
         }
 
         private void botonAnterior_Click(object sender, EventArgs e)
         {
-            PortadaForm Portada = new PortadaForm();
-            Portada.Show();
+           ClientesForm ClientesF = new ClientesForm();
+            ClientesF.Show();
             this.Close();
         }
 
@@ -40,52 +52,74 @@ namespace Sistema_Ventas_Vehiculos.Registros
 
         }
 
-        private void botonBuscarCliente_Click(object sender, EventArgs e)
-        {
-
-            int id = 0;
-            int.TryParse(IdClinteTextBox.Text, out id);
-            cliente.ClienteId = id;
-
-            cliente.Buscar(cliente.ClienteId);
-
-            NombreTextBox.Text = cliente.NombreCompleto;
-            ApodoTextBox.Text = cliente.Apodo;
-            DireccionTextBox.Text = cliente.Direccion;
-            TelefonoTextBox.Text = cliente.Telefono;
-            CelularTextBox.Text = cliente.Celular;
-            CedulaTextBox.Text = cliente.Cedula;
-            NacimientoTextBox.Text = cliente.Nacionalidad;
-            OcupacionTextBox.Text = cliente.Ocupacion;
-            LugardeNacimientoTextBox.Text = cliente.LugarDeNacimiento;
-            SexoTextBox.Text = cliente.Sexo;
-        }
-
         private void botonBuscarVehiculo_Click(object sender, EventArgs e)
         {
-            int id = 0;
-            int.TryParse(vehiculoIdTextBox.Text, out id);
-            vehiculo.VehiculoId = id;
+            try
+            {
+                int id = 0;
+                int.TryParse(vehiculoIdTextBox.Text, out id);
+                vehiculo.VehiculoId = id;
 
-            vehiculo.Buscar(vehiculo.VehiculoId);
-
-            estadoVehiculoTextBox.Text = vehiculo.EstadoDelVehiculo;
-            precioVehiculoTextBox.Text = vehiculo.Precio.ToString();
-            placaVehiculoTextBox.Text = vehiculo.Placa;
-            matriculaVehiculoTextBox.Text = vehiculo.Matricula;
-            kilometrajeVehiculoTextBox.Text = vehiculo.Kilometraje.ToString();
-            marcaVehiculoTextBox.Text = vehiculo.Marca;
-            modeloVehiculoTextBox.Text = vehiculo.Modelo;
-            colorVehiculoTextBox.Text = vehiculo.Color;
-            tipoVehiculoTextBox.Text = vehiculo.TipoDeVehiculo;
-
-            
+                if (vehiculo.Buscar(vehiculo.VehiculoId))
+                {
+                    estadoVehiculoTextBox.Text = vehiculo.EstadoDelVehiculo;
+                    precioVehiculoTextBox.Text = vehiculo.Precio.ToString();
+                    placaVehiculoTextBox.Text = vehiculo.Placa;
+                    matriculaVehiculoTextBox.Text = vehiculo.Matricula;
+                    kilometrajeVehiculoTextBox.Text = vehiculo.Kilometraje.ToString();
+                    marcaVehiculoTextBox.Text = vehiculo.Marca;
+                    modeloVehiculoTextBox.Text = vehiculo.Modelo;
+                    colorVehiculoTextBox.Text = vehiculo.Color;
+                    tipoVehiculoTextBox.Text = vehiculo.TipoDeVehiculo;
+                }
+                else
+                {
+                    MensajeAdvertencia("Id no encontrado");
+                    clienteIdTextBox.Clear();
+                }
+            }
+            catch (Exception)
+            {
+                MensajeError("Error al Buscar");
+            }            
             
         }
 
         private void FacturaDeVentasForm_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void botonBuscarCliente_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                int id = 0;
+                int.TryParse(clienteIdTextBox.Text, out id);
+                clientes.ClienteId = id;
+
+                if (clientes.Buscar(clientes.ClienteId))
+                {
+                    NombreTextBox.Text = clientes.NombreCompleto;
+                    ApodoTextBox.Text = clientes.Apodo;
+                    TelefonoTextBox.Text = clientes.Telefono;
+                    DireccionTextBox.Text = clientes.Direccion;
+                    CedulaTextBox.Text = clientes.Cedula;
+                    nacionalidadTextBox.Text = clientes.Nacionalidad;
+                    OcupacionTextBox.Text = clientes.Ocupacion;
+                    LugardeNacimientoTextBox.Text = clientes.LugarDeNacimiento;
+                    sexoTextBox.Text = clientes.Sexo;
+                }
+                else
+                {
+                    MensajeAdvertencia("Id no encontrado");
+                    clienteIdTextBox.Clear();
+                }
+            }
+            catch (Exception)
+            {
+                MensajeError("Error al Buscar");
+            }
         }
     }
 }

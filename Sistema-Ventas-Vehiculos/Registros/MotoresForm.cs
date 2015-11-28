@@ -104,8 +104,7 @@ namespace Sistema_Ventas_Vehiculos.Registros
                             MensajeError("Error al Insertar");
                         }
                     }
-                    else
-                    {
+                    else{
                         MensajeAdvertencia("Inserte la descripcion");
                     }
                 }

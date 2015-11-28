@@ -14,30 +14,30 @@ namespace BLL
         public int FacturaId { set; get; }
         public string Fecha { set; get; }
         public int Año { set; get; }
-        public int MarcaId { set; get; }
-        public int ModeloId { set; get; }
-        public int MotorId { set; get; }
-        public int ColorId { set; get; }
-        public int TipoDeVehiculoId { set; get; }
-        public int EstadoDelVehiculoId { set; get; }
+        public string Marca { set; get; }
+        public string Modelo { set; get; }
+        public string Motor { set; get; }
+        public string Color { set; get; }
+        public string TipoDeVehiculo { set; get; }
+        public string EstadoDelVehiculo { set; get; }
         public int PrecioVehiculo { set; get; }
         public int PagoInicialEnEfectivo { set; get; }
         public int PagoInicialEnCheque { set; get; }
         public int PrecioAPagar { set; get; }
-        public int AutorizadoPor { set; get; }
+        public string AutorizadoPor { set; get; }
         public ConexionDb conexion = new ConexionDb();
 
-        public FacturasDeVentas(int facturaId, string fecha, int año, int marcaId, int modeloId, int motorId, int colorId, int tipoDeVehiculoId, int estadoDelVehiculoId, int precioVehiculo, int pagoInicialEnEfectivo, int pagoInicialEnCheque, int precioAPagar, int autorizadoPor)
+        public FacturasDeVentas(int facturaId, string fecha, int año, string marca, string modelo, string motor, string color, string tipoDeVehiculo, string estadoDelVehiculo, int precioVehiculo, int pagoInicialEnEfectivo, int pagoInicialEnCheque, int precioAPagar, string autorizadoPor)
         {
             this.FacturaId = facturaId;
             this.Fecha = fecha;
             this.Año = año;
-            this.MarcaId = marcaId;
-            this.ModeloId = modeloId;
-            this.MotorId = motorId;
-            this.ColorId = colorId;
-            this.TipoDeVehiculoId = tipoDeVehiculoId;
-            this.EstadoDelVehiculoId = estadoDelVehiculoId;
+            this.Marca = marca;
+            this.Modelo = modelo;
+            this.Motor = motor;
+            this.Color = color;
+            this.TipoDeVehiculo = tipoDeVehiculo;
+            this.EstadoDelVehiculo = estadoDelVehiculo;
             this.PrecioVehiculo = precioVehiculo;
             this.PagoInicialEnEfectivo = pagoInicialEnEfectivo;
             this.PagoInicialEnCheque = pagoInicialEnCheque;
@@ -57,17 +57,17 @@ namespace BLL
                 this.FacturaId = (int)dt.Rows[0]["FacturaId"];
                 this.Fecha = dt.Rows[0]["Fecha"].ToString();
                 this.Año = (int)dt.Rows[0]["Año"];
-                this.MarcaId = (int)dt.Rows[0]["MarcaId"];
-                this.ModeloId = (int)dt.Rows[0]["ModeloId"];
-                this.MotorId = (int)dt.Rows[0]["MotorId"];
-                this.ColorId = (int)dt.Rows[0]["ColorId"];
-                this.TipoDeVehiculoId = (int)dt.Rows[0]["TipoDeVehiculoId"];
-                this.EstadoDelVehiculoId = (int)dt.Rows[0]["EstadoDelVehiculoId"];
+                this.Marca = dt.Rows[0]["Marca"].ToString();
+                this.Modelo = dt.Rows[0]["Modelo"].ToString();
+                this.Motor = dt.Rows[0]["Motor"].ToString();
+                this.Color = dt.Rows[0]["Color"].ToString();
+                this.TipoDeVehiculo = dt.Rows[0]["TipoDeVehiculo"].ToString();
+                this.EstadoDelVehiculo = dt.Rows[0]["EstadoDelVehiculo"].ToString();
                 this.PrecioVehiculo = (int)dt.Rows[0]["PrecioVehiculo"];
                 this.PagoInicialEnEfectivo = (int)dt.Rows[0]["PagoInicialEnEfectivo"];
                 this.PagoInicialEnCheque = (int)dt.Rows[0]["PagoInicialEnCheque"];
                 this.PrecioAPagar = (int)dt.Rows[0]["PrecioAPagar"];
-                this.AutorizadoPor = (int)dt.Rows[0]["AutorizadoPor"];
+                this.AutorizadoPor = dt.Rows[0]["AutorizadoPor"].ToString();
             }
             return dt.Rows.Count > 0;
         }
@@ -77,7 +77,7 @@ namespace BLL
             bool retornar = false;
             try
             {
-                conexion.Ejecutar(String.Format("Update FacturaDeVentas set Fecha='{0}', Año={1}, MarcaId={2}, ModeloId={3}, MotorId={4}, ColorId={5}, TipoDeVehiculoId={6}, EstadoDelVehiculoId={7}, PrecioVehiculo={8}, PagoInicialEnEfectivo={9}, PagoInicialEnCheque={10}, PrecioAPagar={11}, AutorizadoPor='{12}' where FacturaId={13}", this.Fecha, this.Año, this.MarcaId, this.ModeloId, this.MotorId, this.ColorId, this.TipoDeVehiculoId, this.EstadoDelVehiculoId, this.PrecioVehiculo, this.PagoInicialEnEfectivo, this.PagoInicialEnCheque, this.PrecioAPagar, this.AutorizadoPor, this.FacturaId));
+                conexion.Ejecutar(String.Format("Update FacturaDeVentas set Fecha='{0}', Año={1}, Marca='{2}', Modelo='{3}', Motor='{4}', Color='{5}', TipoDeVehiculo='{6}', EstadoDelVehiculo='{7}', PrecioVehiculo={8}, PagoInicialEnEfectivo={9}, PagoInicialEnCheque={10}, PrecioAPagar={11}, AutorizadoPor='{12}' where FacturaId={13}", this.Fecha, this.Año, this.Marca, this.Modelo, this.Motor, this.Color, this.TipoDeVehiculo, this.EstadoDelVehiculo, this.PrecioVehiculo, this.PagoInicialEnEfectivo, this.PagoInicialEnCheque, this.PrecioAPagar, this.AutorizadoPor, this.FacturaId));
                 retornar = true;
             }
             catch (Exception ex) { throw ex; }
@@ -101,7 +101,7 @@ namespace BLL
             bool retorno = false;
             try
             {
-                conexion.Ejecutar(String.Format("Insert Into FacturaDeVentas (Fecha,Año,MarcaId,ModeloId,MotorId,ColorId,TipoDeVehiculoId,EstadoDelVehiculoId,PrecioVehiculo,PagoInicialEnEfectivo,PagoInicialEnCheque,PrecioAPagar,AutorizadoPor) Values('{0}',{1},{2},{3},{4},{5},{6},{7},{8},{9},{10},{11},'{12}')", this.Fecha, this.Año, this.MarcaId, this.ModeloId, this.MotorId, this.ColorId, this.TipoDeVehiculoId, this.EstadoDelVehiculoId, this.PrecioVehiculo, this.PagoInicialEnEfectivo, this.PagoInicialEnCheque, this.PrecioAPagar, this.AutorizadoPor));
+                conexion.Ejecutar(String.Format("Insert Into FacturaDeVentas (Fecha,Año,MarcaId,ModeloId,MotorId,ColorId,TipoDeVehiculoId,EstadoDelVehiculoId,PrecioVehiculo,PagoInicialEnEfectivo,PagoInicialEnCheque,PrecioAPagar,AutorizadoPor) Values('{0}',{1},{2},'{3}','{4}','{5}','{6}','{7}',{8},{9},{10},{11},'{12}')", this.Fecha, this.Año, this.Marca, this.Modelo, this.Motor, this.Color, this.TipoDeVehiculo, this.EstadoDelVehiculo, this.PrecioVehiculo, this.PagoInicialEnEfectivo, this.PagoInicialEnCheque, this.PrecioAPagar, this.AutorizadoPor));
                 retorno = true;
             }
             catch (Exception ex) { throw ex; }

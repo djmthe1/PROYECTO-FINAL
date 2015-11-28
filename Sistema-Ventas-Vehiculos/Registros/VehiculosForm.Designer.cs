@@ -164,7 +164,7 @@
             this.derechoCheckBox.BackColor = System.Drawing.Color.Transparent;
             this.derechoCheckBox.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.derechoCheckBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.derechoCheckBox.Location = new System.Drawing.Point(39, 40);
+            this.derechoCheckBox.Location = new System.Drawing.Point(66, 40);
             this.derechoCheckBox.Name = "derechoCheckBox";
             this.derechoCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.derechoCheckBox.Size = new System.Drawing.Size(159, 20);
@@ -178,7 +178,7 @@
             this.izquierdoCheckBox.BackColor = System.Drawing.Color.Transparent;
             this.izquierdoCheckBox.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.izquierdoCheckBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.izquierdoCheckBox.Location = new System.Drawing.Point(34, 78);
+            this.izquierdoCheckBox.Location = new System.Drawing.Point(61, 78);
             this.izquierdoCheckBox.Name = "izquierdoCheckBox";
             this.izquierdoCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.izquierdoCheckBox.Size = new System.Drawing.Size(164, 20);
@@ -192,7 +192,7 @@
             this.radioCheckBox.BackColor = System.Drawing.Color.Transparent;
             this.radioCheckBox.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioCheckBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.radioCheckBox.Location = new System.Drawing.Point(351, 59);
+            this.radioCheckBox.Location = new System.Drawing.Point(378, 59);
             this.radioCheckBox.Name = "radioCheckBox";
             this.radioCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.radioCheckBox.Size = new System.Drawing.Size(56, 20);
@@ -206,7 +206,7 @@
             this.gatoCheckBox.BackColor = System.Drawing.Color.Transparent;
             this.gatoCheckBox.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gatoCheckBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.gatoCheckBox.Location = new System.Drawing.Point(355, 78);
+            this.gatoCheckBox.Location = new System.Drawing.Point(382, 78);
             this.gatoCheckBox.Name = "gatoCheckBox";
             this.gatoCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.gatoCheckBox.Size = new System.Drawing.Size(52, 20);
@@ -220,7 +220,7 @@
             this.gomasCheckBox.BackColor = System.Drawing.Color.Transparent;
             this.gomasCheckBox.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gomasCheckBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.gomasCheckBox.Location = new System.Drawing.Point(345, 40);
+            this.gomasCheckBox.Location = new System.Drawing.Point(372, 40);
             this.gomasCheckBox.Name = "gomasCheckBox";
             this.gomasCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.gomasCheckBox.Size = new System.Drawing.Size(62, 20);
@@ -234,7 +234,7 @@
             this.gomaRepuestoCheckBox.BackColor = System.Drawing.Color.Transparent;
             this.gomaRepuestoCheckBox.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gomaRepuestoCheckBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.gomaRepuestoCheckBox.Location = new System.Drawing.Point(207, 78);
+            this.gomaRepuestoCheckBox.Location = new System.Drawing.Point(234, 78);
             this.gomaRepuestoCheckBox.Name = "gomaRepuestoCheckBox";
             this.gomaRepuestoCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.gomaRepuestoCheckBox.Size = new System.Drawing.Size(125, 20);
@@ -248,7 +248,7 @@
             this.llaveDeRuedaCheckBox.BackColor = System.Drawing.Color.Transparent;
             this.llaveDeRuedaCheckBox.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.llaveDeRuedaCheckBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.llaveDeRuedaCheckBox.Location = new System.Drawing.Point(412, 59);
+            this.llaveDeRuedaCheckBox.Location = new System.Drawing.Point(439, 59);
             this.llaveDeRuedaCheckBox.Name = "llaveDeRuedaCheckBox";
             this.llaveDeRuedaCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.llaveDeRuedaCheckBox.Size = new System.Drawing.Size(107, 20);
@@ -262,7 +262,7 @@
             this.alfombrasCheckBox.BackColor = System.Drawing.Color.Transparent;
             this.alfombrasCheckBox.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.alfombrasCheckBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.alfombrasCheckBox.Location = new System.Drawing.Point(440, 21);
+            this.alfombrasCheckBox.Location = new System.Drawing.Point(467, 21);
             this.alfombrasCheckBox.Name = "alfombrasCheckBox";
             this.alfombrasCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.alfombrasCheckBox.Size = new System.Drawing.Size(79, 20);
@@ -277,7 +277,7 @@
             this.botiquinCheckBox.BackColor = System.Drawing.Color.Transparent;
             this.botiquinCheckBox.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.botiquinCheckBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.botiquinCheckBox.Location = new System.Drawing.Point(338, 21);
+            this.botiquinCheckBox.Location = new System.Drawing.Point(365, 21);
             this.botiquinCheckBox.Name = "botiquinCheckBox";
             this.botiquinCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.botiquinCheckBox.Size = new System.Drawing.Size(69, 20);
@@ -291,7 +291,7 @@
             this.taponGasolinaCheckBox.BackColor = System.Drawing.Color.Transparent;
             this.taponGasolinaCheckBox.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.taponGasolinaCheckBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.taponGasolinaCheckBox.Location = new System.Drawing.Point(209, 59);
+            this.taponGasolinaCheckBox.Location = new System.Drawing.Point(236, 59);
             this.taponGasolinaCheckBox.Name = "taponGasolinaCheckBox";
             this.taponGasolinaCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.taponGasolinaCheckBox.Size = new System.Drawing.Size(123, 20);
@@ -305,7 +305,7 @@
             this.taponRadiadorCheckBox.BackColor = System.Drawing.Color.Transparent;
             this.taponRadiadorCheckBox.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.taponRadiadorCheckBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.taponRadiadorCheckBox.Location = new System.Drawing.Point(208, 40);
+            this.taponRadiadorCheckBox.Location = new System.Drawing.Point(235, 40);
             this.taponRadiadorCheckBox.Name = "taponRadiadorCheckBox";
             this.taponRadiadorCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.taponRadiadorCheckBox.Size = new System.Drawing.Size(124, 20);
@@ -319,7 +319,7 @@
             this.encendedorCheckBox.BackColor = System.Drawing.Color.Transparent;
             this.encendedorCheckBox.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.encendedorCheckBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.encendedorCheckBox.Location = new System.Drawing.Point(434, 40);
+            this.encendedorCheckBox.Location = new System.Drawing.Point(461, 40);
             this.encendedorCheckBox.Name = "encendedorCheckBox";
             this.encendedorCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.encendedorCheckBox.Size = new System.Drawing.Size(85, 20);
@@ -333,7 +333,7 @@
             this.InternoCheckBox.BackColor = System.Drawing.Color.Transparent;
             this.InternoCheckBox.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.InternoCheckBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.InternoCheckBox.Location = new System.Drawing.Point(45, 59);
+            this.InternoCheckBox.Location = new System.Drawing.Point(72, 59);
             this.InternoCheckBox.Name = "InternoCheckBox";
             this.InternoCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.InternoCheckBox.Size = new System.Drawing.Size(153, 20);
@@ -347,7 +347,7 @@
             this.manualCheckBox.BackColor = System.Drawing.Color.Transparent;
             this.manualCheckBox.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.manualCheckBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.manualCheckBox.Location = new System.Drawing.Point(208, 21);
+            this.manualCheckBox.Location = new System.Drawing.Point(235, 21);
             this.manualCheckBox.Name = "manualCheckBox";
             this.manualCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.manualCheckBox.Size = new System.Drawing.Size(124, 20);
@@ -362,7 +362,7 @@
             this.duplicadoLlaveCheckBox.BackColor = System.Drawing.Color.Transparent;
             this.duplicadoLlaveCheckBox.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.duplicadoLlaveCheckBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.duplicadoLlaveCheckBox.Location = new System.Drawing.Point(1, 21);
+            this.duplicadoLlaveCheckBox.Location = new System.Drawing.Point(28, 21);
             this.duplicadoLlaveCheckBox.Name = "duplicadoLlaveCheckBox";
             this.duplicadoLlaveCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.duplicadoLlaveCheckBox.Size = new System.Drawing.Size(197, 20);
@@ -516,16 +516,16 @@
             // 
             // matriculaVehiculoTextBox
             // 
-            this.matriculaVehiculoTextBox.Location = new System.Drawing.Point(351, 197);
+            this.matriculaVehiculoTextBox.Location = new System.Drawing.Point(350, 195);
             this.matriculaVehiculoTextBox.Name = "matriculaVehiculoTextBox";
-            this.matriculaVehiculoTextBox.Size = new System.Drawing.Size(100, 20);
+            this.matriculaVehiculoTextBox.Size = new System.Drawing.Size(101, 20);
             this.matriculaVehiculoTextBox.TabIndex = 76;
             // 
             // placaVehiculoTextBox
             // 
             this.placaVehiculoTextBox.Location = new System.Drawing.Point(117, 197);
             this.placaVehiculoTextBox.Name = "placaVehiculoTextBox";
-            this.placaVehiculoTextBox.Size = new System.Drawing.Size(100, 20);
+            this.placaVehiculoTextBox.Size = new System.Drawing.Size(101, 20);
             this.placaVehiculoTextBox.TabIndex = 75;
             // 
             // precioVehiculoTextBox
@@ -545,23 +545,23 @@
             // tipoVehiculoTextBox
             // 
             this.tipoVehiculoTextBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.tipoVehiculoTextBox.Location = new System.Drawing.Point(351, 143);
+            this.tipoVehiculoTextBox.Location = new System.Drawing.Point(350, 143);
             this.tipoVehiculoTextBox.Name = "tipoVehiculoTextBox";
-            this.tipoVehiculoTextBox.Size = new System.Drawing.Size(100, 20);
+            this.tipoVehiculoTextBox.Size = new System.Drawing.Size(101, 20);
             this.tipoVehiculoTextBox.TabIndex = 72;
             // 
             // chasisVehiculoTextBox
             // 
-            this.chasisVehiculoTextBox.Location = new System.Drawing.Point(351, 58);
+            this.chasisVehiculoTextBox.Location = new System.Drawing.Point(350, 58);
             this.chasisVehiculoTextBox.Name = "chasisVehiculoTextBox";
-            this.chasisVehiculoTextBox.Size = new System.Drawing.Size(100, 20);
+            this.chasisVehiculoTextBox.Size = new System.Drawing.Size(101, 20);
             this.chasisVehiculoTextBox.TabIndex = 71;
             // 
             // añoVehiculoTextBox
             // 
             this.añoVehiculoTextBox.Location = new System.Drawing.Point(117, 169);
             this.añoVehiculoTextBox.Name = "añoVehiculoTextBox";
-            this.añoVehiculoTextBox.Size = new System.Drawing.Size(100, 20);
+            this.añoVehiculoTextBox.Size = new System.Drawing.Size(101, 20);
             this.añoVehiculoTextBox.TabIndex = 70;
             // 
             // estadoVehiculoTextBox
@@ -573,7 +573,7 @@
             // 
             // vehiculoIdTextBox
             // 
-            this.vehiculoIdTextBox.Location = new System.Drawing.Point(114, 25);
+            this.vehiculoIdTextBox.Location = new System.Drawing.Point(117, 25);
             this.vehiculoIdTextBox.Name = "vehiculoIdTextBox";
             this.vehiculoIdTextBox.Size = new System.Drawing.Size(101, 20);
             this.vehiculoIdTextBox.TabIndex = 64;
@@ -609,7 +609,7 @@
             // MarcasComboBox
             // 
             this.MarcasComboBox.FormattingEnabled = true;
-            this.MarcasComboBox.Location = new System.Drawing.Point(116, 114);
+            this.MarcasComboBox.Location = new System.Drawing.Point(117, 114);
             this.MarcasComboBox.Name = "MarcasComboBox";
             this.MarcasComboBox.Size = new System.Drawing.Size(101, 21);
             this.MarcasComboBox.TabIndex = 92;
@@ -617,9 +617,9 @@
             // ColorComboBox
             // 
             this.ColorComboBox.FormattingEnabled = true;
-            this.ColorComboBox.Location = new System.Drawing.Point(351, 115);
+            this.ColorComboBox.Location = new System.Drawing.Point(350, 116);
             this.ColorComboBox.Name = "ColorComboBox";
-            this.ColorComboBox.Size = new System.Drawing.Size(100, 21);
+            this.ColorComboBox.Size = new System.Drawing.Size(101, 21);
             this.ColorComboBox.TabIndex = 93;
             // 
             // panel1
@@ -641,9 +641,9 @@
             this.panel1.Controls.Add(this.manualCheckBox);
             this.panel1.Controls.Add(this.duplicadoLlaveCheckBox);
             this.panel1.Controls.Add(this.derechoCheckBox);
-            this.panel1.Location = new System.Drawing.Point(3, 227);
+            this.panel1.Location = new System.Drawing.Point(6, 229);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(534, 122);
+            this.panel1.Size = new System.Drawing.Size(595, 122);
             this.panel1.TabIndex = 94;
             // 
             // VehiculosForm

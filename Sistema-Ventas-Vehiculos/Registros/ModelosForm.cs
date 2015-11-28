@@ -104,7 +104,8 @@ namespace Sistema_Ventas_Vehiculos.Registros
                             MensajeError("Error al Insertar");
                         }
                     }
-                    else {
+                    else
+                    {
                         MensajeAdvertencia("Inserte la descripcion");
                     }
 
@@ -127,7 +128,8 @@ namespace Sistema_Ventas_Vehiculos.Registros
                             MensajeError("Error al Modificar");
                         }
                     }
-                    else {
+                    else
+                    {
                         MensajeAdvertencia("Inserte la descripcion");
                     }
                 }

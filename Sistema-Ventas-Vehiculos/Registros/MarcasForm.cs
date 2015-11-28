@@ -130,8 +130,12 @@ namespace Sistema_Ventas_Vehiculos.Registros
                     }
                 }
             }
-            catch (Exception) { MensajeError("Error al Insertar o Modificar"); }
+            catch (Exception)
+            {
+                MensajeError("Error al Insertar o Modificar");
             }
+
+        }
 
         private void botonAtras_Click(object sender, EventArgs e)
         {

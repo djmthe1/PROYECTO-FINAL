@@ -15,7 +15,6 @@ namespace BLL
         public string NombreCompleto { set; get; }
         public string Apodo { set; get; }
         public string Telefono { set; get; }
-        public string Celular { set; get; }
         public string Direccion { set; get; }
         public string Cedula { set; get; }
         public string Nacionalidad { set; get; }
@@ -26,8 +25,7 @@ namespace BLL
         public ConexionDb conexion = new ConexionDb();
         public StringBuilder comando = new StringBuilder();
 
-
-        public Clientes(int clienteId, string nombreCompleto, string Apodo, string telefono,string celular, string direccion, string cedula, string nacionalidad, string ocupacion, string lugarDeNacimiento, string sexo, int facturaId) {
+        public Clientes(int clienteId, string nombreCompleto, string Apodo, string telefono, string direccion, string cedula, string nacionalidad, string ocupacion, string lugarDeNacimiento, string sexo, int facturaId) {
             this.ClienteId = clienteId;
             this.NombreCompleto = nombreCompleto;
             this.Apodo = Apodo;
@@ -47,8 +45,6 @@ namespace BLL
            
         }
 
-
-
         public override bool Buscar(int IdBuscado)
         {
             DataTable dt = new DataTable();
@@ -60,7 +56,6 @@ namespace BLL
                 this.ClienteId = (int)dt.Rows[0]["ClienteId"];
                 this.NombreCompleto = dt.Rows[0]["NombreCompleto"].ToString();
                 this.Telefono = dt.Rows[0]["Telefono"].ToString();
-                this.Celular = dt.Rows[0]["Celular"].ToString();
                 this.Apodo = dt.Rows[0]["Apodo"].ToString();
                 this.Direccion = dt.Rows[0]["Direccion"].ToString();
                 this.Cedula = dt.Rows[0]["Cedula"].ToString();
@@ -68,7 +63,6 @@ namespace BLL
                 this.Ocupacion = dt.Rows[0]["Ocupacion"].ToString();
                 this.LugarDeNacimiento = dt.Rows[0]["LugarDeNacimiento"].ToString();
                 this.Sexo = dt.Rows[0]["Sexo"].ToString();
-                
                 
             }
             return dt.Rows.Count > 0;
@@ -79,7 +73,7 @@ namespace BLL
             bool retorno = false;
             try
             {
-                conexion.Ejecutar(String.Format("Update Clientes set NombreCompleto='{0}', Apodo='{1}', Telefono='{2}',Celular='{3}', Direccion='{4}', Cedula='{5}', Nacionalidad='{6}', Ocupacion='{7}', LugarDeNacimiento='{8}', Sexo='{9}' where ClienteId={10}", this.NombreCompleto, this.Apodo, this.Telefono,this.Celular, this.Direccion, this.Cedula, this.Nacionalidad, this.Ocupacion, this.LugarDeNacimiento, this.Sexo, this.ClienteId));
+                conexion.Ejecutar(String.Format("Update Clientes set NombreCompleto='{0}', Apodo='{1}', Telefono='{2}', Direccion='{3}', Cedula='{4}', Nacionalidad='{5}', Ocupacion='{6}', LugarDeNacimiento='{7}', Sexo='{8}' where ClienteId={9}", this.NombreCompleto, this.Apodo, this.Telefono, this.Direccion, this.Cedula, this.Nacionalidad, this.Ocupacion, this.LugarDeNacimiento, this.Sexo, this.ClienteId));
                 retorno = true;
 
             }
@@ -104,7 +98,7 @@ namespace BLL
             bool retorno = false;
             try
             {
-                conexion.Ejecutar(String.Format("Insert into Clientes (NombreCompleto, Apodo, Telefono, Celular, Direccion, Cedula, Nacionalidad, Ocupacion, LugarDeNacimiento, Sexo, FacturaId) Values('{0}','{1}',{2},'{3}','{4}','{5}','{6}','{7}','{8}','{9}',{10})", this.NombreCompleto, this.Apodo, this.Telefono,this.Celular, this.Direccion, this.Cedula, this.Nacionalidad, this.Ocupacion, this.LugarDeNacimiento, this.Sexo));
+                conexion.Ejecutar(String.Format("Insert into Clientes (NombreCompleto, Apodo, Telefono, Direccion, Cedula, Nacionalidad, Ocupacion, LugarDeNacimiento, Sexo) Values('{0}','{1}',{2},'{3}','{4}','{5}','{6}','{7}','{8}')", this.NombreCompleto, this.Apodo, this.Telefono, this.Direccion, this.Cedula, this.Nacionalidad, this.Ocupacion, this.LugarDeNacimiento, this.Sexo));
                 retorno = true;
 
 
