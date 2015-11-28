@@ -73,7 +73,7 @@ namespace BLL
             {
                 this.UsuarioId = (int)dt.Rows[0]["UsuarioId"];
                 this.Nombre = dt.Rows[0]["Nombre"].ToString();
-                this.Password = dt.Rows[0]["Password"].ToString();
+                this.Password = dt.Rows[0]["Pass"].ToString();
                 this.Prioridad = (int)dt.Rows[0]["Prioridad"];
             }
             return dt.Rows.Count > 0;

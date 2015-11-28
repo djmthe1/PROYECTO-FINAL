@@ -26,7 +26,11 @@ namespace Sistema_Ventas_Vehiculos.Registros
         }
         private void MensajeError(string mensaje)
         {
-            MessageBox.Show(mensaje, "Registro de Tipos De Motores", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show(mensaje, "Registro de Tipos De Motores", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+        private void MensajeAdvertencia(string mensaje)
+        {
+            MessageBox.Show(mensaje, "Registro de Tipos De Motores", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
 
         private void MotoresForm_Load(object sender, EventArgs e)
@@ -44,17 +48,33 @@ namespace Sistema_Ventas_Vehiculos.Registros
         {
             try
             {
-                motores.MotorId = int.Parse(MotorIDtextBox.Text);
-                if (motores.Eliminar())
+                int id = 0;
+                int.TryParse(MotorIDtextBox.Text, out id);
+                motores.MotorId = id;
+
+                if (motores.Buscar(motores.MotorId))
                 {
-                    MensajeOk("Eliminado correctamente");
-                    DescripciontextBox.Clear();
+
+                    if (motores.Eliminar())
+                    {
+                        MensajeOk("Eliminado correctamente");
+                        DescripciontextBox.Clear();
+                        MotorIDtextBox.Clear();
+                    }
+                    else
+                    {
+                        MensajeError("Error al eliminar");
+                    }
+                }
+                else
+                {
+                    MensajeAdvertencia("Este Id no existe");
                     MotorIDtextBox.Clear();
                 }
             }
             catch (Exception)
             {
-                MessageBox.Show("Error al Eliminar");
+                MensajeError("Error al Eliminar");
             }
         }
 
@@ -72,38 +92,50 @@ namespace Sistema_Ventas_Vehiculos.Registros
                 motores.Descripcion = DescripciontextBox.Text;
                 if (MotorIDtextBox.Text == "")
                 {
-
-                    if (motores.Insertar())
+                    if (DescripciontextBox.Text != "")
                     {
-                        DescripciontextBox.Clear();
-                        MensajeOk("Insertado Correctamente");
+                        if (motores.Insertar())
+                        {
+                            DescripciontextBox.Clear();
+                            MensajeOk("Insertado Correctamente");
+                        }
+                        else
+                        {
+                            MensajeError("Error al Insertar");
+                        }
                     }
                     else
                     {
-                        MensajeError("Error al Insertar");
+                        MensajeAdvertencia("Inserte la descripcion");
                     }
-
                 }
                 else
                 {
                     int id = 0;
                     int.TryParse(MotorIDtextBox.Text, out id);
                     motores.MotorId= id;
-                    if (motores.Editar())
+                    if (DescripciontextBox.Text != "")
                     {
-                        DescripciontextBox.Clear();
-                        MensajeOk("Modificado Correctamente");
+                        if (motores.Editar())
+                        {
+                            DescripciontextBox.Clear();
+                            MotorIDtextBox.Clear();
+                            MensajeOk("Modificado Correctamente");
+                        }
+                        else
+                        {
+                            MensajeError("Error al Modificar");
+                        }
                     }
-                    else
-                    {
-                        MensajeError("Error al Modificar");
+                    else {
+                        MensajeAdvertencia("Inserte la descripcion");
                     }
 
                 }
             }
             catch (Exception)
             {
-                MessageBox.Show("Error al Insertar o Modificar");
+                MensajeError("Error al Insertar o Modificar");
             }
         }
 
@@ -113,8 +145,14 @@ namespace Sistema_Ventas_Vehiculos.Registros
             int.TryParse(MotorIDtextBox.Text, out id);
             motores.MotorId = id;
 
-            motores.Buscar(motores.MotorId);
-            DescripciontextBox.Text = motores.Descripcion;
+            if (motores.Buscar(motores.MotorId))
+            {
+                DescripciontextBox.Text = motores.Descripcion;
+            }
+            else {
+                MensajeAdvertencia("Id no encontrado");
+                MotorIDtextBox.Clear();
+            }
         }
     }
 }

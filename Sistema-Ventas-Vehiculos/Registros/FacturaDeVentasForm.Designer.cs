@@ -94,6 +94,10 @@
             this.matriculaVehiculoLabel = new System.Windows.Forms.Label();
             this.CelularTextBox = new System.Windows.Forms.TextBox();
             this.Celular = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // botonSiguente
@@ -123,175 +127,208 @@
             // nombreClienteLabel
             // 
             this.nombreClienteLabel.AutoSize = true;
-            this.nombreClienteLabel.Location = new System.Drawing.Point(118, 82);
+            this.nombreClienteLabel.BackColor = System.Drawing.Color.Transparent;
+            this.nombreClienteLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nombreClienteLabel.ForeColor = System.Drawing.Color.Black;
+            this.nombreClienteLabel.Location = new System.Drawing.Point(2, 35);
             this.nombreClienteLabel.Name = "nombreClienteLabel";
-            this.nombreClienteLabel.Size = new System.Drawing.Size(79, 13);
+            this.nombreClienteLabel.Size = new System.Drawing.Size(90, 15);
             this.nombreClienteLabel.TabIndex = 2;
             this.nombreClienteLabel.Text = "Nombre Cliente";
             // 
             // apodoLabel
             // 
             this.apodoLabel.AutoSize = true;
-            this.apodoLabel.Location = new System.Drawing.Point(118, 108);
+            this.apodoLabel.BackColor = System.Drawing.Color.Transparent;
+            this.apodoLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.apodoLabel.ForeColor = System.Drawing.Color.Black;
+            this.apodoLabel.Location = new System.Drawing.Point(2, 61);
             this.apodoLabel.Name = "apodoLabel";
-            this.apodoLabel.Size = new System.Drawing.Size(38, 13);
+            this.apodoLabel.Size = new System.Drawing.Size(43, 15);
             this.apodoLabel.TabIndex = 3;
             this.apodoLabel.Text = "Apodo";
             // 
             // telefonoLabel
             // 
             this.telefonoLabel.AutoSize = true;
-            this.telefonoLabel.Location = new System.Drawing.Point(118, 134);
+            this.telefonoLabel.BackColor = System.Drawing.Color.Transparent;
+            this.telefonoLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.telefonoLabel.ForeColor = System.Drawing.Color.Black;
+            this.telefonoLabel.Location = new System.Drawing.Point(2, 87);
             this.telefonoLabel.Name = "telefonoLabel";
-            this.telefonoLabel.Size = new System.Drawing.Size(49, 13);
+            this.telefonoLabel.Size = new System.Drawing.Size(54, 15);
             this.telefonoLabel.TabIndex = 4;
             this.telefonoLabel.Text = "Telefono";
             // 
             // direccionLabel
             // 
             this.direccionLabel.AutoSize = true;
-            this.direccionLabel.Location = new System.Drawing.Point(118, 188);
+            this.direccionLabel.BackColor = System.Drawing.Color.Transparent;
+            this.direccionLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.direccionLabel.ForeColor = System.Drawing.Color.Black;
+            this.direccionLabel.Location = new System.Drawing.Point(2, 141);
             this.direccionLabel.Name = "direccionLabel";
-            this.direccionLabel.Size = new System.Drawing.Size(52, 13);
+            this.direccionLabel.Size = new System.Drawing.Size(58, 15);
             this.direccionLabel.TabIndex = 5;
             this.direccionLabel.Text = "Direccion";
             // 
             // cedulaLabel
             // 
             this.cedulaLabel.AutoSize = true;
-            this.cedulaLabel.Location = new System.Drawing.Point(118, 214);
+            this.cedulaLabel.BackColor = System.Drawing.Color.Transparent;
+            this.cedulaLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cedulaLabel.ForeColor = System.Drawing.Color.Black;
+            this.cedulaLabel.Location = new System.Drawing.Point(2, 167);
             this.cedulaLabel.Name = "cedulaLabel";
-            this.cedulaLabel.Size = new System.Drawing.Size(40, 13);
+            this.cedulaLabel.Size = new System.Drawing.Size(43, 15);
             this.cedulaLabel.TabIndex = 6;
             this.cedulaLabel.Text = "Cedula";
             // 
             // nacionalidadLabel
             // 
             this.nacionalidadLabel.AutoSize = true;
-            this.nacionalidadLabel.Location = new System.Drawing.Point(118, 240);
+            this.nacionalidadLabel.BackColor = System.Drawing.Color.Transparent;
+            this.nacionalidadLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nacionalidadLabel.ForeColor = System.Drawing.Color.Black;
+            this.nacionalidadLabel.Location = new System.Drawing.Point(2, 193);
             this.nacionalidadLabel.Name = "nacionalidadLabel";
-            this.nacionalidadLabel.Size = new System.Drawing.Size(69, 13);
+            this.nacionalidadLabel.Size = new System.Drawing.Size(77, 15);
             this.nacionalidadLabel.TabIndex = 7;
             this.nacionalidadLabel.Text = "Nacionalidad";
             // 
             // ocupacionLabel
             // 
             this.ocupacionLabel.AutoSize = true;
-            this.ocupacionLabel.Location = new System.Drawing.Point(118, 266);
+            this.ocupacionLabel.BackColor = System.Drawing.Color.Transparent;
+            this.ocupacionLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ocupacionLabel.ForeColor = System.Drawing.Color.Black;
+            this.ocupacionLabel.Location = new System.Drawing.Point(2, 219);
             this.ocupacionLabel.Name = "ocupacionLabel";
-            this.ocupacionLabel.Size = new System.Drawing.Size(59, 13);
+            this.ocupacionLabel.Size = new System.Drawing.Size(65, 15);
             this.ocupacionLabel.TabIndex = 8;
             this.ocupacionLabel.Text = "Ocupacion";
             // 
             // lugarDeNacimientoLabel
             // 
             this.lugarDeNacimientoLabel.AutoSize = true;
-            this.lugarDeNacimientoLabel.Location = new System.Drawing.Point(118, 292);
+            this.lugarDeNacimientoLabel.BackColor = System.Drawing.Color.Transparent;
+            this.lugarDeNacimientoLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lugarDeNacimientoLabel.ForeColor = System.Drawing.Color.Black;
+            this.lugarDeNacimientoLabel.Location = new System.Drawing.Point(2, 244);
             this.lugarDeNacimientoLabel.Name = "lugarDeNacimientoLabel";
-            this.lugarDeNacimientoLabel.Size = new System.Drawing.Size(107, 13);
+            this.lugarDeNacimientoLabel.Size = new System.Drawing.Size(120, 15);
             this.lugarDeNacimientoLabel.TabIndex = 9;
             this.lugarDeNacimientoLabel.Text = "Lugar De Nacimiento";
             // 
             // sexoLabel
             // 
             this.sexoLabel.AutoSize = true;
-            this.sexoLabel.Location = new System.Drawing.Point(118, 318);
+            this.sexoLabel.BackColor = System.Drawing.Color.Transparent;
+            this.sexoLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sexoLabel.ForeColor = System.Drawing.Color.Black;
+            this.sexoLabel.Location = new System.Drawing.Point(3, 270);
             this.sexoLabel.Name = "sexoLabel";
-            this.sexoLabel.Size = new System.Drawing.Size(31, 13);
+            this.sexoLabel.Size = new System.Drawing.Size(33, 15);
             this.sexoLabel.TabIndex = 10;
             this.sexoLabel.Text = "Sexo";
             // 
             // clienteIdLabel
             // 
             this.clienteIdLabel.AutoSize = true;
-            this.clienteIdLabel.Location = new System.Drawing.Point(118, 56);
+            this.clienteIdLabel.BackColor = System.Drawing.Color.Transparent;
+            this.clienteIdLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clienteIdLabel.ForeColor = System.Drawing.Color.Black;
+            this.clienteIdLabel.Location = new System.Drawing.Point(2, 10);
             this.clienteIdLabel.Name = "clienteIdLabel";
-            this.clienteIdLabel.Size = new System.Drawing.Size(48, 13);
+            this.clienteIdLabel.Size = new System.Drawing.Size(53, 15);
             this.clienteIdLabel.TabIndex = 11;
             this.clienteIdLabel.Text = "ClienteId";
             // 
             // vehiculoIdLabel
             // 
             this.vehiculoIdLabel.AutoSize = true;
-            this.vehiculoIdLabel.Location = new System.Drawing.Point(535, 49);
+            this.vehiculoIdLabel.BackColor = System.Drawing.Color.Transparent;
+            this.vehiculoIdLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.vehiculoIdLabel.ForeColor = System.Drawing.Color.Black;
+            this.vehiculoIdLabel.Location = new System.Drawing.Point(-1, 13);
             this.vehiculoIdLabel.Name = "vehiculoIdLabel";
-            this.vehiculoIdLabel.Size = new System.Drawing.Size(57, 13);
+            this.vehiculoIdLabel.Size = new System.Drawing.Size(71, 17);
             this.vehiculoIdLabel.TabIndex = 12;
             this.vehiculoIdLabel.Text = "VehiculoId";
             // 
             // IdClinteTextBox
             // 
-            this.IdClinteTextBox.Location = new System.Drawing.Point(12, 49);
+            this.IdClinteTextBox.Location = new System.Drawing.Point(120, 8);
             this.IdClinteTextBox.Name = "IdClinteTextBox";
             this.IdClinteTextBox.Size = new System.Drawing.Size(100, 20);
             this.IdClinteTextBox.TabIndex = 13;
             // 
             // NombreTextBox
             // 
-            this.NombreTextBox.Location = new System.Drawing.Point(12, 75);
+            this.NombreTextBox.Location = new System.Drawing.Point(120, 34);
             this.NombreTextBox.Name = "NombreTextBox";
             this.NombreTextBox.Size = new System.Drawing.Size(100, 20);
             this.NombreTextBox.TabIndex = 14;
             // 
             // ApodoTextBox
             // 
-            this.ApodoTextBox.Location = new System.Drawing.Point(12, 101);
+            this.ApodoTextBox.Location = new System.Drawing.Point(120, 60);
             this.ApodoTextBox.Name = "ApodoTextBox";
             this.ApodoTextBox.Size = new System.Drawing.Size(100, 20);
             this.ApodoTextBox.TabIndex = 15;
             // 
             // TelefonoTextBox
             // 
-            this.TelefonoTextBox.Location = new System.Drawing.Point(12, 127);
+            this.TelefonoTextBox.Location = new System.Drawing.Point(120, 86);
             this.TelefonoTextBox.Name = "TelefonoTextBox";
             this.TelefonoTextBox.Size = new System.Drawing.Size(100, 20);
             this.TelefonoTextBox.TabIndex = 16;
             // 
             // DireccionTextBox
             // 
-            this.DireccionTextBox.Location = new System.Drawing.Point(12, 181);
+            this.DireccionTextBox.Location = new System.Drawing.Point(120, 140);
             this.DireccionTextBox.Name = "DireccionTextBox";
             this.DireccionTextBox.Size = new System.Drawing.Size(100, 20);
             this.DireccionTextBox.TabIndex = 17;
             // 
             // CedulaTextBox
             // 
-            this.CedulaTextBox.Location = new System.Drawing.Point(12, 207);
+            this.CedulaTextBox.Location = new System.Drawing.Point(120, 166);
             this.CedulaTextBox.Name = "CedulaTextBox";
             this.CedulaTextBox.Size = new System.Drawing.Size(100, 20);
             this.CedulaTextBox.TabIndex = 18;
             // 
             // NacimientoTextBox
             // 
-            this.NacimientoTextBox.Location = new System.Drawing.Point(12, 233);
+            this.NacimientoTextBox.Location = new System.Drawing.Point(120, 192);
             this.NacimientoTextBox.Name = "NacimientoTextBox";
             this.NacimientoTextBox.Size = new System.Drawing.Size(100, 20);
             this.NacimientoTextBox.TabIndex = 19;
             // 
             // OcupacionTextBox
             // 
-            this.OcupacionTextBox.Location = new System.Drawing.Point(12, 259);
+            this.OcupacionTextBox.Location = new System.Drawing.Point(120, 218);
             this.OcupacionTextBox.Name = "OcupacionTextBox";
             this.OcupacionTextBox.Size = new System.Drawing.Size(100, 20);
             this.OcupacionTextBox.TabIndex = 20;
             // 
             // LugardeNacimientoTextBox
             // 
-            this.LugardeNacimientoTextBox.Location = new System.Drawing.Point(12, 285);
+            this.LugardeNacimientoTextBox.Location = new System.Drawing.Point(120, 244);
             this.LugardeNacimientoTextBox.Name = "LugardeNacimientoTextBox";
             this.LugardeNacimientoTextBox.Size = new System.Drawing.Size(100, 20);
             this.LugardeNacimientoTextBox.TabIndex = 21;
             // 
             // SexoTextBox
             // 
-            this.SexoTextBox.Location = new System.Drawing.Point(12, 311);
+            this.SexoTextBox.Location = new System.Drawing.Point(120, 270);
             this.SexoTextBox.Name = "SexoTextBox";
             this.SexoTextBox.Size = new System.Drawing.Size(100, 20);
             this.SexoTextBox.TabIndex = 22;
             // 
             // vehiculoIdTextBox
             // 
-            this.vehiculoIdTextBox.Location = new System.Drawing.Point(598, 49);
+            this.vehiculoIdTextBox.Location = new System.Drawing.Point(127, 10);
             this.vehiculoIdTextBox.Name = "vehiculoIdTextBox";
             this.vehiculoIdTextBox.Size = new System.Drawing.Size(100, 20);
             this.vehiculoIdTextBox.TabIndex = 23;
@@ -299,20 +336,24 @@
             // datosClientelabel
             // 
             this.datosClientelabel.AutoSize = true;
-            this.datosClientelabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.datosClientelabel.Location = new System.Drawing.Point(53, 18);
+            this.datosClientelabel.BackColor = System.Drawing.Color.Transparent;
+            this.datosClientelabel.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.datosClientelabel.ForeColor = System.Drawing.Color.Black;
+            this.datosClientelabel.Location = new System.Drawing.Point(3, 18);
             this.datosClientelabel.Name = "datosClientelabel";
-            this.datosClientelabel.Size = new System.Drawing.Size(144, 15);
+            this.datosClientelabel.Size = new System.Drawing.Size(138, 17);
             this.datosClientelabel.TabIndex = 24;
             this.datosClientelabel.Text = "DATOS DEL CLIENTE";
             // 
             // datosVehiculoLabel
             // 
             this.datosVehiculoLabel.AutoSize = true;
-            this.datosVehiculoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.datosVehiculoLabel.Location = new System.Drawing.Point(498, 18);
+            this.datosVehiculoLabel.BackColor = System.Drawing.Color.Transparent;
+            this.datosVehiculoLabel.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.datosVehiculoLabel.ForeColor = System.Drawing.Color.Black;
+            this.datosVehiculoLabel.Location = new System.Drawing.Point(501, 18);
             this.datosVehiculoLabel.Name = "datosVehiculoLabel";
-            this.datosVehiculoLabel.Size = new System.Drawing.Size(155, 15);
+            this.datosVehiculoLabel.Size = new System.Drawing.Size(150, 17);
             this.datosVehiculoLabel.TabIndex = 25;
             this.datosVehiculoLabel.Text = "DATOS DEL VEHICULO";
             // 
@@ -321,9 +362,9 @@
             this.botonBuscarVehiculo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("botonBuscarVehiculo.BackgroundImage")));
             this.botonBuscarVehiculo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.botonBuscarVehiculo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.botonBuscarVehiculo.Location = new System.Drawing.Point(659, 7);
+            this.botonBuscarVehiculo.Location = new System.Drawing.Point(227, 5);
             this.botonBuscarVehiculo.Name = "botonBuscarVehiculo";
-            this.botonBuscarVehiculo.Size = new System.Drawing.Size(39, 31);
+            this.botonBuscarVehiculo.Size = new System.Drawing.Size(35, 30);
             this.botonBuscarVehiculo.TabIndex = 26;
             this.botonBuscarVehiculo.UseVisualStyleBackColor = true;
             this.botonBuscarVehiculo.Click += new System.EventHandler(this.botonBuscarVehiculo_Click);
@@ -333,9 +374,9 @@
             this.botonBuscarCliente.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("botonBuscarCliente.BackgroundImage")));
             this.botonBuscarCliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.botonBuscarCliente.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.botonBuscarCliente.Location = new System.Drawing.Point(8, 7);
+            this.botonBuscarCliente.Location = new System.Drawing.Point(223, 4);
             this.botonBuscarCliente.Name = "botonBuscarCliente";
-            this.botonBuscarCliente.Size = new System.Drawing.Size(39, 31);
+            this.botonBuscarCliente.Size = new System.Drawing.Size(31, 29);
             this.botonBuscarCliente.TabIndex = 27;
             this.botonBuscarCliente.UseVisualStyleBackColor = true;
             this.botonBuscarCliente.Click += new System.EventHandler(this.botonBuscarCliente_Click);
@@ -343,37 +384,39 @@
             // detallesFacturaLabel
             // 
             this.detallesFacturaLabel.AutoSize = true;
-            this.detallesFacturaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.detallesFacturaLabel.Location = new System.Drawing.Point(274, 144);
+            this.detallesFacturaLabel.BackColor = System.Drawing.Color.Transparent;
+            this.detallesFacturaLabel.Font = new System.Drawing.Font("Palatino Linotype", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.detallesFacturaLabel.ForeColor = System.Drawing.Color.Black;
+            this.detallesFacturaLabel.Location = new System.Drawing.Point(270, 84);
             this.detallesFacturaLabel.Name = "detallesFacturaLabel";
-            this.detallesFacturaLabel.Size = new System.Drawing.Size(184, 15);
+            this.detallesFacturaLabel.Size = new System.Drawing.Size(218, 21);
             this.detallesFacturaLabel.TabIndex = 28;
             this.detallesFacturaLabel.Text = "DETALLES DE LA FACTURA";
             // 
             // pagoInicialEfectivoTextBox
             // 
-            this.pagoInicialEfectivoTextBox.Location = new System.Drawing.Point(358, 168);
+            this.pagoInicialEfectivoTextBox.Location = new System.Drawing.Point(394, 114);
             this.pagoInicialEfectivoTextBox.Name = "pagoInicialEfectivoTextBox";
             this.pagoInicialEfectivoTextBox.Size = new System.Drawing.Size(100, 20);
             this.pagoInicialEfectivoTextBox.TabIndex = 29;
             // 
             // pagoInicialChequeTextBox
             // 
-            this.pagoInicialChequeTextBox.Location = new System.Drawing.Point(358, 195);
+            this.pagoInicialChequeTextBox.Location = new System.Drawing.Point(394, 141);
             this.pagoInicialChequeTextBox.Name = "pagoInicialChequeTextBox";
             this.pagoInicialChequeTextBox.Size = new System.Drawing.Size(100, 20);
             this.pagoInicialChequeTextBox.TabIndex = 30;
             // 
             // precioAPagarTextBox
             // 
-            this.precioAPagarTextBox.Location = new System.Drawing.Point(358, 222);
+            this.precioAPagarTextBox.Location = new System.Drawing.Point(394, 168);
             this.precioAPagarTextBox.Name = "precioAPagarTextBox";
             this.precioAPagarTextBox.Size = new System.Drawing.Size(100, 20);
             this.precioAPagarTextBox.TabIndex = 31;
             // 
             // autorizadoPorTextBox
             // 
-            this.autorizadoPorTextBox.Location = new System.Drawing.Point(358, 249);
+            this.autorizadoPorTextBox.Location = new System.Drawing.Point(394, 195);
             this.autorizadoPorTextBox.Name = "autorizadoPorTextBox";
             this.autorizadoPorTextBox.Size = new System.Drawing.Size(100, 20);
             this.autorizadoPorTextBox.TabIndex = 32;
@@ -381,77 +424,89 @@
             // PagoIncialEfectivoLabel
             // 
             this.PagoIncialEfectivoLabel.AutoSize = true;
-            this.PagoIncialEfectivoLabel.Location = new System.Drawing.Point(234, 168);
+            this.PagoIncialEfectivoLabel.BackColor = System.Drawing.Color.Transparent;
+            this.PagoIncialEfectivoLabel.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PagoIncialEfectivoLabel.ForeColor = System.Drawing.Color.Black;
+            this.PagoIncialEfectivoLabel.Location = new System.Drawing.Point(265, 115);
             this.PagoIncialEfectivoLabel.Name = "PagoIncialEfectivoLabel";
-            this.PagoIncialEfectivoLabel.Size = new System.Drawing.Size(118, 13);
+            this.PagoIncialEfectivoLabel.Size = new System.Drawing.Size(124, 14);
             this.PagoIncialEfectivoLabel.TabIndex = 33;
             this.PagoIncialEfectivoLabel.Text = "Pago Incial En Efectivo";
             // 
             // PagoIncialChequeLabel
             // 
             this.PagoIncialChequeLabel.AutoSize = true;
-            this.PagoIncialChequeLabel.Location = new System.Drawing.Point(234, 195);
+            this.PagoIncialChequeLabel.BackColor = System.Drawing.Color.Transparent;
+            this.PagoIncialChequeLabel.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PagoIncialChequeLabel.ForeColor = System.Drawing.Color.Black;
+            this.PagoIncialChequeLabel.Location = new System.Drawing.Point(267, 142);
             this.PagoIncialChequeLabel.Name = "PagoIncialChequeLabel";
-            this.PagoIncialChequeLabel.Size = new System.Drawing.Size(116, 13);
+            this.PagoIncialChequeLabel.Size = new System.Drawing.Size(123, 14);
             this.PagoIncialChequeLabel.TabIndex = 34;
             this.PagoIncialChequeLabel.Text = "Pago Incial En Cheque";
             // 
             // precioAPagarLabel
             // 
             this.precioAPagarLabel.AutoSize = true;
-            this.precioAPagarLabel.Location = new System.Drawing.Point(272, 222);
+            this.precioAPagarLabel.BackColor = System.Drawing.Color.Transparent;
+            this.precioAPagarLabel.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.precioAPagarLabel.ForeColor = System.Drawing.Color.Black;
+            this.precioAPagarLabel.Location = new System.Drawing.Point(312, 169);
             this.precioAPagarLabel.Name = "precioAPagarLabel";
-            this.precioAPagarLabel.Size = new System.Drawing.Size(78, 13);
+            this.precioAPagarLabel.Size = new System.Drawing.Size(82, 14);
             this.precioAPagarLabel.TabIndex = 35;
             this.precioAPagarLabel.Text = "Precio A Pagar";
             // 
             // autorizadoPorLabel
             // 
             this.autorizadoPorLabel.AutoSize = true;
-            this.autorizadoPorLabel.Location = new System.Drawing.Point(274, 249);
+            this.autorizadoPorLabel.BackColor = System.Drawing.Color.Transparent;
+            this.autorizadoPorLabel.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.autorizadoPorLabel.ForeColor = System.Drawing.Color.Black;
+            this.autorizadoPorLabel.Location = new System.Drawing.Point(311, 196);
             this.autorizadoPorLabel.Name = "autorizadoPorLabel";
-            this.autorizadoPorLabel.Size = new System.Drawing.Size(76, 13);
+            this.autorizadoPorLabel.Size = new System.Drawing.Size(84, 14);
             this.autorizadoPorLabel.TabIndex = 36;
             this.autorizadoPorLabel.Text = "Autorizado Por";
             // 
             // estadoVehiculoTextBox
             // 
-            this.estadoVehiculoTextBox.Location = new System.Drawing.Point(598, 75);
+            this.estadoVehiculoTextBox.Location = new System.Drawing.Point(127, 38);
             this.estadoVehiculoTextBox.Name = "estadoVehiculoTextBox";
             this.estadoVehiculoTextBox.Size = new System.Drawing.Size(100, 20);
             this.estadoVehiculoTextBox.TabIndex = 37;
             // 
             // modeloVehiculoTextBox
             // 
-            this.modeloVehiculoTextBox.Location = new System.Drawing.Point(598, 101);
+            this.modeloVehiculoTextBox.Location = new System.Drawing.Point(127, 64);
             this.modeloVehiculoTextBox.Name = "modeloVehiculoTextBox";
             this.modeloVehiculoTextBox.Size = new System.Drawing.Size(100, 20);
             this.modeloVehiculoTextBox.TabIndex = 38;
             // 
             // marcaVehiculoTextBox
             // 
-            this.marcaVehiculoTextBox.Location = new System.Drawing.Point(598, 127);
+            this.marcaVehiculoTextBox.Location = new System.Drawing.Point(127, 90);
             this.marcaVehiculoTextBox.Name = "marcaVehiculoTextBox";
             this.marcaVehiculoTextBox.Size = new System.Drawing.Size(100, 20);
             this.marcaVehiculoTextBox.TabIndex = 39;
             // 
             // motorVehiculoTextBox
             // 
-            this.motorVehiculoTextBox.Location = new System.Drawing.Point(598, 153);
+            this.motorVehiculoTextBox.Location = new System.Drawing.Point(127, 116);
             this.motorVehiculoTextBox.Name = "motorVehiculoTextBox";
             this.motorVehiculoTextBox.Size = new System.Drawing.Size(100, 20);
             this.motorVehiculoTextBox.TabIndex = 40;
             // 
             // colorVehiculoTextBox
             // 
-            this.colorVehiculoTextBox.Location = new System.Drawing.Point(598, 179);
+            this.colorVehiculoTextBox.Location = new System.Drawing.Point(127, 142);
             this.colorVehiculoTextBox.Name = "colorVehiculoTextBox";
             this.colorVehiculoTextBox.Size = new System.Drawing.Size(100, 20);
             this.colorVehiculoTextBox.TabIndex = 41;
             // 
             // añoVehiculoTextBox
             // 
-            this.añoVehiculoTextBox.Location = new System.Drawing.Point(598, 205);
+            this.añoVehiculoTextBox.Location = new System.Drawing.Point(127, 168);
             this.añoVehiculoTextBox.Name = "añoVehiculoTextBox";
             this.añoVehiculoTextBox.Size = new System.Drawing.Size(100, 20);
             this.añoVehiculoTextBox.TabIndex = 42;
@@ -459,42 +514,42 @@
             // 
             // chasisVehiculoTextBox
             // 
-            this.chasisVehiculoTextBox.Location = new System.Drawing.Point(598, 231);
+            this.chasisVehiculoTextBox.Location = new System.Drawing.Point(127, 194);
             this.chasisVehiculoTextBox.Name = "chasisVehiculoTextBox";
             this.chasisVehiculoTextBox.Size = new System.Drawing.Size(100, 20);
             this.chasisVehiculoTextBox.TabIndex = 43;
             // 
             // tipoVehiculoTextBox
             // 
-            this.tipoVehiculoTextBox.Location = new System.Drawing.Point(598, 257);
+            this.tipoVehiculoTextBox.Location = new System.Drawing.Point(127, 220);
             this.tipoVehiculoTextBox.Name = "tipoVehiculoTextBox";
             this.tipoVehiculoTextBox.Size = new System.Drawing.Size(100, 20);
             this.tipoVehiculoTextBox.TabIndex = 44;
             // 
             // kilometrajeVehiculoTextBox
             // 
-            this.kilometrajeVehiculoTextBox.Location = new System.Drawing.Point(598, 283);
+            this.kilometrajeVehiculoTextBox.Location = new System.Drawing.Point(127, 246);
             this.kilometrajeVehiculoTextBox.Name = "kilometrajeVehiculoTextBox";
             this.kilometrajeVehiculoTextBox.Size = new System.Drawing.Size(100, 20);
             this.kilometrajeVehiculoTextBox.TabIndex = 45;
             // 
             // precioVehiculoTextBox
             // 
-            this.precioVehiculoTextBox.Location = new System.Drawing.Point(598, 309);
+            this.precioVehiculoTextBox.Location = new System.Drawing.Point(127, 272);
             this.precioVehiculoTextBox.Name = "precioVehiculoTextBox";
             this.precioVehiculoTextBox.Size = new System.Drawing.Size(100, 20);
             this.precioVehiculoTextBox.TabIndex = 46;
             // 
             // placaVehiculoTextBox
             // 
-            this.placaVehiculoTextBox.Location = new System.Drawing.Point(598, 335);
+            this.placaVehiculoTextBox.Location = new System.Drawing.Point(127, 298);
             this.placaVehiculoTextBox.Name = "placaVehiculoTextBox";
             this.placaVehiculoTextBox.Size = new System.Drawing.Size(100, 20);
             this.placaVehiculoTextBox.TabIndex = 47;
             // 
             // matriculaVehiculoTextBox
             // 
-            this.matriculaVehiculoTextBox.Location = new System.Drawing.Point(598, 361);
+            this.matriculaVehiculoTextBox.Location = new System.Drawing.Point(127, 324);
             this.matriculaVehiculoTextBox.Name = "matriculaVehiculoTextBox";
             this.matriculaVehiculoTextBox.Size = new System.Drawing.Size(100, 20);
             this.matriculaVehiculoTextBox.TabIndex = 48;
@@ -512,124 +567,162 @@
             // facturaDeVentasLlabel
             // 
             this.facturaDeVentasLlabel.AutoSize = true;
-            this.facturaDeVentasLlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.facturaDeVentasLlabel.Location = new System.Drawing.Point(233, 9);
+            this.facturaDeVentasLlabel.BackColor = System.Drawing.Color.Transparent;
+            this.facturaDeVentasLlabel.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.facturaDeVentasLlabel.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.facturaDeVentasLlabel.Location = new System.Drawing.Point(270, 9);
             this.facturaDeVentasLlabel.Name = "facturaDeVentasLlabel";
-            this.facturaDeVentasLlabel.Size = new System.Drawing.Size(229, 24);
+            this.facturaDeVentasLlabel.Size = new System.Drawing.Size(228, 26);
             this.facturaDeVentasLlabel.TabIndex = 50;
             this.facturaDeVentasLlabel.Text = "FACTURA DE VENTAS";
             // 
             // estadoVehiculoLabel
             // 
             this.estadoVehiculoLabel.AutoSize = true;
-            this.estadoVehiculoLabel.Location = new System.Drawing.Point(489, 75);
+            this.estadoVehiculoLabel.BackColor = System.Drawing.Color.Transparent;
+            this.estadoVehiculoLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.estadoVehiculoLabel.ForeColor = System.Drawing.Color.Black;
+            this.estadoVehiculoLabel.Location = new System.Drawing.Point(-1, 39);
             this.estadoVehiculoLabel.Name = "estadoVehiculoLabel";
-            this.estadoVehiculoLabel.Size = new System.Drawing.Size(103, 13);
+            this.estadoVehiculoLabel.Size = new System.Drawing.Size(127, 17);
             this.estadoVehiculoLabel.TabIndex = 51;
             this.estadoVehiculoLabel.Text = "Estado Del Vehiculo";
             // 
             // modeloVehiculoLabel
             // 
             this.modeloVehiculoLabel.AutoSize = true;
-            this.modeloVehiculoLabel.Location = new System.Drawing.Point(550, 101);
+            this.modeloVehiculoLabel.BackColor = System.Drawing.Color.Transparent;
+            this.modeloVehiculoLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.modeloVehiculoLabel.ForeColor = System.Drawing.Color.Black;
+            this.modeloVehiculoLabel.Location = new System.Drawing.Point(-1, 65);
             this.modeloVehiculoLabel.Name = "modeloVehiculoLabel";
-            this.modeloVehiculoLabel.Size = new System.Drawing.Size(42, 13);
+            this.modeloVehiculoLabel.Size = new System.Drawing.Size(54, 17);
             this.modeloVehiculoLabel.TabIndex = 52;
             this.modeloVehiculoLabel.Text = "Modelo";
             // 
             // marcaVehiculoLabel
             // 
             this.marcaVehiculoLabel.AutoSize = true;
-            this.marcaVehiculoLabel.Location = new System.Drawing.Point(555, 127);
+            this.marcaVehiculoLabel.BackColor = System.Drawing.Color.Transparent;
+            this.marcaVehiculoLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.marcaVehiculoLabel.ForeColor = System.Drawing.Color.Black;
+            this.marcaVehiculoLabel.Location = new System.Drawing.Point(-1, 93);
             this.marcaVehiculoLabel.Name = "marcaVehiculoLabel";
-            this.marcaVehiculoLabel.Size = new System.Drawing.Size(37, 13);
+            this.marcaVehiculoLabel.Size = new System.Drawing.Size(45, 17);
             this.marcaVehiculoLabel.TabIndex = 53;
             this.marcaVehiculoLabel.Text = "Marca";
             // 
             // motorVehiculoLabel
             // 
             this.motorVehiculoLabel.AutoSize = true;
-            this.motorVehiculoLabel.Location = new System.Drawing.Point(558, 153);
+            this.motorVehiculoLabel.BackColor = System.Drawing.Color.Transparent;
+            this.motorVehiculoLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.motorVehiculoLabel.ForeColor = System.Drawing.Color.Black;
+            this.motorVehiculoLabel.Location = new System.Drawing.Point(-1, 119);
             this.motorVehiculoLabel.Name = "motorVehiculoLabel";
-            this.motorVehiculoLabel.Size = new System.Drawing.Size(34, 13);
+            this.motorVehiculoLabel.Size = new System.Drawing.Size(46, 17);
             this.motorVehiculoLabel.TabIndex = 54;
             this.motorVehiculoLabel.Text = "Motor";
             // 
             // colorVehiculoLabel
             // 
             this.colorVehiculoLabel.AutoSize = true;
-            this.colorVehiculoLabel.Location = new System.Drawing.Point(561, 179);
+            this.colorVehiculoLabel.BackColor = System.Drawing.Color.Transparent;
+            this.colorVehiculoLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colorVehiculoLabel.ForeColor = System.Drawing.Color.Black;
+            this.colorVehiculoLabel.Location = new System.Drawing.Point(-1, 145);
             this.colorVehiculoLabel.Name = "colorVehiculoLabel";
-            this.colorVehiculoLabel.Size = new System.Drawing.Size(31, 13);
+            this.colorVehiculoLabel.Size = new System.Drawing.Size(40, 17);
             this.colorVehiculoLabel.TabIndex = 55;
             this.colorVehiculoLabel.Text = "Color";
             // 
             // añoVehiculoLabel
             // 
             this.añoVehiculoLabel.AutoSize = true;
-            this.añoVehiculoLabel.Location = new System.Drawing.Point(566, 205);
+            this.añoVehiculoLabel.BackColor = System.Drawing.Color.Transparent;
+            this.añoVehiculoLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.añoVehiculoLabel.ForeColor = System.Drawing.Color.Black;
+            this.añoVehiculoLabel.Location = new System.Drawing.Point(-1, 171);
             this.añoVehiculoLabel.Name = "añoVehiculoLabel";
-            this.añoVehiculoLabel.Size = new System.Drawing.Size(26, 13);
+            this.añoVehiculoLabel.Size = new System.Drawing.Size(33, 17);
             this.añoVehiculoLabel.TabIndex = 56;
             this.añoVehiculoLabel.Text = "Año";
             // 
             // chasisVehiculoLabel
             // 
             this.chasisVehiculoLabel.AutoSize = true;
-            this.chasisVehiculoLabel.Location = new System.Drawing.Point(535, 231);
+            this.chasisVehiculoLabel.BackColor = System.Drawing.Color.Transparent;
+            this.chasisVehiculoLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chasisVehiculoLabel.ForeColor = System.Drawing.Color.Black;
+            this.chasisVehiculoLabel.Location = new System.Drawing.Point(-1, 197);
             this.chasisVehiculoLabel.Name = "chasisVehiculoLabel";
-            this.chasisVehiculoLabel.Size = new System.Drawing.Size(58, 13);
+            this.chasisVehiculoLabel.Size = new System.Drawing.Size(71, 17);
             this.chasisVehiculoLabel.TabIndex = 57;
             this.chasisVehiculoLabel.Text = "Chasis No.";
             // 
             // tipoVehiculoLabel
             // 
             this.tipoVehiculoLabel.AutoSize = true;
-            this.tipoVehiculoLabel.Location = new System.Drawing.Point(504, 257);
+            this.tipoVehiculoLabel.BackColor = System.Drawing.Color.Transparent;
+            this.tipoVehiculoLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tipoVehiculoLabel.ForeColor = System.Drawing.Color.Black;
+            this.tipoVehiculoLabel.Location = new System.Drawing.Point(-1, 223);
             this.tipoVehiculoLabel.Name = "tipoVehiculoLabel";
-            this.tipoVehiculoLabel.Size = new System.Drawing.Size(89, 13);
+            this.tipoVehiculoLabel.Size = new System.Drawing.Size(109, 17);
             this.tipoVehiculoLabel.TabIndex = 58;
             this.tipoVehiculoLabel.Text = "Tipo De Vehiculo";
             // 
             // kilometrajeVehiculoLabel
             // 
             this.kilometrajeVehiculoLabel.AutoSize = true;
-            this.kilometrajeVehiculoLabel.Location = new System.Drawing.Point(534, 283);
+            this.kilometrajeVehiculoLabel.BackColor = System.Drawing.Color.Transparent;
+            this.kilometrajeVehiculoLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kilometrajeVehiculoLabel.ForeColor = System.Drawing.Color.Black;
+            this.kilometrajeVehiculoLabel.Location = new System.Drawing.Point(-1, 249);
             this.kilometrajeVehiculoLabel.Name = "kilometrajeVehiculoLabel";
-            this.kilometrajeVehiculoLabel.Size = new System.Drawing.Size(58, 13);
+            this.kilometrajeVehiculoLabel.Size = new System.Drawing.Size(76, 17);
             this.kilometrajeVehiculoLabel.TabIndex = 59;
             this.kilometrajeVehiculoLabel.Text = "Kilometraje";
             // 
             // precioVehiculoLabel
             // 
             this.precioVehiculoLabel.AutoSize = true;
-            this.precioVehiculoLabel.Location = new System.Drawing.Point(556, 309);
+            this.precioVehiculoLabel.BackColor = System.Drawing.Color.Transparent;
+            this.precioVehiculoLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.precioVehiculoLabel.ForeColor = System.Drawing.Color.Black;
+            this.precioVehiculoLabel.Location = new System.Drawing.Point(-1, 275);
             this.precioVehiculoLabel.Name = "precioVehiculoLabel";
-            this.precioVehiculoLabel.Size = new System.Drawing.Size(37, 13);
+            this.precioVehiculoLabel.Size = new System.Drawing.Size(45, 17);
             this.precioVehiculoLabel.TabIndex = 60;
             this.precioVehiculoLabel.Text = "Precio";
             // 
             // placaVehiculoLabel
             // 
             this.placaVehiculoLabel.AutoSize = true;
-            this.placaVehiculoLabel.Location = new System.Drawing.Point(539, 335);
+            this.placaVehiculoLabel.BackColor = System.Drawing.Color.Transparent;
+            this.placaVehiculoLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.placaVehiculoLabel.ForeColor = System.Drawing.Color.Black;
+            this.placaVehiculoLabel.Location = new System.Drawing.Point(-1, 301);
             this.placaVehiculoLabel.Name = "placaVehiculoLabel";
-            this.placaVehiculoLabel.Size = new System.Drawing.Size(54, 13);
+            this.placaVehiculoLabel.Size = new System.Drawing.Size(64, 17);
             this.placaVehiculoLabel.TabIndex = 61;
             this.placaVehiculoLabel.Text = "Placa No.";
             // 
             // matriculaVehiculoLabel
             // 
             this.matriculaVehiculoLabel.AutoSize = true;
-            this.matriculaVehiculoLabel.Location = new System.Drawing.Point(542, 361);
+            this.matriculaVehiculoLabel.BackColor = System.Drawing.Color.Transparent;
+            this.matriculaVehiculoLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.matriculaVehiculoLabel.ForeColor = System.Drawing.Color.Black;
+            this.matriculaVehiculoLabel.Location = new System.Drawing.Point(-1, 327);
             this.matriculaVehiculoLabel.Name = "matriculaVehiculoLabel";
-            this.matriculaVehiculoLabel.Size = new System.Drawing.Size(50, 13);
+            this.matriculaVehiculoLabel.Size = new System.Drawing.Size(64, 17);
             this.matriculaVehiculoLabel.TabIndex = 62;
             this.matriculaVehiculoLabel.Text = "Matricula";
             // 
             // CelularTextBox
             // 
-            this.CelularTextBox.Location = new System.Drawing.Point(12, 155);
+            this.CelularTextBox.Location = new System.Drawing.Point(120, 114);
             this.CelularTextBox.Name = "CelularTextBox";
             this.CelularTextBox.Size = new System.Drawing.Size(100, 20);
             this.CelularTextBox.TabIndex = 64;
@@ -637,47 +730,93 @@
             // Celular
             // 
             this.Celular.AutoSize = true;
-            this.Celular.Location = new System.Drawing.Point(118, 162);
+            this.Celular.BackColor = System.Drawing.Color.Transparent;
+            this.Celular.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Celular.ForeColor = System.Drawing.Color.Black;
+            this.Celular.Location = new System.Drawing.Point(2, 115);
             this.Celular.Name = "Celular";
-            this.Celular.Size = new System.Drawing.Size(39, 13);
+            this.Celular.Size = new System.Drawing.Size(43, 15);
             this.Celular.TabIndex = 63;
             this.Celular.Text = "Celular";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.LightGray;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.NombreTextBox);
+            this.panel1.Controls.Add(this.CelularTextBox);
+            this.panel1.Controls.Add(this.nombreClienteLabel);
+            this.panel1.Controls.Add(this.Celular);
+            this.panel1.Controls.Add(this.apodoLabel);
+            this.panel1.Controls.Add(this.telefonoLabel);
+            this.panel1.Controls.Add(this.direccionLabel);
+            this.panel1.Controls.Add(this.cedulaLabel);
+            this.panel1.Controls.Add(this.nacionalidadLabel);
+            this.panel1.Controls.Add(this.ocupacionLabel);
+            this.panel1.Controls.Add(this.lugarDeNacimientoLabel);
+            this.panel1.Controls.Add(this.sexoLabel);
+            this.panel1.Controls.Add(this.clienteIdLabel);
+            this.panel1.Controls.Add(this.IdClinteTextBox);
+            this.panel1.Controls.Add(this.ApodoTextBox);
+            this.panel1.Controls.Add(this.TelefonoTextBox);
+            this.panel1.Controls.Add(this.DireccionTextBox);
+            this.panel1.Controls.Add(this.CedulaTextBox);
+            this.panel1.Controls.Add(this.NacimientoTextBox);
+            this.panel1.Controls.Add(this.OcupacionTextBox);
+            this.panel1.Controls.Add(this.LugardeNacimientoTextBox);
+            this.panel1.Controls.Add(this.SexoTextBox);
+            this.panel1.Controls.Add(this.botonBuscarCliente);
+            this.panel1.Location = new System.Drawing.Point(6, 38);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(260, 311);
+            this.panel1.TabIndex = 65;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.LightGray;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel2.Controls.Add(this.matriculaVehiculoTextBox);
+            this.panel2.Controls.Add(this.vehiculoIdLabel);
+            this.panel2.Controls.Add(this.matriculaVehiculoLabel);
+            this.panel2.Controls.Add(this.vehiculoIdTextBox);
+            this.panel2.Controls.Add(this.placaVehiculoLabel);
+            this.panel2.Controls.Add(this.estadoVehiculoTextBox);
+            this.panel2.Controls.Add(this.precioVehiculoLabel);
+            this.panel2.Controls.Add(this.modeloVehiculoTextBox);
+            this.panel2.Controls.Add(this.kilometrajeVehiculoLabel);
+            this.panel2.Controls.Add(this.marcaVehiculoTextBox);
+            this.panel2.Controls.Add(this.tipoVehiculoLabel);
+            this.panel2.Controls.Add(this.motorVehiculoTextBox);
+            this.panel2.Controls.Add(this.chasisVehiculoLabel);
+            this.panel2.Controls.Add(this.botonBuscarVehiculo);
+            this.panel2.Controls.Add(this.colorVehiculoTextBox);
+            this.panel2.Controls.Add(this.añoVehiculoLabel);
+            this.panel2.Controls.Add(this.añoVehiculoTextBox);
+            this.panel2.Controls.Add(this.colorVehiculoLabel);
+            this.panel2.Controls.Add(this.chasisVehiculoTextBox);
+            this.panel2.Controls.Add(this.motorVehiculoLabel);
+            this.panel2.Controls.Add(this.tipoVehiculoTextBox);
+            this.panel2.Controls.Add(this.marcaVehiculoLabel);
+            this.panel2.Controls.Add(this.kilometrajeVehiculoTextBox);
+            this.panel2.Controls.Add(this.modeloVehiculoLabel);
+            this.panel2.Controls.Add(this.precioVehiculoTextBox);
+            this.panel2.Controls.Add(this.estadoVehiculoLabel);
+            this.panel2.Controls.Add(this.placaVehiculoTextBox);
+            this.panel2.Location = new System.Drawing.Point(504, 38);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(266, 357);
+            this.panel2.TabIndex = 66;
             // 
             // FacturaDeVentasForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(710, 485);
-            this.Controls.Add(this.CelularTextBox);
-            this.Controls.Add(this.Celular);
-            this.Controls.Add(this.matriculaVehiculoLabel);
-            this.Controls.Add(this.placaVehiculoLabel);
-            this.Controls.Add(this.precioVehiculoLabel);
-            this.Controls.Add(this.kilometrajeVehiculoLabel);
-            this.Controls.Add(this.tipoVehiculoLabel);
-            this.Controls.Add(this.chasisVehiculoLabel);
-            this.Controls.Add(this.añoVehiculoLabel);
-            this.Controls.Add(this.colorVehiculoLabel);
-            this.Controls.Add(this.motorVehiculoLabel);
-            this.Controls.Add(this.marcaVehiculoLabel);
-            this.Controls.Add(this.modeloVehiculoLabel);
-            this.Controls.Add(this.estadoVehiculoLabel);
+            this.ClientSize = new System.Drawing.Size(793, 484);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.facturaDeVentasLlabel);
             this.Controls.Add(this.botonGenerarFactura);
-            this.Controls.Add(this.matriculaVehiculoTextBox);
-            this.Controls.Add(this.placaVehiculoTextBox);
-            this.Controls.Add(this.precioVehiculoTextBox);
-            this.Controls.Add(this.kilometrajeVehiculoTextBox);
-            this.Controls.Add(this.tipoVehiculoTextBox);
-            this.Controls.Add(this.chasisVehiculoTextBox);
-            this.Controls.Add(this.añoVehiculoTextBox);
-            this.Controls.Add(this.colorVehiculoTextBox);
-            this.Controls.Add(this.motorVehiculoTextBox);
-            this.Controls.Add(this.marcaVehiculoTextBox);
-            this.Controls.Add(this.modeloVehiculoTextBox);
-            this.Controls.Add(this.estadoVehiculoTextBox);
             this.Controls.Add(this.autorizadoPorLabel);
             this.Controls.Add(this.precioAPagarLabel);
             this.Controls.Add(this.PagoIncialChequeLabel);
@@ -687,39 +826,20 @@
             this.Controls.Add(this.pagoInicialChequeTextBox);
             this.Controls.Add(this.pagoInicialEfectivoTextBox);
             this.Controls.Add(this.detallesFacturaLabel);
-            this.Controls.Add(this.botonBuscarCliente);
-            this.Controls.Add(this.botonBuscarVehiculo);
             this.Controls.Add(this.datosVehiculoLabel);
             this.Controls.Add(this.datosClientelabel);
-            this.Controls.Add(this.vehiculoIdTextBox);
-            this.Controls.Add(this.SexoTextBox);
-            this.Controls.Add(this.LugardeNacimientoTextBox);
-            this.Controls.Add(this.OcupacionTextBox);
-            this.Controls.Add(this.NacimientoTextBox);
-            this.Controls.Add(this.CedulaTextBox);
-            this.Controls.Add(this.DireccionTextBox);
-            this.Controls.Add(this.TelefonoTextBox);
-            this.Controls.Add(this.ApodoTextBox);
-            this.Controls.Add(this.NombreTextBox);
-            this.Controls.Add(this.IdClinteTextBox);
-            this.Controls.Add(this.vehiculoIdLabel);
-            this.Controls.Add(this.clienteIdLabel);
-            this.Controls.Add(this.sexoLabel);
-            this.Controls.Add(this.lugarDeNacimientoLabel);
-            this.Controls.Add(this.ocupacionLabel);
-            this.Controls.Add(this.nacionalidadLabel);
-            this.Controls.Add(this.cedulaLabel);
-            this.Controls.Add(this.direccionLabel);
-            this.Controls.Add(this.telefonoLabel);
-            this.Controls.Add(this.apodoLabel);
-            this.Controls.Add(this.nombreClienteLabel);
             this.Controls.Add(this.botonAnterior);
             this.Controls.Add(this.botonSiguente);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "FacturaDeVentasForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Factura De Ventas";
             this.Load += new System.EventHandler(this.FacturaDeVentasForm_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -792,5 +912,7 @@
         private System.Windows.Forms.Label matriculaVehiculoLabel;
         private System.Windows.Forms.TextBox CelularTextBox;
         private System.Windows.Forms.Label Celular;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
     }
 }

@@ -73,9 +73,10 @@
             // Descripcionlabel
             // 
             this.Descripcionlabel.AutoSize = true;
-            this.Descripcionlabel.Location = new System.Drawing.Point(51, 124);
+            this.Descripcionlabel.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Descripcionlabel.Location = new System.Drawing.Point(46, 124);
             this.Descripcionlabel.Name = "Descripcionlabel";
-            this.Descripcionlabel.Size = new System.Drawing.Size(63, 13);
+            this.Descripcionlabel.Size = new System.Drawing.Size(72, 14);
             this.Descripcionlabel.TabIndex = 24;
             this.Descripcionlabel.Text = "Descripcion";
             // 
@@ -89,9 +90,10 @@
             // IDlabel
             // 
             this.IDlabel.AutoSize = true;
-            this.IDlabel.Location = new System.Drawing.Point(51, 71);
+            this.IDlabel.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IDlabel.Location = new System.Drawing.Point(46, 74);
             this.IDlabel.Name = "IDlabel";
-            this.IDlabel.Size = new System.Drawing.Size(16, 13);
+            this.IDlabel.Size = new System.Drawing.Size(17, 14);
             this.IDlabel.TabIndex = 25;
             this.IDlabel.Text = "Id";
             // 
@@ -107,9 +109,9 @@
             this.botonBuscar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("botonBuscar.BackgroundImage")));
             this.botonBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.botonBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.botonBuscar.Location = new System.Drawing.Point(228, 12);
+            this.botonBuscar.Location = new System.Drawing.Point(218, 66);
             this.botonBuscar.Name = "botonBuscar";
-            this.botonBuscar.Size = new System.Drawing.Size(44, 36);
+            this.botonBuscar.Size = new System.Drawing.Size(34, 29);
             this.botonBuscar.TabIndex = 28;
             this.botonBuscar.UseVisualStyleBackColor = true;
             this.botonBuscar.Click += new System.EventHandler(this.botonBuscar_Click);
@@ -130,7 +132,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(284, 262);
             this.Controls.Add(this.botonAtras);
@@ -143,6 +144,7 @@
             this.Controls.Add(this.botonGuardar);
             this.Controls.Add(this.botonNuevo);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "MotoresForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tipos de Motores";

@@ -26,7 +26,11 @@ namespace Sistema_Ventas_Vehiculos.Registros
         }
         private void MensajeError(string mensaje)
         {
-            MessageBox.Show(mensaje, "Registro de Modelos", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show(mensaje, "Registro de Modelos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+        private void MensajeAdvertencia(string mensaje)
+        {
+            MessageBox.Show(mensaje, "Registro de Modelos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
 
         private void botonNuevo_Click(object sender, EventArgs e)
@@ -39,17 +43,33 @@ namespace Sistema_Ventas_Vehiculos.Registros
         {
             try
             {
-                modelos.ModeloId = int.Parse(ModeloIDtextBox.Text);
-                if (modelos.Eliminar())
+                int id = 0;
+                int.TryParse(ModeloIDtextBox.Text, out id);
+                modelos.ModeloId = id;
+
+                if (modelos.Buscar(modelos.ModeloId))
                 {
-                    MensajeOk("Eliminado correctamente");
-                    DescripciontextBox.Clear();
-                    ModeloIDtextBox.Clear();
+
+                    if (modelos.Eliminar())
+                    {
+                        MensajeOk("Eliminado correctamente");
+                        DescripciontextBox.Clear();
+                        ModeloIDtextBox.Clear();
+                    }
+                    else
+                    {
+                        MensajeError("Error al eliminar");
+                    }
                 }
-            }
+                else
+                {
+                MensajeAdvertencia("Este Id no existe");
+                ModeloIDtextBox.Clear();
+                }
+        }
             catch (Exception)
             {
-                MessageBox.Show("Error al Eliminar");
+                MensajeError("Error al Eliminar");
             }
         }
 
@@ -72,15 +92,20 @@ namespace Sistema_Ventas_Vehiculos.Registros
                 modelos.Descripcion = DescripciontextBox.Text;
                 if (ModeloIDtextBox.Text == "")
                 {
-
-                    if (modelos.Insertar())
+                    if (DescripciontextBox.Text != "")
                     {
-                        DescripciontextBox.Clear();
-                        MensajeOk("Insertado Correctamente");
+                        if (modelos.Insertar())
+                        {
+                            DescripciontextBox.Clear();
+                            MensajeOk("Insertado Correctamente");
+                        }
+                        else
+                        {
+                            MensajeError("Error al Insertar");
+                        }
                     }
-                    else
-                    {
-                        MensajeError("Error al Insertar");
+                    else {
+                        MensajeAdvertencia("Inserte la descripcion");
                     }
 
                 }
@@ -89,11 +114,12 @@ namespace Sistema_Ventas_Vehiculos.Registros
                     int id = 0;
                     int.TryParse(ModeloIDtextBox.Text, out id);
                     modelos.ModeloId = id;
-                    if (DescripciontextBox.Text == "")
+                    if (DescripciontextBox.Text != "")
                     {
                         if (modelos.Editar())
                         {
                             DescripciontextBox.Clear();
+                            ModeloIDtextBox.Clear();
                             MensajeOk("Modificado Correctamente");
                         }
                         else
@@ -102,13 +128,13 @@ namespace Sistema_Ventas_Vehiculos.Registros
                         }
                     }
                     else {
-                        MessageBox.Show("Debe Llenar Los Campos Correspondientes");
+                        MensajeAdvertencia("Inserte la descripcion");
                     }
                 }
             }
             catch (Exception)
             {
-                MessageBox.Show("Error al Insertar o Modificar");
+                MensajeError("Error al Insertar o Modificar");
             }
         }
 
@@ -118,8 +144,14 @@ namespace Sistema_Ventas_Vehiculos.Registros
             int.TryParse(ModeloIDtextBox.Text, out id);
             modelos.ModeloId = id;
 
-            modelos.Buscar(modelos.ModeloId);
-            DescripciontextBox.Text = modelos.Descripcion;
+            if (modelos.Buscar(modelos.ModeloId))
+            {
+                DescripciontextBox.Text = modelos.Descripcion;
+            }
+            else {
+                MensajeAdvertencia("Id no encontrado");
+                ModeloIDtextBox.Focus();
+            }
         }
     }
 }

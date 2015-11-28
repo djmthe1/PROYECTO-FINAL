@@ -26,8 +26,13 @@ namespace Sistema_Ventas_Vehiculos.Registros
         }
         private void MensajeError(string mensaje)
         {
-            MessageBox.Show(mensaje, "Registro de Tipos De Vehiculos", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show(mensaje, "Registro de Tipos De Vehiculos", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
+        private void MensajeAdvertencia(string mensaje)
+        {
+            MessageBox.Show(mensaje, "Registro de Tipos De Vehiculos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+        }
+
 
         private void TipoDeVehiculosForm_Load(object sender, EventArgs e)
         {
@@ -44,17 +49,32 @@ namespace Sistema_Ventas_Vehiculos.Registros
         {
             try
             {
-                tipoVehiculos.TipoDeVehiculoId = int.Parse(TipoIDtextBox.Text);
-                if (tipoVehiculos.Eliminar())
+                int id = 0;
+                int.TryParse(TipoIDtextBox.Text, out id);
+                tipoVehiculos.TipoDeVehiculoId = id;
+
+                if (tipoVehiculos.Buscar(tipoVehiculos.TipoDeVehiculoId))
                 {
-                    MensajeOk("Eliminado correctamente");
-                    DescripciontextBox.Clear();
+                    if (tipoVehiculos.Eliminar())
+                    {
+                        MensajeOk("Eliminado correctamente");
+                        DescripciontextBox.Clear();
+                        TipoIDtextBox.Clear();
+                    }
+                    else
+                    {
+                        MensajeError("Error al eliminar");
+                    }
+                }
+                else
+                {
+                    MensajeAdvertencia("Este Id no existe");
                     TipoIDtextBox.Clear();
                 }
-            }
-            catch (Exception)
+
+            }catch (Exception)
             {
-                MessageBox.Show("Error al Eliminar");
+                MensajeError("Error al Eliminar");
             }
         }
 
@@ -65,15 +85,20 @@ namespace Sistema_Ventas_Vehiculos.Registros
                 tipoVehiculos.Descripcion = DescripciontextBox.Text;
                 if (TipoIDtextBox.Text == "")
                 {
-
-                    if (tipoVehiculos.Insertar())
-                    {
-                        DescripciontextBox.Clear();
-                        MensajeOk("Insertado Correctamente");
+                    if(DescripciontextBox.Text != ""){
+                        if (tipoVehiculos.Insertar())
+                        {
+                            DescripciontextBox.Clear();
+                            MensajeOk("Insertado Correctamente");
+                        }
+                        else
+                        {
+                            MensajeError("Error al Insertar");
+                        }
                     }
                     else
                     {
-                        MensajeError("Error al Insertar");
+                        MensajeAdvertencia("Inserte la descripcion");
                     }
 
                 }
@@ -82,14 +107,21 @@ namespace Sistema_Ventas_Vehiculos.Registros
                     int id = 0;
                     int.TryParse(TipoIDtextBox.Text, out id);
                     tipoVehiculos.TipoDeVehiculoId = id;
-                    if (tipoVehiculos.Editar())
+                    if (DescripciontextBox.Text != "")
                     {
-                        DescripciontextBox.Clear();
-                        MensajeOk("Modificado Correctamente");
+                        if (tipoVehiculos.Editar())
+                        {
+                            DescripciontextBox.Clear();
+                            TipoIDtextBox.Clear();
+                            MensajeOk("Modificado Correctamente");
+                        }
+                        else
+                        {
+                            MensajeError("Error al Modificar");
+                        }
                     }
-                    else
-                    {
-                        MensajeError("Error al Modificar");
+                    else{
+                        MensajeAdvertencia("Inserte la descripcion");
                     }
 
                 }
@@ -113,8 +145,15 @@ namespace Sistema_Ventas_Vehiculos.Registros
             int.TryParse(TipoIDtextBox.Text, out id);
             tipoVehiculos.TipoDeVehiculoId = id;
 
-            tipoVehiculos.Buscar(tipoVehiculos.TipoDeVehiculoId);
-            DescripciontextBox.Text = tipoVehiculos.Descripcion;
+            if (tipoVehiculos.Buscar(tipoVehiculos.TipoDeVehiculoId))
+            {
+                DescripciontextBox.Text = tipoVehiculos.Descripcion;
+            }
+            else
+            {
+                MensajeAdvertencia("Id no encontrado");
+                TipoIDtextBox.Clear();
+            }
         }
     }
 }
