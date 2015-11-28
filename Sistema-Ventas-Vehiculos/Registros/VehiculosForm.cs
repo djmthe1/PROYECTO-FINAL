@@ -19,6 +19,7 @@ namespace Sistema_Ventas_Vehiculos.Registros
         public TipoMotores motores = new TipoMotores();
         public Colores colores = new Colores();
         public DataTable dato = new DataTable();
+
         public VehiculosForm()
         {
             InitializeComponent();
