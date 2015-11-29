@@ -97,13 +97,17 @@ namespace BLL.Tests
         [TestMethod()]
         public void EliminarTest()
         {
-            Assert.Fail();
+            Vehiculos v = new Vehiculos();
+            v.VehiculoId = 16;
+            Assert.IsTrue(v.Eliminar());
         }
 
         [TestMethod()]
         public void BuscarTest()
         {
-            Assert.Fail();
+            Vehiculos v = new Vehiculos();
+            v.VehiculoId = 16;
+            Assert.IsTrue(v.Buscar(v.VehiculoId));
         }
 
         [TestMethod()]

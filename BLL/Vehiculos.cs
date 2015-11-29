@@ -127,7 +127,7 @@ namespace BLL
         public override bool Buscar(int IdBuscado)
         {
             DataTable datos = new DataTable();
-            DataTable vehiculodatos = new DataTable();
+            
 
             datos = conexion.ObtenerDatos("Select * from Vehiculos Where VehiculoId=" + IdBuscado);
             if (datos.Rows.Count > 0)
@@ -140,7 +140,7 @@ namespace BLL
                 this.Color = datos.Rows[0]["Color"].ToString();
                 this.Año = (int)datos.Rows[0]["Año"];
                 this.NoChasis = datos.Rows[0]["NoChasis"].ToString();
-                this.TipoDeVehiculo = datos.Rows[0]["TipoDeVehiculo"].ToString();
+                this.TipoDeVehiculo = datos.Rows[0]["TipoVehiculo"].ToString();
                 this.Kilometraje = (int)datos.Rows[0]["Kilometraje"];
                 this.Precio = (int)datos.Rows[0]["Precio"];
                 this.Placa = datos.Rows[0]["Placa"].ToString();

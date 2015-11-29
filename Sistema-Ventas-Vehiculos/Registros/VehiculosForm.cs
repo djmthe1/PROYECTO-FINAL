@@ -88,7 +88,7 @@ namespace Sistema_Ventas_Vehiculos.Registros
                     estadoVehiculoTextBox.Text = vehiculo.EstadoDelVehiculo;
                     MotorComboBox.Text = vehiculo.Motor;
                     MarcasComboBox.Text = vehiculo.Marca;
-                    MotorComboBox.Text = vehiculo.Modelo;
+                    ModeloComboBox.Text = vehiculo.Modelo;
                     ColorComboBox.Text = vehiculo.Color;
                     añoVehiculoTextBox.Text = vehiculo.Año.ToString();
                     chasisVehiculoTextBox.Text = vehiculo.NoChasis;
