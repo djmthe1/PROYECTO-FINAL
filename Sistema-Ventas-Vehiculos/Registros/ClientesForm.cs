@@ -60,6 +60,7 @@ namespace Sistema_Ventas_Vehiculos.Registros
             OcupacionTextBox.Clear();
             LugardeNacimientoTextBox.Clear();
             sexoComboBox.ResetText();
+            telefonosListBox.Items.Clear();
         }
 
         private void ClientesForm_Load(object sender, EventArgs e)
@@ -113,20 +114,23 @@ namespace Sistema_Ventas_Vehiculos.Registros
             {
                 clientes.NombreCompleto = NombreTextBox.Text;
                 clientes.Apodo = ApodoTextBox.Text;
-                int telefonoid = 0;
-                int.TryParse(TelefonoTextBox.Text, out telefonoid);
-                clientes.ClienteId = telefonoid;
                 clientes.Direccion = DireccionTextBox.Text;
                 clientes.Cedula = CedulaTextBox.Text;
                 clientes.Nacionalidad = nacionalidadTextBox.Text;
                 clientes.Ocupacion = OcupacionTextBox.Text;
                 clientes.LugarDeNacimiento = LugardeNacimientoTextBox.Text;
                 clientes.Sexo = sexoComboBox.Text;
+                clientes.LimpiarTelefono();
+                for (int i = 0; i < telefonosListBox.Items.Count; i++)
+                {
+                    clientes.InsertarTelefono(1, telefonosListBox.Items[i].ToString());
+                }
 
                 if (clienteIdTextBox.Text.Length == 0)
                 {
-                    if (NombreTextBox.Text != "" || ApodoTextBox.Text != "" || TelefonoTextBox.Text != "" || DireccionTextBox.Text != "" || CedulaTextBox.Text != "" || nacionalidadTextBox.Text != "" || OcupacionTextBox.Text != "" || LugardeNacimientoTextBox.Text != "" || sexoComboBox.Text != "")
+                    if (NombreTextBox.Text != "" || ApodoTextBox.Text != "" || DireccionTextBox.Text != "" || CedulaTextBox.Text != "" || nacionalidadTextBox.Text != "" || OcupacionTextBox.Text != "" || LugardeNacimientoTextBox.Text != "" || sexoComboBox.Text != "")
                     {
+
                         if (clientes.Insertar())
                         {
                             Limpiar();
@@ -184,13 +188,17 @@ namespace Sistema_Ventas_Vehiculos.Registros
                 {
                     NombreTextBox.Text = clientes.NombreCompleto;
                     ApodoTextBox.Text = clientes.Apodo;
-                    TelefonoTextBox.Text = clientes.TelefonoId.ToString();
                     DireccionTextBox.Text = clientes.Direccion;
                     CedulaTextBox.Text = clientes.Cedula;
                     nacionalidadTextBox.Text = clientes.Nacionalidad;
                     OcupacionTextBox.Text = clientes.Ocupacion;
                     LugardeNacimientoTextBox.Text = clientes.LugarDeNacimiento;
                     sexoComboBox.Text = clientes.Sexo;
+                    telefonosListBox.Items.Clear();
+                    foreach (var telefono in clientes.numerostelefonos)
+                    {
+                        telefonosListBox.Items.Add(telefono.Telefono);
+                    }
                 }
                 else
                 {
@@ -202,6 +210,25 @@ namespace Sistema_Ventas_Vehiculos.Registros
             {
                 MensajeError("Error al Buscar");
             }
+        }
+
+        private void botonEliminarTelefono_Click(object sender, EventArgs e)
+        {
+            if (telefonosListBox.SelectedIndex > 0)
+            {
+                if (MessageBox.Show("Eliminar el Telefono: ", "Eliminar", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    telefonosListBox.Items.RemoveAt(telefonosListBox.SelectedIndex);
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un Telefono");
+            }
+        }
+
+        private void botonInsertarTelefono_Click(object sender, EventArgs e)
+        {
+            telefonosListBox.Items.Add(telefonosListBox.Text);
+            TelefonoTextBox.Clear();
         }
     }
 }

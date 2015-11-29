@@ -85,7 +85,6 @@
             this.clienteIdLabel = new System.Windows.Forms.Label();
             this.clienteIdTextBox = new System.Windows.Forms.TextBox();
             this.ApodoTextBox = new System.Windows.Forms.TextBox();
-            this.TelefonoTextBox = new System.Windows.Forms.TextBox();
             this.DireccionTextBox = new System.Windows.Forms.TextBox();
             this.CedulaTextBox = new System.Windows.Forms.TextBox();
             this.nacionalidadTextBox = new System.Windows.Forms.TextBox();
@@ -95,6 +94,7 @@
             this.botonBuscarCliente = new System.Windows.Forms.Button();
             this.datosClientelabel = new System.Windows.Forms.Label();
             this.facturaDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.telefonosListBox = new System.Windows.Forms.ListBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -558,6 +558,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.LightGray;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.telefonosListBox);
             this.panel1.Controls.Add(this.NombreTextBox);
             this.panel1.Controls.Add(this.nombreClienteLabel);
             this.panel1.Controls.Add(this.apodoLabel);
@@ -571,7 +572,6 @@
             this.panel1.Controls.Add(this.clienteIdLabel);
             this.panel1.Controls.Add(this.clienteIdTextBox);
             this.panel1.Controls.Add(this.ApodoTextBox);
-            this.panel1.Controls.Add(this.TelefonoTextBox);
             this.panel1.Controls.Add(this.DireccionTextBox);
             this.panel1.Controls.Add(this.CedulaTextBox);
             this.panel1.Controls.Add(this.nacionalidadTextBox);
@@ -581,7 +581,7 @@
             this.panel1.Controls.Add(this.botonBuscarCliente);
             this.panel1.Location = new System.Drawing.Point(11, 55);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(263, 311);
+            this.panel1.Size = new System.Drawing.Size(263, 357);
             this.panel1.TabIndex = 69;
             // 
             // NombreTextBox
@@ -634,7 +634,7 @@
             this.direccionLabel.BackColor = System.Drawing.Color.Transparent;
             this.direccionLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.direccionLabel.ForeColor = System.Drawing.Color.Black;
-            this.direccionLabel.Location = new System.Drawing.Point(2, 118);
+            this.direccionLabel.Location = new System.Drawing.Point(2, 169);
             this.direccionLabel.Name = "direccionLabel";
             this.direccionLabel.Size = new System.Drawing.Size(58, 15);
             this.direccionLabel.TabIndex = 5;
@@ -646,7 +646,7 @@
             this.cedulaLabel.BackColor = System.Drawing.Color.Transparent;
             this.cedulaLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cedulaLabel.ForeColor = System.Drawing.Color.Black;
-            this.cedulaLabel.Location = new System.Drawing.Point(2, 144);
+            this.cedulaLabel.Location = new System.Drawing.Point(2, 195);
             this.cedulaLabel.Name = "cedulaLabel";
             this.cedulaLabel.Size = new System.Drawing.Size(43, 15);
             this.cedulaLabel.TabIndex = 6;
@@ -658,7 +658,7 @@
             this.nacionalidadLabel.BackColor = System.Drawing.Color.Transparent;
             this.nacionalidadLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nacionalidadLabel.ForeColor = System.Drawing.Color.Black;
-            this.nacionalidadLabel.Location = new System.Drawing.Point(2, 170);
+            this.nacionalidadLabel.Location = new System.Drawing.Point(2, 221);
             this.nacionalidadLabel.Name = "nacionalidadLabel";
             this.nacionalidadLabel.Size = new System.Drawing.Size(77, 15);
             this.nacionalidadLabel.TabIndex = 7;
@@ -670,7 +670,7 @@
             this.ocupacionLabel.BackColor = System.Drawing.Color.Transparent;
             this.ocupacionLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ocupacionLabel.ForeColor = System.Drawing.Color.Black;
-            this.ocupacionLabel.Location = new System.Drawing.Point(2, 196);
+            this.ocupacionLabel.Location = new System.Drawing.Point(2, 247);
             this.ocupacionLabel.Name = "ocupacionLabel";
             this.ocupacionLabel.Size = new System.Drawing.Size(65, 15);
             this.ocupacionLabel.TabIndex = 8;
@@ -682,7 +682,7 @@
             this.lugarDeNacimientoLabel.BackColor = System.Drawing.Color.Transparent;
             this.lugarDeNacimientoLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lugarDeNacimientoLabel.ForeColor = System.Drawing.Color.Black;
-            this.lugarDeNacimientoLabel.Location = new System.Drawing.Point(2, 221);
+            this.lugarDeNacimientoLabel.Location = new System.Drawing.Point(2, 272);
             this.lugarDeNacimientoLabel.Name = "lugarDeNacimientoLabel";
             this.lugarDeNacimientoLabel.Size = new System.Drawing.Size(120, 15);
             this.lugarDeNacimientoLabel.TabIndex = 9;
@@ -694,7 +694,7 @@
             this.sexoLabel.BackColor = System.Drawing.Color.Transparent;
             this.sexoLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sexoLabel.ForeColor = System.Drawing.Color.Black;
-            this.sexoLabel.Location = new System.Drawing.Point(3, 247);
+            this.sexoLabel.Location = new System.Drawing.Point(3, 298);
             this.sexoLabel.Name = "sexoLabel";
             this.sexoLabel.Size = new System.Drawing.Size(33, 15);
             this.sexoLabel.TabIndex = 10;
@@ -727,17 +727,9 @@
             this.ApodoTextBox.Size = new System.Drawing.Size(100, 20);
             this.ApodoTextBox.TabIndex = 15;
             // 
-            // TelefonoTextBox
-            // 
-            this.TelefonoTextBox.Location = new System.Drawing.Point(120, 86);
-            this.TelefonoTextBox.Name = "TelefonoTextBox";
-            this.TelefonoTextBox.ReadOnly = true;
-            this.TelefonoTextBox.Size = new System.Drawing.Size(100, 20);
-            this.TelefonoTextBox.TabIndex = 16;
-            // 
             // DireccionTextBox
             // 
-            this.DireccionTextBox.Location = new System.Drawing.Point(120, 117);
+            this.DireccionTextBox.Location = new System.Drawing.Point(120, 168);
             this.DireccionTextBox.Name = "DireccionTextBox";
             this.DireccionTextBox.ReadOnly = true;
             this.DireccionTextBox.Size = new System.Drawing.Size(100, 20);
@@ -745,7 +737,7 @@
             // 
             // CedulaTextBox
             // 
-            this.CedulaTextBox.Location = new System.Drawing.Point(120, 143);
+            this.CedulaTextBox.Location = new System.Drawing.Point(120, 194);
             this.CedulaTextBox.Name = "CedulaTextBox";
             this.CedulaTextBox.ReadOnly = true;
             this.CedulaTextBox.Size = new System.Drawing.Size(100, 20);
@@ -753,7 +745,7 @@
             // 
             // nacionalidadTextBox
             // 
-            this.nacionalidadTextBox.Location = new System.Drawing.Point(120, 169);
+            this.nacionalidadTextBox.Location = new System.Drawing.Point(120, 220);
             this.nacionalidadTextBox.Name = "nacionalidadTextBox";
             this.nacionalidadTextBox.ReadOnly = true;
             this.nacionalidadTextBox.Size = new System.Drawing.Size(100, 20);
@@ -761,7 +753,7 @@
             // 
             // OcupacionTextBox
             // 
-            this.OcupacionTextBox.Location = new System.Drawing.Point(120, 195);
+            this.OcupacionTextBox.Location = new System.Drawing.Point(120, 246);
             this.OcupacionTextBox.Name = "OcupacionTextBox";
             this.OcupacionTextBox.ReadOnly = true;
             this.OcupacionTextBox.Size = new System.Drawing.Size(100, 20);
@@ -769,7 +761,7 @@
             // 
             // LugardeNacimientoTextBox
             // 
-            this.LugardeNacimientoTextBox.Location = new System.Drawing.Point(120, 221);
+            this.LugardeNacimientoTextBox.Location = new System.Drawing.Point(120, 272);
             this.LugardeNacimientoTextBox.Name = "LugardeNacimientoTextBox";
             this.LugardeNacimientoTextBox.ReadOnly = true;
             this.LugardeNacimientoTextBox.Size = new System.Drawing.Size(100, 20);
@@ -777,7 +769,7 @@
             // 
             // sexoTextBox
             // 
-            this.sexoTextBox.Location = new System.Drawing.Point(120, 247);
+            this.sexoTextBox.Location = new System.Drawing.Point(120, 298);
             this.sexoTextBox.Name = "sexoTextBox";
             this.sexoTextBox.ReadOnly = true;
             this.sexoTextBox.Size = new System.Drawing.Size(100, 20);
@@ -813,6 +805,14 @@
             this.facturaDateTimePicker.Name = "facturaDateTimePicker";
             this.facturaDateTimePicker.Size = new System.Drawing.Size(200, 20);
             this.facturaDateTimePicker.TabIndex = 70;
+            // 
+            // telefonosListBox
+            // 
+            this.telefonosListBox.FormattingEnabled = true;
+            this.telefonosListBox.Location = new System.Drawing.Point(120, 86);
+            this.telefonosListBox.Name = "telefonosListBox";
+            this.telefonosListBox.Size = new System.Drawing.Size(100, 69);
+            this.telefonosListBox.TabIndex = 30;
             // 
             // FacturaDeVentasForm
             // 
@@ -911,7 +911,6 @@
         private System.Windows.Forms.Label clienteIdLabel;
         private System.Windows.Forms.TextBox clienteIdTextBox;
         private System.Windows.Forms.TextBox ApodoTextBox;
-        private System.Windows.Forms.TextBox TelefonoTextBox;
         private System.Windows.Forms.TextBox DireccionTextBox;
         private System.Windows.Forms.TextBox CedulaTextBox;
         private System.Windows.Forms.TextBox nacionalidadTextBox;
@@ -921,5 +920,6 @@
         private System.Windows.Forms.Button botonBuscarCliente;
         private System.Windows.Forms.Label datosClientelabel;
         private System.Windows.Forms.DateTimePicker facturaDateTimePicker;
+        private System.Windows.Forms.ListBox telefonosListBox;
     }
 }

@@ -57,6 +57,9 @@
             this.botonEliminar = new System.Windows.Forms.Button();
             this.botonGuardar = new System.Windows.Forms.Button();
             this.botonNuevo = new System.Windows.Forms.Button();
+            this.telefonosListBox = new System.Windows.Forms.ListBox();
+            this.botonEliminarTelefono = new System.Windows.Forms.Button();
+            this.botonInsertarTelefono = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,6 +67,9 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.LightGray;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.botonInsertarTelefono);
+            this.panel1.Controls.Add(this.botonEliminarTelefono);
+            this.panel1.Controls.Add(this.telefonosListBox);
             this.panel1.Controls.Add(this.sexoComboBox);
             this.panel1.Controls.Add(this.NombreTextBox);
             this.panel1.Controls.Add(this.nombreClienteLabel);
@@ -85,9 +91,9 @@
             this.panel1.Controls.Add(this.OcupacionTextBox);
             this.panel1.Controls.Add(this.LugardeNacimientoTextBox);
             this.panel1.Controls.Add(this.botonBuscarCliente);
-            this.panel1.Location = new System.Drawing.Point(11, 34);
+            this.panel1.Location = new System.Drawing.Point(10, 73);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(260, 311);
+            this.panel1.Size = new System.Drawing.Size(534, 223);
             this.panel1.TabIndex = 67;
             // 
             // sexoComboBox
@@ -97,7 +103,7 @@
             "Femenino",
             "Masculino",
             "Otro"});
-            this.sexoComboBox.Location = new System.Drawing.Point(120, 271);
+            this.sexoComboBox.Location = new System.Drawing.Point(415, 141);
             this.sexoComboBox.Name = "sexoComboBox";
             this.sexoComboBox.Size = new System.Drawing.Size(100, 21);
             this.sexoComboBox.TabIndex = 28;
@@ -151,7 +157,7 @@
             this.direccionLabel.BackColor = System.Drawing.Color.Transparent;
             this.direccionLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.direccionLabel.ForeColor = System.Drawing.Color.Black;
-            this.direccionLabel.Location = new System.Drawing.Point(2, 141);
+            this.direccionLabel.Location = new System.Drawing.Point(297, 11);
             this.direccionLabel.Name = "direccionLabel";
             this.direccionLabel.Size = new System.Drawing.Size(58, 15);
             this.direccionLabel.TabIndex = 5;
@@ -163,7 +169,7 @@
             this.cedulaLabel.BackColor = System.Drawing.Color.Transparent;
             this.cedulaLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cedulaLabel.ForeColor = System.Drawing.Color.Black;
-            this.cedulaLabel.Location = new System.Drawing.Point(2, 167);
+            this.cedulaLabel.Location = new System.Drawing.Point(297, 37);
             this.cedulaLabel.Name = "cedulaLabel";
             this.cedulaLabel.Size = new System.Drawing.Size(43, 15);
             this.cedulaLabel.TabIndex = 6;
@@ -175,7 +181,7 @@
             this.nacionalidadLabel.BackColor = System.Drawing.Color.Transparent;
             this.nacionalidadLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nacionalidadLabel.ForeColor = System.Drawing.Color.Black;
-            this.nacionalidadLabel.Location = new System.Drawing.Point(2, 193);
+            this.nacionalidadLabel.Location = new System.Drawing.Point(297, 63);
             this.nacionalidadLabel.Name = "nacionalidadLabel";
             this.nacionalidadLabel.Size = new System.Drawing.Size(77, 15);
             this.nacionalidadLabel.TabIndex = 7;
@@ -187,7 +193,7 @@
             this.ocupacionLabel.BackColor = System.Drawing.Color.Transparent;
             this.ocupacionLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ocupacionLabel.ForeColor = System.Drawing.Color.Black;
-            this.ocupacionLabel.Location = new System.Drawing.Point(2, 219);
+            this.ocupacionLabel.Location = new System.Drawing.Point(297, 89);
             this.ocupacionLabel.Name = "ocupacionLabel";
             this.ocupacionLabel.Size = new System.Drawing.Size(65, 15);
             this.ocupacionLabel.TabIndex = 8;
@@ -199,7 +205,7 @@
             this.lugarDeNacimientoLabel.BackColor = System.Drawing.Color.Transparent;
             this.lugarDeNacimientoLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lugarDeNacimientoLabel.ForeColor = System.Drawing.Color.Black;
-            this.lugarDeNacimientoLabel.Location = new System.Drawing.Point(2, 244);
+            this.lugarDeNacimientoLabel.Location = new System.Drawing.Point(297, 114);
             this.lugarDeNacimientoLabel.Name = "lugarDeNacimientoLabel";
             this.lugarDeNacimientoLabel.Size = new System.Drawing.Size(120, 15);
             this.lugarDeNacimientoLabel.TabIndex = 9;
@@ -211,7 +217,7 @@
             this.sexoLabel.BackColor = System.Drawing.Color.Transparent;
             this.sexoLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sexoLabel.ForeColor = System.Drawing.Color.Black;
-            this.sexoLabel.Location = new System.Drawing.Point(3, 270);
+            this.sexoLabel.Location = new System.Drawing.Point(298, 140);
             this.sexoLabel.Name = "sexoLabel";
             this.sexoLabel.Size = new System.Drawing.Size(33, 15);
             this.sexoLabel.TabIndex = 10;
@@ -252,35 +258,35 @@
             // 
             // DireccionTextBox
             // 
-            this.DireccionTextBox.Location = new System.Drawing.Point(120, 140);
+            this.DireccionTextBox.Location = new System.Drawing.Point(415, 10);
             this.DireccionTextBox.Name = "DireccionTextBox";
             this.DireccionTextBox.Size = new System.Drawing.Size(100, 20);
             this.DireccionTextBox.TabIndex = 17;
             // 
             // CedulaTextBox
             // 
-            this.CedulaTextBox.Location = new System.Drawing.Point(120, 166);
+            this.CedulaTextBox.Location = new System.Drawing.Point(415, 36);
             this.CedulaTextBox.Name = "CedulaTextBox";
             this.CedulaTextBox.Size = new System.Drawing.Size(100, 20);
             this.CedulaTextBox.TabIndex = 18;
             // 
             // nacionalidadTextBox
             // 
-            this.nacionalidadTextBox.Location = new System.Drawing.Point(120, 192);
+            this.nacionalidadTextBox.Location = new System.Drawing.Point(415, 62);
             this.nacionalidadTextBox.Name = "nacionalidadTextBox";
             this.nacionalidadTextBox.Size = new System.Drawing.Size(100, 20);
             this.nacionalidadTextBox.TabIndex = 19;
             // 
             // OcupacionTextBox
             // 
-            this.OcupacionTextBox.Location = new System.Drawing.Point(120, 218);
+            this.OcupacionTextBox.Location = new System.Drawing.Point(415, 88);
             this.OcupacionTextBox.Name = "OcupacionTextBox";
             this.OcupacionTextBox.Size = new System.Drawing.Size(100, 20);
             this.OcupacionTextBox.TabIndex = 20;
             // 
             // LugardeNacimientoTextBox
             // 
-            this.LugardeNacimientoTextBox.Location = new System.Drawing.Point(120, 244);
+            this.LugardeNacimientoTextBox.Location = new System.Drawing.Point(415, 114);
             this.LugardeNacimientoTextBox.Name = "LugardeNacimientoTextBox";
             this.LugardeNacimientoTextBox.Size = new System.Drawing.Size(100, 20);
             this.LugardeNacimientoTextBox.TabIndex = 21;
@@ -303,7 +309,7 @@
             this.datosClientelabel.BackColor = System.Drawing.Color.Transparent;
             this.datosClientelabel.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.datosClientelabel.ForeColor = System.Drawing.Color.Black;
-            this.datosClientelabel.Location = new System.Drawing.Point(8, 14);
+            this.datosClientelabel.Location = new System.Drawing.Point(203, 43);
             this.datosClientelabel.Name = "datosClientelabel";
             this.datosClientelabel.Size = new System.Drawing.Size(138, 17);
             this.datosClientelabel.TabIndex = 66;
@@ -314,7 +320,7 @@
             this.botonSiguente.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("botonSiguente.BackgroundImage")));
             this.botonSiguente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.botonSiguente.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.botonSiguente.Location = new System.Drawing.Point(206, 392);
+            this.botonSiguente.Location = new System.Drawing.Point(472, 392);
             this.botonSiguente.Name = "botonSiguente";
             this.botonSiguente.Size = new System.Drawing.Size(65, 55);
             this.botonSiguente.TabIndex = 68;
@@ -326,7 +332,7 @@
             this.botonAnterior.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("botonAnterior.BackgroundImage")));
             this.botonAnterior.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.botonAnterior.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.botonAnterior.Location = new System.Drawing.Point(8, 392);
+            this.botonAnterior.Location = new System.Drawing.Point(12, 392);
             this.botonAnterior.Name = "botonAnterior";
             this.botonAnterior.Size = new System.Drawing.Size(65, 55);
             this.botonAnterior.TabIndex = 69;
@@ -335,7 +341,7 @@
             // 
             // botonEliminar
             // 
-            this.botonEliminar.Location = new System.Drawing.Point(193, 351);
+            this.botonEliminar.Location = new System.Drawing.Point(325, 317);
             this.botonEliminar.Name = "botonEliminar";
             this.botonEliminar.Size = new System.Drawing.Size(75, 23);
             this.botonEliminar.TabIndex = 72;
@@ -345,7 +351,7 @@
             // 
             // botonGuardar
             // 
-            this.botonGuardar.Location = new System.Drawing.Point(101, 351);
+            this.botonGuardar.Location = new System.Drawing.Point(233, 317);
             this.botonGuardar.Name = "botonGuardar";
             this.botonGuardar.Size = new System.Drawing.Size(75, 23);
             this.botonGuardar.TabIndex = 71;
@@ -355,7 +361,7 @@
             // 
             // botonNuevo
             // 
-            this.botonNuevo.Location = new System.Drawing.Point(10, 351);
+            this.botonNuevo.Location = new System.Drawing.Point(142, 317);
             this.botonNuevo.Name = "botonNuevo";
             this.botonNuevo.Size = new System.Drawing.Size(75, 23);
             this.botonNuevo.TabIndex = 70;
@@ -363,11 +369,41 @@
             this.botonNuevo.UseVisualStyleBackColor = true;
             this.botonNuevo.Click += new System.EventHandler(this.botonNuevo_Click);
             // 
+            // telefonosListBox
+            // 
+            this.telefonosListBox.FormattingEnabled = true;
+            this.telefonosListBox.Location = new System.Drawing.Point(120, 112);
+            this.telefonosListBox.Name = "telefonosListBox";
+            this.telefonosListBox.Size = new System.Drawing.Size(100, 69);
+            this.telefonosListBox.TabIndex = 29;
+            // 
+            // botonEliminarTelefono
+            // 
+            this.botonEliminarTelefono.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("botonEliminarTelefono.BackgroundImage")));
+            this.botonEliminarTelefono.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.botonEliminarTelefono.Location = new System.Drawing.Point(223, 153);
+            this.botonEliminarTelefono.Name = "botonEliminarTelefono";
+            this.botonEliminarTelefono.Size = new System.Drawing.Size(30, 28);
+            this.botonEliminarTelefono.TabIndex = 30;
+            this.botonEliminarTelefono.UseVisualStyleBackColor = true;
+            this.botonEliminarTelefono.Click += new System.EventHandler(this.botonEliminarTelefono_Click);
+            // 
+            // botonInsertarTelefono
+            // 
+            this.botonInsertarTelefono.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("botonInsertarTelefono.BackgroundImage")));
+            this.botonInsertarTelefono.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.botonInsertarTelefono.Location = new System.Drawing.Point(223, 86);
+            this.botonInsertarTelefono.Name = "botonInsertarTelefono";
+            this.botonInsertarTelefono.Size = new System.Drawing.Size(30, 28);
+            this.botonInsertarTelefono.TabIndex = 31;
+            this.botonInsertarTelefono.UseVisualStyleBackColor = true;
+            this.botonInsertarTelefono.Click += new System.EventHandler(this.botonInsertarTelefono_Click);
+            // 
             // ClientesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(281, 457);
+            this.ClientSize = new System.Drawing.Size(549, 457);
             this.Controls.Add(this.botonEliminar);
             this.Controls.Add(this.botonGuardar);
             this.Controls.Add(this.botonNuevo);
@@ -416,5 +452,8 @@
         private System.Windows.Forms.Button botonGuardar;
         private System.Windows.Forms.Button botonNuevo;
         private System.Windows.Forms.ComboBox sexoComboBox;
+        private System.Windows.Forms.Button botonEliminarTelefono;
+        private System.Windows.Forms.ListBox telefonosListBox;
+        private System.Windows.Forms.Button botonInsertarTelefono;
     }
 }

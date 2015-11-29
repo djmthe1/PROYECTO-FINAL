@@ -11,14 +11,12 @@ namespace BLL
     public class NumerosTelefonos : ClaseMaestra
     {
         public int Id { get; set; }
-        public int ClienteId { get; set; }
         public string Telefono { get; set; }
         public ConexionDb conexion = new ConexionDb();
 
-        public NumerosTelefonos(int id, int clienteId, string telefono)
+        public NumerosTelefonos(int id, string telefono)
         {
             this.Id = id;
-            this.ClienteId = clienteId;
             this.Telefono = telefono;
         }
 
@@ -35,7 +33,6 @@ namespace BLL
             if (datos.Rows.Count > 0)
             {
                 this.Id = (int)datos.Rows[0]["Id"];
-                this.ClienteId = (int)datos.Rows[0]["ClienteId"];
                 this.Telefono = datos.Rows[0]["Telefono"].ToString();
             }
             return datos.Rows.Count > 0;
@@ -46,7 +43,7 @@ namespace BLL
             bool retorno = false;
             try
             {
-                conexion.Ejecutar(String.Format("Update NumerosTelefono set ClienteId={0}, Telefono='{1}' where Id ={2}", this.ClienteId, this.Telefono, this.Id));
+                conexion.Ejecutar(String.Format("Update NumerosTelefono set Telefono='{0}' where Id ={1}", this.Telefono, this.Id));
                 retorno = true;
             }
             catch (Exception ex) { throw ex; }

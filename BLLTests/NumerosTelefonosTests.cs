@@ -37,7 +37,6 @@ namespace BLL.Tests
             NumerosTelefonos n = new NumerosTelefonos();
             n.Id = 1;
             n.Telefono = "123";
-            n.ClienteId = 1;
             Assert.IsTrue(n.Editar());
         }
 

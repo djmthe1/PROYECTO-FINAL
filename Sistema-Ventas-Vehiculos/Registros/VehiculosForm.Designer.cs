@@ -151,7 +151,7 @@
             this.gatoCheckBox.BackColor = System.Drawing.Color.Transparent;
             this.gatoCheckBox.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gatoCheckBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.gatoCheckBox.Location = new System.Drawing.Point(397, 78);
+            this.gatoCheckBox.Location = new System.Drawing.Point(398, 78);
             this.gatoCheckBox.Name = "gatoCheckBox";
             this.gatoCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.gatoCheckBox.Size = new System.Drawing.Size(55, 20);
@@ -165,7 +165,7 @@
             this.gomasCheckBox.BackColor = System.Drawing.Color.Transparent;
             this.gomasCheckBox.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gomasCheckBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.gomasCheckBox.Location = new System.Drawing.Point(383, 40);
+            this.gomasCheckBox.Location = new System.Drawing.Point(384, 40);
             this.gomasCheckBox.Name = "gomasCheckBox";
             this.gomasCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.gomasCheckBox.Size = new System.Drawing.Size(69, 20);
@@ -207,7 +207,7 @@
             this.alfombrasCheckBox.BackColor = System.Drawing.Color.Transparent;
             this.alfombrasCheckBox.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.alfombrasCheckBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.alfombrasCheckBox.Location = new System.Drawing.Point(489, 21);
+            this.alfombrasCheckBox.Location = new System.Drawing.Point(490, 21);
             this.alfombrasCheckBox.Name = "alfombrasCheckBox";
             this.alfombrasCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.alfombrasCheckBox.Size = new System.Drawing.Size(85, 20);
@@ -221,7 +221,7 @@
             this.botiquinCheckBox.BackColor = System.Drawing.Color.Transparent;
             this.botiquinCheckBox.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.botiquinCheckBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.botiquinCheckBox.Location = new System.Drawing.Point(378, 21);
+            this.botiquinCheckBox.Location = new System.Drawing.Point(379, 21);
             this.botiquinCheckBox.Name = "botiquinCheckBox";
             this.botiquinCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.botiquinCheckBox.Size = new System.Drawing.Size(74, 20);
@@ -263,7 +263,7 @@
             this.encendedorCheckBox.BackColor = System.Drawing.Color.Transparent;
             this.encendedorCheckBox.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.encendedorCheckBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.encendedorCheckBox.Location = new System.Drawing.Point(478, 40);
+            this.encendedorCheckBox.Location = new System.Drawing.Point(479, 40);
             this.encendedorCheckBox.Name = "encendedorCheckBox";
             this.encendedorCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.encendedorCheckBox.Size = new System.Drawing.Size(96, 20);
@@ -326,7 +326,7 @@
             // 
             this.MarcasComboBox.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MarcasComboBox.FormattingEnabled = true;
-            this.MarcasComboBox.Location = new System.Drawing.Point(176, 133);
+            this.MarcasComboBox.Location = new System.Drawing.Point(176, 104);
             this.MarcasComboBox.Name = "MarcasComboBox";
             this.MarcasComboBox.Size = new System.Drawing.Size(101, 24);
             this.MarcasComboBox.TabIndex = 123;
@@ -344,7 +344,7 @@
             // 
             this.ModeloComboBox.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ModeloComboBox.FormattingEnabled = true;
-            this.ModeloComboBox.Location = new System.Drawing.Point(176, 104);
+            this.ModeloComboBox.Location = new System.Drawing.Point(176, 133);
             this.ModeloComboBox.Name = "ModeloComboBox";
             this.ModeloComboBox.Size = new System.Drawing.Size(101, 24);
             this.ModeloComboBox.TabIndex = 121;
@@ -451,7 +451,7 @@
             this.marcaVehiculoLabel.BackColor = System.Drawing.Color.Transparent;
             this.marcaVehiculoLabel.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.marcaVehiculoLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.marcaVehiculoLabel.Location = new System.Drawing.Point(39, 136);
+            this.marcaVehiculoLabel.Location = new System.Drawing.Point(38, 112);
             this.marcaVehiculoLabel.Name = "marcaVehiculoLabel";
             this.marcaVehiculoLabel.Size = new System.Drawing.Size(44, 16);
             this.marcaVehiculoLabel.TabIndex = 112;
@@ -463,7 +463,7 @@
             this.modeloVehiculoLabel.BackColor = System.Drawing.Color.Transparent;
             this.modeloVehiculoLabel.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.modeloVehiculoLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.modeloVehiculoLabel.Location = new System.Drawing.Point(39, 110);
+            this.modeloVehiculoLabel.Location = new System.Drawing.Point(38, 140);
             this.modeloVehiculoLabel.Name = "modeloVehiculoLabel";
             this.modeloVehiculoLabel.Size = new System.Drawing.Size(50, 16);
             this.modeloVehiculoLabel.TabIndex = 111;

@@ -19,7 +19,6 @@ namespace Sistema_Ventas_Vehiculos.Registros
         }
         public Clientes clientes = new Clientes();
         public Vehiculos vehiculo = new Vehiculos();
-        public Marcas marca = new Marcas();
 
         private void MensajeOk(string mensaje)
         {
@@ -105,13 +104,17 @@ namespace Sistema_Ventas_Vehiculos.Registros
                 {
                     NombreTextBox.Text = clientes.NombreCompleto;
                     ApodoTextBox.Text = clientes.Apodo;
-                    TelefonoTextBox.Text = clientes.TelefonoId.ToString();
                     DireccionTextBox.Text = clientes.Direccion;
                     CedulaTextBox.Text = clientes.Cedula;
                     nacionalidadTextBox.Text = clientes.Nacionalidad;
                     OcupacionTextBox.Text = clientes.Ocupacion;
                     LugardeNacimientoTextBox.Text = clientes.LugarDeNacimiento;
                     sexoTextBox.Text = clientes.Sexo;
+                    telefonosListBox.Items.Clear();
+                    foreach (var telefono in clientes.numerostelefonos)
+                    {
+                        telefonosListBox.Items.Add(telefono.Telefono);
+                    }
                 }
                 else
                 {
