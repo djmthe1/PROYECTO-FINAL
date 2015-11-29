@@ -30,6 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClientesForm));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.botonInsertarTelefono = new System.Windows.Forms.Button();
+            this.botonEliminarTelefono = new System.Windows.Forms.Button();
+            this.telefonosListBox = new System.Windows.Forms.ListBox();
             this.sexoComboBox = new System.Windows.Forms.ComboBox();
             this.NombreTextBox = new System.Windows.Forms.TextBox();
             this.nombreClienteLabel = new System.Windows.Forms.Label();
@@ -57,9 +60,6 @@
             this.botonEliminar = new System.Windows.Forms.Button();
             this.botonGuardar = new System.Windows.Forms.Button();
             this.botonNuevo = new System.Windows.Forms.Button();
-            this.telefonosListBox = new System.Windows.Forms.ListBox();
-            this.botonEliminarTelefono = new System.Windows.Forms.Button();
-            this.botonInsertarTelefono = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -95,6 +95,36 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(534, 223);
             this.panel1.TabIndex = 67;
+            // 
+            // botonInsertarTelefono
+            // 
+            this.botonInsertarTelefono.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("botonInsertarTelefono.BackgroundImage")));
+            this.botonInsertarTelefono.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.botonInsertarTelefono.Location = new System.Drawing.Point(223, 86);
+            this.botonInsertarTelefono.Name = "botonInsertarTelefono";
+            this.botonInsertarTelefono.Size = new System.Drawing.Size(30, 28);
+            this.botonInsertarTelefono.TabIndex = 31;
+            this.botonInsertarTelefono.UseVisualStyleBackColor = true;
+            this.botonInsertarTelefono.Click += new System.EventHandler(this.botonInsertarTelefono_Click);
+            // 
+            // botonEliminarTelefono
+            // 
+            this.botonEliminarTelefono.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("botonEliminarTelefono.BackgroundImage")));
+            this.botonEliminarTelefono.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.botonEliminarTelefono.Location = new System.Drawing.Point(223, 153);
+            this.botonEliminarTelefono.Name = "botonEliminarTelefono";
+            this.botonEliminarTelefono.Size = new System.Drawing.Size(30, 28);
+            this.botonEliminarTelefono.TabIndex = 30;
+            this.botonEliminarTelefono.UseVisualStyleBackColor = true;
+            this.botonEliminarTelefono.Click += new System.EventHandler(this.botonEliminarTelefono_Click);
+            // 
+            // telefonosListBox
+            // 
+            this.telefonosListBox.FormattingEnabled = true;
+            this.telefonosListBox.Location = new System.Drawing.Point(120, 112);
+            this.telefonosListBox.Name = "telefonosListBox";
+            this.telefonosListBox.Size = new System.Drawing.Size(100, 69);
+            this.telefonosListBox.TabIndex = 29;
             // 
             // sexoComboBox
             // 
@@ -205,7 +235,7 @@
             this.lugarDeNacimientoLabel.BackColor = System.Drawing.Color.Transparent;
             this.lugarDeNacimientoLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lugarDeNacimientoLabel.ForeColor = System.Drawing.Color.Black;
-            this.lugarDeNacimientoLabel.Location = new System.Drawing.Point(297, 114);
+            this.lugarDeNacimientoLabel.Location = new System.Drawing.Point(296, 114);
             this.lugarDeNacimientoLabel.Name = "lugarDeNacimientoLabel";
             this.lugarDeNacimientoLabel.Size = new System.Drawing.Size(120, 15);
             this.lugarDeNacimientoLabel.TabIndex = 9;
@@ -368,36 +398,6 @@
             this.botonNuevo.Text = "Nuevo";
             this.botonNuevo.UseVisualStyleBackColor = true;
             this.botonNuevo.Click += new System.EventHandler(this.botonNuevo_Click);
-            // 
-            // telefonosListBox
-            // 
-            this.telefonosListBox.FormattingEnabled = true;
-            this.telefonosListBox.Location = new System.Drawing.Point(120, 112);
-            this.telefonosListBox.Name = "telefonosListBox";
-            this.telefonosListBox.Size = new System.Drawing.Size(100, 69);
-            this.telefonosListBox.TabIndex = 29;
-            // 
-            // botonEliminarTelefono
-            // 
-            this.botonEliminarTelefono.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("botonEliminarTelefono.BackgroundImage")));
-            this.botonEliminarTelefono.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.botonEliminarTelefono.Location = new System.Drawing.Point(223, 153);
-            this.botonEliminarTelefono.Name = "botonEliminarTelefono";
-            this.botonEliminarTelefono.Size = new System.Drawing.Size(30, 28);
-            this.botonEliminarTelefono.TabIndex = 30;
-            this.botonEliminarTelefono.UseVisualStyleBackColor = true;
-            this.botonEliminarTelefono.Click += new System.EventHandler(this.botonEliminarTelefono_Click);
-            // 
-            // botonInsertarTelefono
-            // 
-            this.botonInsertarTelefono.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("botonInsertarTelefono.BackgroundImage")));
-            this.botonInsertarTelefono.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.botonInsertarTelefono.Location = new System.Drawing.Point(223, 86);
-            this.botonInsertarTelefono.Name = "botonInsertarTelefono";
-            this.botonInsertarTelefono.Size = new System.Drawing.Size(30, 28);
-            this.botonInsertarTelefono.TabIndex = 31;
-            this.botonInsertarTelefono.UseVisualStyleBackColor = true;
-            this.botonInsertarTelefono.Click += new System.EventHandler(this.botonInsertarTelefono_Click);
             // 
             // ClientesForm
             // 

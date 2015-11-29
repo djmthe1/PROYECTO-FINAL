@@ -28,29 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListarForm));
-            this.botonAtras = new System.Windows.Forms.Button();
             this.listarDataGridView = new System.Windows.Forms.DataGridView();
             this.listarComboBox = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.listarDataGridView)).BeginInit();
             this.SuspendLayout();
-            // 
-            // botonAtras
-            // 
-            this.botonAtras.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("botonAtras.BackgroundImage")));
-            this.botonAtras.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.botonAtras.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.botonAtras.Location = new System.Drawing.Point(399, 262);
-            this.botonAtras.Name = "botonAtras";
-            this.botonAtras.Size = new System.Drawing.Size(47, 44);
-            this.botonAtras.TabIndex = 35;
-            this.botonAtras.UseVisualStyleBackColor = true;
-            this.botonAtras.Click += new System.EventHandler(this.botonAtras_Click);
             // 
             // listarDataGridView
             // 
             this.listarDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.listarDataGridView.Location = new System.Drawing.Point(12, 118);
+            this.listarDataGridView.Location = new System.Drawing.Point(12, 76);
             this.listarDataGridView.Name = "listarDataGridView";
             this.listarDataGridView.Size = new System.Drawing.Size(381, 188);
             this.listarDataGridView.TabIndex = 36;
@@ -65,21 +52,31 @@
             "Tipos de Vehiculos",
             "Tipos de Motores",
             "Vehiculos"});
-            this.listarComboBox.Location = new System.Drawing.Point(12, 33);
+            this.listarComboBox.Location = new System.Drawing.Point(12, 35);
             this.listarComboBox.Name = "listarComboBox";
             this.listarComboBox.Size = new System.Drawing.Size(121, 21);
             this.listarComboBox.TabIndex = 37;
             this.listarComboBox.SelectedIndexChanged += new System.EventHandler(this.listarComboBox_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(165, 7);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(85, 20);
+            this.label1.TabIndex = 38;
+            this.label1.Text = "LISTADO";
             // 
             // ListarForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(453, 318);
+            this.ClientSize = new System.Drawing.Size(404, 275);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.listarComboBox);
             this.Controls.Add(this.listarDataGridView);
-            this.Controls.Add(this.botonAtras);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "ListarForm";
@@ -88,12 +85,13 @@
             this.Load += new System.EventHandler(this.ListarForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.listarDataGridView)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-        internal System.Windows.Forms.Button botonAtras;
         private System.Windows.Forms.DataGridView listarDataGridView;
         public System.Windows.Forms.ComboBox listarComboBox;
+        private System.Windows.Forms.Label label1;
     }
 }

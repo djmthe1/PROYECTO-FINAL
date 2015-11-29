@@ -40,8 +40,7 @@ namespace Sistema_Ventas_Vehiculos.Registros
                     else
                     {
                         PortadaF.Show();
-                        PortadaF.botonAgregarUsuario.Visible = false;
-                        PortadaF.botonInsertar.Visible = false;
+                        
                         this.Close();
                     }
                 }

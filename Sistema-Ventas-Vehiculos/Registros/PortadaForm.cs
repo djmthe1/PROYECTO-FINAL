@@ -17,47 +17,80 @@ namespace Sistema_Ventas_Vehiculos.Registros
             InitializeComponent();
         }
 
-        private void botonInsertar_Click(object sender, EventArgs e)
-        {
-            Registros.InsetarForm InsertarF = new InsetarForm();
-            InsertarF.Show();
-            this.Close();
-        }
-
-        private void botonAgregarUsuario_Click(object sender, EventArgs e)
-        {
-            Registros.InsertarUsuarioForm InsertarU = new InsertarUsuarioForm();
-            InsertarU.Show();
-            this.Close();
-        }
-
-        private void botonSalir_Click(object sender, EventArgs e)
-        {
-            Registros.LoginForm LoginF = new LoginForm();
-            LoginF.Show();
-            this.Close();
-        }
-
-       
-        private void botonVenderVehiculo_Click(object sender, EventArgs e)
-        {
-            ClientesForm ClientesF = new ClientesForm();
-            ClientesF.Show();
-            this.Close();
-        }
-
-        private void botonListar_Click(object sender, EventArgs e)
-        {
-            Registros.ListarForm ListarF = new ListarForm();
-           
-            
-            ListarF.Show();
-            this.Close();
-        }
 
         private void PortadaForm_Load(object sender, EventArgs e)
         {
             
+        }
+
+        
+
+        private void cerrarSecionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            DialogResult opcion;
+            opcion = MessageBox.Show("Realmente desea cerrar sesion?", "Registro de Marcas", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (opcion== DialogResult.OK) {
+
+                Registros.LoginForm LoginF = new LoginForm();
+                LoginF.Show();
+                this.Close();
+            }
+        }
+
+        private void marcaToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            MarcasForm MarcasF = new MarcasForm();
+            MarcasF.Show();
+
+        }
+
+        private void modeloToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            ModelosForm ModelosF = new ModelosForm();
+            ModelosF.Show();
+        }
+
+        private void tipoDeVehiculoToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            TipoDeVehiculosForm TipoVehiculoF = new TipoDeVehiculosForm();
+            TipoVehiculoF.Show();
+        }
+
+        private void tipoDeMotorToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            MotoresForm TipoMotorF = new MotoresForm();
+            TipoMotorF.Show();
+        }
+
+        private void colorToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            ColoresForm ColorF = new ColoresForm();
+            ColorF.Show();
+        }
+
+        private void vehiculoToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            VehiculosForm VehiculosF = new VehiculosForm();
+            VehiculosF.Show();
+        }
+
+        private void usuarioToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            InsertarUsuarioForm InsertarU = new InsertarUsuarioForm();
+            InsertarU.Show();
+        }
+
+        private void listarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Registros.ListarForm ListarF = new ListarForm();
+            ListarF.Show();
+        }
+
+        private void compraDeVehiculoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ClientesForm ClientesF = new ClientesForm();
+            ClientesF.Show();
         }
     }
 }

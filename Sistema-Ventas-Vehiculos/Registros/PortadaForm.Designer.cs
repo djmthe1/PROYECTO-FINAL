@@ -29,73 +29,118 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PortadaForm));
-            this.botonInsertar = new System.Windows.Forms.Button();
-            this.botonSalir = new System.Windows.Forms.Button();
-            this.botonAgregarUsuario = new System.Windows.Forms.Button();
-            this.botonVenderVehiculo = new System.Windows.Forms.Button();
-            this.botonListar = new System.Windows.Forms.Button();
+            this.MenuStripVentaVehiculos = new System.Windows.Forms.MenuStrip();
+            this.cerrarSecionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.insertarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.marcaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modeloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tipoDeVehiculoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tipoDeMotorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.colorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.vehiculoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.usuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.compraDeVehiculoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuStripVentaVehiculos.SuspendLayout();
             this.SuspendLayout();
             // 
-            // botonInsertar
+            // MenuStripVentaVehiculos
             // 
-            this.botonInsertar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("botonInsertar.BackgroundImage")));
-            this.botonInsertar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.botonInsertar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.botonInsertar.Location = new System.Drawing.Point(12, 77);
-            this.botonInsertar.Name = "botonInsertar";
-            this.botonInsertar.Size = new System.Drawing.Size(72, 54);
-            this.botonInsertar.TabIndex = 0;
-            this.botonInsertar.UseVisualStyleBackColor = true;
-            this.botonInsertar.Click += new System.EventHandler(this.botonInsertar_Click);
+            this.MenuStripVentaVehiculos.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.MenuStripVentaVehiculos.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
+            this.MenuStripVentaVehiculos.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cerrarSecionToolStripMenuItem,
+            this.insertarToolStripMenuItem,
+            this.listarToolStripMenuItem,
+            this.compraDeVehiculoToolStripMenuItem});
+            this.MenuStripVentaVehiculos.Location = new System.Drawing.Point(0, 0);
+            this.MenuStripVentaVehiculos.Name = "MenuStripVentaVehiculos";
+            this.MenuStripVentaVehiculos.Size = new System.Drawing.Size(530, 24);
+            this.MenuStripVentaVehiculos.TabIndex = 0;
             // 
-            // botonSalir
+            // cerrarSecionToolStripMenuItem
             // 
-            this.botonSalir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("botonSalir.BackgroundImage")));
-            this.botonSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.botonSalir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.botonSalir.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.botonSalir.Location = new System.Drawing.Point(446, 246);
-            this.botonSalir.Name = "botonSalir";
-            this.botonSalir.Size = new System.Drawing.Size(72, 54);
-            this.botonSalir.TabIndex = 2;
-            this.botonSalir.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.botonSalir.UseVisualStyleBackColor = true;
-            this.botonSalir.Click += new System.EventHandler(this.botonSalir_Click);
+            this.cerrarSecionToolStripMenuItem.Name = "cerrarSecionToolStripMenuItem";
+            this.cerrarSecionToolStripMenuItem.Size = new System.Drawing.Size(87, 20);
+            this.cerrarSecionToolStripMenuItem.Text = "Cerrar sesion";
+            this.cerrarSecionToolStripMenuItem.Click += new System.EventHandler(this.cerrarSecionToolStripMenuItem_Click);
             // 
-            // botonAgregarUsuario
+            // insertarToolStripMenuItem
             // 
-            this.botonAgregarUsuario.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("botonAgregarUsuario.BackgroundImage")));
-            this.botonAgregarUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.botonAgregarUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.botonAgregarUsuario.Location = new System.Drawing.Point(446, 77);
-            this.botonAgregarUsuario.Name = "botonAgregarUsuario";
-            this.botonAgregarUsuario.Size = new System.Drawing.Size(72, 54);
-            this.botonAgregarUsuario.TabIndex = 3;
-            this.botonAgregarUsuario.UseVisualStyleBackColor = true;
-            this.botonAgregarUsuario.Click += new System.EventHandler(this.botonAgregarUsuario_Click);
+            this.insertarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.marcaToolStripMenuItem,
+            this.modeloToolStripMenuItem,
+            this.tipoDeVehiculoToolStripMenuItem,
+            this.tipoDeMotorToolStripMenuItem,
+            this.colorToolStripMenuItem,
+            this.vehiculoToolStripMenuItem,
+            this.usuarioToolStripMenuItem});
+            this.insertarToolStripMenuItem.Name = "insertarToolStripMenuItem";
+            this.insertarToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
+            this.insertarToolStripMenuItem.Text = "Insertar";
             // 
-            // botonVenderVehiculo
+            // marcaToolStripMenuItem
             // 
-            this.botonVenderVehiculo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("botonVenderVehiculo.BackgroundImage")));
-            this.botonVenderVehiculo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.botonVenderVehiculo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.botonVenderVehiculo.Location = new System.Drawing.Point(225, 245);
-            this.botonVenderVehiculo.Name = "botonVenderVehiculo";
-            this.botonVenderVehiculo.Size = new System.Drawing.Size(72, 55);
-            this.botonVenderVehiculo.TabIndex = 4;
-            this.botonVenderVehiculo.UseVisualStyleBackColor = true;
-            this.botonVenderVehiculo.Click += new System.EventHandler(this.botonVenderVehiculo_Click);
+            this.marcaToolStripMenuItem.Name = "marcaToolStripMenuItem";
+            this.marcaToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.marcaToolStripMenuItem.Text = "Marca";
+            this.marcaToolStripMenuItem.Click += new System.EventHandler(this.marcaToolStripMenuItem_Click_1);
             // 
-            // botonListar
+            // modeloToolStripMenuItem
             // 
-            this.botonListar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("botonListar.BackgroundImage")));
-            this.botonListar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.botonListar.Location = new System.Drawing.Point(12, 246);
-            this.botonListar.Name = "botonListar";
-            this.botonListar.Size = new System.Drawing.Size(72, 54);
-            this.botonListar.TabIndex = 6;
-            this.botonListar.UseVisualStyleBackColor = true;
-            this.botonListar.Click += new System.EventHandler(this.botonListar_Click);
+            this.modeloToolStripMenuItem.Name = "modeloToolStripMenuItem";
+            this.modeloToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.modeloToolStripMenuItem.Text = "Modelo";
+            this.modeloToolStripMenuItem.Click += new System.EventHandler(this.modeloToolStripMenuItem_Click_1);
+            // 
+            // tipoDeVehiculoToolStripMenuItem
+            // 
+            this.tipoDeVehiculoToolStripMenuItem.Name = "tipoDeVehiculoToolStripMenuItem";
+            this.tipoDeVehiculoToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.tipoDeVehiculoToolStripMenuItem.Text = "Tipo de vehiculo";
+            this.tipoDeVehiculoToolStripMenuItem.Click += new System.EventHandler(this.tipoDeVehiculoToolStripMenuItem_Click_1);
+            // 
+            // tipoDeMotorToolStripMenuItem
+            // 
+            this.tipoDeMotorToolStripMenuItem.Name = "tipoDeMotorToolStripMenuItem";
+            this.tipoDeMotorToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.tipoDeMotorToolStripMenuItem.Text = "Tipo de motor";
+            this.tipoDeMotorToolStripMenuItem.Click += new System.EventHandler(this.tipoDeMotorToolStripMenuItem_Click_1);
+            // 
+            // colorToolStripMenuItem
+            // 
+            this.colorToolStripMenuItem.Name = "colorToolStripMenuItem";
+            this.colorToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.colorToolStripMenuItem.Text = "Color";
+            this.colorToolStripMenuItem.Click += new System.EventHandler(this.colorToolStripMenuItem_Click_1);
+            // 
+            // vehiculoToolStripMenuItem
+            // 
+            this.vehiculoToolStripMenuItem.Name = "vehiculoToolStripMenuItem";
+            this.vehiculoToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.vehiculoToolStripMenuItem.Text = "Vehiculo";
+            this.vehiculoToolStripMenuItem.Click += new System.EventHandler(this.vehiculoToolStripMenuItem_Click_1);
+            // 
+            // usuarioToolStripMenuItem
+            // 
+            this.usuarioToolStripMenuItem.Name = "usuarioToolStripMenuItem";
+            this.usuarioToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.usuarioToolStripMenuItem.Text = "Usuario";
+            this.usuarioToolStripMenuItem.Click += new System.EventHandler(this.usuarioToolStripMenuItem_Click_1);
+            // 
+            // listarToolStripMenuItem
+            // 
+            this.listarToolStripMenuItem.Name = "listarToolStripMenuItem";
+            this.listarToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
+            this.listarToolStripMenuItem.Text = "Listar";
+            this.listarToolStripMenuItem.Click += new System.EventHandler(this.listarToolStripMenuItem_Click);
+            // 
+            // compraDeVehiculoToolStripMenuItem
+            // 
+            this.compraDeVehiculoToolStripMenuItem.Name = "compraDeVehiculoToolStripMenuItem";
+            this.compraDeVehiculoToolStripMenuItem.Size = new System.Drawing.Size(126, 20);
+            this.compraDeVehiculoToolStripMenuItem.Text = "Compra de vehiculo";
+            this.compraDeVehiculoToolStripMenuItem.Click += new System.EventHandler(this.compraDeVehiculoToolStripMenuItem_Click);
             // 
             // PortadaForm
             // 
@@ -104,24 +149,34 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(530, 312);
-            this.Controls.Add(this.botonListar);
-            this.Controls.Add(this.botonVenderVehiculo);
-            this.Controls.Add(this.botonAgregarUsuario);
-            this.Controls.Add(this.botonSalir);
-            this.Controls.Add(this.botonInsertar);
+            this.Controls.Add(this.MenuStripVentaVehiculos);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MainMenuStrip = this.MenuStripVentaVehiculos;
+            this.MinimizeBox = false;
             this.Name = "PortadaForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Portada";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.PortadaForm_Load);
+            this.MenuStripVentaVehiculos.ResumeLayout(false);
+            this.MenuStripVentaVehiculos.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Button botonSalir;
-        private System.Windows.Forms.Button botonVenderVehiculo;
-        private System.Windows.Forms.Button botonListar;
-        public System.Windows.Forms.Button botonInsertar;
-        public System.Windows.Forms.Button botonAgregarUsuario;
+        private System.Windows.Forms.MenuStrip MenuStripVentaVehiculos;
+        private System.Windows.Forms.ToolStripMenuItem cerrarSecionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem insertarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem marcaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem modeloToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tipoDeVehiculoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tipoDeMotorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem colorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem vehiculoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem usuarioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem listarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem compraDeVehiculoToolStripMenuItem;
     }
 }
