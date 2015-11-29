@@ -57,37 +57,28 @@ namespace BLL
             this.numerostelefonos.Clear();
         }
 
-        public override bool Buscar(int IdBuscado)
+
+        public override bool Insertar()
         {
-            DataTable dt = new DataTable();
-            DataTable datosNumerosTelefonos = new DataTable();
-
-            dt = conexion.ObtenerDatos("Select * from Clientes Where ClienteId=" + IdBuscado);
-            if (dt.Rows.Count > 0)
+            bool retorno = false;
+            try
             {
-                this.ClienteId = (int)dt.Rows[0]["ClienteId"];
-                this.NombreCompleto = dt.Rows[0]["NombreCompleto"].ToString();
-                this.Apodo = dt.Rows[0]["Apodo"].ToString();
-                this.Direccion = dt.Rows[0]["Direccion"].ToString();
-                this.Cedula = dt.Rows[0]["Cedula"].ToString();
-                this.Nacionalidad = dt.Rows[0]["Nacionalidad"].ToString();
-                this.Ocupacion = dt.Rows[0]["Ocupacion"].ToString();
-                this.LugarDeNacimiento = dt.Rows[0]["LugarDeNacimiento"].ToString();
-                this.Sexo = dt.Rows[0]["Sexo"].ToString();
-
-                datosNumerosTelefonos = conexion.ObtenerDatos("Select c.Id as Id, n.Telefono as Telefono from NumerosTelefono c " + "Inner Join Telefonos n On c.TelefonoId = n.TelefonoId " + "Where c.ClienteId=" + IdBuscado);
-
-                LimpiarTelefono();
-                foreach (DataRow row in datosNumerosTelefonos.Rows)
+                retorno = conexion.Ejecutar(String.Format("Insert into Clientes (NombreCompleto, Apodo, TelefonoId, Direccion, Cedula, Nacionalidad, Ocupacion, LugarDeNacimiento, Sexo) Values('{0}','{1}',{2},'{3}','{4}','{5}','{6}','{7}','{8}')", this.NombreCompleto, this.Apodo, this.TelefonoId, this.Direccion, this.Cedula, this.Nacionalidad, this.Ocupacion, this.LugarDeNacimiento, this.Sexo));
+                if (retorno)
                 {
-                    this.InsertarTelefono((int)row["Id"], (int)row["ClienteId"], row["Numero"].ToString());
+                    this.ClienteId = (int)conexion.ObtenerDatos("Select Max(ClienteId) as ClienteId from Clientes").Rows[0]["ClienteId"];
 
-                    this.TelefonoId = (int)dt.Rows[0]["TelefonoId"];
+                    foreach (var Telefono in this.numerostelefonos)
+                    {
+                        comando.AppendLine(String.Format("insert into NumerosTelefono (ClienteId,Telefono) Values({0},'{1}'); ", this.ClienteId, Telefono.Telefono));
+                    }
+                    retorno = conexion.Ejecutar(comando.ToString());
                 }
-
             }
-            return dt.Rows.Count > 0;
+            catch (Exception ex) { throw ex; }
+            return retorno;
         }
+
 
         public override bool Editar()
         {
@@ -121,25 +112,38 @@ namespace BLL
             return retorno;
         }
 
-        public override bool Insertar()
-        {
-            bool retorno = false;
-            try
-            {
-                retorno = conexion.Ejecutar(String.Format("Insert into Clientes (NombreCompleto, Apodo, TelefonoId, Direccion, Cedula, Nacionalidad, Ocupacion, LugarDeNacimiento, Sexo) Values('{0}','{1}',{2},'{3}','{4}','{5}','{6}','{7}','{8}')", this.NombreCompleto, this.Apodo, this.TelefonoId, this.Direccion, this.Cedula, this.Nacionalidad, this.Ocupacion, this.LugarDeNacimiento, this.Sexo));
-                if (retorno)
-                {
-                    this.ClienteId = (int)conexion.ObtenerDatos("Select Max(ClienteId) as ClienteId from Clientes").Rows[0]["ClienteId"];
+      
 
-                    foreach (var Telefono in this.numerostelefonos)
-                    {
-                        comando.AppendLine(String.Format("insert into NumerosTelefono (ClienteId,Telefono) Values({0},'{1}'); ", this.ClienteId, Telefono.Telefono));
-                    }
-                    retorno = conexion.Ejecutar(comando.ToString());
+        public override bool Buscar(int IdBuscado)
+        {
+            DataTable dt = new DataTable();
+            DataTable datosNumerosTelefonos = new DataTable();
+
+            dt = conexion.ObtenerDatos("Select * from Clientes Where ClienteId=" + IdBuscado);
+            if (dt.Rows.Count > 0)
+            {
+                this.ClienteId = (int)dt.Rows[0]["ClienteId"];
+                this.NombreCompleto = dt.Rows[0]["NombreCompleto"].ToString();
+                this.Apodo = dt.Rows[0]["Apodo"].ToString();
+                this.Direccion = dt.Rows[0]["Direccion"].ToString();
+                this.Cedula = dt.Rows[0]["Cedula"].ToString();
+                this.Nacionalidad = dt.Rows[0]["Nacionalidad"].ToString();
+                this.Ocupacion = dt.Rows[0]["Ocupacion"].ToString();
+                this.LugarDeNacimiento = dt.Rows[0]["LugarDeNacimiento"].ToString();
+                this.Sexo = dt.Rows[0]["Sexo"].ToString();
+
+                datosNumerosTelefonos = conexion.ObtenerDatos("Select c.Id as Id, n.Telefono as Telefono from NumerosTelefono c " + "Inner Join Telefonos n On c.TelefonoId = n.TelefonoId " + "Where c.ClienteId=" + IdBuscado);
+
+                LimpiarTelefono();
+                foreach (DataRow row in datosNumerosTelefonos.Rows)
+                {
+                    this.InsertarTelefono((int)row["Id"], (int)row["ClienteId"], row["Numero"].ToString());
+
+                    this.TelefonoId = (int)dt.Rows[0]["TelefonoId"];
                 }
+
             }
-            catch (Exception ex) { throw ex; }
-            return retorno;
+            return dt.Rows.Count > 0;
         }
 
         public override DataTable Listado(string Campos, string Condicion, string Orden)

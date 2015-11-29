@@ -70,7 +70,7 @@ namespace BLL
             bool retorno = false;
             try
             {
-                conexion.Ejecutar(String.Format("Insert into NumerosTelefono (Numero) Values('{0}')", this.Telefono));
+                conexion.Ejecutar(String.Format("Insert into NumerosTelefono (Telefono) Values('{0}')", this.Telefono));
                 retorno = true;
             }
             catch (Exception ex) { throw ex; }
