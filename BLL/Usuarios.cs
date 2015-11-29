@@ -33,7 +33,7 @@ namespace BLL
             bool retorno = false;
             try
             {
-                conexion.Ejecutar(String.Format("Insert Into Usuarios (Nombre, Pass, Prioridad) Values('{0}','{1}',{2})", this.Nombre, this.Password, this.Prioridad));
+                conexion.Ejecutar(String.Format("Insert Into Usuarios (Nombre, Password, Prioridad) Values('{0}','{1}',{2})", this.Nombre, this.Password, this.Prioridad));
                 retorno = true;
             }
             catch (Exception ex) { throw ex; }
@@ -45,7 +45,7 @@ namespace BLL
             bool retorno = false;
             try
             {
-                conexion.Ejecutar(String.Format("Update Usuarios set Nombre='{0}',Pass='{1}',Prioridad={2} where UsuarioId={3}", this.Nombre, this.Password, this.Prioridad, this.UsuarioId));
+                conexion.Ejecutar(String.Format("Update Usuarios set Nombre='{0}',Password='{1}',Prioridad={2} where UsuarioId={3}", this.Nombre, this.Password, this.Prioridad, this.UsuarioId));
                 retorno = true;
             }
             catch (Exception ex) { throw ex; }
@@ -73,7 +73,7 @@ namespace BLL
             {
                 this.UsuarioId = (int)dt.Rows[0]["UsuarioId"];
                 this.Nombre = dt.Rows[0]["Nombre"].ToString();
-                this.Password = dt.Rows[0]["Pass"].ToString();
+                this.Password = dt.Rows[0]["Password"].ToString();
                 this.Prioridad = (int)dt.Rows[0]["Prioridad"];
             }
             return dt.Rows.Count > 0;
@@ -93,7 +93,7 @@ namespace BLL
             try
             {
                 DataTable dt = new DataTable();
-                dt = conexion.ObtenerDatos(String.Format("select * from Usuarios where Nombre='{0}' and Pass='{1}' and Prioridad={2}", Nombre, Password, Prioridad));
+                dt = conexion.ObtenerDatos(String.Format("select * from Usuarios where Nombre='{0}' and Password='{1}' and Prioridad={2}", Nombre, Password, Prioridad));
                 if (dt.Rows.Count > 0)
                 {
                     retorno = true;

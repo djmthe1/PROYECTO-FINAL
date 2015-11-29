@@ -64,7 +64,6 @@
             this.placaVehiculoTextBox = new System.Windows.Forms.TextBox();
             this.precioVehiculoTextBox = new System.Windows.Forms.TextBox();
             this.kilometrajeVehiculoTextBox = new System.Windows.Forms.TextBox();
-            this.tipoVehiculoTextBox = new System.Windows.Forms.TextBox();
             this.chasisVehiculoTextBox = new System.Windows.Forms.TextBox();
             this.añoVehiculoTextBox = new System.Windows.Forms.TextBox();
             this.estadoVehiculoTextBox = new System.Windows.Forms.TextBox();
@@ -76,6 +75,7 @@
             this.botonGuardar = new System.Windows.Forms.Button();
             this.botonNuevo = new System.Windows.Forms.Button();
             this.añoVehiculoLabel = new System.Windows.Forms.Label();
+            this.tipoVehiculoComboBox = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -513,15 +513,6 @@
             this.kilometrajeVehiculoTextBox.Size = new System.Drawing.Size(101, 22);
             this.kilometrajeVehiculoTextBox.TabIndex = 106;
             // 
-            // tipoVehiculoTextBox
-            // 
-            this.tipoVehiculoTextBox.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tipoVehiculoTextBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.tipoVehiculoTextBox.Location = new System.Drawing.Point(426, 164);
-            this.tipoVehiculoTextBox.Name = "tipoVehiculoTextBox";
-            this.tipoVehiculoTextBox.Size = new System.Drawing.Size(101, 22);
-            this.tipoVehiculoTextBox.TabIndex = 105;
-            // 
             // chasisVehiculoTextBox
             // 
             this.chasisVehiculoTextBox.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -571,7 +562,7 @@
             this.botonAtras.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("botonAtras.BackgroundImage")));
             this.botonAtras.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.botonAtras.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.botonAtras.Location = new System.Drawing.Point(585, 376);
+            this.botonAtras.Location = new System.Drawing.Point(609, 404);
             this.botonAtras.Name = "botonAtras";
             this.botonAtras.Size = new System.Drawing.Size(51, 42);
             this.botonAtras.TabIndex = 99;
@@ -632,11 +623,20 @@
             this.añoVehiculoLabel.TabIndex = 126;
             this.añoVehiculoLabel.Text = "Año";
             // 
+            // tipoVehiculoComboBox
+            // 
+            this.tipoVehiculoComboBox.FormattingEnabled = true;
+            this.tipoVehiculoComboBox.Location = new System.Drawing.Point(427, 165);
+            this.tipoVehiculoComboBox.Name = "tipoVehiculoComboBox";
+            this.tipoVehiculoComboBox.Size = new System.Drawing.Size(100, 21);
+            this.tipoVehiculoComboBox.TabIndex = 127;
+            // 
             // VehiculosForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(672, 458);
+            this.Controls.Add(this.tipoVehiculoComboBox);
             this.Controls.Add(this.añoVehiculoLabel);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.ColorComboBox);
@@ -658,7 +658,6 @@
             this.Controls.Add(this.placaVehiculoTextBox);
             this.Controls.Add(this.precioVehiculoTextBox);
             this.Controls.Add(this.kilometrajeVehiculoTextBox);
-            this.Controls.Add(this.tipoVehiculoTextBox);
             this.Controls.Add(this.chasisVehiculoTextBox);
             this.Controls.Add(this.añoVehiculoTextBox);
             this.Controls.Add(this.estadoVehiculoTextBox);
@@ -716,7 +715,6 @@
         private System.Windows.Forms.TextBox placaVehiculoTextBox;
         private System.Windows.Forms.TextBox precioVehiculoTextBox;
         private System.Windows.Forms.TextBox kilometrajeVehiculoTextBox;
-        private System.Windows.Forms.TextBox tipoVehiculoTextBox;
         private System.Windows.Forms.TextBox chasisVehiculoTextBox;
         private System.Windows.Forms.TextBox añoVehiculoTextBox;
         private System.Windows.Forms.TextBox estadoVehiculoTextBox;
@@ -728,5 +726,6 @@
         private System.Windows.Forms.Button botonGuardar;
         private System.Windows.Forms.Button botonNuevo;
         private System.Windows.Forms.Label añoVehiculoLabel;
+        private System.Windows.Forms.ComboBox tipoVehiculoComboBox;
     }
 }

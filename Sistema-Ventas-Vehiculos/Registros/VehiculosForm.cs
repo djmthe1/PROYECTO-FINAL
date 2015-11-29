@@ -22,6 +22,7 @@ namespace Sistema_Ventas_Vehiculos.Registros
         public Modelos modelo = new Modelos();
         public Marcas marcas = new Marcas();
         public TipoMotores motores = new TipoMotores();
+        public TipoDeVehiculos tipoVehiculo = new TipoDeVehiculos();
         public Colores colores = new Colores();
         public DataTable dato = new DataTable();
 
@@ -29,11 +30,11 @@ namespace Sistema_Ventas_Vehiculos.Registros
         {
             vehiculoIdTextBox.Clear();
             estadoVehiculoTextBox.Clear();
-            ModeloComboBox.Refresh();
-            MarcasComboBox.Refresh();
-            MotorComboBox.Refresh();
-            ColorComboBox.Refresh();
-            tipoVehiculoTextBox.Clear();
+            ModeloComboBox.ResetText();
+            MarcasComboBox.ResetText();
+            MotorComboBox.ResetText();
+            ColorComboBox.ResetText();
+            tipoVehiculoComboBox.ResetText();
             añoVehiculoTextBox.Clear();
             chasisVehiculoTextBox.Clear();
             kilometrajeVehiculoTextBox.Clear();
@@ -91,38 +92,25 @@ namespace Sistema_Ventas_Vehiculos.Registros
                     ColorComboBox.Text = vehiculo.Color;
                     añoVehiculoTextBox.Text = vehiculo.Año.ToString();
                     chasisVehiculoTextBox.Text = vehiculo.NoChasis;
-                    tipoVehiculoTextBox.Text = vehiculo.TipoDeVehiculo;
+                    tipoVehiculoComboBox.Text = vehiculo.TipoDeVehiculo;
                     kilometrajeVehiculoTextBox.Text = vehiculo.Kilometraje.ToString();
                     precioVehiculoTextBox.Text = vehiculo.Precio.ToString();
                     placaVehiculoTextBox.Text = vehiculo.Placa;
                     matriculaVehiculoTextBox.Text = vehiculo.Matricula;
-                    duplicadoLlaveCheckBox.ThreeState = vehiculo.DuplicadoDeLlaveDeEncendido;
-                    derechoCheckBox.ThreeState = vehiculo.EspejoRetrovisorDerecho;
-                    izquierdoCheckBox.ThreeState = vehiculo.EspejoRetrovisorIzquierdo;
-                    InternoCheckBox.ThreeState = vehiculo.EspejoRetrovisorInterno;
-                    manualCheckBox.ThreeState = vehiculo.ManualDeUsuario;
-                    taponGasolinaCheckBox.ThreeState = vehiculo.TaponDeGasolina;
-                    taponRadiadorCheckBox.ThreeState = vehiculo.TaponDeRadiador;
-                    gomaRepuestoCheckBox.ThreeState = vehiculo.GomaDeRepuesto;
-                    botiquinCheckBox.ThreeState = vehiculo.Botiquin;
-                    gomasCheckBox.ThreeState = vehiculo.Gomas;
-                    radioCheckBox.ThreeState = vehiculo.Radio;
-                    gatoCheckBox.ThreeState = vehiculo.Gato;
-                    alfombrasCheckBox.ThreeState = vehiculo.Alfombras;
-                    encendedorCheckBox.ThreeState = vehiculo.Encendedor;
-                    llaveDeRuedaCheckBox.ThreeState = vehiculo.LlaveDeRueda;
 
                     if (vehiculo.DuplicadoDeLlaveDeEncendido == true)
                     {
                         duplicadoLlaveCheckBox.Checked = true;
                     }
+
                     if (vehiculo.EspejoRetrovisorDerecho == true)
                     {
                         izquierdoCheckBox.Checked = true;
                     }
+
                     if (vehiculo.EspejoRetrovisorIzquierdo == true)
                     {
-                        izquierdoCheckBox.Checked=true;
+                        izquierdoCheckBox.Checked = true;
                     }
 
                     if (vehiculo.EspejoRetrovisorInterno == true)
@@ -132,59 +120,59 @@ namespace Sistema_Ventas_Vehiculos.Registros
 
                     if (vehiculo.ManualDeUsuario == true)
                     {
-                        manualCheckBox.Checked=true;
+                        manualCheckBox.Checked = true;
                     }
-                    
+
                     if (vehiculo.TaponDeGasolina == true)
-                    {
-                        taponGasolinaCheckBox.Checked=true;
-                    }
-                    
-                    if (vehiculo.TaponDeRadiador== true)
                     {
                         taponGasolinaCheckBox.Checked = true;
                     }
-                    
+
+                    if (vehiculo.TaponDeRadiador == true)
+                    {
+                        taponGasolinaCheckBox.Checked = true;
+                    }
+
                     if (vehiculo.GomaDeRepuesto == true)
                     {
-                        gomaRepuestoCheckBox.Checked=true;
+                        gomaRepuestoCheckBox.Checked = true;
                     }
-                   
+
                     if (vehiculo.Botiquin == true)
                     {
                         botiquinCheckBox.Checked = true;
                     }
-                    
+
                     if (vehiculo.Gomas == true)
                     {
-                         gomasCheckBox.Checked=true;
+                        gomasCheckBox.Checked = true;
                     }
-                   
-                    if (vehiculo.Radio== true)
+
+                    if (vehiculo.Radio == true)
                     {
-                        radioCheckBox.Checked=true;
+                        radioCheckBox.Checked = true;
                     }
-                    
+
                     if (vehiculo.Gato == true)
                     {
-                        gatoCheckBox.Checked=true;
+                        gatoCheckBox.Checked = true;
                     }
-                    
+
                     if (vehiculo.Alfombras == true)
                     {
                         alfombrasCheckBox.Checked = true;
                     }
-                    
+
                     if (vehiculo.Encendedor == true)
                     {
-                        encendedorCheckBox.Checked=true;
+                        encendedorCheckBox.Checked = true;
                     }
-                    
+
                     if (vehiculo.LlaveDeRueda == true)
                     {
-                        llaveDeRuedaCheckBox.Checked=true;
+                        llaveDeRuedaCheckBox.Checked = true;
                     }
-                    
+
                 }
                 else
                 {
@@ -360,7 +348,7 @@ namespace Sistema_Ventas_Vehiculos.Registros
                 vehiculo.Año = Año;
 
                 vehiculo.NoChasis = chasisVehiculoTextBox.Text;
-                vehiculo.TipoDeVehiculo = tipoVehiculoTextBox.Text;
+                vehiculo.TipoDeVehiculo = tipoVehiculoComboBox.Text;
 
                 int Kilometraje = 0;
                 int.TryParse(kilometrajeVehiculoTextBox.Text, out Kilometraje);
@@ -375,7 +363,7 @@ namespace Sistema_Ventas_Vehiculos.Registros
 
                 if (vehiculoIdTextBox.Text == "")
                 {
-                    if (estadoVehiculoTextBox.Text != "" && MotorComboBox.Text != "" && MarcasComboBox.Text != "" && MotorComboBox.Text != "" && ColorComboBox.Text != "" && añoVehiculoTextBox.Text != "" && chasisVehiculoTextBox.Text != "" && tipoVehiculoTextBox.Text != "" && kilometrajeVehiculoTextBox.Text != "" && precioVehiculoTextBox.Text != "" && placaVehiculoTextBox.Text != "" && matriculaVehiculoTextBox.Text != "")
+                    if (estadoVehiculoTextBox.Text != "" && MotorComboBox.Text != "" && MarcasComboBox.Text != "" && MotorComboBox.Text != "" && ColorComboBox.Text != "" && añoVehiculoTextBox.Text != "" && chasisVehiculoTextBox.Text != "" && tipoVehiculoComboBox.Text != "" && kilometrajeVehiculoTextBox.Text != "" && precioVehiculoTextBox.Text != "" && placaVehiculoTextBox.Text != "" && matriculaVehiculoTextBox.Text != "")
                     {
 
                         if (vehiculo.Insertar())
@@ -399,7 +387,7 @@ namespace Sistema_Ventas_Vehiculos.Registros
                     int.TryParse(vehiculoIdTextBox.Text, out id);
                     vehiculo.VehiculoId = id;
 
-                    if (estadoVehiculoTextBox.Text != "" && MotorComboBox.Text != "" && MarcasComboBox.Text != "" && MotorComboBox.Text != "" && ColorComboBox.Text != "" && añoVehiculoTextBox.Text != "" && chasisVehiculoTextBox.Text != "" && tipoVehiculoTextBox.Text != "" && kilometrajeVehiculoTextBox.Text != "" && precioVehiculoTextBox.Text != "" && placaVehiculoTextBox.Text != "" && matriculaVehiculoTextBox.Text != "")
+                    if (estadoVehiculoTextBox.Text != "" && MotorComboBox.Text != "" && MarcasComboBox.Text != "" && MotorComboBox.Text != "" && ColorComboBox.Text != "" && añoVehiculoTextBox.Text != "" && chasisVehiculoTextBox.Text != "" && tipoVehiculoComboBox.Text != "" && kilometrajeVehiculoTextBox.Text != "" && precioVehiculoTextBox.Text != "" && placaVehiculoTextBox.Text != "" && matriculaVehiculoTextBox.Text != "")
                     {
                         if (vehiculo.Editar())
                         {
@@ -479,6 +467,11 @@ namespace Sistema_Ventas_Vehiculos.Registros
 
             for (int i = 0; i <= dato.Rows.Count - 1; i++)
                 ColorComboBox.Items.Add(colores.Listado("*", "0=0", "ORDER BY Descripcion").Rows[i]["Descripcion"]);
+
+            dato = tipoVehiculo.Listado("*", "0=0", "ORDER BY Descripcion");
+
+            for (int i = 0; i <= dato.Rows.Count - 1; i++)
+                tipoVehiculoComboBox.Items.Add(tipoVehiculo.Listado("*", "0=0", "ORDER BY Descripcion").Rows[i]["Descripcion"]);
         }
     }
 }

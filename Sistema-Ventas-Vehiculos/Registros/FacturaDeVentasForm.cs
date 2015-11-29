@@ -90,7 +90,7 @@ namespace Sistema_Ventas_Vehiculos.Registros
 
         private void FacturaDeVentasForm_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void botonBuscarCliente_Click_1(object sender, EventArgs e)
