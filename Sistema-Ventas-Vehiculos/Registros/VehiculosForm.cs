@@ -119,7 +119,21 @@ namespace Sistema_Ventas_Vehiculos.Registros
                     precioVehiculoTextBox.Text = vehiculo.Precio.ToString();
                     placaVehiculoTextBox.Text = vehiculo.Placa;
                     matriculaVehiculoTextBox.Text = vehiculo.Matricula;
-
+                    duplicadoLlaveCheckBox.ThreeState = vehiculo.DuplicadoDeLlaveDeEncendido;
+                    derechoCheckBox.ThreeState = vehiculo.EspejoRetrovisorDerecho;
+                    izquierdoCheckBox.ThreeState = vehiculo.EspejoRetrovisorIzquierdo;
+                    InternoCheckBox.ThreeState = vehiculo.EspejoRetrovisorInterno;
+                    manualCheckBox.ThreeState = vehiculo.ManualDeUsuario;
+                    taponGasolinaCheckBox.ThreeState = vehiculo.TaponDeGasolina;
+                    taponRadiadorCheckBox.ThreeState = vehiculo.TaponDeRadiador;
+                    gomaRepuestoCheckBox.ThreeState = vehiculo.GomaDeRepuesto;
+                    botiquinCheckBox.ThreeState = vehiculo.Botiquin;
+                    gomasCheckBox.ThreeState = vehiculo.Gomas;
+                    radioCheckBox.ThreeState = vehiculo.Radio;
+                    gatoCheckBox.ThreeState = vehiculo.Gato;
+                    alfombrasCheckBox.ThreeState = vehiculo.Alfombras;
+                    encendedorCheckBox.ThreeState = vehiculo.Encendedor;
+                    llaveDeRuedaCheckBox.ThreeState = vehiculo.LlaveDeRueda;
                 }
                 else
                 {

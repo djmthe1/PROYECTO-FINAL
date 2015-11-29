@@ -113,7 +113,9 @@ namespace Sistema_Ventas_Vehiculos.Registros
             {
                 clientes.NombreCompleto = NombreTextBox.Text;
                 clientes.Apodo = ApodoTextBox.Text;
-                clientes.Telefono = TelefonoTextBox.Text;
+                int telefonoid = 0;
+                int.TryParse(TelefonoTextBox.Text, out telefonoid);
+                clientes.ClienteId = telefonoid;
                 clientes.Direccion = DireccionTextBox.Text;
                 clientes.Cedula = CedulaTextBox.Text;
                 clientes.Nacionalidad = nacionalidadTextBox.Text;
@@ -182,7 +184,7 @@ namespace Sistema_Ventas_Vehiculos.Registros
                 {
                     NombreTextBox.Text = clientes.NombreCompleto;
                     ApodoTextBox.Text = clientes.Apodo;
-                    TelefonoTextBox.Text = clientes.Telefono;
+                    TelefonoTextBox.Text = clientes.TelefonoId.ToString();
                     DireccionTextBox.Text = clientes.Direccion;
                     CedulaTextBox.Text = clientes.Cedula;
                     nacionalidadTextBox.Text = clientes.Nacionalidad;

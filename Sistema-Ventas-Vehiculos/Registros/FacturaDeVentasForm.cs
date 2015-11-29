@@ -105,7 +105,7 @@ namespace Sistema_Ventas_Vehiculos.Registros
                 {
                     NombreTextBox.Text = clientes.NombreCompleto;
                     ApodoTextBox.Text = clientes.Apodo;
-                    TelefonoTextBox.Text = clientes.Telefono;
+                    TelefonoTextBox.Text = clientes.TelefonoId.ToString();
                     DireccionTextBox.Text = clientes.Direccion;
                     CedulaTextBox.Text = clientes.Cedula;
                     nacionalidadTextBox.Text = clientes.Nacionalidad;
