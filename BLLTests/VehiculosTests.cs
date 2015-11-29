@@ -62,7 +62,7 @@ namespace BLL.Tests
         public void EditarTest()
         {
             Vehiculos v = new Vehiculos();
-            v.VehiculoId = 1;
+            v.VehiculoId = 15;
             v.EstadoDelVehiculo = "jh";
             v.Modelo = "c3";
             v.Marca = "as";
