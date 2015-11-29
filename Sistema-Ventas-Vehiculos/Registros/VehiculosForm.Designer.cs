@@ -632,7 +632,7 @@
             this.añoVehiculoLabel.TabIndex = 126;
             this.añoVehiculoLabel.Text = "Año";
             // 
-            // FormVehiculos
+            // VehiculosForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -669,8 +669,9 @@
             this.Controls.Add(this.botonEliminar);
             this.Controls.Add(this.botonGuardar);
             this.Controls.Add(this.botonNuevo);
-            this.Name = "FormVehiculos";
+            this.Name = "VehiculosForm";
             this.Text = "FormVehiculos";
+            this.Load += new System.EventHandler(this.VehiculosForm_Load_1);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

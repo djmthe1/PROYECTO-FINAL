@@ -72,29 +72,6 @@ namespace Sistema_Ventas_Vehiculos.Registros
         }
 
 
-        private void VehiculosForm_Load(object sender, EventArgs e)
-        {
-            dato = modelo.Listado("*", "0=0", "ORDER BY Descripcion");
-
-            for (int i = 0; i <= dato.Rows.Count - 1; i++)
-                ModeloComboBox.Items.Add(modelo.Listado("*", "0=0", "ORDER BY Descripcion").Rows[i]["Descripcion"]);
-
-            dato = marcas.Listado("*", "0=0", "ORDER BY Descripcion");
-
-            for (int i = 0; i <= dato.Rows.Count - 1; i++)
-                MarcasComboBox.Items.Add(marcas.Listado("*", "0=0", "ORDER BY Descripcion").Rows[i]["Descripcion"]);
-
-            dato = motores.Listado("*", "0=0", "ORDER BY Descripcion");
-
-            for (int i = 0; i <= dato.Rows.Count - 1; i++)
-                MotorComboBox.Items.Add(motores.Listado("*", "0=0", "ORDER BY Descripcion").Rows[i]["Descripcion"]);
-
-            dato = colores.Listado("*", "0=0", "ORDER BY Descripcion");
-
-            for (int i = 0; i <= dato.Rows.Count - 1; i++)
-                ColorComboBox.Items.Add(colores.Listado("*", "0=0", "ORDER BY Descripcion").Rows[i]["Descripcion"]);
-
-        }
 
         private void botonBuscar_Click(object sender, EventArgs e)
         {
@@ -134,6 +111,80 @@ namespace Sistema_Ventas_Vehiculos.Registros
                     alfombrasCheckBox.ThreeState = vehiculo.Alfombras;
                     encendedorCheckBox.ThreeState = vehiculo.Encendedor;
                     llaveDeRuedaCheckBox.ThreeState = vehiculo.LlaveDeRueda;
+
+                    if (vehiculo.DuplicadoDeLlaveDeEncendido == true)
+                    {
+                        duplicadoLlaveCheckBox.Checked = true;
+                    }
+                    if (vehiculo.EspejoRetrovisorDerecho == true)
+                    {
+                        izquierdoCheckBox.Checked = true;
+                    }
+                    if (vehiculo.EspejoRetrovisorIzquierdo == true)
+                    {
+                        izquierdoCheckBox.Checked=true;
+                    }
+
+                    if (vehiculo.EspejoRetrovisorInterno == true)
+                    {
+                        InternoCheckBox.Checked = true;
+                    }
+
+                    if (vehiculo.ManualDeUsuario == true)
+                    {
+                        manualCheckBox.Checked=true;
+                    }
+                    
+                    if (vehiculo.TaponDeGasolina == true)
+                    {
+                        taponGasolinaCheckBox.Checked=true;
+                    }
+                    
+                    if (vehiculo.TaponDeRadiador== true)
+                    {
+                        taponGasolinaCheckBox.Checked = true;
+                    }
+                    
+                    if (vehiculo.GomaDeRepuesto == true)
+                    {
+                        gomaRepuestoCheckBox.Checked=true;
+                    }
+                   
+                    if (vehiculo.Botiquin == true)
+                    {
+                        botiquinCheckBox.Checked = true;
+                    }
+                    
+                    if (vehiculo.Gomas == true)
+                    {
+                         gomasCheckBox.Checked=true;
+                    }
+                   
+                    if (vehiculo.Radio== true)
+                    {
+                        radioCheckBox.Checked=true;
+                    }
+                    
+                    if (vehiculo.Gato == true)
+                    {
+                        gatoCheckBox.Checked=true;
+                    }
+                    
+                    if (vehiculo.Alfombras == true)
+                    {
+                        alfombrasCheckBox.Checked = true;
+                    }
+                    
+                    if (vehiculo.Encendedor == true)
+                    {
+                        encendedorCheckBox.Checked=true;
+                    }
+                    
+                    if (vehiculo.LlaveDeRueda == true)
+                    {
+                        llaveDeRuedaCheckBox.Checked=true;
+                    }
+                    
                 }
                 else
                 {
@@ -169,139 +220,139 @@ namespace Sistema_Ventas_Vehiculos.Registros
                 vehiculo.Modelo = MotorComboBox.Text;
                 vehiculo.Color = ColorComboBox.Text;
 
-                if (!duplicadoLlaveCheckBox.ThreeState)
+                if (duplicadoLlaveCheckBox.Checked)
                 {
-                    duplicadoLlaveCheckBox.ThreeState = true;
+                    vehiculo.DuplicadoDeLlaveDeEncendido = true;
                 }
                 else
                 {
-                    duplicadoLlaveCheckBox.ThreeState = false;
+                    vehiculo.DuplicadoDeLlaveDeEncendido = false;
                 }
 
-                if (!derechoCheckBox.ThreeState)
+                if (derechoCheckBox.Checked)
                 {
-                    derechoCheckBox.ThreeState = true;
+                    vehiculo.EspejoRetrovisorDerecho = true;
                 }
                 else
                 {
-                    derechoCheckBox.ThreeState = false;
+                    vehiculo.EspejoRetrovisorDerecho = false;
                 }
 
-                if (!izquierdoCheckBox.ThreeState)
+                if (izquierdoCheckBox.Checked)
                 {
-                    izquierdoCheckBox.ThreeState = true;
+                    vehiculo.EspejoRetrovisorIzquierdo = true;
                 }
                 else
                 {
-                    izquierdoCheckBox.ThreeState = false;
+                    vehiculo.EspejoRetrovisorIzquierdo= false;
                 }
 
-                if (!InternoCheckBox.ThreeState)
+                if (InternoCheckBox.Checked)
                 {
-                    InternoCheckBox.ThreeState = true;
+                    vehiculo.EspejoRetrovisorInterno = true;
                 }
                 else
                 {
-                    InternoCheckBox.ThreeState = false;
+                    vehiculo.EspejoRetrovisorInterno = false;
                 }
 
-                if (!manualCheckBox.ThreeState)
+                if (manualCheckBox.Checked)
                 {
-                    manualCheckBox.ThreeState = true;
+                    vehiculo.ManualDeUsuario = true;
                 }
                 else
                 {
-                    manualCheckBox.ThreeState = false;
+                    vehiculo.ManualDeUsuario = false;
                 }
 
-                if (!taponGasolinaCheckBox.ThreeState)
+                if (taponGasolinaCheckBox.Checked)
                 {
-                    taponGasolinaCheckBox.ThreeState = true;
+                    vehiculo.TaponDeGasolina = true;
                 }
                 else
                 {
-                    taponGasolinaCheckBox.ThreeState = false;
+                    vehiculo.TaponDeGasolina = false;
                 }
 
-                if (!taponRadiadorCheckBox.ThreeState)
+                if (taponRadiadorCheckBox.Checked)
                 {
-                    taponRadiadorCheckBox.ThreeState = true;
+                    vehiculo.TaponDeRadiador = true;
                 }
                 else
                 {
-                    taponRadiadorCheckBox.ThreeState = false;
+                    vehiculo.TaponDeRadiador = false;
                 }
 
-                if (!gomaRepuestoCheckBox.ThreeState)
+                if (gomaRepuestoCheckBox.Checked)
                 {
-                    gomaRepuestoCheckBox.ThreeState = true;
+                    vehiculo.GomaDeRepuesto = true;
                 }
                 else
                 {
-                    gomaRepuestoCheckBox.ThreeState = false;
+                    vehiculo.GomaDeRepuesto = false;
                 }
 
-                if (!botiquinCheckBox.ThreeState)
+                if (botiquinCheckBox.Checked)
                 {
-                    botiquinCheckBox.ThreeState = true;
+                    vehiculo.Botiquin = true;
                 }
                 else
                 {
-                    botiquinCheckBox.ThreeState = false;
+                    vehiculo.Botiquin = false;
                 }
 
-                if (!gomasCheckBox.ThreeState)
+                if (gomasCheckBox.Checked)
                 {
-                    gomasCheckBox.ThreeState = true;
+                    vehiculo.Gomas = true;
                 }
                 else
                 {
-                    gomasCheckBox.ThreeState = false;
+                    vehiculo.Gomas = false;
                 }
 
-                if (!radioCheckBox.ThreeState)
+                if (radioCheckBox.Checked)
                 {
-                    radioCheckBox.ThreeState = true;
+                    vehiculo.Radio = true;
                 }
                 else
                 {
-                    radioCheckBox.ThreeState = false;
+                    vehiculo.Radio = false;
                 }
 
-                if (!gatoCheckBox.ThreeState)
+                if (gatoCheckBox.Checked)
                 {
-                    gatoCheckBox.ThreeState = true;
+                    vehiculo.Gato = true;
                 }
                 else
                 {
-                    gatoCheckBox.ThreeState = false;
+                    vehiculo.Gato = false;
                 }
 
-                if (!alfombrasCheckBox.ThreeState)
+                if (alfombrasCheckBox.Checked)
                 {
-                    alfombrasCheckBox.ThreeState = true;
+                    vehiculo.Alfombras= true;
                 }
                 else
                 {
-                    alfombrasCheckBox.ThreeState = false;
+                    vehiculo.Alfombras = false;
                 }
 
-                if (!encendedorCheckBox.ThreeState)
+                if (encendedorCheckBox.Checked)
                 {
-                    encendedorCheckBox.ThreeState = true;
+                    vehiculo.Encendedor= true;
                 }
                 else
                 {
-                    encendedorCheckBox.ThreeState = false;
+                   vehiculo.Encendedor = false;
                 }
 
-                if (!llaveDeRuedaCheckBox.ThreeState)
+                if (llaveDeRuedaCheckBox.Checked)
                 {
-                    llaveDeRuedaCheckBox.ThreeState = true;
+                    vehiculo.LlaveDeRueda = true;
                 }
                 else
                 {
-                    llaveDeRuedaCheckBox.ThreeState = false;
+                    vehiculo.LlaveDeRueda = false;
                 }
 
                 int Año = 0;
@@ -405,6 +456,29 @@ namespace Sistema_Ventas_Vehiculos.Registros
             {
                 MensajeError("Error al Eliminar");
             }
+        }
+
+        private void VehiculosForm_Load_1(object sender, EventArgs e)
+        {
+            dato = modelo.Listado("*", "0=0", "ORDER BY Descripcion");
+
+            for (int i = 0; i <= dato.Rows.Count - 1; i++)
+                ModeloComboBox.Items.Add(modelo.Listado("*", "0=0", "ORDER BY Descripcion").Rows[i]["Descripcion"]);
+
+            dato = marcas.Listado("*", "0=0", "ORDER BY Descripcion");
+
+            for (int i = 0; i <= dato.Rows.Count - 1; i++)
+                MarcasComboBox.Items.Add(marcas.Listado("*", "0=0", "ORDER BY Descripcion").Rows[i]["Descripcion"]);
+
+            dato = motores.Listado("*", "0=0", "ORDER BY Descripcion");
+
+            for (int i = 0; i <= dato.Rows.Count - 1; i++)
+                MotorComboBox.Items.Add(motores.Listado("*", "0=0", "ORDER BY Descripcion").Rows[i]["Descripcion"]);
+
+            dato = colores.Listado("*", "0=0", "ORDER BY Descripcion");
+
+            for (int i = 0; i <= dato.Rows.Count - 1; i++)
+                ColorComboBox.Items.Add(colores.Listado("*", "0=0", "ORDER BY Descripcion").Rows[i]["Descripcion"]);
         }
     }
 }

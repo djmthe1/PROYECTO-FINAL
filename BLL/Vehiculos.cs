@@ -13,7 +13,7 @@ namespace BLL
 
         public int VehiculoId { set; get; }
         public string EstadoDelVehiculo { set; get; }
-        public int AtributosId { set; get; }
+    
         public string Modelo { set; get; }
         public string Marca { set; get; }
         public string Motor { set; get; }
@@ -43,11 +43,11 @@ namespace BLL
 
         public ConexionDb conexion = new ConexionDb();
 
-        public Vehiculos(int vehiculoId, string estadoDelVehiculo, int atributosId, string modelo, string marca, string motor, string color, int año, string noChasis, string tipoDeVehiculo, int kilometraje, int precio, string placa, string matricula, bool espejoRetrovisorInterno, bool espejoRetrovisorDerecho, bool espejoRetrovisorIzquierdo, bool radio, bool gato, bool gomas, bool gomaDeRepuesto, bool alfombras, bool botiquin, bool taponDeGasolina, bool taponDeRadiador, bool encendedor, bool manualDeUsuario, bool duplicadoDeLlaveDeEncendido, bool llaveDeRueda)
+        public Vehiculos(int vehiculoId, string estadoDelVehiculo, string modelo, string marca, string motor, string color, int año, string noChasis, string tipoDeVehiculo, int kilometraje, int precio, string placa, string matricula, bool espejoRetrovisorInterno, bool espejoRetrovisorDerecho, bool espejoRetrovisorIzquierdo, bool radio, bool gato, bool gomas, bool gomaDeRepuesto, bool alfombras, bool botiquin, bool taponDeGasolina, bool taponDeRadiador, bool encendedor, bool manualDeUsuario, bool duplicadoDeLlaveDeEncendido, bool llaveDeRueda)
         {
             this.VehiculoId = vehiculoId;
             this.EstadoDelVehiculo = estadoDelVehiculo;
-            this.AtributosId = atributosId;
+            
             this.Modelo = modelo;
             this.Marca = marca;
             this.Motor = motor;
@@ -88,9 +88,10 @@ namespace BLL
             StringBuilder comando = new StringBuilder();
             try
             {
-            
 
-                conexion.Ejecutar(String.Format("Insert Into Vehiculos (EstadoDelVehiculo, Año, NoChasis, Kilometraje, Precio, Placa, Matricula, Marca, Modelo, Color, EstadoDelVehiculo, TipoVehiculo, Motor, EspejoRetrovisorInterno, EspejoRetrovisorInterno, EspejoRetrovisorIzquierdo, Radio, Gato, Gomas, GomaDeRepuesto, Alfombras, Botiquin, TaponDeGasolina, TaponDeRadiador, Encendedor, ManualDeUsuario, DuplicadoDeLlaveDeEncendido, LlaveDeRueda) Values('{0}',{1},'{2}',{3},{4},'{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}','{17}','{18}','{19}','{20}','{21}','{22}','{23}','{24}','{25}','{26}','{27}')", this.EstadoDelVehiculo, this.Año, this.NoChasis, this.Kilometraje, this.Precio, this.Placa, this.Matricula,this.Marca,this.Modelo,this.Color,this.EstadoDelVehiculo,this.TipoDeVehiculo,this.Motor, this.EspejoRetrovisorInterno, this.EspejoRetrovisorInterno, this.EspejoRetrovisorIzquierdo, this.Radio, this.Gato, this.Gomas, this.GomaDeRepuesto, this.Alfombras, this.Botiquin, this.TaponDeGasolina, this.TaponDeRadiador, this.Encendedor, this.ManualDeUsuario, this.DuplicadoDeLlaveDeEncendido, this.LlaveDeRueda));
+                
+
+                conexion.Ejecutar(String.Format("Insert Into Vehiculos (EstadoDelVehiculo, Año, NoChasis, Kilometraje, Precio, Placa, Matricula, Marca, Modelo, Color, EstadoDelVehiculo, TipoVehiculo, Motor, EspejoRetrovisorInterno, EspejoRetrovisorInterno, EspejoRetrovisorIzquierdo, Radio, Gato, Gomas, GomaDeRepuesto, Alfombras, Botiquin, TaponDeGasolina, TaponDeRadiador, Encendedor, ManualDeUsuario, DuplicadoDeLlaveDeEncendido, LlaveDeRueda) Values('{0}',{1},'{2}',{3},{4},'{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}','{17}','{18}','{19}','{20}','{21}','{22}','{23}','{24}','{25}','{26}','{27}')", this.EstadoDelVehiculo, this.Año, this.NoChasis, this.Kilometraje, this.Precio, this.Placa, this.Matricula, this.Marca, this.Modelo, this.Color, this.EstadoDelVehiculo, this.TipoDeVehiculo, this.Motor, this.EspejoRetrovisorInterno, this.EspejoRetrovisorInterno, this.EspejoRetrovisorIzquierdo, this.Radio, this.Gato, this.Gomas, this.GomaDeRepuesto, this.Alfombras, this.Botiquin, this.TaponDeGasolina, this.TaponDeRadiador, this.Encendedor, this.ManualDeUsuario, this.DuplicadoDeLlaveDeEncendido, this.LlaveDeRueda));
                 retorno = true;
 
                
@@ -105,7 +106,7 @@ namespace BLL
             bool retorno = false;
             try
             {
-                conexion.Ejecutar(String.Format("Update Vehiculos set EstadoDelVehiculo='{0}', AtributosId={1}, Modelo='{2}', Marca='{3}', Motor='{4}', Color='{5}', Año={6}, NoChasis='{7}', TipoDeVehiculoId={8}, Kilometraje={9}, Precio={10}, Placa='{11}', Matricula='{12}', EspejoRetrovisorInterno='{13}', EspejoRetrovisorInterno='{14}', EspejoRetrovisorIzquierdo='{15}', Radio='{16}', Gato='{17}', Gomas='{18}', GomaDeRepuesto='{19}', Alfombras='{20}', Botiquin='{21}', TaponDeGasolina='{22}', TaponDeRadiador='{23}', Encendedor='{24}', ManualDeUsuario='{25}', DuplicadoDeLlaveDeEncendido='{26}', LlaveDeRueda='{27}' where AtributoId ={28} where VehiculoId={29}", this.EstadoDelVehiculo, this.AtributosId, this.Modelo, this.Marca, this.Motor, this.Color, this.Año, this.NoChasis, this.TipoDeVehiculo, this.Kilometraje, this.Precio, this.Placa, this.Matricula, this.EspejoRetrovisorInterno, this.EspejoRetrovisorInterno, this.EspejoRetrovisorIzquierdo, this.Radio, this.Gato, this.Gomas, this.GomaDeRepuesto, this.Alfombras, this.Botiquin, this.TaponDeGasolina, this.TaponDeRadiador, this.Encendedor, this.ManualDeUsuario, this.DuplicadoDeLlaveDeEncendido, this.LlaveDeRueda, this.VehiculoId));
+                conexion.Ejecutar(String.Format("Update Vehiculos set EstadoDelVehiculo='{0}', Modelo='{1}', Marca='{2}', Motor='{3}', Color='{4}', Año={5}, NoChasis='{6}', TipoDeVehiculoId={7}, Kilometraje={8}, Precio={9}, Placa='{10}', Matricula='{11}', EspejoRetrovisorInterno='{12}', EspejoRetrovisorInterno='{13}', EspejoRetrovisorIzquierdo='{14}', Radio='{15}', Gato='{16}', Gomas='{17}', GomaDeRepuesto='{18}', Alfombras='{19}', Botiquin='{20}', TaponDeGasolina='{21}', TaponDeRadiador='{22}', Encendedor='{23}', ManualDeUsuario='{24}', DuplicadoDeLlaveDeEncendido='{25}', LlaveDeRueda='{26}' where AtributoId ={27} where VehiculoId={28}", this.EstadoDelVehiculo, this.Modelo, this.Marca, this.Motor, this.Color, this.Año, this.NoChasis, this.TipoDeVehiculo, this.Kilometraje, this.Precio, this.Placa, this.Matricula, this.EspejoRetrovisorInterno, this.EspejoRetrovisorInterno, this.EspejoRetrovisorIzquierdo, this.Radio, this.Gato, this.Gomas, this.GomaDeRepuesto, this.Alfombras, this.Botiquin, this.TaponDeGasolina, this.TaponDeRadiador, this.Encendedor, this.ManualDeUsuario, this.DuplicadoDeLlaveDeEncendido, this.LlaveDeRueda, this.VehiculoId));
                 retorno = true;
             }
             catch (Exception ex) { throw ex; }

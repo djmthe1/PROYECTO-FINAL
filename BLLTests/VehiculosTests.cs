@@ -27,20 +27,35 @@ namespace BLL.Tests
         public void InsertarTest()
         {
             Vehiculos v = new Vehiculos();
-            v.VehiculoId = 1;
+           
             v.EstadoDelVehiculo = "jh";
-            v.Modelo = "";
-            v.Marca = "";
-            v.Motor = "";
-            v.Color = "";
+            v.Modelo = "c3";
+            v.Marca = "as";
+            v.Motor = "as";
+            v.Color = "d";
             v.Año = 123;
             v.NoChasis = "43";
-            v.TipoDeVehiculo = "";
+            v.TipoDeVehiculo = "sd";
             v.Kilometraje = 234;
             v.Precio = 23;
             v.Placa = "24221";
             v.Matricula = "bnde34";
-            Assert.IsTrue(v.Insertar());
+            v.EspejoRetrovisorInterno = true;
+            v.EspejoRetrovisorDerecho = false;
+          v.EspejoRetrovisorIzquierdo = true;
+            v.Radio = true;
+            v.Gato = true;
+            v.Gomas = true;
+            v.GomaDeRepuesto = true;
+            v.Alfombras = true;
+            v.Botiquin = true;
+            v.TaponDeGasolina = true;
+            v.TaponDeRadiador = true;
+            v.Encendedor = true;
+            v.ManualDeUsuario = true;
+            v.DuplicadoDeLlaveDeEncendido = true;
+            v.LlaveDeRueda = false;
+        Assert.IsTrue(v.Insertar());
         }
 
         [TestMethod()]
