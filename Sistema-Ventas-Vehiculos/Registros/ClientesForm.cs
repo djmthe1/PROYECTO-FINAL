@@ -230,5 +230,53 @@ namespace Sistema_Ventas_Vehiculos.Registros
             telefonosListBox.Items.Add(telefonosListBox.Text);
             TelefonoTextBox.Clear();
         }
+
+
+        private void NombreTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void LugardeNacimientoTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void OcupacionTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void nacionalidadTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void CedulaTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void DireccionTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void TelefonoTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void ApodoTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void clienteIdTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+
     }
 }

@@ -105,7 +105,7 @@ namespace Sistema_Ventas_Vehiculos.Registros
 
                     if (vehiculo.EspejoRetrovisorDerecho == true)
                     {
-                        izquierdoCheckBox.Checked = true;
+                        derechoCheckBox.Checked = true;
                     }
 
                     if (vehiculo.EspejoRetrovisorIzquierdo == true)
@@ -130,7 +130,7 @@ namespace Sistema_Ventas_Vehiculos.Registros
 
                     if (vehiculo.TaponDeRadiador == true)
                     {
-                        taponGasolinaCheckBox.Checked = true;
+                        taponRadiadorCheckBox.Checked = true;
                     }
 
                     if (vehiculo.GomaDeRepuesto == true)
@@ -230,7 +230,7 @@ namespace Sistema_Ventas_Vehiculos.Registros
                 }
                 else
                 {
-                    vehiculo.EspejoRetrovisorIzquierdo= false;
+                    vehiculo.EspejoRetrovisorIzquierdo = false;
                 }
 
                 if (InternoCheckBox.Checked)

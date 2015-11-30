@@ -95,6 +95,8 @@
             this.datosClientelabel = new System.Windows.Forms.Label();
             this.facturaDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.telefonosListBox = new System.Windows.Forms.ListBox();
+            this.botonGuardar = new System.Windows.Forms.Button();
+            this.botonNuevo = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -104,7 +106,7 @@
             this.botonSiguente.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("botonSiguente.BackgroundImage")));
             this.botonSiguente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.botonSiguente.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.botonSiguente.Location = new System.Drawing.Point(716, 418);
+            this.botonSiguente.Location = new System.Drawing.Point(781, 418);
             this.botonSiguente.Name = "botonSiguente";
             this.botonSiguente.Size = new System.Drawing.Size(65, 55);
             this.botonSiguente.TabIndex = 0;
@@ -148,7 +150,7 @@
             this.datosVehiculoLabel.BackColor = System.Drawing.Color.Transparent;
             this.datosVehiculoLabel.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.datosVehiculoLabel.ForeColor = System.Drawing.Color.Black;
-            this.datosVehiculoLabel.Location = new System.Drawing.Point(576, 24);
+            this.datosVehiculoLabel.Location = new System.Drawing.Point(641, 4);
             this.datosVehiculoLabel.Name = "datosVehiculoLabel";
             this.datosVehiculoLabel.Size = new System.Drawing.Size(150, 17);
             this.datosVehiculoLabel.TabIndex = 25;
@@ -172,7 +174,7 @@
             this.detallesFacturaLabel.BackColor = System.Drawing.Color.Transparent;
             this.detallesFacturaLabel.Font = new System.Drawing.Font("Palatino Linotype", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.detallesFacturaLabel.ForeColor = System.Drawing.Color.Black;
-            this.detallesFacturaLabel.Location = new System.Drawing.Point(280, 89);
+            this.detallesFacturaLabel.Location = new System.Drawing.Point(309, 89);
             this.detallesFacturaLabel.Name = "detallesFacturaLabel";
             this.detallesFacturaLabel.Size = new System.Drawing.Size(218, 21);
             this.detallesFacturaLabel.TabIndex = 28;
@@ -180,28 +182,28 @@
             // 
             // pagoInicialEfectivoTextBox
             // 
-            this.pagoInicialEfectivoTextBox.Location = new System.Drawing.Point(404, 119);
+            this.pagoInicialEfectivoTextBox.Location = new System.Drawing.Point(433, 119);
             this.pagoInicialEfectivoTextBox.Name = "pagoInicialEfectivoTextBox";
             this.pagoInicialEfectivoTextBox.Size = new System.Drawing.Size(100, 20);
             this.pagoInicialEfectivoTextBox.TabIndex = 29;
             // 
             // pagoInicialChequeTextBox
             // 
-            this.pagoInicialChequeTextBox.Location = new System.Drawing.Point(404, 146);
+            this.pagoInicialChequeTextBox.Location = new System.Drawing.Point(433, 146);
             this.pagoInicialChequeTextBox.Name = "pagoInicialChequeTextBox";
             this.pagoInicialChequeTextBox.Size = new System.Drawing.Size(100, 20);
             this.pagoInicialChequeTextBox.TabIndex = 30;
             // 
             // precioAPagarTextBox
             // 
-            this.precioAPagarTextBox.Location = new System.Drawing.Point(404, 173);
+            this.precioAPagarTextBox.Location = new System.Drawing.Point(433, 173);
             this.precioAPagarTextBox.Name = "precioAPagarTextBox";
             this.precioAPagarTextBox.Size = new System.Drawing.Size(100, 20);
             this.precioAPagarTextBox.TabIndex = 31;
             // 
             // autorizadoPorTextBox
             // 
-            this.autorizadoPorTextBox.Location = new System.Drawing.Point(404, 200);
+            this.autorizadoPorTextBox.Location = new System.Drawing.Point(433, 200);
             this.autorizadoPorTextBox.Name = "autorizadoPorTextBox";
             this.autorizadoPorTextBox.Size = new System.Drawing.Size(100, 20);
             this.autorizadoPorTextBox.TabIndex = 32;
@@ -212,7 +214,7 @@
             this.PagoIncialEfectivoLabel.BackColor = System.Drawing.Color.Transparent;
             this.PagoIncialEfectivoLabel.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PagoIncialEfectivoLabel.ForeColor = System.Drawing.Color.Black;
-            this.PagoIncialEfectivoLabel.Location = new System.Drawing.Point(275, 120);
+            this.PagoIncialEfectivoLabel.Location = new System.Drawing.Point(304, 120);
             this.PagoIncialEfectivoLabel.Name = "PagoIncialEfectivoLabel";
             this.PagoIncialEfectivoLabel.Size = new System.Drawing.Size(124, 14);
             this.PagoIncialEfectivoLabel.TabIndex = 33;
@@ -224,7 +226,7 @@
             this.PagoIncialChequeLabel.BackColor = System.Drawing.Color.Transparent;
             this.PagoIncialChequeLabel.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PagoIncialChequeLabel.ForeColor = System.Drawing.Color.Black;
-            this.PagoIncialChequeLabel.Location = new System.Drawing.Point(277, 147);
+            this.PagoIncialChequeLabel.Location = new System.Drawing.Point(306, 147);
             this.PagoIncialChequeLabel.Name = "PagoIncialChequeLabel";
             this.PagoIncialChequeLabel.Size = new System.Drawing.Size(123, 14);
             this.PagoIncialChequeLabel.TabIndex = 34;
@@ -236,7 +238,7 @@
             this.precioAPagarLabel.BackColor = System.Drawing.Color.Transparent;
             this.precioAPagarLabel.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.precioAPagarLabel.ForeColor = System.Drawing.Color.Black;
-            this.precioAPagarLabel.Location = new System.Drawing.Point(322, 174);
+            this.precioAPagarLabel.Location = new System.Drawing.Point(351, 174);
             this.precioAPagarLabel.Name = "precioAPagarLabel";
             this.precioAPagarLabel.Size = new System.Drawing.Size(82, 14);
             this.precioAPagarLabel.TabIndex = 35;
@@ -248,7 +250,7 @@
             this.autorizadoPorLabel.BackColor = System.Drawing.Color.Transparent;
             this.autorizadoPorLabel.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.autorizadoPorLabel.ForeColor = System.Drawing.Color.Black;
-            this.autorizadoPorLabel.Location = new System.Drawing.Point(321, 201);
+            this.autorizadoPorLabel.Location = new System.Drawing.Point(350, 201);
             this.autorizadoPorLabel.Name = "autorizadoPorLabel";
             this.autorizadoPorLabel.Size = new System.Drawing.Size(84, 14);
             this.autorizadoPorLabel.TabIndex = 36;
@@ -356,7 +358,7 @@
             this.botonGenerarFactura.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("botonGenerarFactura.BackgroundImage")));
             this.botonGenerarFactura.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.botonGenerarFactura.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.botonGenerarFactura.Location = new System.Drawing.Point(357, 418);
+            this.botonGenerarFactura.Location = new System.Drawing.Point(397, 417);
             this.botonGenerarFactura.Name = "botonGenerarFactura";
             this.botonGenerarFactura.Size = new System.Drawing.Size(65, 55);
             this.botonGenerarFactura.TabIndex = 49;
@@ -368,7 +370,7 @@
             this.facturaDeVentasLlabel.BackColor = System.Drawing.Color.Transparent;
             this.facturaDeVentasLlabel.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.facturaDeVentasLlabel.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.facturaDeVentasLlabel.Location = new System.Drawing.Point(279, 9);
+            this.facturaDeVentasLlabel.Location = new System.Drawing.Point(308, 9);
             this.facturaDeVentasLlabel.Name = "facturaDeVentasLlabel";
             this.facturaDeVentasLlabel.Size = new System.Drawing.Size(228, 26);
             this.facturaDeVentasLlabel.TabIndex = 50;
@@ -549,7 +551,7 @@
             this.panel2.Controls.Add(this.precioVehiculoTextBox);
             this.panel2.Controls.Add(this.estadoVehiculoLabel);
             this.panel2.Controls.Add(this.placaVehiculoTextBox);
-            this.panel2.Location = new System.Drawing.Point(515, 44);
+            this.panel2.Location = new System.Drawing.Point(580, 24);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(266, 357);
             this.panel2.TabIndex = 66;
@@ -579,7 +581,7 @@
             this.panel1.Controls.Add(this.LugardeNacimientoTextBox);
             this.panel1.Controls.Add(this.sexoTextBox);
             this.panel1.Controls.Add(this.botonBuscarCliente);
-            this.panel1.Location = new System.Drawing.Point(11, 44);
+            this.panel1.Location = new System.Drawing.Point(8, 24);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(263, 357);
             this.panel1.TabIndex = 69;
@@ -793,7 +795,7 @@
             this.datosClientelabel.BackColor = System.Drawing.Color.Transparent;
             this.datosClientelabel.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.datosClientelabel.ForeColor = System.Drawing.Color.Black;
-            this.datosClientelabel.Location = new System.Drawing.Point(65, 24);
+            this.datosClientelabel.Location = new System.Drawing.Point(62, 4);
             this.datosClientelabel.Name = "datosClientelabel";
             this.datosClientelabel.Size = new System.Drawing.Size(138, 17);
             this.datosClientelabel.TabIndex = 68;
@@ -801,7 +803,7 @@
             // 
             // facturaDateTimePicker
             // 
-            this.facturaDateTimePicker.Location = new System.Drawing.Point(304, 228);
+            this.facturaDateTimePicker.Location = new System.Drawing.Point(333, 228);
             this.facturaDateTimePicker.Name = "facturaDateTimePicker";
             this.facturaDateTimePicker.Size = new System.Drawing.Size(200, 20);
             this.facturaDateTimePicker.TabIndex = 70;
@@ -814,12 +816,32 @@
             this.telefonosListBox.Size = new System.Drawing.Size(100, 69);
             this.telefonosListBox.TabIndex = 30;
             // 
+            // botonGuardar
+            // 
+            this.botonGuardar.Location = new System.Drawing.Point(433, 327);
+            this.botonGuardar.Name = "botonGuardar";
+            this.botonGuardar.Size = new System.Drawing.Size(75, 23);
+            this.botonGuardar.TabIndex = 72;
+            this.botonGuardar.Text = "Guardar";
+            this.botonGuardar.UseVisualStyleBackColor = true;
+            // 
+            // botonNuevo
+            // 
+            this.botonNuevo.Location = new System.Drawing.Point(340, 327);
+            this.botonNuevo.Name = "botonNuevo";
+            this.botonNuevo.Size = new System.Drawing.Size(75, 23);
+            this.botonNuevo.TabIndex = 71;
+            this.botonNuevo.Text = "Nuevo";
+            this.botonNuevo.UseVisualStyleBackColor = true;
+            // 
             // FacturaDeVentasForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(793, 484);
+            this.ClientSize = new System.Drawing.Size(858, 484);
+            this.Controls.Add(this.botonGuardar);
+            this.Controls.Add(this.botonNuevo);
             this.Controls.Add(this.facturaDateTimePicker);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.datosClientelabel);
@@ -921,5 +943,7 @@
         private System.Windows.Forms.Label datosClientelabel;
         private System.Windows.Forms.DateTimePicker facturaDateTimePicker;
         private System.Windows.Forms.ListBox telefonosListBox;
+        private System.Windows.Forms.Button botonGuardar;
+        private System.Windows.Forms.Button botonNuevo;
     }
 }

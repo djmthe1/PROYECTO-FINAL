@@ -13,7 +13,6 @@ namespace BLL
 
         public int VehiculoId { set; get; }
         public string EstadoDelVehiculo { set; get; }
-    
         public string Modelo { set; get; }
         public string Marca { set; get; }
         public string Motor { set; get; }
@@ -47,7 +46,6 @@ namespace BLL
         {
             this.VehiculoId = vehiculoId;
             this.EstadoDelVehiculo = estadoDelVehiculo;
-            
             this.Modelo = modelo;
             this.Marca = marca;
             this.Motor = motor;
