@@ -72,7 +72,7 @@ namespace Sistema_Ventas_Vehiculos.Registros
                     TipoIDtextBox.Clear();
                 }
 
-            }catch (Exception)
+            } catch (Exception)
             {
                 MensajeError("Error al Eliminar");
             }
@@ -85,7 +85,7 @@ namespace Sistema_Ventas_Vehiculos.Registros
                 tipoVehiculos.Descripcion = DescripciontextBox.Text;
                 if (TipoIDtextBox.Text == "")
                 {
-                    if(DescripciontextBox.Text != ""){
+                    if (DescripciontextBox.Text != "") {
                         if (tipoVehiculos.Insertar())
                         {
                             DescripciontextBox.Clear();
@@ -120,7 +120,7 @@ namespace Sistema_Ventas_Vehiculos.Registros
                             MensajeError("Error al Modificar");
                         }
                     }
-                    else{
+                    else {
                         MensajeAdvertencia("Inserte la descripcion");
                     }
 
@@ -156,7 +156,7 @@ namespace Sistema_Ventas_Vehiculos.Registros
 
         private void DescripciontextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8))
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar == 32) || (e.KeyChar == 45) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8))
                 e.Handled = false;
             else
                 e.Handled = true;
