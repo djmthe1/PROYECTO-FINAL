@@ -1,4 +1,7 @@
-﻿namespace Sistema_Ventas_Vehiculos.Registros
+﻿using System;
+using System.Windows.Forms;
+
+namespace Sistema_Ventas_Vehiculos.Registros
 {
     partial class ClientesForm
     {
@@ -144,6 +147,7 @@
             this.NombreTextBox.Name = "NombreTextBox";
             this.NombreTextBox.Size = new System.Drawing.Size(100, 20);
             this.NombreTextBox.TabIndex = 14;
+            this.NombreTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NombreTextBox_KeyPress);
             // 
             // nombreClienteLabel
             // 
@@ -271,6 +275,7 @@
             this.clienteIdTextBox.Name = "clienteIdTextBox";
             this.clienteIdTextBox.Size = new System.Drawing.Size(100, 20);
             this.clienteIdTextBox.TabIndex = 13;
+            this.clienteIdTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.clienteIdTextBox_KeyPress);
             // 
             // ApodoTextBox
             // 
@@ -278,6 +283,7 @@
             this.ApodoTextBox.Name = "ApodoTextBox";
             this.ApodoTextBox.Size = new System.Drawing.Size(100, 20);
             this.ApodoTextBox.TabIndex = 15;
+            this.ApodoTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ApodoTextBox_KeyPress);
             // 
             // TelefonoTextBox
             // 
@@ -285,6 +291,7 @@
             this.TelefonoTextBox.Name = "TelefonoTextBox";
             this.TelefonoTextBox.Size = new System.Drawing.Size(100, 20);
             this.TelefonoTextBox.TabIndex = 16;
+            this.TelefonoTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TelefonoTextBox_KeyPress);
             // 
             // DireccionTextBox
             // 
@@ -292,6 +299,7 @@
             this.DireccionTextBox.Name = "DireccionTextBox";
             this.DireccionTextBox.Size = new System.Drawing.Size(100, 20);
             this.DireccionTextBox.TabIndex = 17;
+            this.DireccionTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DireccionTextBox_KeyPress);
             // 
             // CedulaTextBox
             // 
@@ -299,6 +307,7 @@
             this.CedulaTextBox.Name = "CedulaTextBox";
             this.CedulaTextBox.Size = new System.Drawing.Size(100, 20);
             this.CedulaTextBox.TabIndex = 18;
+            this.CedulaTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CedulaTextBox_KeyPress);
             // 
             // nacionalidadTextBox
             // 
@@ -306,6 +315,7 @@
             this.nacionalidadTextBox.Name = "nacionalidadTextBox";
             this.nacionalidadTextBox.Size = new System.Drawing.Size(100, 20);
             this.nacionalidadTextBox.TabIndex = 19;
+            this.nacionalidadTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nacionalidadTextBox_KeyPress);
             // 
             // OcupacionTextBox
             // 
@@ -313,6 +323,7 @@
             this.OcupacionTextBox.Name = "OcupacionTextBox";
             this.OcupacionTextBox.Size = new System.Drawing.Size(100, 20);
             this.OcupacionTextBox.TabIndex = 20;
+            this.OcupacionTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OcupacionTextBox_KeyPress);
             // 
             // LugardeNacimientoTextBox
             // 
@@ -320,6 +331,7 @@
             this.LugardeNacimientoTextBox.Name = "LugardeNacimientoTextBox";
             this.LugardeNacimientoTextBox.Size = new System.Drawing.Size(100, 20);
             this.LugardeNacimientoTextBox.TabIndex = 21;
+            this.LugardeNacimientoTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.LugardeNacimientoTextBox_KeyPress);
             // 
             // botonBuscarCliente
             // 

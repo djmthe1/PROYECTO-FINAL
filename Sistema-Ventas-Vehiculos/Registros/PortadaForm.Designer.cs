@@ -40,6 +40,7 @@
             this.vehiculoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.buscarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.venderVehiculoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.marcasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,7 +49,6 @@
             this.tipoDeMotoresToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.coloresToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.vehiculosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.buscarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuStripVentaVehiculos.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -145,6 +145,12 @@
             this.listarToolStripMenuItem.Text = "LISTAR";
             this.listarToolStripMenuItem.Click += new System.EventHandler(this.listarToolStripMenuItem_Click);
             // 
+            // buscarToolStripMenuItem
+            // 
+            this.buscarToolStripMenuItem.Name = "buscarToolStripMenuItem";
+            this.buscarToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
+            this.buscarToolStripMenuItem.Text = "BUSCAR";
+            // 
             // venderVehiculoToolStripMenuItem
             // 
             this.venderVehiculoToolStripMenuItem.Name = "venderVehiculoToolStripMenuItem";
@@ -200,12 +206,6 @@
             this.vehiculosToolStripMenuItem1.Name = "vehiculosToolStripMenuItem1";
             this.vehiculosToolStripMenuItem1.Size = new System.Drawing.Size(188, 22);
             this.vehiculosToolStripMenuItem1.Text = "VEHICULOS";
-            // 
-            // buscarToolStripMenuItem
-            // 
-            this.buscarToolStripMenuItem.Name = "buscarToolStripMenuItem";
-            this.buscarToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
-            this.buscarToolStripMenuItem.Text = "BUSCAR";
             // 
             // PortadaForm
             // 

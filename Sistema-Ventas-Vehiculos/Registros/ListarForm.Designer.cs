@@ -40,6 +40,7 @@
             this.listarDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.listarDataGridView.Location = new System.Drawing.Point(12, 76);
             this.listarDataGridView.Name = "listarDataGridView";
+            this.listarDataGridView.ReadOnly = true;
             this.listarDataGridView.Size = new System.Drawing.Size(381, 188);
             this.listarDataGridView.TabIndex = 36;
             // 
