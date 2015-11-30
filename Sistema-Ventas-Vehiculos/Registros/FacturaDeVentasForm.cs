@@ -127,5 +127,213 @@ namespace Sistema_Ventas_Vehiculos.Registros
                 MensajeError("Error al Buscar");
             }
         }
+
+        private void NombreTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8))
+                e.Handled = false;
+            else
+                e.Handled = true;
+        }
+
+        private void ApodoTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8))
+                e.Handled = false;
+            else
+                e.Handled = true;
+        }
+
+        private void telefonosListBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8))
+                e.Handled = false;
+            else
+                e.Handled = true;
+        }
+
+        private void DireccionTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8))
+                e.Handled = false;
+            else
+                e.Handled = true;
+        }
+
+        private void CedulaTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8))
+                e.Handled = false;
+            else
+                e.Handled = true;
+        }
+
+        private void nacionalidadTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8))
+                e.Handled = false;
+            else
+                e.Handled = true;
+        }
+
+        private void OcupacionTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8))
+                e.Handled = false;
+            else
+                e.Handled = true;
+        }
+
+        private void LugardeNacimientoTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8))
+                e.Handled = false;
+            else
+                e.Handled = true;
+        }
+
+        private void estadoVehiculoTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8))
+                e.Handled = false;
+            else
+                e.Handled = true;
+        }
+
+        private void modeloVehiculoTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8))
+                e.Handled = false;
+            else
+                e.Handled = true;
+        }
+
+        private void marcaVehiculoTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8))
+                e.Handled = false;
+            else
+                e.Handled = true;
+        }
+
+        private void motorVehiculoTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8))
+                e.Handled = false;
+            else
+                e.Handled = true;
+        }
+
+        private void colorVehiculoTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8))
+                e.Handled = false;
+            else
+                e.Handled = true;
+        }
+
+        private void chasisVehiculoTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8))
+                e.Handled = false;
+            else
+                e.Handled = true;
+        }
+
+        private void tipoVehiculoTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8))
+                e.Handled = false;
+            else
+                e.Handled = true;
+        }
+
+        private void placaVehiculoTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8))
+                e.Handled = false;
+            else
+                e.Handled = true;
+        }
+
+        private void matriculaVehiculoTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8))
+                e.Handled = false;
+            else
+                e.Handled = true;
+        }
+
+        private void autorizadoPorTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8))
+                e.Handled = false;
+            else
+                e.Handled = true;
+        }
+
+        private void precioAPagarTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar == 8))
+                e.Handled = false;
+            else
+                e.Handled = true;
+        }
+
+        private void pagoInicialChequeTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar == 8))
+                e.Handled = false;
+            else
+                e.Handled = true;
+        }
+
+        private void pagoInicialEfectivoTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar == 8))
+                e.Handled = false;
+            else
+                e.Handled = true;
+        }
+
+        private void clienteIdTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar == 8))
+                e.Handled = false;
+            else
+                e.Handled = true;
+        }
+
+        private void vehiculoIdTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar == 8))
+                e.Handled = false;
+            else
+                e.Handled = true;
+        }
+
+        private void añoVehiculoTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar == 8))
+                e.Handled = false;
+            else
+                e.Handled = true;
+        }
+
+        private void kilometrajeVehiculoTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar == 8))
+                e.Handled = false;
+            else
+                e.Handled = true;
+        }
+
+        private void precioVehiculoTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar == 8))
+                e.Handled = false;
+            else
+                e.Handled = true;
+        }
     }
 }

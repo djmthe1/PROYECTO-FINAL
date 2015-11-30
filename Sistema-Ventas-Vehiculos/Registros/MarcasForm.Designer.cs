@@ -46,6 +46,8 @@
             this.DescripciontextBox.Name = "DescripciontextBox";
             this.DescripciontextBox.Size = new System.Drawing.Size(81, 20);
             this.DescripciontextBox.TabIndex = 10;
+            this.DescripciontextBox.TextChanged += new System.EventHandler(this.DescripciontextBox_TextChanged);
+            this.DescripciontextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DescripciontextBox_KeyPress);
             // 
             // Descripcionlabel
             // 
@@ -93,6 +95,7 @@
             this.MarcasIDtextBox.Name = "MarcasIDtextBox";
             this.MarcasIDtextBox.Size = new System.Drawing.Size(81, 20);
             this.MarcasIDtextBox.TabIndex = 12;
+            this.MarcasIDtextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.MarcasIDtextBox_KeyPress);
             // 
             // botonEliminar
             // 

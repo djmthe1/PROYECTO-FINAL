@@ -96,6 +96,8 @@
             this.DescripciontextBox.Name = "DescripciontextBox";
             this.DescripciontextBox.Size = new System.Drawing.Size(100, 20);
             this.DescripciontextBox.TabIndex = 25;
+            this.DescripciontextBox.TextChanged += new System.EventHandler(this.DescripciontextBox_TextChanged);
+            this.DescripciontextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DescripciontextBox_KeyPress);
             // 
             // ModeloIDtextBox
             // 
@@ -103,6 +105,7 @@
             this.ModeloIDtextBox.Name = "ModeloIDtextBox";
             this.ModeloIDtextBox.Size = new System.Drawing.Size(100, 20);
             this.ModeloIDtextBox.TabIndex = 26;
+            this.ModeloIDtextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ModeloIDtextBox_KeyPress);
             // 
             // botonBuscar
             // 

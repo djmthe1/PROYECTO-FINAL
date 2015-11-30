@@ -79,7 +79,7 @@
             // IDlabel
             // 
             this.IDlabel.AutoSize = true;
-            this.IDlabel.Location = new System.Drawing.Point(49, 32);
+            this.IDlabel.Location = new System.Drawing.Point(25, 32);
             this.IDlabel.Name = "IDlabel";
             this.IDlabel.Size = new System.Drawing.Size(16, 13);
             this.IDlabel.TabIndex = 20;
@@ -88,7 +88,7 @@
             // nombreLabel
             // 
             this.nombreLabel.AutoSize = true;
-            this.nombreLabel.Location = new System.Drawing.Point(21, 66);
+            this.nombreLabel.Location = new System.Drawing.Point(21, 62);
             this.nombreLabel.Name = "nombreLabel";
             this.nombreLabel.Size = new System.Drawing.Size(44, 13);
             this.nombreLabel.TabIndex = 21;
@@ -97,7 +97,7 @@
             // passLabel
             // 
             this.passLabel.AutoSize = true;
-            this.passLabel.Location = new System.Drawing.Point(4, 98);
+            this.passLabel.Location = new System.Drawing.Point(12, 94);
             this.passLabel.Name = "passLabel";
             this.passLabel.Size = new System.Drawing.Size(61, 13);
             this.passLabel.TabIndex = 22;
@@ -106,7 +106,7 @@
             // prioridadLabel
             // 
             this.prioridadLabel.AutoSize = true;
-            this.prioridadLabel.Location = new System.Drawing.Point(17, 151);
+            this.prioridadLabel.Location = new System.Drawing.Point(12, 151);
             this.prioridadLabel.Name = "prioridadLabel";
             this.prioridadLabel.Size = new System.Drawing.Size(48, 13);
             this.prioridadLabel.TabIndex = 23;
@@ -118,6 +118,7 @@
             this.usuarioIDTextBox.Name = "usuarioIDTextBox";
             this.usuarioIDTextBox.Size = new System.Drawing.Size(100, 20);
             this.usuarioIDTextBox.TabIndex = 1;
+            this.usuarioIDTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.usuarioIDTextBox_KeyPress);
             // 
             // nombreTextBox
             // 
@@ -125,6 +126,7 @@
             this.nombreTextBox.Name = "nombreTextBox";
             this.nombreTextBox.Size = new System.Drawing.Size(100, 20);
             this.nombreTextBox.TabIndex = 2;
+            this.nombreTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nombreTextBox_KeyPress);
             // 
             // passTextBox
             // 
@@ -133,6 +135,7 @@
             this.passTextBox.Size = new System.Drawing.Size(100, 20);
             this.passTextBox.TabIndex = 3;
             this.passTextBox.UseSystemPasswordChar = true;
+            this.passTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.passTextBox_KeyPress);
             // 
             // botonBuscar
             // 
@@ -165,11 +168,12 @@
             this.confirmarPassTextBox.Size = new System.Drawing.Size(100, 20);
             this.confirmarPassTextBox.TabIndex = 4;
             this.confirmarPassTextBox.UseSystemPasswordChar = true;
+            this.confirmarPassTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.confirmarPassTextBox_KeyPress);
             // 
             // confirmarContraseñaLabel
             // 
             this.confirmarContraseñaLabel.AutoSize = true;
-            this.confirmarContraseñaLabel.Location = new System.Drawing.Point(4, 127);
+            this.confirmarContraseñaLabel.Location = new System.Drawing.Point(9, 123);
             this.confirmarContraseñaLabel.Name = "confirmarContraseñaLabel";
             this.confirmarContraseñaLabel.Size = new System.Drawing.Size(108, 13);
             this.confirmarContraseñaLabel.TabIndex = 34;
@@ -177,6 +181,7 @@
             // 
             // prioridadComboBox
             // 
+            this.prioridadComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.prioridadComboBox.FormattingEnabled = true;
             this.prioridadComboBox.Items.AddRange(new object[] {
             "1",

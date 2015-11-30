@@ -76,6 +76,7 @@
             // 
             // buscarComboBox
             // 
+            this.buscarComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.buscarComboBox.FormattingEnabled = true;
             this.buscarComboBox.Items.AddRange(new object[] {
             "Marca",
@@ -91,6 +92,7 @@
             // 
             // descripcionComboBox
             // 
+            this.descripcionComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.descripcionComboBox.FormattingEnabled = true;
             this.descripcionComboBox.Location = new System.Drawing.Point(153, 61);
             this.descripcionComboBox.Name = "descripcionComboBox";

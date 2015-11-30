@@ -86,6 +86,7 @@
             this.DescripciontextBox.Name = "DescripciontextBox";
             this.DescripciontextBox.Size = new System.Drawing.Size(92, 20);
             this.DescripciontextBox.TabIndex = 23;
+            this.DescripciontextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DescripciontextBox_KeyPress);
             // 
             // IDlabel
             // 
@@ -103,6 +104,7 @@
             this.MotorIDtextBox.Name = "MotorIDtextBox";
             this.MotorIDtextBox.Size = new System.Drawing.Size(92, 20);
             this.MotorIDtextBox.TabIndex = 27;
+            this.MotorIDtextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.MotorIDtextBox_KeyPress);
             // 
             // botonBuscar
             // 

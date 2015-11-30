@@ -66,6 +66,7 @@
             this.ColorIDtextBox.Name = "ColorIDtextBox";
             this.ColorIDtextBox.Size = new System.Drawing.Size(81, 20);
             this.ColorIDtextBox.TabIndex = 6;
+            this.ColorIDtextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ColorIDtextBox_KeyPress);
             // 
             // DescripciontextBox
             // 
@@ -73,6 +74,8 @@
             this.DescripciontextBox.Name = "DescripciontextBox";
             this.DescripciontextBox.Size = new System.Drawing.Size(81, 20);
             this.DescripciontextBox.TabIndex = 7;
+            this.DescripciontextBox.TextChanged += new System.EventHandler(this.DescripciontextBox_TextChanged);
+            this.DescripciontextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DescripciontextBox_KeyPress);
             // 
             // IDlabel
             // 
