@@ -330,6 +330,7 @@
             this.MarcasComboBox.Name = "MarcasComboBox";
             this.MarcasComboBox.Size = new System.Drawing.Size(101, 24);
             this.MarcasComboBox.TabIndex = 123;
+            this.MarcasComboBox.SelectedIndexChanged += new System.EventHandler(this.MarcasComboBox_SelectedIndexChanged);
             // 
             // MotorComboBox
             // 

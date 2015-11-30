@@ -471,5 +471,10 @@ namespace Sistema_Ventas_Vehiculos.Registros
             for (int i = 0; i <= dato.Rows.Count - 1; i++)
                 tipoVehiculoComboBox.Items.Add(tipoVehiculo.Listado("*", "0=0", "ORDER BY Descripcion").Rows[i]["Descripcion"]);
         }
+
+        private void MarcasComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
