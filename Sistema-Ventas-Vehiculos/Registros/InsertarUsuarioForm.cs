@@ -19,6 +19,7 @@ namespace Sistema_Ventas_Vehiculos.Registros
         }
 
         Usuarios usuarios = new Usuarios();
+        int prioridad = 0;
 
         private void MensajeOk(string mensaje)
         {
@@ -31,8 +32,6 @@ namespace Sistema_Ventas_Vehiculos.Registros
 
         private void botonAtras_Click(object sender, EventArgs e)
         {
-            PortadaForm PortadaF = new PortadaForm();
-            PortadaF.Show();
             this.Close();
         }
 
@@ -68,7 +67,6 @@ namespace Sistema_Ventas_Vehiculos.Registros
         private void botonGuardar_Click(object sender, EventArgs e)
         {
             usuarios.Nombre = nombreTextBox.Text;
-            int prioridad = 0;
            
             if (prioridad < 3)
             {
@@ -165,6 +163,18 @@ namespace Sistema_Ventas_Vehiculos.Registros
                 e.Handled = false;
             else
                 e.Handled = true;
+        }
+
+        private void prioridadComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (prioridadComboBox.Text == "Administrador")
+            {
+                prioridad = 1;
+            }
+            if (prioridadComboBox.Text == "Usuario")
+            {
+                prioridad = 2;
+            }
         }
     }
 }

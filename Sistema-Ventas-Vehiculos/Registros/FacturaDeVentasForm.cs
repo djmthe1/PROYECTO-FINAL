@@ -193,6 +193,15 @@ namespace Sistema_Ventas_Vehiculos.Registros
                 factura.Marca = marcaVehiculoTextBox.Text;
                 factura.Modelo = motorVehiculoTextBox.Text;
                 factura.Color = colorVehiculoTextBox.Text;
+                int VAño = 0;
+                int.TryParse(vehiculoIdTextBox.Text, out VAño);
+                factura.VehiculoId = VAño;
+                factura.Año = VAño;
+                factura.NoChasis = chasisVehiculoTextBox.Text;
+                factura.TipoDeVehiculo = tipoVehiculoTextBox.Text;
+                int Kvehiculo = 0;
+                int.TryParse(vehiculoIdTextBox.Text, out Kvehiculo);
+                factura.Kilometraje = Kvehiculo;
                 factura.DuplicadoDeLlaveDeEncendido = vehiculo.DuplicadoDeLlaveDeEncendido;
                 factura.EspejoRetrovisorDerecho = vehiculo.EspejoRetrovisorDerecho;
                 factura.EspejoRetrovisorIzquierdo = vehiculo.EspejoRetrovisorIzquierdo;
@@ -208,6 +217,11 @@ namespace Sistema_Ventas_Vehiculos.Registros
                 factura.Alfombras = vehiculo.Alfombras;
                 factura.Encendedor = vehiculo.Encendedor;
                 factura.LlaveDeRueda = vehiculo.LlaveDeRueda;
+                factura.Matricula = marcaVehiculoTextBox.Text;
+                factura.Placa = placaVehiculoTextBox.Text;
+                int Pvehiculo = 0;
+                int.TryParse(vehiculoIdTextBox.Text, out Pvehiculo);
+                factura.Precio = Pvehiculo;
                 int PagoInicialE = 0;
                 int.TryParse(vehiculoIdTextBox.Text, out PagoInicialE);
                 factura.PagoInicialEnEfectivo = PagoInicialE;
@@ -247,13 +261,43 @@ namespace Sistema_Ventas_Vehiculos.Registros
             }
             catch (Exception)
             {
-                MensajeError("Error al Insertar o Modificar");
+                MensajeError("Error al Insertar");
             }
         }
 
         private void botonBuscarFactura_Click(object sender, EventArgs e)
         {
 
+           /* vehiculoIdTextBox  = factura.VehiculoId;
+            estadoVehiculoTextBox = factura.EstadoDelVehiculo;
+            modeloVehiculoTextBox = factura.Modelo;
+
+
+
+            factura.Marca = marcaVehiculoTextBox;
+            factura.Motor = modeloVehiculoTextBox;
+            factura.Color = colorVehiculoTextBox.Text;
+            factura.Año = añoVehiculoTextBox.Text;
+            factura.NoChasis = chasisVehiculoTextBox.Text;
+            factura.TipoVehiculo = tipoVehiculoTextBox.Text;
+            factura.Kilometraje int,
+            factura.Precio int,
+            factura.Placa = placaVehiculoTextBox.Text;
+            factura.Matricula = marcaVehiculoTextBox.Text;
+            factura.PagoInicialEnEfectivo int,
+            factura.PagoInicialEnCheque int,
+            factura.PrecioAPagar int,
+            factura.ClienteId int,
+            factura.NombreCompleto = NombreTextBox.Text;
+            factura.Apodo = ApodoTextBox.Text;
+            factura.Cedula = CedulaTextBox.Text;
+            factura.Direccion = DireccionTextBox.Text;
+            factura.Nacionalidad = nacionalidadTextBox;
+            factura.Ocupacion = OcupacionTextBox.Text;
+            factura.LugarDeNacimiento = LugardeNacimientoTextBox.Text;
+            factura.Sexo = sexoTextBox.Text;
+            factura.AutorizadoPor = autorizadoPorTextBox.Text;
+            */
         }
 
         private void NombreTextBox_KeyPress(object sender, KeyPressEventArgs e)

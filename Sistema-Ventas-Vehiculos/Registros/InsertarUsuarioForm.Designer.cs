@@ -184,12 +184,13 @@
             this.prioridadComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.prioridadComboBox.FormattingEnabled = true;
             this.prioridadComboBox.Items.AddRange(new object[] {
-            "1",
-            "2"});
+            "Administrador",
+            "Usuario"});
             this.prioridadComboBox.Location = new System.Drawing.Point(119, 151);
             this.prioridadComboBox.Name = "prioridadComboBox";
             this.prioridadComboBox.Size = new System.Drawing.Size(100, 21);
             this.prioridadComboBox.TabIndex = 5;
+            this.prioridadComboBox.SelectedIndexChanged += new System.EventHandler(this.prioridadComboBox_SelectedIndexChanged);
             // 
             // InsertarUsuarioForm
             // 
