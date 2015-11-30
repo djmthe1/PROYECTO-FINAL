@@ -476,5 +476,74 @@ namespace Sistema_Ventas_Vehiculos.Registros
         {
 
         }
+
+        private void vehiculoIdTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar == 8))
+                e.Handled = false;
+            else
+                e.Handled = true;
+        }
+
+        private void estadoVehiculoTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8))
+                e.Handled = false;
+            else
+                e.Handled = true;
+        }
+
+        private void placaVehiculoTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8))
+                e.Handled = false;
+            else
+                e.Handled = true;
+        }
+
+        private void chasisVehiculoTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8))
+                e.Handled = false;
+            else
+                e.Handled = true;
+        }
+
+        private void matriculaVehiculoTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8))
+                e.Handled = false;
+            else
+                e.Handled = true;
+        }
+
+        private void kilometrajeVehiculoTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar == 8))
+                e.Handled = false;
+            else
+                e.Handled = true;
+        }
+
+        private void añoVehiculoTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar == 8))
+                e.Handled = false;
+            else
+                e.Handled = true;
+        }
+
+        private void precioVehiculoTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar == 8))
+                e.Handled = false;
+            else
+                e.Handled = true;
+        }
+
+        private void ModeloComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

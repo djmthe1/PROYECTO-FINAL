@@ -146,6 +146,7 @@
             this.vehiculoIdTextBox.Name = "vehiculoIdTextBox";
             this.vehiculoIdTextBox.Size = new System.Drawing.Size(100, 20);
             this.vehiculoIdTextBox.TabIndex = 23;
+            this.vehiculoIdTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.vehiculoIdTextBox_KeyPress);
             // 
             // datosVehiculoLabel
             // 
@@ -189,6 +190,7 @@
             this.pagoInicialEfectivoTextBox.Name = "pagoInicialEfectivoTextBox";
             this.pagoInicialEfectivoTextBox.Size = new System.Drawing.Size(100, 20);
             this.pagoInicialEfectivoTextBox.TabIndex = 29;
+            this.pagoInicialEfectivoTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.pagoInicialEfectivoTextBox_KeyPress);
             // 
             // pagoInicialChequeTextBox
             // 
@@ -196,6 +198,7 @@
             this.pagoInicialChequeTextBox.Name = "pagoInicialChequeTextBox";
             this.pagoInicialChequeTextBox.Size = new System.Drawing.Size(100, 20);
             this.pagoInicialChequeTextBox.TabIndex = 30;
+            this.pagoInicialChequeTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.pagoInicialChequeTextBox_KeyPress);
             // 
             // precioAPagarTextBox
             // 
@@ -203,6 +206,7 @@
             this.precioAPagarTextBox.Name = "precioAPagarTextBox";
             this.precioAPagarTextBox.Size = new System.Drawing.Size(100, 20);
             this.precioAPagarTextBox.TabIndex = 31;
+            this.precioAPagarTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.precioAPagarTextBox_KeyPress);
             // 
             // autorizadoPorTextBox
             // 
@@ -210,6 +214,7 @@
             this.autorizadoPorTextBox.Name = "autorizadoPorTextBox";
             this.autorizadoPorTextBox.Size = new System.Drawing.Size(100, 20);
             this.autorizadoPorTextBox.TabIndex = 32;
+            this.autorizadoPorTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.autorizadoPorTextBox_KeyPress);
             // 
             // PagoIncialEfectivoLabel
             // 
@@ -266,6 +271,7 @@
             this.estadoVehiculoTextBox.ReadOnly = true;
             this.estadoVehiculoTextBox.Size = new System.Drawing.Size(100, 20);
             this.estadoVehiculoTextBox.TabIndex = 37;
+            this.estadoVehiculoTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.estadoVehiculoTextBox_KeyPress);
             // 
             // modeloVehiculoTextBox
             // 
@@ -274,6 +280,7 @@
             this.modeloVehiculoTextBox.ReadOnly = true;
             this.modeloVehiculoTextBox.Size = new System.Drawing.Size(100, 20);
             this.modeloVehiculoTextBox.TabIndex = 38;
+            this.modeloVehiculoTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.modeloVehiculoTextBox_KeyPress);
             // 
             // marcaVehiculoTextBox
             // 
@@ -282,6 +289,7 @@
             this.marcaVehiculoTextBox.ReadOnly = true;
             this.marcaVehiculoTextBox.Size = new System.Drawing.Size(100, 20);
             this.marcaVehiculoTextBox.TabIndex = 39;
+            this.marcaVehiculoTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.marcaVehiculoTextBox_KeyPress);
             // 
             // motorVehiculoTextBox
             // 
@@ -290,6 +298,7 @@
             this.motorVehiculoTextBox.ReadOnly = true;
             this.motorVehiculoTextBox.Size = new System.Drawing.Size(100, 20);
             this.motorVehiculoTextBox.TabIndex = 40;
+            this.motorVehiculoTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.motorVehiculoTextBox_KeyPress);
             // 
             // colorVehiculoTextBox
             // 
@@ -298,6 +307,7 @@
             this.colorVehiculoTextBox.ReadOnly = true;
             this.colorVehiculoTextBox.Size = new System.Drawing.Size(100, 20);
             this.colorVehiculoTextBox.TabIndex = 41;
+            this.colorVehiculoTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.colorVehiculoTextBox_KeyPress);
             // 
             // añoVehiculoTextBox
             // 
@@ -307,6 +317,7 @@
             this.añoVehiculoTextBox.Size = new System.Drawing.Size(100, 20);
             this.añoVehiculoTextBox.TabIndex = 42;
             this.añoVehiculoTextBox.TextChanged += new System.EventHandler(this.añoVehiculoTextBox_TextChanged);
+            this.añoVehiculoTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.añoVehiculoTextBox_KeyPress);
             // 
             // chasisVehiculoTextBox
             // 
@@ -315,6 +326,7 @@
             this.chasisVehiculoTextBox.ReadOnly = true;
             this.chasisVehiculoTextBox.Size = new System.Drawing.Size(100, 20);
             this.chasisVehiculoTextBox.TabIndex = 43;
+            this.chasisVehiculoTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.chasisVehiculoTextBox_KeyPress);
             // 
             // tipoVehiculoTextBox
             // 
@@ -323,6 +335,7 @@
             this.tipoVehiculoTextBox.ReadOnly = true;
             this.tipoVehiculoTextBox.Size = new System.Drawing.Size(100, 20);
             this.tipoVehiculoTextBox.TabIndex = 44;
+            this.tipoVehiculoTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tipoVehiculoTextBox_KeyPress);
             // 
             // kilometrajeVehiculoTextBox
             // 
@@ -331,6 +344,7 @@
             this.kilometrajeVehiculoTextBox.ReadOnly = true;
             this.kilometrajeVehiculoTextBox.Size = new System.Drawing.Size(100, 20);
             this.kilometrajeVehiculoTextBox.TabIndex = 45;
+            this.kilometrajeVehiculoTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.kilometrajeVehiculoTextBox_KeyPress);
             // 
             // precioVehiculoTextBox
             // 
@@ -339,6 +353,7 @@
             this.precioVehiculoTextBox.ReadOnly = true;
             this.precioVehiculoTextBox.Size = new System.Drawing.Size(100, 20);
             this.precioVehiculoTextBox.TabIndex = 46;
+            this.precioVehiculoTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.precioVehiculoTextBox_KeyPress);
             // 
             // placaVehiculoTextBox
             // 
@@ -347,6 +362,7 @@
             this.placaVehiculoTextBox.ReadOnly = true;
             this.placaVehiculoTextBox.Size = new System.Drawing.Size(100, 20);
             this.placaVehiculoTextBox.TabIndex = 47;
+            this.placaVehiculoTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.placaVehiculoTextBox_KeyPress);
             // 
             // matriculaVehiculoTextBox
             // 
@@ -355,6 +371,7 @@
             this.matriculaVehiculoTextBox.ReadOnly = true;
             this.matriculaVehiculoTextBox.Size = new System.Drawing.Size(100, 20);
             this.matriculaVehiculoTextBox.TabIndex = 48;
+            this.matriculaVehiculoTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.matriculaVehiculoTextBox_KeyPress);
             // 
             // botonGenerarFactura
             // 
@@ -596,6 +613,7 @@
             this.telefonosListBox.Name = "telefonosListBox";
             this.telefonosListBox.Size = new System.Drawing.Size(100, 69);
             this.telefonosListBox.TabIndex = 30;
+            this.telefonosListBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.telefonosListBox_KeyPress);
             // 
             // NombreTextBox
             // 
@@ -604,6 +622,7 @@
             this.NombreTextBox.ReadOnly = true;
             this.NombreTextBox.Size = new System.Drawing.Size(100, 20);
             this.NombreTextBox.TabIndex = 14;
+            this.NombreTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NombreTextBox_KeyPress);
             // 
             // nombreClienteLabel
             // 
@@ -731,6 +750,7 @@
             this.clienteIdTextBox.Name = "clienteIdTextBox";
             this.clienteIdTextBox.Size = new System.Drawing.Size(100, 20);
             this.clienteIdTextBox.TabIndex = 13;
+            this.clienteIdTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.clienteIdTextBox_KeyPress);
             // 
             // ApodoTextBox
             // 
@@ -739,6 +759,7 @@
             this.ApodoTextBox.ReadOnly = true;
             this.ApodoTextBox.Size = new System.Drawing.Size(100, 20);
             this.ApodoTextBox.TabIndex = 15;
+            this.ApodoTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ApodoTextBox_KeyPress);
             // 
             // DireccionTextBox
             // 
@@ -747,6 +768,7 @@
             this.DireccionTextBox.ReadOnly = true;
             this.DireccionTextBox.Size = new System.Drawing.Size(100, 20);
             this.DireccionTextBox.TabIndex = 17;
+            this.DireccionTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DireccionTextBox_KeyPress);
             // 
             // CedulaTextBox
             // 
@@ -755,6 +777,7 @@
             this.CedulaTextBox.ReadOnly = true;
             this.CedulaTextBox.Size = new System.Drawing.Size(100, 20);
             this.CedulaTextBox.TabIndex = 18;
+            this.CedulaTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CedulaTextBox_KeyPress);
             // 
             // nacionalidadTextBox
             // 
@@ -763,6 +786,7 @@
             this.nacionalidadTextBox.ReadOnly = true;
             this.nacionalidadTextBox.Size = new System.Drawing.Size(100, 20);
             this.nacionalidadTextBox.TabIndex = 19;
+            this.nacionalidadTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nacionalidadTextBox_KeyPress);
             // 
             // OcupacionTextBox
             // 
@@ -771,6 +795,7 @@
             this.OcupacionTextBox.ReadOnly = true;
             this.OcupacionTextBox.Size = new System.Drawing.Size(100, 20);
             this.OcupacionTextBox.TabIndex = 20;
+            this.OcupacionTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OcupacionTextBox_KeyPress);
             // 
             // LugardeNacimientoTextBox
             // 
@@ -779,6 +804,7 @@
             this.LugardeNacimientoTextBox.ReadOnly = true;
             this.LugardeNacimientoTextBox.Size = new System.Drawing.Size(100, 20);
             this.LugardeNacimientoTextBox.TabIndex = 21;
+            this.LugardeNacimientoTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.LugardeNacimientoTextBox_KeyPress);
             // 
             // sexoTextBox
             // 

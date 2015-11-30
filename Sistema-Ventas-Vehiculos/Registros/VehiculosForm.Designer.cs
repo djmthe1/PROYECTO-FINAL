@@ -315,6 +315,7 @@
             // 
             // ColorComboBox
             // 
+            this.ColorComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ColorComboBox.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ColorComboBox.FormattingEnabled = true;
             this.ColorComboBox.Location = new System.Drawing.Point(426, 137);
@@ -324,6 +325,7 @@
             // 
             // MarcasComboBox
             // 
+            this.MarcasComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.MarcasComboBox.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MarcasComboBox.FormattingEnabled = true;
             this.MarcasComboBox.Location = new System.Drawing.Point(176, 104);
@@ -334,6 +336,7 @@
             // 
             // MotorComboBox
             // 
+            this.MotorComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.MotorComboBox.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MotorComboBox.FormattingEnabled = true;
             this.MotorComboBox.Location = new System.Drawing.Point(426, 106);
@@ -343,12 +346,14 @@
             // 
             // ModeloComboBox
             // 
+            this.ModeloComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ModeloComboBox.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ModeloComboBox.FormattingEnabled = true;
             this.ModeloComboBox.Location = new System.Drawing.Point(176, 133);
             this.ModeloComboBox.Name = "ModeloComboBox";
             this.ModeloComboBox.Size = new System.Drawing.Size(101, 24);
             this.ModeloComboBox.TabIndex = 121;
+            this.ModeloComboBox.SelectedIndexChanged += new System.EventHandler(this.ModeloComboBox_SelectedIndexChanged);
             // 
             // matriculaVehiculoLabel
             // 
@@ -489,6 +494,7 @@
             this.matriculaVehiculoTextBox.Name = "matriculaVehiculoTextBox";
             this.matriculaVehiculoTextBox.Size = new System.Drawing.Size(101, 22);
             this.matriculaVehiculoTextBox.TabIndex = 109;
+            this.matriculaVehiculoTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.matriculaVehiculoTextBox_KeyPress);
             // 
             // placaVehiculoTextBox
             // 
@@ -497,6 +503,7 @@
             this.placaVehiculoTextBox.Name = "placaVehiculoTextBox";
             this.placaVehiculoTextBox.Size = new System.Drawing.Size(101, 22);
             this.placaVehiculoTextBox.TabIndex = 108;
+            this.placaVehiculoTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.placaVehiculoTextBox_KeyPress);
             // 
             // precioVehiculoTextBox
             // 
@@ -505,6 +512,7 @@
             this.precioVehiculoTextBox.Name = "precioVehiculoTextBox";
             this.precioVehiculoTextBox.Size = new System.Drawing.Size(101, 22);
             this.precioVehiculoTextBox.TabIndex = 107;
+            this.precioVehiculoTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.precioVehiculoTextBox_KeyPress);
             // 
             // kilometrajeVehiculoTextBox
             // 
@@ -513,6 +521,7 @@
             this.kilometrajeVehiculoTextBox.Name = "kilometrajeVehiculoTextBox";
             this.kilometrajeVehiculoTextBox.Size = new System.Drawing.Size(101, 22);
             this.kilometrajeVehiculoTextBox.TabIndex = 106;
+            this.kilometrajeVehiculoTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.kilometrajeVehiculoTextBox_KeyPress);
             // 
             // chasisVehiculoTextBox
             // 
@@ -521,6 +530,7 @@
             this.chasisVehiculoTextBox.Name = "chasisVehiculoTextBox";
             this.chasisVehiculoTextBox.Size = new System.Drawing.Size(101, 22);
             this.chasisVehiculoTextBox.TabIndex = 104;
+            this.chasisVehiculoTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.chasisVehiculoTextBox_KeyPress);
             // 
             // añoVehiculoTextBox
             // 
@@ -529,6 +539,7 @@
             this.añoVehiculoTextBox.Name = "añoVehiculoTextBox";
             this.añoVehiculoTextBox.Size = new System.Drawing.Size(101, 22);
             this.añoVehiculoTextBox.TabIndex = 103;
+            this.añoVehiculoTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.añoVehiculoTextBox_KeyPress);
             // 
             // estadoVehiculoTextBox
             // 
@@ -537,6 +548,7 @@
             this.estadoVehiculoTextBox.Name = "estadoVehiculoTextBox";
             this.estadoVehiculoTextBox.Size = new System.Drawing.Size(101, 22);
             this.estadoVehiculoTextBox.TabIndex = 102;
+            this.estadoVehiculoTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.estadoVehiculoTextBox_KeyPress);
             // 
             // vehiculoIdTextBox
             // 
@@ -545,6 +557,7 @@
             this.vehiculoIdTextBox.Name = "vehiculoIdTextBox";
             this.vehiculoIdTextBox.Size = new System.Drawing.Size(101, 22);
             this.vehiculoIdTextBox.TabIndex = 101;
+            this.vehiculoIdTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.vehiculoIdTextBox_KeyPress);
             // 
             // vehiculoIdLabel
             // 
@@ -626,6 +639,7 @@
             // 
             // tipoVehiculoComboBox
             // 
+            this.tipoVehiculoComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.tipoVehiculoComboBox.FormattingEnabled = true;
             this.tipoVehiculoComboBox.Location = new System.Drawing.Point(427, 165);
             this.tipoVehiculoComboBox.Name = "tipoVehiculoComboBox";

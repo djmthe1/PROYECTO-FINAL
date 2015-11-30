@@ -234,49 +234,79 @@ namespace Sistema_Ventas_Vehiculos.Registros
 
         private void NombreTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            throw new NotImplementedException();
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8))
+                e.Handled = false;
+            else
+                e.Handled = true;
         }
 
         private void LugardeNacimientoTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            throw new NotImplementedException();
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8))
+                e.Handled = false;
+            else
+                e.Handled = true;
         }
 
         private void OcupacionTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            throw new NotImplementedException();
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8))
+                e.Handled = false;
+            else
+                e.Handled = true;
         }
 
         private void nacionalidadTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            throw new NotImplementedException();
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8))
+                e.Handled = false;
+            else
+                e.Handled = true;
         }
 
         private void CedulaTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            throw new NotImplementedException();
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8))
+                e.Handled = false;
+            else
+                e.Handled = true;
         }
 
         private void DireccionTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            throw new NotImplementedException();
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8))
+                e.Handled = false;
+            else
+                e.Handled = true;
         }
 
         private void TelefonoTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            throw new NotImplementedException();
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8))
+                e.Handled = false;
+            else
+                e.Handled = true;
         }
 
         private void ApodoTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            throw new NotImplementedException();
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8))
+                e.Handled = false;
+            else
+                e.Handled = true;
         }
 
         private void clienteIdTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            throw new NotImplementedException();
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar == 8))
+                e.Handled = false;
+            else
+                e.Handled = true;
         }
 
+        private void NombreTextBox_TextChanged(object sender, EventArgs e)
+        {
 
+        }
     }
 }

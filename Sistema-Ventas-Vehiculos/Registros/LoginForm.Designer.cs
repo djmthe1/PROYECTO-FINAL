@@ -68,6 +68,7 @@
             this.usuarioTextBox.Name = "usuarioTextBox";
             this.usuarioTextBox.Size = new System.Drawing.Size(100, 20);
             this.usuarioTextBox.TabIndex = 2;
+            this.usuarioTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.usuarioTextBox_KeyPress);
             // 
             // passwordTextBox
             // 
@@ -76,6 +77,7 @@
             this.passwordTextBox.Size = new System.Drawing.Size(100, 20);
             this.passwordTextBox.TabIndex = 3;
             this.passwordTextBox.UseSystemPasswordChar = true;
+            this.passwordTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.passwordTextBox_KeyPress);
             // 
             // botonEntrar
             // 
@@ -115,6 +117,7 @@
             // 
             // loginComboBox
             // 
+            this.loginComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.loginComboBox.FormattingEnabled = true;
             this.loginComboBox.Items.AddRange(new object[] {
             "Administrador",

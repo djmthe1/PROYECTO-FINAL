@@ -153,5 +153,26 @@ namespace Sistema_Ventas_Vehiculos.Registros
                 ModeloIDtextBox.Focus();
             }
         }
+
+        private void DescripciontextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DescripciontextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8))
+                e.Handled = false;
+            else
+                e.Handled = true;
+        }
+
+        private void ModeloIDtextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar == 8))
+                e.Handled = false;
+            else
+                e.Handled = true;
+        }
     }
 }

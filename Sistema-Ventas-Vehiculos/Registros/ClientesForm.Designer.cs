@@ -131,6 +131,7 @@ namespace Sistema_Ventas_Vehiculos.Registros
             // 
             // sexoComboBox
             // 
+            this.sexoComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.sexoComboBox.FormattingEnabled = true;
             this.sexoComboBox.Items.AddRange(new object[] {
             "Femenino",
@@ -147,6 +148,7 @@ namespace Sistema_Ventas_Vehiculos.Registros
             this.NombreTextBox.Name = "NombreTextBox";
             this.NombreTextBox.Size = new System.Drawing.Size(100, 20);
             this.NombreTextBox.TabIndex = 14;
+            this.NombreTextBox.TextChanged += new System.EventHandler(this.NombreTextBox_TextChanged);
             this.NombreTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NombreTextBox_KeyPress);
             // 
             // nombreClienteLabel
