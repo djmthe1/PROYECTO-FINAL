@@ -93,5 +93,10 @@ namespace Sistema_Ventas_Vehiculos.Registros
         {
 
         }
+
+        private void FiltroComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
