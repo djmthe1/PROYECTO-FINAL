@@ -42,6 +42,7 @@
             this.buscarDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.buscarDataGridView.Location = new System.Drawing.Point(12, 88);
             this.buscarDataGridView.Name = "buscarDataGridView";
+            this.buscarDataGridView.ReadOnly = true;
             this.buscarDataGridView.Size = new System.Drawing.Size(381, 199);
             this.buscarDataGridView.TabIndex = 37;
             // 

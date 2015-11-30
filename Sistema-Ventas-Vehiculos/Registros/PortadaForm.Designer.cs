@@ -150,6 +150,7 @@
             this.buscarToolStripMenuItem.Name = "buscarToolStripMenuItem";
             this.buscarToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
             this.buscarToolStripMenuItem.Text = "BUSCAR";
+            this.buscarToolStripMenuItem.Click += new System.EventHandler(this.buscarToolStripMenuItem_Click);
             // 
             // venderVehiculoToolStripMenuItem
             // 
