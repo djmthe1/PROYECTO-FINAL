@@ -97,4 +97,5 @@ namespace Sistema_Ventas_Vehiculos.Registros
             BuscarF.Show();
         }
     }
+
 }
