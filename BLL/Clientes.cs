@@ -25,7 +25,7 @@ namespace BLL
         public ConexionDb conexion = new ConexionDb();
         public StringBuilder comando = new StringBuilder();
 
-        public Clientes(int clienteId, string nombreCompleto, string Apodo, string direccion, string cedula, string nacionalidad, string ocupacion, string lugarDeNacimiento, string sexo, int facturaId) {
+        public Clientes(int clienteId, string nombreCompleto, string Apodo, string direccion, string cedula, string nacionalidad, string ocupacion, string lugarDeNacimiento, string sexo) {
             this.ClienteId = clienteId;
             this.NombreCompleto = nombreCompleto;
             this.Apodo = Apodo;

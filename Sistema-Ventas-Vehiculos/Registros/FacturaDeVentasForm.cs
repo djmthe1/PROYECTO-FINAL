@@ -19,6 +19,7 @@ namespace Sistema_Ventas_Vehiculos.Registros
         }
         public Clientes clientes = new Clientes();
         public Vehiculos vehiculo = new Vehiculos();
+        public FacturasDeVentas factura = new FacturasDeVentas();
 
         private void MensajeOk(string mensaje)
         {
@@ -49,6 +50,37 @@ namespace Sistema_Ventas_Vehiculos.Registros
         private void añoVehiculoTextBox_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void Limpiar()
+        {
+            clienteIdTextBox.Clear();
+            NombreTextBox.Clear();
+            ApodoTextBox.Clear();
+            DireccionTextBox.Clear();
+            CedulaTextBox.Clear();
+            nacionalidadTextBox.Clear();
+            OcupacionTextBox.Clear();
+            LugardeNacimientoTextBox.Clear();
+            sexoTextBox.ResetText();
+            telefonosListBox.Items.Clear();
+            vehiculoIdTextBox.Clear();
+            estadoVehiculoTextBox.Clear();
+            modeloVehiculoTextBox.ResetText();
+            marcaVehiculoTextBox.ResetText();
+            motorVehiculoTextBox.ResetText();
+            colorVehiculoTextBox.ResetText();
+            tipoVehiculoTextBox.ResetText();
+            añoVehiculoTextBox.Clear();
+            chasisVehiculoTextBox.Clear();
+            kilometrajeVehiculoTextBox.Clear();
+            precioVehiculoTextBox.Clear();
+            placaVehiculoTextBox.Clear();
+            matriculaVehiculoTextBox.Clear();
+            pagoInicialEfectivoTextBox.Clear();
+            pagoInicialChequeTextBox.Clear();
+            precioAPagarTextBox.Clear();
+            autorizadoPorTextBox.Clear();
         }
 
         private void botonBuscarVehiculo_Click(object sender, EventArgs e)
@@ -126,6 +158,102 @@ namespace Sistema_Ventas_Vehiculos.Registros
             {
                 MensajeError("Error al Buscar");
             }
+        }
+
+        private void botonNuevo_Click(object sender, EventArgs e)
+        {
+            Limpiar();
+        }
+
+        private void botonGuardar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int CId = 0;
+                int.TryParse(clienteIdTextBox.Text, out CId);
+                factura.ClienteId = CId;
+                factura.NombreCompleto = NombreTextBox.Text;
+                factura.Apodo = ApodoTextBox.Text;
+                factura.Direccion = DireccionTextBox.Text;
+                factura.Cedula = CedulaTextBox.Text;
+                factura.Nacionalidad = nacionalidadTextBox.Text;
+                factura.Ocupacion = OcupacionTextBox.Text;
+                factura.LugarDeNacimiento = LugardeNacimientoTextBox.Text;
+                factura.Sexo = sexoTextBox.Text;
+                factura.LimpiarTelefono();
+                for (int i = 0; i < telefonosListBox.Items.Count; i++)
+                {
+                    clientes.InsertarTelefono(1, telefonosListBox.Items[i].ToString());
+                }
+                int VId = 0;
+                int.TryParse(vehiculoIdTextBox.Text, out VId);
+                factura.VehiculoId = VId;
+                factura.EstadoDelVehiculo = estadoVehiculoTextBox.Text;
+                factura.Motor = motorVehiculoTextBox.Text;
+                factura.Marca = marcaVehiculoTextBox.Text;
+                factura.Modelo = motorVehiculoTextBox.Text;
+                factura.Color = colorVehiculoTextBox.Text;
+                factura.DuplicadoDeLlaveDeEncendido = vehiculo.DuplicadoDeLlaveDeEncendido;
+                factura.EspejoRetrovisorDerecho = vehiculo.EspejoRetrovisorDerecho;
+                factura.EspejoRetrovisorIzquierdo = vehiculo.EspejoRetrovisorIzquierdo;
+                factura.EspejoRetrovisorInterno = vehiculo.EspejoRetrovisorInterno;
+                factura.ManualDeUsuario = vehiculo.ManualDeUsuario;
+                factura.TaponDeGasolina = vehiculo.TaponDeGasolina;
+                factura.TaponDeRadiador = vehiculo.TaponDeRadiador;
+                factura.GomaDeRepuesto = vehiculo.GomaDeRepuesto;
+                factura.Botiquin = vehiculo.Botiquin;
+                factura.Gomas = vehiculo.Gomas;
+                factura.Radio = vehiculo.Radio;
+                factura.Gato = vehiculo.Gato;
+                factura.Alfombras = vehiculo.Alfombras;
+                factura.Encendedor = vehiculo.Encendedor;
+                factura.LlaveDeRueda = vehiculo.LlaveDeRueda;
+                int PagoInicialE = 0;
+                int.TryParse(vehiculoIdTextBox.Text, out PagoInicialE);
+                factura.PagoInicialEnEfectivo = PagoInicialE;
+                int PagoInicialC = 0;
+                int.TryParse(vehiculoIdTextBox.Text, out PagoInicialC);
+                factura.PagoInicialEnCheque = PagoInicialC;
+                int PrecioAP = 0;
+                int.TryParse(vehiculoIdTextBox.Text, out PrecioAP);
+                factura.PrecioAPagar = PrecioAP;
+                factura.AutorizadoPor = autorizadoPorTextBox.Text;
+                factura.Fecha = facturaDateTimePicker.Text;
+
+                if (facturaIdTextBox.Text.Length == 0)
+                {
+                    if (pagoInicialEfectivoTextBox.Text != "" || pagoInicialChequeTextBox.Text != "" || precioAPagarTextBox.Text != "" || autorizadoPorTextBox.Text != "" || vehiculoIdTextBox.Text != "" || clienteIdTextBox.Text != "")
+                    {
+
+                        if (factura.Insertar())
+                        {
+                            Limpiar();
+                            MensajeOk("Insertado Correctamente");
+                        }
+                        else
+                        {
+                            MensajeError("Error al Insertar");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Debe llenar todos los Campos", "Error Al Inserar", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Debe llenar todos los Campos", "Error Al Inserar", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+            }
+            catch (Exception)
+            {
+                MensajeError("Error al Insertar o Modificar");
+            }
+        }
+
+        private void botonBuscarFactura_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void NombreTextBox_KeyPress(object sender, KeyPressEventArgs e)
