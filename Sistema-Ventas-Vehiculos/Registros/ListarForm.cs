@@ -43,45 +43,7 @@ namespace Sistema_Ventas_Vehiculos.Registros
             }
         }
 
-    private void listarComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (listarComboBox.Text == "Marcas")
-            {
-                listarDataGridView.DataSource = marcas.Listado("*", "1=1", "ORDER BY Descripcion");
-                mensaje();
-
-            }
-            if (listarComboBox.Text == "Modelos")
-            {
-                listarDataGridView.DataSource = modelos.Listado("*", "1=1", "ORDER BY Descripcion");
-                mensaje();
-
-            }
-            if (listarComboBox.Text == "Colores")
-            {
-                listarDataGridView.DataSource = colores.Listado("*", "1=1", "ORDER BY Descripcion");
-                mensaje();
-
-            }
-            if (listarComboBox.Text == "Tipos de Vehiculos")
-            {
-                listarDataGridView.DataSource = tipoDeVehiculos.Listado("*", "1=1", "ORDER BY Descripcion");
-                mensaje();
-
-            }
-            if (listarComboBox.Text == "Tipos de Motores")
-            {
-                listarDataGridView.DataSource = tipoMotores.Listado("*", "1=1", "ORDER BY Descripcion");
-                mensaje();
-
-            }
-            if (listarComboBox.Text == "Vehiculos")
-            {
-                listarDataGridView.DataSource = vehiculos.Listado("*", "1=1", "ORDER BY VehiculoId");
-                mensaje();
-
-            }
-        }
+    
 
         private void listarFueraComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -97,6 +59,95 @@ namespace Sistema_Ventas_Vehiculos.Registros
         private void FiltroComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             
+        }
+
+        private void ListarForm_Load_1(object sender, EventArgs e)
+        {
+            
+
+        }
+
+        private void CbFiltro_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DataTable dato = new DataTable();
+            CbFiltro2.Items.Clear();
+            
+
+            if (CbFiltro.Text == "Marca")
+            {
+                
+                dato = marcas.Listado("*", "0=0", "ORDER BY Descripcion");
+
+                for (int i = 0; i <= dato.Rows.Count - 1; i++)
+                    CbFiltro2.Items.Add(marcas.Listado("*", "0=0", "ORDER BY Descripcion").Rows[i]["Descripcion"]);
+            }
+
+            if (CbFiltro.Text == "Modelo")
+            {
+                CbFiltro2.ResetText();
+                dato = modelos.Listado("*", "0=0", "ORDER BY Descripcion");
+
+                for (int i = 0; i <= dato.Rows.Count - 1; i++)
+                    CbFiltro2.Items.Add(modelos.Listado("*", "0=0", "ORDER BY Descripcion").Rows[i]["Descripcion"]);
+            }
+
+            if (CbFiltro.Text == "Tipo de motor")
+            {
+                dato = tipoMotores.Listado("*", "0=0", "ORDER BY Descripcion");
+
+                for (int i = 0; i <= dato.Rows.Count - 1; i++)
+                    CbFiltro2.Items.Add(tipoMotores.Listado("*", "0=0", "ORDER BY Descripcion").Rows[i]["Descripcion"]);
+            }
+
+            if (CbFiltro.Text == "Tipo de vehiculo")
+            {
+                dato = tipoDeVehiculos.Listado("*", "0=0", "ORDER BY Descripcion");
+
+                for (int i = 0; i <= dato.Rows.Count - 1; i++)
+                    CbFiltro2.Items.Add(tipoDeVehiculos.Listado("*", "0=0", "ORDER BY Descripcion").Rows[i]["Descripcion"]);
+            }
+
+            if (CbFiltro.Text == "Color")
+            {
+                dato = colores.Listado("*", "0=0", "ORDER BY Descripcion");
+
+                for (int i = 0; i <= dato.Rows.Count - 1; i++)
+                    CbFiltro2.Items.Add(colores.Listado("*", "0=0", "ORDER BY Descripcion").Rows[i]["Descripcion"]);
+            }
+
+    
+
+
+        }
+
+        private void CbFiltro2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (CbFiltro.Text == "Marca")
+            {
+                DataListado.DataSource = vehiculos.Listado(" * ", "Marca = "+"'"+CbFiltro2.Text+"'", " ORDER BY VehiculoId ");
+                
+            }
+            if (CbFiltro.Text == "Modelo")
+            {
+                DataListado.DataSource = vehiculos.Listado(" * ", "Modelo = " + "'" + CbFiltro2.Text + "'", " ORDER BY VehiculoId ");
+
+            }
+            if (CbFiltro.Text == "Tipo de vehiculo")
+            {
+                DataListado.DataSource = vehiculos.Listado(" * ", "TipoVehiculo = " + "'" + CbFiltro2.Text + "'", " ORDER BY VehiculoId ");
+
+            }
+
+            if (CbFiltro.Text == "Color")
+            {
+                DataListado.DataSource = vehiculos.Listado(" * ", "Color = " + "'" + CbFiltro2.Text + "'", " ORDER BY VehiculoId ");
+
+            }
+            if (CbFiltro.Text == "Tipo de motor")
+            {
+                DataListado.DataSource = vehiculos.Listado(" * ", "Motor = " + "'" + CbFiltro2.Text + "'", " ORDER BY VehiculoId ");
+
+            }
         }
     }
 }
