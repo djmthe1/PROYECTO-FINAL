@@ -72,6 +72,7 @@
             this.matriculaVehiculoLabel = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.telefonosListBox = new System.Windows.Forms.ListBox();
             this.NombreTextBox = new System.Windows.Forms.TextBox();
             this.nombreClienteLabel = new System.Windows.Forms.Label();
             this.apodoLabel = new System.Windows.Forms.Label();
@@ -94,9 +95,11 @@
             this.botonBuscarCliente = new System.Windows.Forms.Button();
             this.datosClientelabel = new System.Windows.Forms.Label();
             this.facturaDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.telefonosListBox = new System.Windows.Forms.ListBox();
             this.botonGuardar = new System.Windows.Forms.Button();
             this.botonNuevo = new System.Windows.Forms.Button();
+            this.facturaIdlabel = new System.Windows.Forms.Label();
+            this.facturaIdTextBox = new System.Windows.Forms.TextBox();
+            this.botonBuscarFactura = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -163,7 +166,7 @@
             this.botonBuscarVehiculo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.botonBuscarVehiculo.Location = new System.Drawing.Point(227, 5);
             this.botonBuscarVehiculo.Name = "botonBuscarVehiculo";
-            this.botonBuscarVehiculo.Size = new System.Drawing.Size(35, 30);
+            this.botonBuscarVehiculo.Size = new System.Drawing.Size(32, 28);
             this.botonBuscarVehiculo.TabIndex = 26;
             this.botonBuscarVehiculo.UseVisualStyleBackColor = true;
             this.botonBuscarVehiculo.Click += new System.EventHandler(this.botonBuscarVehiculo_Click);
@@ -238,7 +241,7 @@
             this.precioAPagarLabel.BackColor = System.Drawing.Color.Transparent;
             this.precioAPagarLabel.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.precioAPagarLabel.ForeColor = System.Drawing.Color.Black;
-            this.precioAPagarLabel.Location = new System.Drawing.Point(351, 174);
+            this.precioAPagarLabel.Location = new System.Drawing.Point(345, 174);
             this.precioAPagarLabel.Name = "precioAPagarLabel";
             this.precioAPagarLabel.Size = new System.Drawing.Size(82, 14);
             this.precioAPagarLabel.TabIndex = 35;
@@ -250,7 +253,7 @@
             this.autorizadoPorLabel.BackColor = System.Drawing.Color.Transparent;
             this.autorizadoPorLabel.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.autorizadoPorLabel.ForeColor = System.Drawing.Color.Black;
-            this.autorizadoPorLabel.Location = new System.Drawing.Point(350, 201);
+            this.autorizadoPorLabel.Location = new System.Drawing.Point(343, 200);
             this.autorizadoPorLabel.Name = "autorizadoPorLabel";
             this.autorizadoPorLabel.Size = new System.Drawing.Size(84, 14);
             this.autorizadoPorLabel.TabIndex = 36;
@@ -586,6 +589,14 @@
             this.panel1.Size = new System.Drawing.Size(263, 357);
             this.panel1.TabIndex = 69;
             // 
+            // telefonosListBox
+            // 
+            this.telefonosListBox.FormattingEnabled = true;
+            this.telefonosListBox.Location = new System.Drawing.Point(120, 86);
+            this.telefonosListBox.Name = "telefonosListBox";
+            this.telefonosListBox.Size = new System.Drawing.Size(100, 69);
+            this.telefonosListBox.TabIndex = 30;
+            // 
             // NombreTextBox
             // 
             this.NombreTextBox.Location = new System.Drawing.Point(120, 34);
@@ -803,18 +814,10 @@
             // 
             // facturaDateTimePicker
             // 
-            this.facturaDateTimePicker.Location = new System.Drawing.Point(333, 228);
+            this.facturaDateTimePicker.Location = new System.Drawing.Point(340, 249);
             this.facturaDateTimePicker.Name = "facturaDateTimePicker";
-            this.facturaDateTimePicker.Size = new System.Drawing.Size(200, 20);
+            this.facturaDateTimePicker.Size = new System.Drawing.Size(193, 20);
             this.facturaDateTimePicker.TabIndex = 70;
-            // 
-            // telefonosListBox
-            // 
-            this.telefonosListBox.FormattingEnabled = true;
-            this.telefonosListBox.Location = new System.Drawing.Point(120, 86);
-            this.telefonosListBox.Name = "telefonosListBox";
-            this.telefonosListBox.Size = new System.Drawing.Size(100, 69);
-            this.telefonosListBox.TabIndex = 30;
             // 
             // botonGuardar
             // 
@@ -824,6 +827,7 @@
             this.botonGuardar.TabIndex = 72;
             this.botonGuardar.Text = "Guardar";
             this.botonGuardar.UseVisualStyleBackColor = true;
+            this.botonGuardar.Click += new System.EventHandler(this.botonGuardar_Click);
             // 
             // botonNuevo
             // 
@@ -833,6 +837,35 @@
             this.botonNuevo.TabIndex = 71;
             this.botonNuevo.Text = "Nuevo";
             this.botonNuevo.UseVisualStyleBackColor = true;
+            this.botonNuevo.Click += new System.EventHandler(this.botonNuevo_Click);
+            // 
+            // facturaIdlabel
+            // 
+            this.facturaIdlabel.AutoSize = true;
+            this.facturaIdlabel.Location = new System.Drawing.Point(375, 63);
+            this.facturaIdlabel.Name = "facturaIdlabel";
+            this.facturaIdlabel.Size = new System.Drawing.Size(52, 13);
+            this.facturaIdlabel.TabIndex = 73;
+            this.facturaIdlabel.Text = "FacturaId";
+            // 
+            // facturaIdTextBox
+            // 
+            this.facturaIdTextBox.Location = new System.Drawing.Point(433, 60);
+            this.facturaIdTextBox.Name = "facturaIdTextBox";
+            this.facturaIdTextBox.Size = new System.Drawing.Size(100, 20);
+            this.facturaIdTextBox.TabIndex = 74;
+            // 
+            // botonBuscarFactura
+            // 
+            this.botonBuscarFactura.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("botonBuscarFactura.BackgroundImage")));
+            this.botonBuscarFactura.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.botonBuscarFactura.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.botonBuscarFactura.Location = new System.Drawing.Point(539, 59);
+            this.botonBuscarFactura.Name = "botonBuscarFactura";
+            this.botonBuscarFactura.Size = new System.Drawing.Size(28, 25);
+            this.botonBuscarFactura.TabIndex = 31;
+            this.botonBuscarFactura.UseVisualStyleBackColor = true;
+            this.botonBuscarFactura.Click += new System.EventHandler(this.botonBuscarFactura_Click);
             // 
             // FacturaDeVentasForm
             // 
@@ -840,6 +873,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(858, 484);
+            this.Controls.Add(this.botonBuscarFactura);
+            this.Controls.Add(this.facturaIdTextBox);
+            this.Controls.Add(this.facturaIdlabel);
             this.Controls.Add(this.botonGuardar);
             this.Controls.Add(this.botonNuevo);
             this.Controls.Add(this.facturaDateTimePicker);
@@ -945,5 +981,8 @@
         private System.Windows.Forms.ListBox telefonosListBox;
         private System.Windows.Forms.Button botonGuardar;
         private System.Windows.Forms.Button botonNuevo;
+        private System.Windows.Forms.Label facturaIdlabel;
+        private System.Windows.Forms.TextBox facturaIdTextBox;
+        private System.Windows.Forms.Button botonBuscarFactura;
     }
 }

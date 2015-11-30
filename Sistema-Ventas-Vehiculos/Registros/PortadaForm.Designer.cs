@@ -49,6 +49,7 @@
             this.tipoDeMotoresToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.coloresToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.vehiculosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.graficosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuStripVentaVehiculos.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,10 +63,11 @@
             this.listarToolStripMenuItem,
             this.buscarToolStripMenuItem,
             this.venderVehiculoToolStripMenuItem,
-            this.reportesToolStripMenuItem});
+            this.reportesToolStripMenuItem,
+            this.graficosToolStripMenuItem});
             this.MenuStripVentaVehiculos.Location = new System.Drawing.Point(0, 0);
             this.MenuStripVentaVehiculos.Name = "MenuStripVentaVehiculos";
-            this.MenuStripVentaVehiculos.Size = new System.Drawing.Size(522, 24);
+            this.MenuStripVentaVehiculos.Size = new System.Drawing.Size(599, 24);
             this.MenuStripVentaVehiculos.TabIndex = 0;
             // 
             // cerrarSecionToolStripMenuItem
@@ -208,13 +210,19 @@
             this.vehiculosToolStripMenuItem1.Size = new System.Drawing.Size(188, 22);
             this.vehiculosToolStripMenuItem1.Text = "VEHICULOS";
             // 
+            // graficosToolStripMenuItem
+            // 
+            this.graficosToolStripMenuItem.Name = "graficosToolStripMenuItem";
+            this.graficosToolStripMenuItem.Size = new System.Drawing.Size(74, 20);
+            this.graficosToolStripMenuItem.Text = "GRAFICOS";
+            // 
             // PortadaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(522, 313);
+            this.ClientSize = new System.Drawing.Size(599, 313);
             this.Controls.Add(this.MenuStripVentaVehiculos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MainMenuStrip = this.MenuStripVentaVehiculos;
@@ -252,5 +260,6 @@
         private System.Windows.Forms.ToolStripMenuItem coloresToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem vehiculosToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem buscarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem graficosToolStripMenuItem;
     }
 }
