@@ -81,7 +81,8 @@ namespace Sistema_Ventas_Vehiculos.Registros
 
         private void listarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           
+            //Registros.ListarForm ListarF = new ListarForm();
+           // ListarF.Show();
         }
 
         private void compraDeVehiculoToolStripMenuItem_Click(object sender, EventArgs e)
