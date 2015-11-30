@@ -27,7 +27,7 @@ namespace Sistema_Ventas_Vehiculos.Registros
 
         private void ListarForm_Load(object sender, EventArgs e)
         {
-            
+        
         }
 
         private void botonAtrasPortada_Click(object sender, EventArgs e)
@@ -92,11 +92,6 @@ namespace Sistema_Ventas_Vehiculos.Registros
         private void listarDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
-        }
-
-        private void FiltroComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
         }
     }
 }
