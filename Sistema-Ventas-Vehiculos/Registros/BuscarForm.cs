@@ -90,28 +90,28 @@ namespace Sistema_Ventas_Vehiculos.Registros
 
         private void descripcionComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (descripcionComboBox.Text == "Marca")
+            if (buscarComboBox.Text == "Marca")
             {
                 buscarDataGridView.DataSource = vehiculos.Listado(" * ", "Marca = " + "'" + descripcionComboBox.Text + "'", " ORDER BY VehiculoId ");
 
             }
-            if (descripcionComboBox.Text == "Modelo")
+            if (buscarComboBox.Text == "Modelo")
             {
                 buscarDataGridView.DataSource = vehiculos.Listado(" * ", "Modelo = " + "'" + descripcionComboBox.Text + "'", " ORDER BY VehiculoId ");
 
             }
-            if (descripcionComboBox.Text == "Tipo de vehiculo")
+            if (buscarComboBox.Text == "Tipo de vehiculo")
             {
                 buscarDataGridView.DataSource = vehiculos.Listado(" * ", "TipoVehiculo = " + "'" + descripcionComboBox.Text + "'", " ORDER BY VehiculoId ");
 
             }
 
-            if (descripcionComboBox.Text == "Color")
+            if (buscarComboBox.Text == "Color")
             {
                 buscarDataGridView.DataSource = vehiculos.Listado(" * ", "Color = " + "'" + descripcionComboBox.Text + "'", " ORDER BY VehiculoId ");
 
             }
-            if (descripcionComboBox.Text == "Tipo de motor")
+            if (buscarComboBox.Text == "Tipo de motor")
             {
                 buscarDataGridView.DataSource = vehiculos.Listado(" * ", "Motor = " + "'" + descripcionComboBox.Text + "'", " ORDER BY VehiculoId ");
 
