@@ -35,8 +35,6 @@ namespace Sistema_Ventas_Vehiculos.Registros
 
         private void MarcasForm_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the '_Sistema_Ventas_VehiculosDataSet.Marcas' table. You can move, or remove it, as needed.
-            this.marcasTableAdapter.Fill(this._Sistema_Ventas_VehiculosDataSet.Marcas);
 
         }
 
@@ -139,8 +137,6 @@ namespace Sistema_Ventas_Vehiculos.Registros
 
         private void botonAtras_Click(object sender, EventArgs e)
         {
-            InsetarForm InsetarF = new InsetarForm();
-            InsetarF.Show();
             this.Close();
         }
 

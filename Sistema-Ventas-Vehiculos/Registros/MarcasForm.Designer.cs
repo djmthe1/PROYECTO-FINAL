@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MarcasForm));
             this.DescripciontextBox = new System.Windows.Forms.TextBox();
             this.Descripcionlabel = new System.Windows.Forms.Label();
@@ -37,13 +36,8 @@
             this.IDlabel = new System.Windows.Forms.Label();
             this.MarcasIDtextBox = new System.Windows.Forms.TextBox();
             this.botonEliminar = new System.Windows.Forms.Button();
-            this.marcasBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this._Sistema_Ventas_VehiculosDataSet = new Sistema_Ventas_Vehiculos._Sistema_Ventas_VehiculosDataSet();
-            this.marcasTableAdapter = new Sistema_Ventas_Vehiculos._Sistema_Ventas_VehiculosDataSetTableAdapters.MarcasTableAdapter();
             this.botonBuscar = new System.Windows.Forms.Button();
             this.botonAtras = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.marcasBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._Sistema_Ventas_VehiculosDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // DescripciontextBox
@@ -110,20 +104,6 @@
             this.botonEliminar.UseVisualStyleBackColor = true;
             this.botonEliminar.Click += new System.EventHandler(this.botonEliminar_Click);
             // 
-            // marcasBindingSource
-            // 
-            this.marcasBindingSource.DataMember = "Marcas";
-            this.marcasBindingSource.DataSource = this._Sistema_Ventas_VehiculosDataSet;
-            // 
-            // _Sistema_Ventas_VehiculosDataSet
-            // 
-            this._Sistema_Ventas_VehiculosDataSet.DataSetName = "_Sistema_Ventas_VehiculosDataSet";
-            this._Sistema_Ventas_VehiculosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // marcasTableAdapter
-            // 
-            this.marcasTableAdapter.ClearBeforeFill = true;
-            // 
             // botonBuscar
             // 
             this.botonBuscar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("botonBuscar.BackgroundImage")));
@@ -169,8 +149,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Marcas";
             this.Load += new System.EventHandler(this.MarcasForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.marcasBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._Sistema_Ventas_VehiculosDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -184,9 +162,6 @@
         private System.Windows.Forms.Label IDlabel;
         private System.Windows.Forms.TextBox MarcasIDtextBox;
         private System.Windows.Forms.Button botonEliminar;
-        private _Sistema_Ventas_VehiculosDataSet _Sistema_Ventas_VehiculosDataSet;
-        private System.Windows.Forms.BindingSource marcasBindingSource;
-        private _Sistema_Ventas_VehiculosDataSetTableAdapters.MarcasTableAdapter marcasTableAdapter;
         private System.Windows.Forms.Button botonBuscar;
         private System.Windows.Forms.Button botonAtras;
     }
