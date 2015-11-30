@@ -23,13 +23,11 @@ namespace Sistema_Ventas_Vehiculos.Registros
             
         }
 
-        
-
         private void cerrarSecionToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
             DialogResult opcion;
-            opcion = MessageBox.Show("Realmente desea cerrar sesion?", "Registro de Marcas", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            opcion = MessageBox.Show("Realmente Desea Cerrar Sesion?", "Registro de Marcas", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (opcion== DialogResult.OK) {
 
                 Registros.LoginForm LoginF = new LoginForm();

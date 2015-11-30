@@ -148,7 +148,7 @@
             this.datosVehiculoLabel.BackColor = System.Drawing.Color.Transparent;
             this.datosVehiculoLabel.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.datosVehiculoLabel.ForeColor = System.Drawing.Color.Black;
-            this.datosVehiculoLabel.Location = new System.Drawing.Point(575, 35);
+            this.datosVehiculoLabel.Location = new System.Drawing.Point(576, 24);
             this.datosVehiculoLabel.Name = "datosVehiculoLabel";
             this.datosVehiculoLabel.Size = new System.Drawing.Size(150, 17);
             this.datosVehiculoLabel.TabIndex = 25;
@@ -549,7 +549,7 @@
             this.panel2.Controls.Add(this.precioVehiculoTextBox);
             this.panel2.Controls.Add(this.estadoVehiculoLabel);
             this.panel2.Controls.Add(this.placaVehiculoTextBox);
-            this.panel2.Location = new System.Drawing.Point(514, 55);
+            this.panel2.Location = new System.Drawing.Point(515, 44);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(266, 357);
             this.panel2.TabIndex = 66;
@@ -579,7 +579,7 @@
             this.panel1.Controls.Add(this.LugardeNacimientoTextBox);
             this.panel1.Controls.Add(this.sexoTextBox);
             this.panel1.Controls.Add(this.botonBuscarCliente);
-            this.panel1.Location = new System.Drawing.Point(11, 55);
+            this.panel1.Location = new System.Drawing.Point(11, 44);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(263, 357);
             this.panel1.TabIndex = 69;
@@ -793,7 +793,7 @@
             this.datosClientelabel.BackColor = System.Drawing.Color.Transparent;
             this.datosClientelabel.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.datosClientelabel.ForeColor = System.Drawing.Color.Black;
-            this.datosClientelabel.Location = new System.Drawing.Point(65, 35);
+            this.datosClientelabel.Location = new System.Drawing.Point(65, 24);
             this.datosClientelabel.Name = "datosClientelabel";
             this.datosClientelabel.Size = new System.Drawing.Size(138, 17);
             this.datosClientelabel.TabIndex = 68;

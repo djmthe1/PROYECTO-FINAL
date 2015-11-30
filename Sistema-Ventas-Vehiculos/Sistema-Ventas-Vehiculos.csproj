@@ -99,12 +99,6 @@
     <Compile Include="Registros\InsertarUsuarioForm.Designer.cs">
       <DependentUpon>InsertarUsuarioForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Registros\InsetarForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Registros\InsetarForm.Designer.cs">
-      <DependentUpon>InsetarForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Registros\ListarForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -193,9 +187,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Registros\InsertarUsuarioForm.resx">
       <DependentUpon>InsertarUsuarioForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Registros\InsetarForm.resx">
-      <DependentUpon>InsetarForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Registros\ListarForm.resx">
       <DependentUpon>ListarForm.cs</DependentUpon>
