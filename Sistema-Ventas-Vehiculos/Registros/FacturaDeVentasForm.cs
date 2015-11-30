@@ -130,7 +130,7 @@ namespace Sistema_Ventas_Vehiculos.Registros
 
         private void NombreTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8))
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar == 32) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8))
                 e.Handled = false;
             else
                 e.Handled = true;
@@ -138,7 +138,7 @@ namespace Sistema_Ventas_Vehiculos.Registros
 
         private void ApodoTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8))
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar == 32) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8))
                 e.Handled = false;
             else
                 e.Handled = true;
@@ -146,7 +146,7 @@ namespace Sistema_Ventas_Vehiculos.Registros
 
         private void telefonosListBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8))
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar == 45) || (e.KeyChar == 8))
                 e.Handled = false;
             else
                 e.Handled = true;
@@ -154,7 +154,7 @@ namespace Sistema_Ventas_Vehiculos.Registros
 
         private void DireccionTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8))
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar == 32) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8))
                 e.Handled = false;
             else
                 e.Handled = true;
@@ -162,7 +162,7 @@ namespace Sistema_Ventas_Vehiculos.Registros
 
         private void CedulaTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8))
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar == 45) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8))
                 e.Handled = false;
             else
                 e.Handled = true;
@@ -170,7 +170,7 @@ namespace Sistema_Ventas_Vehiculos.Registros
 
         private void nacionalidadTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8))
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar == 32) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8))
                 e.Handled = false;
             else
                 e.Handled = true;
@@ -178,7 +178,7 @@ namespace Sistema_Ventas_Vehiculos.Registros
 
         private void OcupacionTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8))
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar == 32) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8))
                 e.Handled = false;
             else
                 e.Handled = true;
@@ -186,7 +186,7 @@ namespace Sistema_Ventas_Vehiculos.Registros
 
         private void LugardeNacimientoTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8))
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar == 32) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8))
                 e.Handled = false;
             else
                 e.Handled = true;
@@ -194,7 +194,7 @@ namespace Sistema_Ventas_Vehiculos.Registros
 
         private void estadoVehiculoTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8))
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar == 45) || (e.KeyChar == 32) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8))
                 e.Handled = false;
             else
                 e.Handled = true;
@@ -202,7 +202,7 @@ namespace Sistema_Ventas_Vehiculos.Registros
 
         private void modeloVehiculoTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8))
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar == 32) || (e.KeyChar == 45) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8))
                 e.Handled = false;
             else
                 e.Handled = true;
@@ -210,7 +210,7 @@ namespace Sistema_Ventas_Vehiculos.Registros
 
         private void marcaVehiculoTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8))
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar == 32) || (e.KeyChar == 45) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8))
                 e.Handled = false;
             else
                 e.Handled = true;
@@ -218,7 +218,7 @@ namespace Sistema_Ventas_Vehiculos.Registros
 
         private void motorVehiculoTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8))
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar == 32) || (e.KeyChar == 45) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8))
                 e.Handled = false;
             else
                 e.Handled = true;
@@ -226,7 +226,7 @@ namespace Sistema_Ventas_Vehiculos.Registros
 
         private void colorVehiculoTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8))
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar == 32) || (e.KeyChar == 45) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8))
                 e.Handled = false;
             else
                 e.Handled = true;
@@ -234,7 +234,7 @@ namespace Sistema_Ventas_Vehiculos.Registros
 
         private void chasisVehiculoTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8))
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar == 32) || (e.KeyChar == 45) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8))
                 e.Handled = false;
             else
                 e.Handled = true;
@@ -242,7 +242,7 @@ namespace Sistema_Ventas_Vehiculos.Registros
 
         private void tipoVehiculoTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8))
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar == 32) || (e.KeyChar == 45) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8))
                 e.Handled = false;
             else
                 e.Handled = true;
@@ -250,7 +250,7 @@ namespace Sistema_Ventas_Vehiculos.Registros
 
         private void placaVehiculoTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8))
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar == 45) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8))
                 e.Handled = false;
             else
                 e.Handled = true;
@@ -258,7 +258,7 @@ namespace Sistema_Ventas_Vehiculos.Registros
 
         private void matriculaVehiculoTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8))
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar == 45) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8))
                 e.Handled = false;
             else
                 e.Handled = true;
@@ -266,7 +266,7 @@ namespace Sistema_Ventas_Vehiculos.Registros
 
         private void autorizadoPorTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8))
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar == 32) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8))
                 e.Handled = false;
             else
                 e.Handled = true;
