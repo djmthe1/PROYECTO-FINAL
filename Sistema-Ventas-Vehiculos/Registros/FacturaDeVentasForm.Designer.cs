@@ -880,6 +880,7 @@
             this.facturaIdTextBox.Name = "facturaIdTextBox";
             this.facturaIdTextBox.Size = new System.Drawing.Size(100, 20);
             this.facturaIdTextBox.TabIndex = 74;
+            this.facturaIdTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.facturaIdTextBox_KeyPress);
             // 
             // botonBuscarFactura
             // 

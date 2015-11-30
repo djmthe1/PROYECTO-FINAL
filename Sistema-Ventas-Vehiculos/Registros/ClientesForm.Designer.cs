@@ -128,6 +128,7 @@ namespace Sistema_Ventas_Vehiculos.Registros
             this.telefonosListBox.Name = "telefonosListBox";
             this.telefonosListBox.Size = new System.Drawing.Size(100, 69);
             this.telefonosListBox.TabIndex = 29;
+            this.telefonosListBox.SelectedIndexChanged += new System.EventHandler(this.telefonosListBox_SelectedIndexChanged);
             // 
             // sexoComboBox
             // 

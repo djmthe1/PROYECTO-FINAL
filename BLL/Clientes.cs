@@ -25,7 +25,7 @@ namespace BLL
         public ConexionDb conexion = new ConexionDb();
         public StringBuilder comando = new StringBuilder();
 
-        public Clientes(int clienteId, string nombreCompleto, string Apodo, string direccion, string cedula, string nacionalidad, string ocupacion, string lugarDeNacimiento, string sexo) {
+        public Clientes(int clienteId, string nombreCompleto, string Apodo, string direccion, string cedula, string nacionalidad, string ocupacion, string lugarDeNacimiento, string sexo, int facturaId) {
             this.ClienteId = clienteId;
             this.NombreCompleto = nombreCompleto;
             this.Apodo = Apodo;
@@ -68,7 +68,7 @@ namespace BLL
 
                     foreach (var Telefono in this.numerostelefonos)
                     {
-                        comando.AppendLine(String.Format("insert into NumerosTelefono (ClienteId,Telefono) Values ({0},'{1}')", this.ClienteId, Telefono.Telefono));
+                        comando.AppendLine(String.Format("insert into NumerosTelefono (ClienteId,Telefono) Values({0},'{1}'); ", this.ClienteId, Telefono.Telefono));
                     }
                     retorno = conexion.Ejecutar(comando.ToString()); 
                 }
@@ -89,7 +89,7 @@ namespace BLL
                     conexion.Ejecutar("Delete From NumerosTelefono Where ClienteId=" + this.ClienteId);
                     foreach (var Telefono in this.numerostelefonos)
                     {
-                        comando.AppendLine(String.Format("insert into NumerosTelefono (ClienteId,Telefono) Values ({0},'{1}') ", this.ClienteId, Telefono.Telefono));
+                        comando.AppendLine(String.Format("insert into NumerosTelefono (ClienteId,Telefono) Values({0},'{1}'); ", this.ClienteId, Telefono.Telefono));
                     }
                     retorno = conexion.Ejecutar(comando.ToString());
                 }

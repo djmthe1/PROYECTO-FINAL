@@ -221,13 +221,13 @@ namespace Sistema_Ventas_Vehiculos.Registros
             }
             else
             {
-                MessageBox.Show("Seleccione un Telefono");
+                MensajeAdvertencia("Seleccione un Telefono");
             }
         }
 
         private void botonInsertarTelefono_Click(object sender, EventArgs e)
         {
-            telefonosListBox.Items.Add(telefonosListBox.Text);
+            telefonosListBox.Items.Add(TelefonoTextBox.Text);
             TelefonoTextBox.Clear();
         }
 
@@ -305,6 +305,11 @@ namespace Sistema_Ventas_Vehiculos.Registros
         }
 
         private void NombreTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void telefonosListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

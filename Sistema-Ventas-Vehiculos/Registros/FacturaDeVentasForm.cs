@@ -169,59 +169,15 @@ namespace Sistema_Ventas_Vehiculos.Registros
         {
             try
             {
-                int CId = 0;
-                int.TryParse(clienteIdTextBox.Text, out CId);
-                factura.ClienteId = CId;
-                factura.NombreCompleto = NombreTextBox.Text;
-                factura.Apodo = ApodoTextBox.Text;
-                factura.Direccion = DireccionTextBox.Text;
-                factura.Cedula = CedulaTextBox.Text;
-                factura.Nacionalidad = nacionalidadTextBox.Text;
-                factura.Ocupacion = OcupacionTextBox.Text;
-                factura.LugarDeNacimiento = LugardeNacimientoTextBox.Text;
-                factura.Sexo = sexoTextBox.Text;
-                factura.LimpiarTelefono();
-                for (int i = 0; i < telefonosListBox.Items.Count; i++)
-                {
-                    clientes.InsertarTelefono(1, telefonosListBox.Items[i].ToString());
-                }
-                int VId = 0;
-                int.TryParse(vehiculoIdTextBox.Text, out VId);
-                factura.VehiculoId = VId;
-                factura.EstadoDelVehiculo = estadoVehiculoTextBox.Text;
-                factura.Motor = motorVehiculoTextBox.Text;
-                factura.Marca = marcaVehiculoTextBox.Text;
-                factura.Modelo = motorVehiculoTextBox.Text;
-                factura.Color = colorVehiculoTextBox.Text;
-                int VAño = 0;
-                int.TryParse(vehiculoIdTextBox.Text, out VAño);
-                factura.VehiculoId = VAño;
-                factura.Año = VAño;
-                factura.NoChasis = chasisVehiculoTextBox.Text;
-                factura.TipoDeVehiculo = tipoVehiculoTextBox.Text;
-                int Kvehiculo = 0;
-                int.TryParse(vehiculoIdTextBox.Text, out Kvehiculo);
-                factura.Kilometraje = Kvehiculo;
-                factura.DuplicadoDeLlaveDeEncendido = vehiculo.DuplicadoDeLlaveDeEncendido;
-                factura.EspejoRetrovisorDerecho = vehiculo.EspejoRetrovisorDerecho;
-                factura.EspejoRetrovisorIzquierdo = vehiculo.EspejoRetrovisorIzquierdo;
-                factura.EspejoRetrovisorInterno = vehiculo.EspejoRetrovisorInterno;
-                factura.ManualDeUsuario = vehiculo.ManualDeUsuario;
-                factura.TaponDeGasolina = vehiculo.TaponDeGasolina;
-                factura.TaponDeRadiador = vehiculo.TaponDeRadiador;
-                factura.GomaDeRepuesto = vehiculo.GomaDeRepuesto;
-                factura.Botiquin = vehiculo.Botiquin;
-                factura.Gomas = vehiculo.Gomas;
-                factura.Radio = vehiculo.Radio;
-                factura.Gato = vehiculo.Gato;
-                factura.Alfombras = vehiculo.Alfombras;
-                factura.Encendedor = vehiculo.Encendedor;
-                factura.LlaveDeRueda = vehiculo.LlaveDeRueda;
-                factura.Matricula = marcaVehiculoTextBox.Text;
-                factura.Placa = placaVehiculoTextBox.Text;
-                int Pvehiculo = 0;
-                int.TryParse(vehiculoIdTextBox.Text, out Pvehiculo);
-                factura.Precio = Pvehiculo;
+                int vehiculoId = 0;
+                int.TryParse(vehiculoIdTextBox.Text, out vehiculoId);
+                factura.VehiculoId = vehiculoId;
+
+                int clienteId = 0;
+                int.TryParse(clienteIdTextBox.Text, out clienteId);
+                factura.ClienteId = clienteId;
+
+
                 int PagoInicialE = 0;
                 int.TryParse(vehiculoIdTextBox.Text, out PagoInicialE);
                 factura.PagoInicialEnEfectivo = PagoInicialE;
@@ -267,37 +223,59 @@ namespace Sistema_Ventas_Vehiculos.Registros
 
         private void botonBuscarFactura_Click(object sender, EventArgs e)
         {
+            int id = 0;
+            int.TryParse(facturaIdTextBox.Text, out id);
+            factura.FacturaId = id;
+            if (factura.Buscar(factura.FacturaId)) {
 
-           /* vehiculoIdTextBox  = factura.VehiculoId;
-            estadoVehiculoTextBox = factura.EstadoDelVehiculo;
-            modeloVehiculoTextBox = factura.Modelo;
+                pagoInicialEfectivoTextBox.Text = factura.PagoInicialEnEfectivo.ToString();
+                pagoInicialChequeTextBox.Text = factura.PagoInicialEnCheque.ToString();
+                precioAPagarTextBox.Text = factura.PrecioAPagar.ToString();
+                autorizadoPorTextBox.Text = factura.AutorizadoPor;
+
+                if (clientes.Buscar(factura.ClienteId) && vehiculo.Buscar(factura.VehiculoId))
+                {
+
+                    estadoVehiculoTextBox.Text = vehiculo.EstadoDelVehiculo;
+                    precioVehiculoTextBox.Text = vehiculo.Precio.ToString();
+                    placaVehiculoTextBox.Text = vehiculo.Placa;
+                    matriculaVehiculoTextBox.Text = vehiculo.Matricula;
+                    kilometrajeVehiculoTextBox.Text = vehiculo.Kilometraje.ToString();
+                    marcaVehiculoTextBox.Text = vehiculo.Marca;
+                    modeloVehiculoTextBox.Text = vehiculo.Modelo;
+                    colorVehiculoTextBox.Text = vehiculo.Color;
+                    tipoVehiculoTextBox.Text = vehiculo.TipoDeVehiculo;
+                    motorVehiculoTextBox.Text = vehiculo.Motor;
+                    chasisVehiculoTextBox.Text = vehiculo.NoChasis;
+                    añoVehiculoTextBox.Text = vehiculo.Año.ToString();
 
 
+                    NombreTextBox.Text = clientes.NombreCompleto;
+                    ApodoTextBox.Text = clientes.Apodo;
+                    DireccionTextBox.Text = clientes.Direccion;
+                    CedulaTextBox.Text = clientes.Cedula;
+                    nacionalidadTextBox.Text = clientes.Nacionalidad;
+                    OcupacionTextBox.Text = clientes.Ocupacion;
+                    LugardeNacimientoTextBox.Text = clientes.LugarDeNacimiento;
+                    sexoTextBox.Text = clientes.Sexo;
+                    telefonosListBox.Items.Clear();
+                    foreach (var telefono in clientes.numerostelefonos)
+                    {
+                        telefonosListBox.Items.Add(telefono.Telefono);
+                    }
+                }
+                else
+                {
+                    MensajeAdvertencia("Id no encontrado");
+                    clienteIdTextBox.Clear();
+                }
 
-            factura.Marca = marcaVehiculoTextBox;
-            factura.Motor = modeloVehiculoTextBox;
-            factura.Color = colorVehiculoTextBox.Text;
-            factura.Año = añoVehiculoTextBox.Text;
-            factura.NoChasis = chasisVehiculoTextBox.Text;
-            factura.TipoVehiculo = tipoVehiculoTextBox.Text;
-            factura.Kilometraje int,
-            factura.Precio int,
-            factura.Placa = placaVehiculoTextBox.Text;
-            factura.Matricula = marcaVehiculoTextBox.Text;
-            factura.PagoInicialEnEfectivo int,
-            factura.PagoInicialEnCheque int,
-            factura.PrecioAPagar int,
-            factura.ClienteId int,
-            factura.NombreCompleto = NombreTextBox.Text;
-            factura.Apodo = ApodoTextBox.Text;
-            factura.Cedula = CedulaTextBox.Text;
-            factura.Direccion = DireccionTextBox.Text;
-            factura.Nacionalidad = nacionalidadTextBox;
-            factura.Ocupacion = OcupacionTextBox.Text;
-            factura.LugarDeNacimiento = LugardeNacimientoTextBox.Text;
-            factura.Sexo = sexoTextBox.Text;
-            factura.AutorizadoPor = autorizadoPorTextBox.Text;
-            */
+            }
+            else
+            {
+                MensajeAdvertencia("Id no encontrado");
+            }
+
         }
 
         private void NombreTextBox_KeyPress(object sender, KeyPressEventArgs e)
@@ -501,6 +479,14 @@ namespace Sistema_Ventas_Vehiculos.Registros
         }
 
         private void precioVehiculoTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar == 8))
+                e.Handled = false;
+            else
+                e.Handled = true;
+        }
+
+        private void facturaIdTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar == 8))
                 e.Handled = false;
