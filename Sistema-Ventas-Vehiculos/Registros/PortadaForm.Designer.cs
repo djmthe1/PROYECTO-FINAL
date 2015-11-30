@@ -179,42 +179,49 @@
             this.marcasToolStripMenuItem.Name = "marcasToolStripMenuItem";
             this.marcasToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
             this.marcasToolStripMenuItem.Text = "MARCAS";
+            this.marcasToolStripMenuItem.Click += new System.EventHandler(this.marcasToolStripMenuItem_Click);
             // 
             // modelosToolStripMenuItem
             // 
             this.modelosToolStripMenuItem.Name = "modelosToolStripMenuItem";
             this.modelosToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
             this.modelosToolStripMenuItem.Text = "MODELOS";
+            this.modelosToolStripMenuItem.Click += new System.EventHandler(this.modelosToolStripMenuItem_Click);
             // 
             // tipoDeVehiculosToolStripMenuItem1
             // 
             this.tipoDeVehiculosToolStripMenuItem1.Name = "tipoDeVehiculosToolStripMenuItem1";
             this.tipoDeVehiculosToolStripMenuItem1.Size = new System.Drawing.Size(188, 22);
             this.tipoDeVehiculosToolStripMenuItem1.Text = "TIPOS DE VEHICULOS";
+            this.tipoDeVehiculosToolStripMenuItem1.Click += new System.EventHandler(this.tipoDeVehiculosToolStripMenuItem1_Click);
             // 
             // tipoDeMotoresToolStripMenuItem1
             // 
             this.tipoDeMotoresToolStripMenuItem1.Name = "tipoDeMotoresToolStripMenuItem1";
             this.tipoDeMotoresToolStripMenuItem1.Size = new System.Drawing.Size(188, 22);
             this.tipoDeMotoresToolStripMenuItem1.Text = "TIPOS DE MOTORES";
+            this.tipoDeMotoresToolStripMenuItem1.Click += new System.EventHandler(this.tipoDeMotoresToolStripMenuItem1_Click);
             // 
             // coloresToolStripMenuItem1
             // 
             this.coloresToolStripMenuItem1.Name = "coloresToolStripMenuItem1";
             this.coloresToolStripMenuItem1.Size = new System.Drawing.Size(188, 22);
             this.coloresToolStripMenuItem1.Text = "COLORES";
+            this.coloresToolStripMenuItem1.Click += new System.EventHandler(this.coloresToolStripMenuItem1_Click);
             // 
             // vehiculosToolStripMenuItem1
             // 
             this.vehiculosToolStripMenuItem1.Name = "vehiculosToolStripMenuItem1";
             this.vehiculosToolStripMenuItem1.Size = new System.Drawing.Size(188, 22);
             this.vehiculosToolStripMenuItem1.Text = "VEHICULOS";
+            this.vehiculosToolStripMenuItem1.Click += new System.EventHandler(this.vehiculosToolStripMenuItem1_Click);
             // 
             // graficosToolStripMenuItem
             // 
             this.graficosToolStripMenuItem.Name = "graficosToolStripMenuItem";
             this.graficosToolStripMenuItem.Size = new System.Drawing.Size(74, 20);
             this.graficosToolStripMenuItem.Text = "GRAFICOS";
+            this.graficosToolStripMenuItem.Click += new System.EventHandler(this.graficosToolStripMenuItem_Click);
             // 
             // PortadaForm
             // 

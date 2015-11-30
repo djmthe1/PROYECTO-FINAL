@@ -23,6 +23,8 @@ namespace Sistema_Ventas_Vehiculos.Registros
             
         }
 
+        Reportes.PresentarReporte PresentarR = new Reportes.PresentarReporte();
+
         private void cerrarSecionToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
@@ -95,6 +97,55 @@ namespace Sistema_Ventas_Vehiculos.Registros
         {
             BuscarForm BuscarF = new BuscarForm();
             BuscarF.Show();
+        }
+
+        private void graficosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Graficos.GraficosForm MarcaG = new Graficos.GraficosForm();
+            MarcaG.Show();
+        }
+
+        private void marcasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            Reportes.CrystalReportMarcas ReporteM = new Reportes.CrystalReportMarcas();
+            PresentarR.crystalReportViewer1.ReportSource = ReporteM;
+            PresentarR.ShowDialog();
+        }
+
+        private void modelosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Reportes.CrystalReportModelos ReporteMod = new Reportes.CrystalReportModelos();
+            PresentarR.crystalReportViewer1.ReportSource = ReporteMod;
+            PresentarR.ShowDialog();
+        }
+
+        private void coloresToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Reportes.CrystalReportColores ReporteC = new Reportes.CrystalReportColores();
+            PresentarR.crystalReportViewer1.ReportSource = ReporteC;
+            PresentarR.ShowDialog();
+        }
+
+        private void tipoDeVehiculosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Reportes.CrystalReportTipoVehiculo ReporteTV = new Reportes.CrystalReportTipoVehiculo();
+            PresentarR.crystalReportViewer1.ReportSource = ReporteTV;
+            PresentarR.ShowDialog();
+        }
+
+        private void tipoDeMotoresToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Reportes.CrystalReportMotores ReporteTM = new Reportes.CrystalReportMotores();
+            PresentarR.crystalReportViewer1.ReportSource = ReporteTM;
+            PresentarR.ShowDialog();
+        }
+
+        private void vehiculosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Reportes.CrystalReportVehiculo ReporteV = new Reportes.CrystalReportVehiculo();
+            PresentarR.crystalReportViewer1.ReportSource = ReporteV;
+            PresentarR.ShowDialog();
         }
     }
 }
