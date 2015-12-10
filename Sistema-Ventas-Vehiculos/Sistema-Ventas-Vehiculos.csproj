@@ -393,6 +393,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Sistema-Ventas-Vehiculos.mdf</DependentUpon>
     </Content>
+    <Content Include="BaseDatos\SQLScript.sql" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
